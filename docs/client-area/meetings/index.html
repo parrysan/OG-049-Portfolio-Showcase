@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Portfolio Showcase — Meetings | Oganiko Digital</title>
+<link rel="stylesheet" href="../assets/ods-tokens.css">
+<link rel="stylesheet" href="../assets/client.css">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/ods-project-chrome.css">
+<style>
+/* Meetings tab — self-contained so the feature needs no shared-CSS edit per project */
+.meeting{--resize-dur:280ms;--resize-close-dur:220ms;--resize-ease:cubic-bezier(0.65, 0, 0.35, 1);border:1px solid var(--line);border-radius:12px;padding:20px 22px;margin:16px 0;background:var(--surface)}
+.meeting .date{font-size:11.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--og-green)}
+.meeting h3{margin:5px 0 12px}
+.meeting details{border-top:1px solid var(--line);padding:12px 0 4px}
+.meeting details summary{cursor:pointer;font-weight:700;color:var(--og-black);list-style:none;display:flex;align-items:center;gap:8px;touch-action:manipulation}
+.meeting details summary::before{content:"▸";color:var(--og-green);transition:transform var(--resize-dur) var(--resize-ease)}
+.meeting details[open]:not(.is-closing) summary::before{transform:rotate(90deg)}
+.meeting details summary::-webkit-details-marker{display:none}
+.meeting details .fold{display:grid;grid-template-rows:0fr}
+.meeting details[open]:not(.is-closing) .fold{grid-template-rows:1fr}
+.meeting details.is-animated .fold{transition:grid-template-rows var(--resize-dur) var(--resize-ease)}
+.meeting details.is-closing:not(.is-swap) .fold{transition-duration:var(--resize-close-dur)}
+.meeting details .fold > *{min-height:0;overflow:hidden}
+.meeting details .body{padding:10px 0 4px;font-size:14.5px;opacity:0;transform:translateY(-8px)}
+.meeting details[open]:not(.is-closing) .body{opacity:1;transform:none}
+.meeting details.is-animated .body{transition:opacity var(--resize-dur) var(--resize-ease),transform var(--resize-dur) var(--resize-ease)}
+@media (prefers-reduced-motion:reduce){
+  .meeting details.is-animated .fold,.meeting details.is-animated .body,.meeting details summary::before{transition:none}
+}
+.meeting details .body ul{margin:0 0 0 20px}
+.meeting .links{margin:14px 0 0;padding-top:12px;border-top:1px solid var(--line);font-size:13.5px}
+.meeting .links a{margin-right:16px}
+.meeting .links .reserved{color:var(--muted);font-weight:600;text-decoration:none}
+</style>
+</head>
+<body>
+<header class="ods-project-header" data-version="1.1.2">
+ <div class="ods-project-header__inner">
+  <div class="ods-project-header__global">
+   <a class="ods-project-header__mark" href="../">Oganiko Digital</a>
+  </div>
+  <p class="ods-project-header__title">Portfolio Showcase</p>
+ </div>
+ <div class="ods-project-header__tabbar"><div class="ods-project-header__inner">
+  <nav class="ods-project-header__tabs" aria-label="Sections"><a href="../">Overview</a><a href="../research/">Research</a><a href="./" aria-current="page">Meetings</a></nav>
+ </div></div>
+</header>
+
+<main class="wrap">
+  <p class="lead">Every call is captured here — most recent first. Each meeting has a short summary, an expandable list of action points, and (where available) a link to the full minutes and the recording.</p>
+
+  <!-- MEETING BLOCK TEMPLATE — duplicate per meeting, newest at the top.
+       Feed a Fathom summary in and fill: date, title, summary, action points,
+       Google Doc link (full minutes) and the Fathom recording URL. -->
+  <article class="meeting">
+    <span class="date">{{MEETING_DATE}}</span>
+    <h3>{{MEETING_TITLE}}</h3>
+    <details open>
+      <summary>Summary</summary>
+      <div class="body"><p>{{MEETING_SUMMARY}}</p></div>
+    </details>
+    <details>
+      <summary>Action points</summary>
+      <div class="body"><ul>
+        <li>{{ACTION_POINT}}</li>
+      </ul></div>
+    </details>
+    <p class="links">
+      <a href="{{GOOGLE_DOC_URL}}">Full minutes (Google Doc)</a>
+      <a href="{{FATHOM_URL}}">Recording</a>
+    </p>
+  </article>
+
+  <div class="note">Populated from Fathom meeting summaries. To add a meeting: duplicate the block above, newest first. This area is private (<code>noindex</code>).</div>
+</main>
+
+<footer class="ods-project-footer" data-version="1.0.0">
+ <div class="ods-project-footer__inner">
+  <dl class="ods-project-footer__meta">
+   <dt>Version</dt><dd><a class="ods-project-footer__version" href="https://github.com/parrysan/OG-049-Portfolio-Showcase/commits/main">v0.1 · Just started</a></dd>
+   <dt>Last updated</dt><dd><span class="ods-project-footer__label">Updated</span> <time datetime="2026-11-06">6 Nov 2026 (Warsaw)</time></dd>
+   <dt>Owner</dt><dd><span class="ods-project-footer__label">Owner</span> <a href="mailto:phil.parry@oganiko.com">Phil Parry</a></dd>
+   <dt>Project</dt><dd><span class="ods-project-footer__label">Project</span> <a href="https://github.com/parrysan/OG-049-Portfolio-Showcase">OG-049</a></dd>
+   <dt>Environment</dt><dd><span class="ods-project-footer__label">Environment</span> Preview</dd>
+  </dl>
+  <p class="ods-project-footer__small"><span>© 2026 OGANIKO Digital · Prepared for Portfolio Showcase · Private client workspace</span></p>
+ </div>
+</footer>
+<script>
+(function () {
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+  function finishClose(details) {
+    details.open = false;
+    details.classList.remove("is-closing", "is-swap");
+    details._pending = null;
+  }
+
+  function closePanel(details, swap) {
+    if (!details.open || details.classList.contains("is-closing")) return;
+    if (reduce.matches) {
+      details.open = false;
+      return;
+    }
+    var fold = details._fold;
+    if (details._pending) fold.removeEventListener("transitionend", details._pending);
+    details.classList.add("is-animated", "is-closing");
+    details.classList.toggle("is-swap", !!swap);
+    details._pending = function (ev) {
+      if (ev.target !== fold || ev.propertyName !== "grid-template-rows") return;
+      fold.removeEventListener("transitionend", details._pending);
+      finishClose(details);
+    };
+    fold.addEventListener("transitionend", details._pending);
+  }
+
+  function openPanel(details) {
+    if (details._pending) {
+      details._fold.removeEventListener("transitionend", details._pending);
+      details._pending = null;
+    }
+    details.classList.remove("is-closing", "is-swap");
+    if (!reduce.matches) details.classList.add("is-animated");
+    details.open = true;
+  }
+
+  document.querySelectorAll(".meeting details").forEach(function (details) {
+    var body = details.querySelector(":scope > .body");
+    if (!body) return;
+    var fold = document.createElement("div");
+    fold.className = "fold";
+    details.insertBefore(fold, body);
+    fold.appendChild(body);
+    details._fold = fold;
+
+    details.querySelector("summary").addEventListener("click", function (e) {
+      e.preventDefault();
+      var isOpen = details.open && !details.classList.contains("is-closing");
+      if (isOpen) {
+        closePanel(details, false);
+        return;
+      }
+      var meeting = details.closest(".meeting");
+      meeting.querySelectorAll("details").forEach(function (other) {
+        if (other !== details) closePanel(other, true);
+      });
+      openPanel(details);
+    });
+  });
+})();
+</script>
+<script src="../assets/ods-project-chrome.js"></script>
+</body>
+</html>

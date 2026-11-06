@@ -1,0 +1,69 @@
+/* ODS Project header v1.1.2 + Project footer v1.0.0 — from Tung's approved proposal
+   source: ~/OG/reports/ods-project-header-2026-10-16/example.html (17 Oct 2026)
+   Expressed on the ODS tokens in assets/ods-tokens.css (load it first): no raw colour, spacing, radius or type values.
+   Not yet a component in OS-000-Design-System; replace with the ODS sync-component copy once it lands. */
+/* ods-project-header v1.1.2 + ods-project-footer v1.0.0 (proposal, 2026-10-17, Phil's markup)
+   CHANGELOG v1.1.2 (2026-10-17, Phil): the title no longer shrinks on scroll. It keeps one size on all pages and in all states;
+   the title-to-tabs gap stays 24px (--spacing-6) when stuck. Sticky header and scroll hairline unchanged. */
+:root{
+ /* component tokens */
+ --ph-bg:var(--color-gray-900);--ph-text:var(--color-text-inverse);--ph-muted:var(--color-text-inverse-muted);
+ --ph-line:var(--color-success-strong);
+ --ods-project-rule-width:calc(var(--border-width) * 2); /* the green rule, as in OS-000 ods-project-header/-footer */
+ --ph-title-gap:var(--spacing-6);            /* was 12px; 24px = 2.0x */
+ --ph-tab-radius:var(--radius-sm);           /* top corners only */
+ --ph-canvas:var(--color-bg);                /* the selected tab takes the colour of the canvas it selects */
+ --ph-tab-active-text:var(--color-text);
+ /* No exact ODS token for these; derived from tokens so the rendering is unchanged */
+ --ph-subtle:color-mix(in srgb,var(--color-white) 60%,var(--color-black));     /* #999 */
+ --ph-hover:color-mix(in srgb,var(--color-white) 8%,var(--color-clear));       /* white at 8% */
+ --ph-title-leading:calc((var(--leading-tight) + var(--leading-snug)) / 2);    /* 1.2 */
+ --ph-footer-text:calc((var(--text-xs) + var(--text-sm)) / 2);                 /* 13px */}
+.ods-project-header{position:sticky;top:0;z-index:100;background:var(--ph-bg);color:var(--ph-text)}
+.ods-project-header:has(.ods-project-header__sub){--ph-canvas:var(--color-bg-muted)}
+.ods-project-header__inner{max-width:var(--container-max);margin:0 auto;padding:var(--spacing-4) var(--spacing-6) 0}
+.ods-project-header__global{display:flex;align-items:center;gap:var(--spacing-3);min-height:var(--control-height-sm)}
+.ods-project-header__mark{font-size:var(--text-sm);letter-spacing:var(--tracking-caps);text-transform:uppercase;color:var(--ph-muted);text-decoration:none}
+.ods-project-header__mark:hover{color:var(--ph-text);text-decoration:underline}
+.ods-project-header__meta{margin-inline-start:auto;display:flex;gap:var(--spacing-2);align-items:center}
+.ods-project-header__util{font:var(--weight-semibold) var(--text-sm)/1 var(--font-primary);height:var(--control-height-sm);padding:0 var(--spacing-3);background:transparent;color:var(--ph-muted);border:var(--border-width) solid var(--ph-muted);border-radius:0;cursor:pointer;transition:background-color var(--duration-hover),color var(--duration-hover)}
+.ods-project-header__util:hover{background:var(--ph-text);color:var(--ph-tab-active-text);border-color:var(--ph-text)}
+.ods-project-header__util:active{background:var(--ph-muted);border-color:var(--ph-muted);color:var(--ph-tab-active-text)}
+.ods-project-header__title{margin:var(--spacing-2) 0 var(--ph-title-gap);font-size:var(--text-2xl);font-weight:var(--weight-bold);line-height:var(--ph-title-leading)}
+/* v1.1.2: no stuck-state title rule. Same size and same 24px gap when stuck (Phil, 2026-10-17). */
+/* Tab row. The green line is painted as the row's own background, so the opaque selected tab covers it:
+   the line breaks under the selected tab and the tab joins the canvas below. */
+/* v1.1.1: the line is painted on the full-bleed tab bar (edge to edge of the viewport), not on the inner content width. */
+.ods-project-header__tabbar{background:linear-gradient(var(--ph-line),var(--ph-line)) left bottom/100% var(--ods-project-rule-width) no-repeat}
+.ods-project-header__tabbar>.ods-project-header__inner{padding-top:0;padding-bottom:0}
+.ods-project-header__tabs{display:flex;overflow-x:auto;scrollbar-width:none;scroll-snap-type:x proximity;margin:0 calc(var(--spacing-6) * -1);padding:0 var(--spacing-6)}
+.ods-project-header__tabs::-webkit-scrollbar{display:none}
+.ods-project-header__tabs a{flex:none;scroll-snap-align:start;padding:var(--spacing-3) var(--spacing-4) calc(var(--spacing-3) + var(--ods-project-rule-width));font-size:var(--text-sm);font-weight:var(--weight-semibold);color:var(--ph-muted);text-decoration:none;white-space:nowrap;
+ border-radius:var(--ph-tab-radius) var(--ph-tab-radius) 0 0;transition:background-color var(--duration-hover),color var(--duration-hover)}
+.ods-project-header__tabs a:hover{color:var(--ph-text);background:var(--ph-hover)}
+.ods-project-header__tabs a[aria-current=page]{background:var(--ph-canvas);color:var(--ph-tab-active-text);font-weight:var(--weight-bold);border:0}
+.ods-project-header a:focus-visible,.ods-project-header button:focus-visible{outline:var(--focus-width) solid var(--ph-text);outline-offset:calc(var(--focus-width) * -1)}
+.ods-project-header__tabs a[aria-current=page]:focus-visible{outline-color:var(--ph-tab-active-text)}
+.ods-project-header__sub{background:var(--ph-canvas);color:var(--color-text-secondary);font-size:var(--text-sm)}
+/* Hairline on scroll (approved item 7): the light line under the header only shows once content scrolls beneath it */
+.ods-project-header{border-bottom:var(--border-width) solid var(--color-clear);background-clip:padding-box;transition:border-color var(--duration-hover)}
+.ods-project-header.is-stuck{border-bottom-color:var(--color-gray-300)}
+
+.ods-project-header__sub .ods-project-header__inner{padding:var(--spacing-2) var(--spacing-6)}
+/* Project footer: same treatment, slim, not sticky */
+.ods-project-footer{background:var(--ph-bg);color:var(--ph-muted);font-size:var(--ph-footer-text);line-height:var(--leading-normal);border-top:var(--ods-project-rule-width) solid var(--ph-line)}
+.ods-project-footer__inner{max-width:var(--container-max);margin:0 auto;padding:var(--spacing-4) var(--spacing-6);display:grid;gap:var(--spacing-3)}
+.ods-project-footer__meta,.ods-project-footer__links,.ods-project-footer__small{display:flex;flex-wrap:wrap;gap:var(--spacing-2) var(--spacing-6);margin:0;padding:0;list-style:none;align-items:baseline}
+.ods-project-footer__meta dt{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.ods-project-footer__meta dd{margin:0}
+.ods-project-footer__label{color:var(--ph-subtle)}
+.ods-project-footer a{color:var(--ph-muted);text-decoration:underline;text-underline-offset:var(--ods-project-rule-width)}
+.ods-project-footer a:hover{color:var(--ph-text);text-decoration-thickness:var(--ods-project-rule-width)}
+.ods-project-footer a:focus-visible{outline:var(--focus-width) solid var(--ph-text);outline-offset:var(--focus-width)}
+.ods-project-footer__version{color:var(--ph-text);font-weight:var(--weight-semibold)}
+.ods-project-footer__small{color:var(--ph-subtle);font-size:var(--text-xs);padding-top:var(--spacing-3);border-top:var(--border-width) solid var(--color-gray-dark)}
+.ods-project-footer__example{font-size:var(--text-xs);color:var(--ph-subtle);font-style:italic}
+
+@media (max-width:767px){.ods-project-header__title{font-size:var(--text-xl)}
+ .ods-project-footer__meta,.ods-project-footer__links,.ods-project-footer__small{flex-direction:column;gap:var(--spacing-1)}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
