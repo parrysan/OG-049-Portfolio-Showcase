@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1280">
+<title>OGANIKO honey · concept storefront (desktop)</title>
+<meta name="robots" content="noindex">
+<!-- Desktop version of the concept storefront, captured as the demo screen for the UX review offer video. -->
+<style>
+@font-face{font-family:"Open Sans";src:url("../../../assets/fonts/open-sans-latin-400-normal.woff2") format("woff2");font-weight:400}
+@font-face{font-family:"Open Sans";src:url("../../../assets/fonts/open-sans-latin-600-normal.woff2") format("woff2");font-weight:600}
+@font-face{font-family:"Open Sans";src:url("../../../assets/fonts/open-sans-latin-700-normal.woff2") format("woff2");font-weight:700}
+:root{--ink:#0A0A0A;--ink-2:#333;--ink-3:#595959;--cream:#F6F1E7;--line:#E6DFD0;--green:#109200;--deep:#0F3E09}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1280px}
+body{font-family:"Open Sans",system-ui,sans-serif;color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased}
+.top{height:40px;background:var(--deep);color:#fff;font-size:14px;display:flex;align-items:center;justify-content:center}
+header{height:76px;display:flex;align-items:center;gap:40px;padding:0 64px;border-bottom:1px solid var(--line)}
+header img{height:30px;width:auto}
+nav{display:flex;gap:32px;font-size:15px;color:var(--ink-2);margin-left:auto}
+.bag{width:24px;height:24px}
+.hero{display:grid;grid-template-columns:520px 1fr;height:520px;background:var(--cream)}
+.hero .box{padding:88px 48px 0 64px}
+.hero small{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--deep)}
+.hero h1{font-size:46px;line-height:1.08;letter-spacing:-.02em;margin:14px 0 18px}
+.hero p{font-size:17px;line-height:1.5;color:var(--ink-2);margin-bottom:28px}
+.btn{display:inline-block;font-size:15px;font-weight:600;padding:13px 22px;border-radius:999px;background:var(--deep);color:#fff}
+.hero .photo{background:url("banner.jpg") 40% 45%/cover no-repeat}
+.shop{padding:56px 64px 64px}
+.shop-h{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:24px}
+.shop-h h2{font-size:28px;letter-spacing:-.01em}
+.shop-h span{font-size:15px;color:var(--ink-3)}
+.row{display:grid;grid-template-columns:330px 330px 1fr;gap:28px;align-items:stretch}
+.card{border-radius:14px;overflow:hidden;box-shadow:0 0 0 1px var(--line)}
+.card .img{height:250px;background:#fff url("packshot.jpg") center 32%/auto 135% no-repeat}
+.card .t{padding:16px 18px 18px;display:grid;gap:4px}
+.card b{font-size:17px}
+.card .m{font-size:14px;color:var(--ink-3)}
+.card .r{display:flex;align-items:center;justify-content:space-between;margin-top:10px}
+.card .p{font-size:20px;font-weight:700}
+.card .add{font-size:14px;font-weight:600;padding:8px 18px;border-radius:999px;border:1px solid var(--ink)}
+.story{border-radius:14px;background:var(--cream);padding:32px}
+.story h3{font-size:20px;margin-bottom:10px}
+.story p{font-size:15px;line-height:1.55;color:var(--ink-2);margin-bottom:10px}
+.facts{height:52px;display:flex;align-items:center;justify-content:center;gap:40px;font-size:14px;color:var(--ink-2);background:var(--cream);border-top:1px solid var(--line)}
+.facts span::before{content:"✓ ";color:var(--green);font-weight:700}
+</style>
+</head>
+<body>
+<div class="top" id="strip">Free delivery on two jars or more</div>
+<header>
+  <img src="../../../assets/ogl-master.svg" alt="OGANIKO">
+  <nav><span>Honey</span><span>Our story</span><span>From the hive</span></nav>
+  <svg class="bag" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6 22q-.825 0-1.412-.587T4 20V8q0-.825.588-1.412T6 6h2q0-1.65 1.175-2.825T12 2t2.825 1.175T16 6h2q.825 0 1.413.588T20 8v12q0 .825-.587 1.413T18 22zm0-2h12V8h-2v2q0 .425-.288.713T15 11t-.712-.288T14 10V8h-4v2q0 .425-.288.713T9 11t-.712-.288T8 10V8H6zm4-14h4q0-.825-.587-1.412T12 4t-1.412.588T10 6"/></svg>
+</header>
+<section class="hero">
+  <div class="box">
+    <small>Raw · unfiltered</small>
+    <h1>Honey from Spain's high mountains</h1>
+    <p>Cold-extracted from hives above 800 metres.</p>
+    <span class="btn">Shop the honey</span>
+  </div>
+  <div class="photo"></div>
+</section>
+<section class="shop" id="shop">
+  <div class="shop-h"><h2>Raw Spanish Mountain Honey</h2><span>Dark amber · runny</span></div>
+  <div class="row">
+    <div class="card" id="card1"><div class="img"></div><div class="t"><b>1 kg jar</b><span class="m">Hives above 800 m</span><div class="r"><span class="p">€13.90</span><span class="add" id="add1">Add</span></div></div></div>
+    <div class="card" id="card2"><div class="img"></div><div class="t"><b>1.2 kg jar</b><span class="m">Our largest jar</span><div class="r"><span class="p">€15.90</span><span class="add" id="add2">Add</span></div></div></div>
+    <div class="story"><h3>From the hive</h3><p>Harvested from July to September, high in Spain's mountain ranges.</p><p>We leave half the honey in the hive for the bees' winter.</p></div>
+  </div>
+</section>
+<div class="facts"><span>Harvested July to September</span><span>Half left for the bees</span></div>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Work and explorations · Phil Parry</title>
+<meta name="description" content="Selected client work and capability demonstrations by Phil Parry, OGANIKO Digital.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='8 9 16 15'%3E%3Cpath fill='%23109200' d='M9 22c0-6 4-11 14-12-1 9-6 13-12 13-.7 0-1.4-.1-2-.3z'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/ods/tokens-base.css"><link rel="stylesheet" href="assets/ods/tokens-theme-oganiko.css"><link rel="stylesheet" href="assets/ods/tabs.css">
+<style>
+@font-face{font-family:"Open Sans";src:url("assets/fonts/open-sans-latin-400-normal.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Open Sans";src:url("assets/fonts/open-sans-latin-600-normal.woff2") format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:"Open Sans";src:url("assets/fonts/open-sans-latin-700-normal.woff2") format("woff2");font-weight:700;font-display:swap}
+/* Showcase home — ODS frame: Open Sans, ink on white, hairlines; each piece brings its own colour in its preview. */
+:root{--ink:#0A0A0A;--ink-2:#333;--ink-3:#595959;--line:#E0E0E0;--paper:#FFF;--soft:#F6F6F4;--leaf:#109200;--ease:cubic-bezier(.16,1,.3,1);--pad:clamp(20px,5vw,96px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Open Sans",system-ui,sans-serif;font-size:18px;line-height:1.55;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-underline-offset:.2em}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+h1,h2,h3,p,ul,ol{margin:0;padding:0}ul,ol{list-style:none}
+.wrap{max-width:1240px;margin:0 auto;padding:0 var(--pad)}
+.bar .wrap{display:flex;align-items:center;gap:14px;min-height:64px;font-size:14px;border-bottom:1px solid var(--line)}
+.bar svg{width:16px;height:15px}.bar b{letter-spacing:.04em}.bar span{color:var(--ink-3)}
+.bar a.cta{margin-left:auto;padding:9px 16px;border-radius:999px;background:var(--ink);color:#fff;text-decoration:none;font-weight:600;white-space:nowrap}
+@font-face{font-family:"Open Sans";src:url("assets/fonts/open-sans-latin-300-normal.woff2") format("woff2");font-weight:300;font-display:swap}
+.brand{display:inline-flex;align-items:center;text-decoration:none;color:var(--ink)}.brand img{display:block;height:36px;width:auto}
+.bar .wordmark-light{font-weight:300;color:#109200;margin-left:6px;font-size:16px;line-height:1}
+@media(max-width:480px){.brand img{height:28px}.bar .wordmark-light{font-size:14px;display:inline}}
+header.intro{padding:clamp(64px,9vw,128px) 0 clamp(40px,6vw,72px)}
+header.intro h1{font-size:clamp(44px,7vw,104px);line-height:.98;letter-spacing:-.04em;max-width:11em;text-wrap:balance}
+header.intro p{margin-top:24px;max-width:36em;font-size:clamp(18px,1.5vw,22px);color:var(--ink-2);text-wrap:pretty}
+.key{margin-top:28px;display:flex;flex-wrap:wrap;gap:10px 22px;font-size:14px;color:var(--ink-3)}
+.chip{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;padding:5px 11px 5px 9px;border-radius:999px;background:var(--soft);color:var(--ink)}
+.chip::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--leaf)}
+.chip.draft::before{background:#C58A00}
+.chip.concept{background:var(--soft);color:var(--ink)}.chip.concept::before{background:#8A8A8A}
+section.collection{padding:clamp(48px,7vw,96px) 0;border-top:1px solid var(--line)}
+.collection .head{display:grid;grid-template-columns:1fr 1.2fr;gap:24px 64px;align-items:end;margin-bottom:40px}
+.collection h2{font-size:clamp(30px,3.6vw,52px);line-height:1.04;letter-spacing:-.03em}
+.collection .head p{color:var(--ink-2);max-width:34em;text-wrap:pretty}
+.cards{display:grid;gap:28px}
+.card{display:grid;grid-template-columns:1.35fr 1fr;gap:clamp(20px,3vw,48px);align-items:center;text-decoration:none;padding:16px;margin:-16px;border-radius:24px;transition:background .3s var(--ease)}
+.card:hover{background:var(--soft)}
+.card{position:relative;padding-right:64px}
+.card{box-shadow:inset 0 0 0 1px transparent;transition:background .3s var(--ease),box-shadow .3s var(--ease)}
+.card:hover,.card:focus-visible{box-shadow:inset 0 0 0 1px rgba(16,146,0,.28)}
+.card .chev{position:absolute;right:18px;top:50%;width:36px;height:36px;margin-top:-18px;border-radius:50%;display:grid;place-items:center;color:var(--ink);background:#fff;box-shadow:0 0 0 1px rgba(0,0,0,.08);opacity:0;transform:translateX(-6px);transition:opacity .3s var(--ease),transform .3s var(--ease)}
+.card .chev svg{width:22px;height:22px}
+.card:hover .chev,.card:focus-visible .chev{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.card .chev{transition:none}}
+.card .pv{position:relative;border-radius:16px;overflow:hidden;aspect-ratio:16/10;background:var(--soft);box-shadow:0 24px 50px -30px rgba(0,0,0,.35),0 0 0 1px rgba(0,0,0,.06)}
+.card .pv img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;transition:opacity .5s var(--ease),transform .8s var(--ease)}
+.card .pv img + img{opacity:0}
+.card:hover .pv img + img,.card:focus-visible .pv img + img{opacity:1}
+.card:hover .pv img{transform:scale(1.015)}
+.card .tx{display:grid;gap:12px;align-content:center}
+.card .type{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
+.card h3{font-size:clamp(26px,2.6vw,38px);line-height:1.08;letter-spacing:-.025em}
+.card .prob{color:var(--ink-2);text-wrap:pretty}
+.card .row{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;margin-top:4px}
+.card .open{font-weight:600;font-size:15px;display:inline-flex;align-items:center;gap:6px}
+.card .open svg{width:18px;height:18px;transition:transform .3s var(--ease)}
+.card:hover .open svg{transform:translateX(4px)}
+.next{margin-top:44px;padding:22px 24px;border:1px dashed #C9CED6;border-radius:16px;display:grid;grid-template-columns:auto 1fr;gap:6px 20px;align-items:baseline}
+.next b{font-size:15px}.next p{color:var(--ink-3);font-size:15px}
+.next ul{grid-column:2;display:flex;flex-wrap:wrap;gap:8px}
+.next li{font-size:14px;padding:6px 12px;border-radius:999px;background:var(--soft);color:var(--ink-2)}
+footer{border-top:1px solid var(--line);padding:32px 0 48px;font-size:14px;color:var(--ink-3)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center}
+footer .who{color:var(--ink)}footer .who b{display:block;font-size:18px}
+footer a{color:var(--ink)}
+footer .internal{margin-left:auto}
+@media (max-width:900px){
+  .collection .head,.card{grid-template-columns:1fr}
+  .card{margin:0;padding:0}.card:hover{background:none}.card .chev{display:none}
+  .next{grid-template-columns:1fr}.next ul{grid-column:1}
+  footer .internal{margin-left:0}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+/* Project switcher (og-ods-case-showcase pattern): ODS tabs over one stage, so each collection fits above the fold */
+.switch{margin:8px 0 26px}
+.switch .og-tabs__list{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}
+.switch .og-tabs__tab{white-space:nowrap;font-size:15px}
+.cards.is-switch li[hidden]{display:none}
+.cards.is-switch li:not([hidden]){animation:swin .45s var(--ease) both}
+@keyframes swin{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.cards.is-switch li{animation:none!important}}
+</style>
+</head>
+<body>
+<header class="bar"><div class="wrap"><a class="brand" href="https://oganiko.com/" aria-label="OGANIKO Digital, home"><img src="assets/ogl-master.svg" alt="" width="1251" height="291"><span class="wordmark-light" aria-hidden="true">Digital</span></a><a class="cta" href="mailto:phil.parry@oganiko.com">Get in touch</a></div></header>
+<main>
+<header class="intro"><div class="wrap">
+  <h1>Work, and what it could be next</h1>
+  <p>Two kinds of pages live here. Selected work is real client work, shown with real material. Explorations are capability demonstrations: working examples of experiences I could build for a brief like yours.</p>
+  <p class="key"><span class="chip">Client work</span><span class="chip draft">Client work, awaiting client approval</span><span class="chip concept">Capability demonstration</span></p>
+</div></header>
+
+<section class="collection" id="selected-work" aria-labelledby="work-t"><div class="wrap">
+  <div class="head"><h2 id="work-t">Selected work</h2><p>Projects delivered for real clients. Every claim on these pages traces to the project's own records.</p></div>
+  <ul class="cards">
+    <li data-tab="mAbV"><a class="card" href="../portfolio-mabv/showcase/">
+      <span class="pv"><img src="assets/previews/mabv-hero.jpg" alt="mAbV case study: hero with the project switcher"><img src="assets/previews/mabv.jpg" alt="" aria-hidden="true"></span>
+      <span class="tx"><span class="type">Brand identity · Design system · Brand kit</span><h3>mAbV</h3><span class="prob">A new antibody company needed an identity investors and scientists could trust. It's now on the doors of its offices in Guangzhou.</span><span class="row"><span class="chip">Client work</span><span class="open">Open the case study <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></span>
+    <span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path fill="currentColor" d="M12.6 12L8 7.4L9.4 6l6 6l-6 6L8 16.6z"/></svg></span></a></li>
+    <li data-tab="STR Technologies"><a class="card" href="../portfolio-str/showcase/">
+      <span class="pv"><img src="assets/previews/str-hero.jpg" alt="STR Technologies case study: hero with the storefront on a phone"><img src="assets/previews/str.jpg" alt="" aria-hidden="true"></span>
+      <span class="tx"><span class="type">Shopify storefront · Design system · Catalogue tools</span><h3>STR Technologies</h3><span class="prob">A shop for scientists who compare specifications, not pictures: built from scratch on Shopify and live at strsg.com.</span><span class="row"><span class="chip draft">Awaiting client approval</span><span class="open">Open the case study <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></span>
+    <span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path fill="currentColor" d="M12.6 12L8 7.4L9.4 6l6 6l-6 6L8 16.6z"/></svg></span></a></li>
+  </ul>
+</div></section>
+
+<section class="collection" id="explorations" aria-labelledby="ex-t"><div class="wrap">
+  <div class="head"><h2 id="ex-t">Explorations</h2><p>Capability demonstrations. They're not client commissions, and any businesses in them are fictional. They show the kind of experience I'd build for a brief like this, and they work.</p></div>
+  <ul class="cards">
+    <li data-tab="WordPress"><a class="card" href="explorations/wordpress-builds/">
+      <span class="pv"><img src="assets/previews/wordpress.jpg" alt="WordPress builds: the brief-in, site-out demonstration showing a finished page"></span>
+      <span class="tx"><span class="type">Product story · Service page</span><h3>WordPress sites your team can run</h3><span class="prob">How do you sell a WordPress build to a business owner? Let them watch a brief become a sitemap, a block library and a finished page, then click a block to see what their team would edit.</span><span class="row"><span class="chip concept">Capability demonstration</span><span class="open">Try it <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></span>
+    <span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path fill="currentColor" d="M12.6 12L8 7.4L9.4 6l6 6l-6 6L8 16.6z"/></svg></span></a></li>
+    <li data-tab="Shopify"><a class="card" href="explorations/shopify-stores/">
+      <span class="pv"><img src="assets/previews/shopify.jpg" alt="Shopify stores: the catalogue-in, checkout-out demonstration showing a product page with buying options"></span>
+      <span class="tx"><span class="type">Product story · Service page</span><h3>Shopify stores that stay easy to run</h3><span class="prob">How do you show a shop owner what a well-run store looks like? Let them watch one spreadsheet become collections, a product page with real buying choices, and a checkout, including one for business buyers.</span><span class="row"><span class="chip concept">Capability demonstration</span><span class="open">Try it <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></span>
+    <span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path fill="currentColor" d="M12.6 12L8 7.4L9.4 6l6 6l-6 6L8 16.6z"/></svg></span></a></li>
+    <li data-tab="Design systems"><a class="card" href="explorations/design-systems/">
+      <span class="pv"><img src="assets/previews/design-systems.jpg" alt="Design systems: the mess-in, system-out demonstration showing one button component with its variants"></span>
+      <span class="tx"><span class="type">Product story · Service page</span><h3>Design systems your teams actually use</h3><span class="prob">How do you show what a design system is worth? Let a product lead watch twenty-three buttons become one set of tokens, one component and its rules.</span><span class="row"><span class="chip concept">Capability demonstration</span><span class="open">Try it <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></span>
+    <span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path fill="currentColor" d="M12.6 12L8 7.4L9.4 6l6 6l-6 6L8 16.6z"/></svg></span></a></li>
+    <li data-tab="Amazon"><a class="card" href="explorations/amazon-listings/">
+      <span class="pv"><img src="assets/previews/amazon.jpg" alt="Amazon listings: the search-in, listing-out demonstration showing a real honey listing image set"></span>
+      <span class="tx"><span class="type">Product story · Service page</span><h3>Amazon product research and listings</h3><span class="prob">For Amazon sellers: watch search research become a title, bullets, an image set and A+ content, using real products.</span><span class="row"><span class="chip concept">Capability demonstration</span><span class="open">Try it <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></span>
+    <span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path fill="currentColor" d="M12.6 12L8 7.4L9.4 6l6 6l-6 6L8 16.6z"/></svg></span></a></li>
+  </ul>
+  <div class="next"><b>In preparation</b><p>The same approach, for the other kinds of work I do:</p><ul><li>Research</li><li>Conversion rate optimisation</li></ul></div>
+</div></section>
+</main>
+<footer><div class="wrap"><span class="who"><b>Phil Parry</b>20+ years in UX, brand and design systems</span><a href="mailto:phil.parry@oganiko.com">phil.parry@oganiko.com</a><a href="https://oganiko.com">oganiko.com</a><a class="internal" href="internal.html">How these were made (internal)</a></div></footer>
+<script>
+// Project switcher: turns each collection's card list into ODS tabs + one visible card. Without JS, all cards show.
+document.querySelectorAll(".collection").forEach((sec, k) => {
+  const ul = sec.querySelector("ul.cards"); const lis = [...ul.children];
+  if (lis.length < 2) return;
+  const wrap = document.createElement("div"); wrap.className = "switch og-tabs og-tabs--line og-tabs--md";
+  const list = document.createElement("div"); list.className = "og-tabs__list"; list.setAttribute("role", "tablist");
+  list.setAttribute("aria-label", sec.querySelector("h2").textContent); wrap.append(list);
+  const tabs = lis.map((li, i) => {
+    const b = document.createElement("button"); b.type = "button"; b.className = "og-tabs__tab"; b.setAttribute("role", "tab");
+    b.id = `sw${k}-t${i}`; b.setAttribute("aria-controls", `sw${k}-p${i}`); b.textContent = li.dataset.tab;
+    li.id = `sw${k}-p${i}`; li.setAttribute("role", "tabpanel"); li.setAttribute("aria-labelledby", b.id);
+    list.append(b); return b;
+  });
+  const show = (n, focus) => { tabs.forEach((t, i) => { t.setAttribute("aria-selected", String(i === n)); t.tabIndex = i === n ? 0 : -1; lis[i].hidden = i !== n; }); if (focus) tabs[n].focus(); };
+  tabs.forEach((t, i) => { t.addEventListener("click", () => show(i)); t.addEventListener("keydown", (e) => { if (e.key === "ArrowRight" || e.key === "ArrowLeft") { e.preventDefault(); show((i + (e.key === "ArrowRight" ? 1 : -1) + tabs.length) % tabs.length, true); } }); });
+  ul.classList.add("is-switch"); ul.before(wrap); show(0);
+});
+</script>
+</body>
+</html>

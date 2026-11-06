@@ -1,0 +1,719 @@
+{
+  "slug": "amazon-listings",
+  "pageTitle": "Amazon product research and listings · OGANIKO",
+  "description": "A capability demonstration: product research and listings for Amazon sellers, from how buyers search to the finished title, bullets, images and A+ content.",
+  "output": "index.html",
+  "status": {
+    "label": "Capability demonstration",
+    "real": false
+  },
+  "brandLine": "Amazon listings",
+  "logo": "../../assets/ogl-master.svg",
+  "logoReversed": "../../assets/oganiko-lockup-reversed.svg",
+  "crumbs": [
+    {
+      "label": "Showcase",
+      "href": "../../"
+    },
+    {
+      "label": "Explorations",
+      "href": "../../#explorations"
+    }
+  ],
+  "theme": {
+    "accent": "#109200",
+    "deep": "#0F3E09",
+    "darkest": "#0A2207",
+    "tint": "#EDF6EC",
+    "surface": "#F6FAF5",
+    "line": "#DCEBD9"
+  },
+  "fonts": [
+    {
+      "family": "Open Sans",
+      "src": "../../assets/fonts/open-sans-latin-300-normal.woff2",
+      "weight": "300"
+    },
+    {
+      "family": "Open Sans",
+      "src": "../../assets/fonts/open-sans-latin-400-normal.woff2",
+      "weight": "400"
+    },
+    {
+      "family": "Open Sans",
+      "src": "../../assets/fonts/open-sans-latin-600-normal.woff2",
+      "weight": "600"
+    },
+    {
+      "family": "Open Sans",
+      "src": "../../assets/fonts/open-sans-latin-700-normal.woff2",
+      "weight": "700"
+    }
+  ],
+  "contact": {
+    "name": "Phil Parry",
+    "line": "20+ years in UX, brand and design systems",
+    "email": "phil.parry@oganiko.com",
+    "site": "oganiko.com"
+  },
+  "recipe": {
+    "idea": "A listing is found through search and chosen through images, so show how buyer searches become the title, the bullets, the image set and the A+ content.",
+    "task": "A seller decides whether to talk to Phil about product research and listings for Amazon.",
+    "signature": "Search in, listing out: pick a product, watch its search terms become a title and bullets, an image set and A+ content.",
+    "simple": "No ranking promises, no sales numbers, no health claims. Real products, one listing-parts explorer, the evidence and a clear next step.",
+    "references": [
+      "relume.io (staged input-to-output pipeline)",
+      "tasteskill.dev (before/after toggle feel, measured motion)"
+    ]
+  },
+  "hero": {
+    "title": "Amazon product research and listings",
+    "lede": "For sellers on Amazon: I research the product, the niche and how buyers search, then write the listing and design the images and A+ content, for each marketplace you sell in.",
+    "actions": [
+      {
+        "label": "Book a 30-minute call",
+        "href": "mailto:phil.parry@oganiko.com?subject=Amazon%20listings"
+      },
+      {
+        "label": "See how it works",
+        "href": "#transform"
+      }
+    ],
+    "proof": [
+      "**Sold on Amazon** under my own brand",
+      "**20+ years** in UX and design systems"
+    ],
+    "media": {
+      "src": "../../assets/img/amz-honey-hero.jpg",
+      "ratio": "1 / 1",
+      "alt": "Four images from a real Amazon listing for OGANIKO Raw Spanish Mountain Honey: the main jar shot, taste notes against a mountain backdrop, ways to use it, and honey being poured",
+      "caption": "Real listing images: OGANIKO Raw Spanish Mountain Honey"
+    }
+  },
+  "sections": [
+    {
+      "type": "problem",
+      "id": "problem",
+      "title": "Most listings are written for the algorithm, not the buyer.",
+      "intro": "A listing has seconds to be found and seconds more to be chosen. Most lose the buyer in the title or the first image.",
+      "beforeLabel": "The usual listing",
+      "afterLabel": "Written to be chosen",
+      "rows": [
+        {
+          "before": "A title stuffed with keywords nobody reads.",
+          "after": "A title written for the buyer, with the search terms where they belong."
+        },
+        {
+          "before": "Five bullets that repeat the title.",
+          "after": "Five bullets, each answering one buyer question."
+        },
+        {
+          "before": "Phone photos on a kitchen table.",
+          "after": "A designed image set: main shot, details, scale and use."
+        },
+        {
+          "before": "Claims Amazon removes, or the law doesn't allow.",
+          "after": "Copy that stays within the rules and the claims you can prove."
+        },
+        {
+          "before": "One listing, copied into every marketplace.",
+          "after": "Each marketplace with its own copy, in its own language."
+        }
+      ]
+    },
+    {
+      "type": "transform",
+      "id": "transform",
+      "surface": true,
+      "title": "Search in, listing out.",
+      "intro": "Pick one of three real OGANIKO honeys and watch the work: how buyers search becomes the title and bullets, then the image set, then the A+ content below the fold.",
+      "inputsLabel": "OGANIKO products",
+      "simulated": "Real products and listing images · listing text written for this page",
+      "stages": [
+        {
+          "label": "Search terms",
+          "view": "table",
+          "key": "search"
+        },
+        {
+          "label": "Title and bullets",
+          "view": "listing",
+          "key": "listing"
+        },
+        {
+          "label": "Image set",
+          "view": "gallery",
+          "key": "images"
+        },
+        {
+          "label": "A+ content",
+          "view": "cards",
+          "key": "aplus"
+        }
+      ],
+      "inputs": [
+        {
+          "name": "Mountain Honey",
+          "kind": "Amazon UK · 1 kg",
+          "search": {
+            "caption": "How buyers search, and where each term goes",
+            "cols": [
+              "Search term",
+              "What the buyer wants",
+              "Goes in"
+            ],
+            "rows": [
+              [
+                "raw honey",
+                "Unprocessed honey",
+                "Title"
+              ],
+              [
+                "spanish honey",
+                "A clear origin",
+                "Title"
+              ],
+              [
+                "mountain honey 1kg",
+                "Type and size",
+                "Title"
+              ],
+              [
+                "honeydew honey",
+                "A specific variety",
+                "Bullets"
+              ],
+              [
+                "unpasteurised honey",
+                "Proof of processing",
+                "Bullets"
+              ],
+              [
+                "dark honey",
+                "Colour and taste",
+                "Backend terms"
+              ]
+            ],
+            "note": "Terms that don't fit naturally go in the backend search terms, never stuffed into the title."
+          },
+          "listing": {
+            "title": "OGANIKO Raw Spanish Mountain Honey 1 kg – Unpasteurised, Cold-Extracted, Unfiltered Dark Amber Honey from Hives Above 800 m",
+            "bullets": [
+              "HIGH-ALTITUDE ORIGIN – from hives above 800 metres in Spain's mountain ranges.",
+              "RAW AND UNFILTERED – cold-extracted and gravity-filtered, never pasteurised.",
+              "DARK AMBER TASTE – smooth and full-bodied, with caramel, malt and nutty notes.",
+              "HARVESTED LATE – July to September, with half the honey left for the bees.",
+              "1 KG GLASS JAR – naturally runny; slow crystallisation is a sign it's raw."
+            ],
+            "note": "No health claims: for food sold in the EU, only approved health claims are allowed."
+          },
+          "images": {
+            "caption": "Four of the real listing images",
+            "items": [
+              {
+                "label": "Main image",
+                "src": "../../assets/img/amz-honey-main.jpg",
+                "alt": "The OGANIKO honey jar on white with a honey dipper"
+              },
+              {
+                "label": "Taste notes",
+                "src": "../../assets/img/amz-honey-taste.jpg",
+                "alt": "The jar on a tree stump against Spanish mountains, with taste notes"
+              },
+              {
+                "label": "Ways to use it",
+                "src": "../../assets/img/amz-honey-uses.jpg",
+                "alt": "Breakfast, drinks and cooking scenes with the jar"
+              },
+              {
+                "label": "In use",
+                "src": "../../assets/img/amz-honey-life.jpg",
+                "alt": "The jar beside a cup of tea"
+              }
+            ],
+            "note": "One visual system across the set: the jar, the black-and-green banners, the honeycomb."
+          },
+          "aplus": [
+            {
+              "name": "Brand story",
+              "note": "OGANIKO: a family business with English–Polish roots"
+            },
+            {
+              "name": "From the mountains",
+              "note": "The ranges and altitudes the honey comes from"
+            },
+            {
+              "name": "How it's made",
+              "note": "Cold extraction, gravity filtering, late harvest"
+            },
+            {
+              "name": "Taste guide",
+              "note": "Mountain, wildflower and honeydew, side by side"
+            },
+            {
+              "name": "Ways to use it",
+              "note": "Breakfast, drinks, cooking"
+            }
+          ]
+        },
+        {
+          "name": "Wildflower Honey",
+          "kind": "Amazon Germany · 1 kg",
+          "search": {
+            "caption": "Real research for Amazon.de: monthly searches, April 2025",
+            "cols": [
+              "Search term",
+              "Monthly searches",
+              "Goes in"
+            ],
+            "rows": [
+              [
+                "rohhonig",
+                "2,655",
+                "Title"
+              ],
+              [
+                "roher honig",
+                "1,268",
+                "Title"
+              ],
+              [
+                "blütenhonig",
+                "≈250",
+                "Title"
+              ],
+              [
+                "honig 1kg",
+                "≈250",
+                "Title"
+              ],
+              [
+                "imker honig",
+                "461",
+                "Bullets"
+              ],
+              [
+                "honig flüssig",
+                "≈250",
+                "Bullets"
+              ],
+              [
+                "honig",
+                "22,537",
+                "Not targeted: too broad"
+              ]
+            ],
+            "note": "From my keyword research against eleven competing listings. The biggest term isn't always the right one: “honig” scores low on relevance for a raw wildflower honey."
+          },
+          "listing": {
+            "title": "OGANIKO Roher Spanischer Wildblumenhonig 1 kg – Rohhonig, kaltgeschleudert, ungefiltert und flüssig, aus Spaniens Bergregionen",
+            "bullets": [
+              "ROHHONIG – kaltgeschleudert, nur durch Schwerkraft gefiltert, nie pasteurisiert.",
+              "AUS SPANIENS BERGEN – von Bienenvölkern über 800 Metern Höhe.",
+              "MILD UND BLUMIG – warm bernsteinfarben, samtig, mit dem Duft von Bergwiesen.",
+              "SPÄTE ERNTE – Juli bis September; die Hälfte bleibt für die Bienen.",
+              "1-KG-GLAS – natürlich flüssig; langsames Kristallisieren zeigt, dass er roh ist."
+            ],
+            "note": "Written in German for Amazon.de, not translated word for word. English: Raw Spanish Wildflower Honey 1 kg – raw, cold-extracted, unfiltered and runny, from Spain's mountain regions."
+          },
+          "images": {
+            "caption": "Four of the real listing images (German main image)",
+            "items": [
+              {
+                "label": "Main image",
+                "src": "../../assets/img/amz-wfh-main.jpg",
+                "alt": "Main image on white"
+              },
+              {
+                "label": "Taste notes",
+                "src": "../../assets/img/amz-wfh-taste.jpg",
+                "alt": "Taste notes against a mountain backdrop"
+              },
+              {
+                "label": "Ways to use it",
+                "src": "../../assets/img/amz-wfh-uses.jpg",
+                "alt": "Breakfast, drinks and cooking"
+              },
+              {
+                "label": "In use",
+                "src": "../../assets/img/amz-wfh-life.jpg",
+                "alt": "The honey in use"
+              }
+            ],
+            "note": "The same visual system as the mountain honey, so the range reads as one brand."
+          },
+          "aplus": [
+            {
+              "name": "Brand story",
+              "note": "OGANIKO, in German, for Amazon.de"
+            },
+            {
+              "name": "Blütenhonig aus den Bergen",
+              "note": "Where the wildflowers grow"
+            },
+            {
+              "name": "Roh und kaltgeschleudert",
+              "note": "What raw means, step by step"
+            },
+            {
+              "name": "Die Honig-Familie",
+              "note": "Mountain, wildflower and creamed, compared"
+            }
+          ]
+        },
+        {
+          "name": "Creamed Wildflower Honey",
+          "kind": "Amazon UK · 1.2 kg",
+          "search": {
+            "caption": "How buyers search, and where each term goes",
+            "cols": [
+              "Search term",
+              "What the buyer wants",
+              "Goes in"
+            ],
+            "rows": [
+              [
+                "creamed honey",
+                "A spreadable texture",
+                "Title"
+              ],
+              [
+                "raw honey 1.2kg",
+                "Raw, and a big jar",
+                "Title"
+              ],
+              [
+                "set honey",
+                "A British synonym",
+                "Bullets"
+              ],
+              [
+                "spreadable honey",
+                "Easy on toast",
+                "Bullets"
+              ],
+              [
+                "wildflower honey",
+                "The floral source",
+                "Title"
+              ],
+              [
+                "whipped honey",
+                "Another synonym",
+                "Backend terms"
+              ]
+            ],
+            "note": "Synonyms buyers use for the same thing go in the bullets and backend terms, not all in the title."
+          },
+          "listing": {
+            "title": "OGANIKO Creamy Wildflower Honey 1.2 kg – Raw, Unpasteurised Creamed Honey, Smooth and Spreadable, Packed in Poland",
+            "bullets": [
+              "CREAMY AND SPREADABLE – silky smooth, made for toast and baking.",
+              "RAW WILDFLOWER HONEY – never pasteurised, from Spanish mountain meadows.",
+              "GENTLE TASTE – golden, with hints of vanilla, light caramel and fruit.",
+              "1.2 KG JAR – our largest size, packed in Poland by OGANIKO.",
+              "CREAMED, NOT ADDED TO – just honey, gently stirred to a soft set."
+            ],
+            "note": "Each bullet answers one question a buyer asks before choosing a creamed honey."
+          },
+          "images": {
+            "caption": "Four of the real listing images",
+            "items": [
+              {
+                "label": "Main image",
+                "src": "../../assets/img/amz-wfc-main.jpg",
+                "alt": "Main image on white"
+              },
+              {
+                "label": "Taste notes",
+                "src": "../../assets/img/amz-wfc-taste.jpg",
+                "alt": "Taste notes against a mountain backdrop"
+              },
+              {
+                "label": "Ways to use it",
+                "src": "../../assets/img/amz-wfc-uses.jpg",
+                "alt": "Breakfast, drinks and cooking"
+              },
+              {
+                "label": "In use",
+                "src": "../../assets/img/amz-wfc-life.jpg",
+                "alt": "The honey in use"
+              }
+            ],
+            "note": "A paler palette for a creamed honey, inside the same system."
+          },
+          "aplus": [
+            {
+              "name": "Brand story",
+              "note": "OGANIKO: a family business with English–Polish roots"
+            },
+            {
+              "name": "Why creamed",
+              "note": "Soft set, no drips, easy to spread"
+            },
+            {
+              "name": "How to use it",
+              "note": "Toast, porridge, baking"
+            },
+            {
+              "name": "Compare the range",
+              "note": "Runny or creamed, mountain or wildflower"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "detail",
+      "id": "detail",
+      "nav": "Listing parts",
+      "title": "Every listing has the same parts.",
+      "intro": "Click a part to see what goes in it and the rules that apply.",
+      "pageLabel": "The parts of an Amazon listing",
+      "blocks": [
+        {
+          "name": "Title",
+          "summary": "Found in search",
+          "fields": [
+            {
+              "k": "Length",
+              "v": "About 200 characters (varies by category)"
+            },
+            {
+              "k": "Order",
+              "v": "Brand, product, key features, size"
+            }
+          ],
+          "note": "Written for the buyer, with the main search terms where they read naturally."
+        },
+        {
+          "name": "Bullets",
+          "summary": "Why choose this one",
+          "fields": [
+            {
+              "k": "Count",
+              "v": "Five"
+            },
+            {
+              "k": "Each",
+              "v": "One buyer question, answered"
+            }
+          ],
+          "note": "Lead with a short capitalised summary, then the detail."
+        },
+        {
+          "name": "Images",
+          "summary": "Chosen on sight",
+          "fields": [
+            {
+              "k": "Main image",
+              "v": "Pure white background, product fills the frame"
+            },
+            {
+              "k": "Others",
+              "v": "Details, scale, use, comparison"
+            }
+          ],
+          "note": "Designed as one set, so the listing looks like one brand."
+        },
+        {
+          "name": "A+ content",
+          "summary": "The brand story below the fold",
+          "fields": [
+            {
+              "k": "Who",
+              "v": "Brand-registered sellers"
+            },
+            {
+              "k": "Modules",
+              "v": "Banners, comparisons, text and images"
+            }
+          ],
+          "note": "Answers the questions that would otherwise end in a return."
+        },
+        {
+          "name": "Backend search terms",
+          "summary": "Found without clutter",
+          "fields": [
+            {
+              "k": "Limit",
+              "v": "About 250 bytes"
+            },
+            {
+              "k": "Rule",
+              "v": "No repeats of the title, no competitor brands"
+            }
+          ],
+          "note": "Synonyms and spellings that don't belong in the title."
+        }
+      ]
+    },
+    {
+      "type": "evidence",
+      "id": "evidence",
+      "title": "Why trust me with it.",
+      "intro": "I've sold on Amazon myself, so I know the work from the seller's side.",
+      "items": [
+        {
+          "claim": "I've sold on Amazon myself",
+          "proof": "Under my own brand, OGANIKO: teas, supplements and Spanish honeys, on Amazon UK and Amazon Germany.",
+          "source": "Phil Parry, OGANIKO"
+        },
+        {
+          "claim": "Research before writing",
+          "proof": "Keyword and competitor research for each marketplace, like the German search terms in the demonstration above.",
+          "source": "OGANIKO honey research, Amazon Germany"
+        },
+        {
+          "claim": "Images designed as one set",
+          "proof": "The honey listings on this page share one visual system across products and languages, so the range reads as one brand.",
+          "source": "OGANIKO honey range"
+        },
+        {
+          "claim": "Listings for each marketplace",
+          "proof": "I write in English, German and French, with Polish checked by a native speaker. Each marketplace gets its own copy, not a straight translation.",
+          "source": "Phil Parry, OGANIKO Digital"
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "id": "process",
+      "label": "From research to a live listing",
+      "title": "From search to sale.",
+      "intro": "How I build a listing: research how buyers search, agree the copy and the images with you, then set it up in Seller Central.",
+      "groupLabel": "↺ Review with you until it's right",
+      "steps": [
+        {
+          "title": "Research",
+          "text": "The product, the niche, the competition and how buyers search."
+        },
+        {
+          "title": "Listing copy",
+          "text": "Title, bullets, description and backend terms.",
+          "group": true
+        },
+        {
+          "title": "Image set and A+",
+          "text": "The brief, the images and the A+ modules, as one set.",
+          "group": true
+        },
+        {
+          "title": "Set up",
+          "text": "Built in Seller Central for each marketplace."
+        },
+        {
+          "title": "Live listing",
+          "text": "Found in search, chosen on sight.",
+          "end": true
+        }
+      ],
+      "alt": {
+        "label": "The usual route",
+        "steps": [
+          "Copy a competitor's title",
+          "Add phone photos",
+          "Hope it ranks"
+        ],
+        "note": "A listing is a small brand page; it deserves the same care as a website."
+      }
+    },
+    {
+      "type": "offer",
+      "id": "offer",
+      "title": "What you'd get.",
+      "intro": "Research and listings for sellers who want to be found and chosen.",
+      "items": [
+        {
+          "title": "Product research",
+          "text": "The product, its niche, the competition and the buyer, before you list."
+        },
+        {
+          "title": "Keyword research",
+          "text": "How buyers search in each marketplace, and which terms to target."
+        },
+        {
+          "title": "Title, bullets and description",
+          "text": "Written for the buyer, with backend search terms."
+        },
+        {
+          "title": "An image set and A+ content",
+          "text": "Brief, images and modules, designed as one set."
+        }
+      ],
+      "actions": [
+        {
+          "label": "Book a 30-minute call",
+          "href": "mailto:phil.parry@oganiko.com?subject=Amazon%20listings"
+        },
+        {
+          "label": "Email your listing link",
+          "href": "mailto:phil.parry@oganiko.com"
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "id": "faq",
+      "title": "Questions.",
+      "items": [
+        {
+          "q": "Can you make my listing rank first?",
+          "a": "Nobody can promise that. I write for the buyer and place the search terms where Amazon reads them, which is what you control."
+        },
+        {
+          "q": "Can you help me choose what to sell?",
+          "a": "Yes. Product research looks at the niche, the competition and the buyers before you commit to stock or listings."
+        },
+        {
+          "q": "Do you make the images too?",
+          "a": "Yes: the brief, the art direction and the finished image set, including the A+ modules."
+        },
+        {
+          "q": "Which marketplaces?",
+          "a": "Amazon UK, Germany, France and Poland. I write in English, German and French; Polish is checked by a native speaker."
+        },
+        {
+          "q": "What about health or performance claims?",
+          "a": "I keep copy to what you can prove and what the rules allow. For food in the EU, only approved health claims can be used."
+        }
+      ]
+    },
+    {
+      "type": "close",
+      "id": "close",
+      "lines": [
+        "Your product,",
+        "found and chosen."
+      ]
+    }
+  ],
+  "pager": {
+    "prev": {
+      "href": "../design-systems/",
+      "title": "Design systems"
+    }
+  },
+  "capabilities": [
+    {
+      "slug": "wordpress-builds",
+      "title": "WordPress builds",
+      "href": "../wordpress-builds/"
+    },
+    {
+      "slug": "shopify-stores",
+      "title": "Shopify stores",
+      "href": "../shopify-stores/"
+    },
+    {
+      "slug": "design-systems",
+      "title": "Design systems",
+      "href": "../design-systems/"
+    },
+    {
+      "slug": "amazon-listings",
+      "title": "Amazon research and listings",
+      "href": "../amazon-listings/"
+    }
+  ]
+}

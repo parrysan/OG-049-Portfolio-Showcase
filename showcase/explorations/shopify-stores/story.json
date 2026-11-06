@@ -1,0 +1,900 @@
+{
+  "slug": "shopify-stores",
+  "pageTitle": "Shopify stores built to run · OGANIKO",
+  "description": "A capability demonstration: how Phil Parry designs and builds Shopify stores, from one catalogue spreadsheet to a product page and checkout.",
+  "output": "index.html",
+  "status": {
+    "label": "Capability demonstration",
+    "real": false
+  },
+  "brandLine": "Shopify stores",
+  "footer": "Phil Parry · OGANIKO Digital",
+  "theme": {
+    "accent": "#109200",
+    "deep": "#0F3E09",
+    "tint": "#EDF6EC",
+    "surface": "#F6FAF5",
+    "line": "#DCEBD9",
+    "darkest": "#0A2207"
+  },
+  "fonts": [
+    {
+      "family": "Open Sans",
+      "src": "../../assets/fonts/open-sans-latin-300-normal.woff2",
+      "weight": "300"
+    },
+    {
+      "family": "Open Sans",
+      "src": "../../assets/fonts/open-sans-latin-400-normal.woff2",
+      "weight": "400"
+    },
+    {
+      "family": "Open Sans",
+      "src": "../../assets/fonts/open-sans-latin-600-normal.woff2",
+      "weight": "600"
+    },
+    {
+      "family": "Open Sans",
+      "src": "../../assets/fonts/open-sans-latin-700-normal.woff2",
+      "weight": "700"
+    }
+  ],
+  "contact": {
+    "name": "Phil Parry",
+    "line": "20+ years in UX, brand and design systems",
+    "email": "phil.parry@oganiko.com",
+    "site": "oganiko.com"
+  },
+  "recipe": {
+    "idea": "A shop is only as good as its catalogue, so show one spreadsheet becoming collections, a product page and a checkout.",
+    "task": "A shop owner decides whether to talk to Phil about a Shopify store that stays easy to run.",
+    "signature": "Catalogue in, checkout out: pick a shop, watch its spreadsheet become collections, a product page with real buying choices, and a checkout.",
+    "simple": "No app list, no conversion-rate promises, no testimonials. One demonstration, one product explorer, the evidence and a clear next step.",
+    "references": [
+      "relume.io (staged input-to-output pipeline)",
+      "tasteskill.dev (before/after toggle feel, measured motion)"
+    ]
+  },
+  "nav": [
+    {
+      "label": "How it works",
+      "href": "#transform"
+    },
+    {
+      "label": "Why me",
+      "href": "#evidence"
+    },
+    {
+      "label": "Questions",
+      "href": "#faq"
+    }
+  ],
+  "hero": {
+    "title": "Shopify stores that stay easy to run",
+    "lede": "I design and build Shopify stores from the catalogue up. Your products live in one spreadsheet, nothing goes live by accident, and the theme carries only what your shop needs.",
+    "actions": [
+      {
+        "label": "Book a 30-minute call",
+        "href": "mailto:phil.parry@oganiko.com?subject=Shopify%20store"
+      },
+      {
+        "label": "See how it works",
+        "href": "#transform"
+      }
+    ],
+    "proof": [
+      "**Live** Shopify build for a biotech supplier",
+      "**20+ years** in UX and design systems"
+    ],
+    "media": {
+      "src": "../../assets/img/shopify-honey-storefront.jpg",
+      "alt": "Concept storefront for OGANIKO Raw Spanish Mountain Honey: a banner reading 'Honey from Spain's high mountains' beside a photo of the jar, and two jar sizes with prices",
+      "caption": "Concept storefront: OGANIKO Spanish mountain honey"
+    }
+  },
+  "sections": [
+    {
+      "type": "problem",
+      "id": "problem",
+      "title": "Most shops are run around their store, not by it.",
+      "intro": "The store looks fine on launch day. Then every new product is an afternoon in the admin, and every theme update is a gamble.",
+      "beforeLabel": "The usual shop",
+      "afterLabel": "Built to run",
+      "rows": [
+        {
+          "before": "A bought theme, plus an app for every gap.",
+          "after": "A theme built from an agreed prototype, with only what your shop needs."
+        },
+        {
+          "before": "Products typed into the admin one at a time.",
+          "after": "The whole catalogue kept in one spreadsheet and pushed to the store."
+        },
+        {
+          "before": "A half-finished product goes live by accident.",
+          "after": "Every product moves Draft, Ready, Live, so nothing slips out."
+        },
+        {
+          "before": "Every visitor sees the same prices.",
+          "after": "Business buyers can get their own prices, documents and terms."
+        },
+        {
+          "before": "A theme update breaks the homepage.",
+          "after": "Changes ship as numbered releases you can roll back."
+        }
+      ]
+    },
+    {
+      "type": "transform",
+      "id": "transform",
+      "surface": true,
+      "title": "Catalogue in, checkout out.",
+      "intro": "Pick one of three example shops and watch the build: the spreadsheet becomes collections, a collection becomes a product page with real buying choices, and the basket becomes a checkout.",
+      "inputsLabel": "Example shops (fictional)",
+      "simulated": "Simulated demonstration · fictional shops",
+      "stages": [
+        {
+          "label": "Catalogue",
+          "view": "table",
+          "key": "catalogue"
+        },
+        {
+          "label": "Collections",
+          "view": "tree",
+          "key": "collections"
+        },
+        {
+          "label": "Product page",
+          "view": "product",
+          "key": "product"
+        },
+        {
+          "label": "Checkout",
+          "view": "checkout",
+          "key": "checkout"
+        }
+      ],
+      "inputs": [
+        {
+          "name": "Kora Ceramics",
+          "kind": "Handmade tableware",
+          "catalogue": {
+            "caption": "kora-catalogue · one sheet, every product",
+            "cols": [
+              "SKU",
+              "Product",
+              "Glaze",
+              "Size",
+              "Price",
+              "Stock",
+              "Status"
+            ],
+            "rows": [
+              [
+                "KO-BW-14C",
+                "Breakfast bowl",
+                "Celadon",
+                "14 cm",
+                "€28",
+                "12",
+                "Live"
+              ],
+              [
+                "KO-BW-18C",
+                "Breakfast bowl",
+                "Celadon",
+                "18 cm",
+                "€34",
+                "7",
+                "Live"
+              ],
+              [
+                "KO-BW-14I",
+                "Breakfast bowl",
+                "Iron",
+                "14 cm",
+                "€28",
+                "9",
+                "Live"
+              ],
+              [
+                "KO-PL-26C",
+                "Dinner plate",
+                "Celadon",
+                "26 cm",
+                "€34",
+                "15",
+                "Ready"
+              ],
+              [
+                "KO-MG-03K",
+                "Mug",
+                "Chalk",
+                "300 ml",
+                "€24",
+                "0",
+                "Draft"
+              ]
+            ],
+            "note": "The team edits the sheet; the store updates when a row is marked Ready."
+          },
+          "collections": [
+            {
+              "page": "Tableware",
+              "note": "Automatic: every bowl, plate and mug"
+            },
+            {
+              "page": "Celadon",
+              "note": "Automatic: glaze is Celadon"
+            },
+            {
+              "page": "New this month",
+              "note": "Automatic: added in the last 30 days"
+            },
+            {
+              "page": "Gift sets",
+              "note": "Picked by hand"
+            },
+            {
+              "page": "Seconds",
+              "note": "Picked by hand, small flaws, lower price"
+            }
+          ],
+          "product": {
+            "bg": "#F6F2EC",
+            "ink": "#2A2420",
+            "accent": "#3F6B5E",
+            "swatch": [
+              "#CFE0D4",
+              "#6E9583"
+            ],
+            "imageLabel": "Celadon glaze",
+            "crumb": "Tableware / Celadon",
+            "title": "Breakfast bowl",
+            "price": "€28",
+            "priceNote": "VAT included",
+            "options": [
+              {
+                "label": "Glaze",
+                "values": [
+                  "Celadon",
+                  "Iron",
+                  "Chalk"
+                ]
+              },
+              {
+                "label": "Size",
+                "values": [
+                  "14 cm",
+                  "18 cm"
+                ]
+              }
+            ],
+            "button": "Add to basket",
+            "notes": [
+              "Thrown by hand in Kraków",
+              "Dishwasher safe",
+              "Free EU shipping over €80"
+            ],
+            "imageAlt": "Celadon breakfast bowl, hand-thrown stoneware",
+            "image": "../../assets/img/shop-kora-bowl.jpg"
+          },
+          "checkout": {
+            "accent": "#3F6B5E",
+            "lines": [
+              {
+                "t": "Breakfast bowl × 2",
+                "d": "Celadon · 14 cm",
+                "v": "€56",
+                "c": "#A9C7B5"
+              },
+              {
+                "t": "Dinner plate × 1",
+                "d": "Celadon · 26 cm",
+                "v": "€34",
+                "c": "#8FB3A1"
+              }
+            ],
+            "rows": [
+              {
+                "k": "Shipping",
+                "v": "Free over €80"
+              },
+              {
+                "k": "VAT",
+                "v": "Included"
+              }
+            ],
+            "total": "€90",
+            "button": "Pay now",
+            "note": "Card, BLIK and Apple Pay"
+          }
+        },
+        {
+          "name": "Halde Tea",
+          "kind": "Loose-leaf tea, with subscriptions",
+          "catalogue": {
+            "caption": "halde-catalogue · one sheet, every product",
+            "cols": [
+              "SKU",
+              "Product",
+              "Origin",
+              "Pack",
+              "Price",
+              "Stock",
+              "Status"
+            ],
+            "rows": [
+              [
+                "HT-SEN-50",
+                "Sencha",
+                "Shizuoka",
+                "50 g",
+                "€14",
+                "40",
+                "Live"
+              ],
+              [
+                "HT-SEN-100",
+                "Sencha",
+                "Shizuoka",
+                "100 g",
+                "€25",
+                "28",
+                "Live"
+              ],
+              [
+                "HT-GEN-100",
+                "Genmaicha",
+                "Kagoshima",
+                "100 g",
+                "€18",
+                "33",
+                "Live"
+              ],
+              [
+                "HT-ASS-100",
+                "Assam",
+                "Assam",
+                "100 g",
+                "€16",
+                "21",
+                "Ready"
+              ],
+              [
+                "HT-KYU-01",
+                "Kyusu teapot",
+                "Tokoname",
+                "1 piece",
+                "€38",
+                "6",
+                "Live"
+              ]
+            ],
+            "note": "Harvest dates and brewing notes live in the same sheet."
+          },
+          "collections": [
+            {
+              "page": "Green teas",
+              "note": "Automatic: type is green"
+            },
+            {
+              "page": "Black teas",
+              "note": "Automatic: type is black"
+            },
+            {
+              "page": "Monthly tea",
+              "note": "Products sold as a subscription"
+            },
+            {
+              "page": "Brewing",
+              "note": "Teapots and tools"
+            },
+            {
+              "page": "Gift boxes",
+              "note": "Picked by hand for the season"
+            }
+          ],
+          "product": {
+            "bg": "#F3F5EC",
+            "ink": "#22261C",
+            "accent": "#55703A",
+            "swatch": [
+              "#DDE8C4",
+              "#7E9B55"
+            ],
+            "imageLabel": "Sencha · spring harvest",
+            "crumb": "Green teas",
+            "title": "Sencha, Shizuoka",
+            "price": "€25",
+            "priceNote": "100 g · VAT included",
+            "options": [
+              {
+                "label": "Pack",
+                "values": [
+                  "50 g",
+                  "100 g",
+                  "250 g"
+                ],
+                "sel": 1
+              },
+              {
+                "label": "Buy",
+                "values": [
+                  "Once",
+                  "Every month, 10% off"
+                ]
+              }
+            ],
+            "button": "Add to basket",
+            "notes": [
+              "Harvest date on every pack",
+              "Shipped within two days",
+              "Skip or cancel a subscription any time"
+            ],
+            "imageAlt": "Sencha loose-leaf tea in a resealable pouch with a small dish of leaves",
+            "image": "../../assets/img/shop-halde-sencha.jpg"
+          },
+          "checkout": {
+            "accent": "#55703A",
+            "lines": [
+              {
+                "t": "Sencha, 100 g",
+                "d": "Every month, 10% off",
+                "v": "€22.50",
+                "c": "#C5D6A4"
+              },
+              {
+                "t": "Kyusu teapot",
+                "d": "Tokoname",
+                "v": "€38",
+                "c": "#B98B6A"
+              }
+            ],
+            "rows": [
+              {
+                "k": "Shipping",
+                "v": "€4.90"
+              },
+              {
+                "k": "VAT",
+                "v": "Included"
+              }
+            ],
+            "total": "€65.40",
+            "button": "Pay now",
+            "note": "The subscription renews monthly; the teapot ships once."
+          }
+        },
+        {
+          "name": "Fieldnote Lab Supply",
+          "kind": "Lab consumables, for business buyers",
+          "catalogue": {
+            "caption": "fieldnote-catalogue · one sheet, every product",
+            "cols": [
+              "SKU",
+              "Product",
+              "Grade",
+              "Pack",
+              "Price list",
+              "Documents",
+              "Status"
+            ],
+            "rows": [
+              [
+                "FN-TIP-200",
+                "Filter tips, 200 µl",
+                "Sterile",
+                "960",
+                "Trade A",
+                "CoA, SDS",
+                "Live"
+              ],
+              [
+                "FN-TIP-1000",
+                "Filter tips, 1000 µl",
+                "Sterile",
+                "960",
+                "Trade A",
+                "CoA, SDS",
+                "Live"
+              ],
+              [
+                "FN-TUB-15",
+                "Centrifuge tubes, 15 ml",
+                "Sterile",
+                "500",
+                "Trade A",
+                "CoA",
+                "Live"
+              ],
+              [
+                "FN-BUF-PBS",
+                "PBS buffer, 1 l",
+                "Molecular",
+                "6",
+                "Trade B",
+                "CoA, SDS",
+                "Ready"
+              ],
+              [
+                "FN-GLV-M",
+                "Nitrile gloves, M",
+                "Exam",
+                "1,000",
+                "Trade A",
+                "SDS",
+                "Draft"
+              ]
+            ],
+            "note": "Each row says which price list applies and which documents must be attached before it can go live."
+          },
+          "collections": [
+            {
+              "page": "Pipette tips",
+              "note": "Automatic: category is tips"
+            },
+            {
+              "page": "Tubes",
+              "note": "Automatic: category is tubes"
+            },
+            {
+              "page": "Buffers",
+              "note": "Automatic: category is buffers"
+            },
+            {
+              "page": "Reorder list",
+              "note": "Each account's past orders"
+            },
+            {
+              "page": "Approved accounts only",
+              "note": "Hidden until a business account is approved"
+            }
+          ],
+          "product": {
+            "bg": "#F2F5F8",
+            "ink": "#1B2530",
+            "accent": "#2C5A85",
+            "swatch": [
+              "#DCE6F0",
+              "#7C9CBC"
+            ],
+            "imageLabel": "Sterile · racked",
+            "crumb": "Pipette tips",
+            "title": "Filter tips, 200 µl",
+            "gated": "Prices and ordering open to approved business accounts. Sign in, or apply for an account.",
+            "options": [
+              {
+                "label": "Pack",
+                "values": [
+                  "96",
+                  "960",
+                  "9,600"
+                ],
+                "sel": 1
+              }
+            ],
+            "button": "Sign in for pricing",
+            "notes": [
+              "Certificate of analysis for every batch",
+              "Safety data sheet to download",
+              "Delivery to labs across the EU"
+            ],
+            "imageAlt": "A rack of sterile filter pipette tips",
+            "image": "../../assets/img/shop-fieldnote-tips.jpg"
+          },
+          "checkout": {
+            "accent": "#2C5A85",
+            "lines": [
+              {
+                "t": "Filter tips, 200 µl × 10",
+                "d": "960 per pack · Trade A",
+                "v": "€684",
+                "c": "#C9D8E6"
+              },
+              {
+                "t": "PBS buffer × 4",
+                "d": "6 × 1 l · Trade B",
+                "v": "€600",
+                "c": "#A8BFD6"
+              }
+            ],
+            "rows": [
+              {
+                "k": "Payment",
+                "v": "Invoice, 30 days"
+              },
+              {
+                "k": "Purchase order",
+                "v": "PO-2026-0412"
+              },
+              {
+                "k": "Shipping",
+                "v": "Included"
+              }
+            ],
+            "total": "€1,284",
+            "button": "Place order on account",
+            "note": "Business accounts get their own price lists and payment terms."
+          }
+        }
+      ]
+    },
+    {
+      "type": "detail",
+      "id": "detail",
+      "title": "Every product is a record your team controls.",
+      "intro": "Click a part of a product to see what your team sets and what the store does with it.",
+      "pageLabel": "Example product: Kora breakfast bowl",
+      "blocks": [
+        {
+          "name": "Title and story",
+          "summary": "What the customer reads first",
+          "fields": [
+            {
+              "k": "Title",
+              "v": "Breakfast bowl"
+            },
+            {
+              "k": "Short description",
+              "v": "Thrown by hand, glazed in small batches."
+            },
+            {
+              "k": "Care",
+              "v": "Dishwasher safe"
+            }
+          ],
+          "note": "Written once in the sheet; the theme sets the type and layout."
+        },
+        {
+          "name": "Options and variants",
+          "summary": "The buying choices",
+          "fields": [
+            {
+              "k": "Glaze",
+              "v": "Celadon, Iron, Chalk"
+            },
+            {
+              "k": "Size",
+              "v": "14 cm, 18 cm"
+            },
+            {
+              "k": "Price per size",
+              "v": "€28, €34"
+            },
+            {
+              "k": "Stock",
+              "v": "Per variant, from the sheet"
+            }
+          ],
+          "note": "Six variants from two short lists, each with its own stock and price."
+        },
+        {
+          "name": "Specs and documents",
+          "summary": "The details buyers check",
+          "fields": [
+            {
+              "k": "Diameter",
+              "v": "14 cm"
+            },
+            {
+              "k": "Weight",
+              "v": "420 g"
+            },
+            {
+              "k": "Care sheet",
+              "v": "kora-care.pdf"
+            }
+          ],
+          "note": "Stored as structured fields, so filters and comparison tables read the same values."
+        },
+        {
+          "name": "Status",
+          "summary": "Draft, Ready, Live",
+          "fields": [
+            {
+              "k": "Status",
+              "v": "Ready"
+            },
+            {
+              "k": "Missing",
+              "v": "Nothing"
+            },
+            {
+              "k": "Goes live",
+              "v": "On the next push"
+            }
+          ],
+          "note": "A product with missing data stays in Draft and can't reach the store."
+        }
+      ],
+      "nav": "Your products"
+    },
+    {
+      "type": "evidence",
+      "id": "evidence",
+      "title": "Why trust me with it.",
+      "intro": "This isn't a sketch of how it might work. It's how I run a live Shopify build today.",
+      "items": [
+        {
+          "claim": "A biotech supplier's whole store, built from nothing",
+          "proof": "Design system, customer personas, a custom theme and a catalogue manager for STR Technologies, a vaccine-adjuvant supplier selling to research buyers. Live as a prototype.",
+          "source": "The [STR case study](https://oganiko.com/work/str/) on oganiko.com"
+        },
+        {
+          "claim": "One spreadsheet runs the catalogue",
+          "proof": "Products come from a single sheet through an admin layer with a Draft-to-Live step, so the person managing them never touches Shopify's raw backend and nothing goes live by accident.",
+          "source": "The [STR case study](https://oganiko.com/work/str/) on oganiko.com"
+        },
+        {
+          "claim": "Prices only for approved buyers",
+          "proof": "Pricing, documents and checkout stay hidden until Shopify confirms a buyer as an approved business. Every deploy needs a version tag, closer to a software release than a theme tweak.",
+          "source": "The [STR case study](https://oganiko.com/work/str/) on oganiko.com"
+        },
+        {
+          "claim": "I've built and sold my own product brand",
+          "proof": "OGANIKO Raw Spanish Mountain Honey: I researched the niche and the buyer, built the brand, the packaging and the listings, and sold it on Allegro and Amazon. Before design, I imported and sold goods at London markets.",
+          "source": "Phil Parry, OGANIKO"
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "id": "process",
+      "label": "From idea to live store",
+      "title": "From idea to store.",
+      "intro": "How I build a Shopify store today: a static prototype first, agreed with you, then built into Shopify through its API. You get exactly what was agreed, nothing more.",
+      "groupLabel": "↺ Review and change until it's right",
+      "steps": [
+        {
+          "title": "Research and catalogue",
+          "text": "Your product, its niche and who buys it, then your products in one sheet."
+        },
+        {
+          "title": "Static prototype",
+          "text": "The real pages, built from scratch. Quick to change, easy to click through.",
+          "group": true
+        },
+        {
+          "title": "Agreed",
+          "text": "You sign off a working prototype, not a picture of one.",
+          "group": true
+        },
+        {
+          "title": "Built through Shopify's API",
+          "text": "Shopify now opens its building blocks through an API, so I build only what the agreed pages need."
+        },
+        {
+          "title": "Live store",
+          "text": "Only what was agreed. Nothing to strip out, nothing to maintain that you don't use.",
+          "end": true
+        }
+      ],
+      "alt": {
+        "label": "The bought-theme route I started with",
+        "steps": [
+          "Buy a premium theme",
+          "Strip out what you don't need",
+          "Work around what it can't do"
+        ],
+        "note": "My first Shopify build used a theme that cost nearly $500. Building the prototype first has since proved faster and cheaper."
+      }
+    },
+    {
+      "type": "offer",
+      "id": "offer",
+      "title": "What you'd get.",
+      "intro": "A store you can run without calling a developer for every product.",
+      "items": [
+        {
+          "title": "Research first",
+          "text": "Your product, its niche and the people who buy it, written down as personas before anything is designed."
+        },
+        {
+          "title": "A brand identity, if you need one",
+          "text": "Name, logo, colours and type, built into the store's design system."
+        },
+        {
+          "title": "A custom Shopify theme",
+          "text": "Mapped from the prototype you agreed, with nothing extra to maintain."
+        },
+        {
+          "title": "A catalogue pipeline",
+          "text": "One sheet to the store, with a Draft, Ready, Live step."
+        },
+        {
+          "title": "Buyer rules",
+          "text": "Business accounts, price lists and documents where you need them."
+        },
+        {
+          "title": "Run it or hand it over",
+          "text": "I keep releasing changes, or train your team to."
+        }
+      ],
+      "actions": [
+        {
+          "label": "Book a 30-minute call",
+          "href": "mailto:phil.parry@oganiko.com?subject=Shopify%20store"
+        },
+        {
+          "label": "Email your product list",
+          "href": "mailto:phil.parry@oganiko.com"
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "id": "faq",
+      "title": "Questions.",
+      "items": [
+        {
+          "q": "Why not just buy a theme?",
+          "a": "I started that way: my first Shopify build used a premium theme that cost nearly $500. I've since found it faster and cheaper to build a static prototype from scratch, agree it with you, then build it into Shopify through its API and the Shopify CLI. That's far more flexible than bending a theme: you get what your shop needs, and nothing more."
+        },
+        {
+          "q": "Can you take over an existing Shopify store?",
+          "a": "Often, yes. I start by mapping the catalogue, the apps and what your team actually edits, then decide what to keep."
+        },
+        {
+          "q": "Do you work with business buyers?",
+          "a": "Yes. Approved accounts, their own price lists, documents and payment terms are part of how I build."
+        },
+        {
+          "q": "Can the shop sell in more than one language?",
+          "a": "Yes. I work in English, German, French and Polish, and plan the catalogue for every language from the start."
+        }
+      ]
+    },
+    {
+      "type": "close",
+      "id": "close",
+      "lines": [
+        "Your catalogue,",
+        "ready to sell."
+      ]
+    }
+  ],
+  "logo": "../../assets/ogl-master.svg",
+  "crumbs": [
+    {
+      "label": "Showcase",
+      "href": "../../"
+    },
+    {
+      "label": "Explorations",
+      "href": "../../#explorations"
+    }
+  ],
+  "pager": {
+    "prev": {
+      "href": "../wordpress-builds/",
+      "title": "WordPress builds"
+    },
+    "next": {
+      "href": "../design-systems/",
+      "title": "Design systems"
+    }
+  },
+  "logoReversed": "../../assets/oganiko-lockup-reversed.svg",
+  "capabilities": [
+    {
+      "slug": "wordpress-builds",
+      "title": "WordPress builds",
+      "href": "../wordpress-builds/"
+    },
+    {
+      "slug": "shopify-stores",
+      "title": "Shopify stores",
+      "href": "../shopify-stores/"
+    },
+    {
+      "slug": "design-systems",
+      "title": "Design systems",
+      "href": "../design-systems/"
+    },
+    {
+      "slug": "amazon-listings",
+      "title": "Amazon research and listings",
+      "href": "../amazon-listings/"
+    }
+  ]
+}

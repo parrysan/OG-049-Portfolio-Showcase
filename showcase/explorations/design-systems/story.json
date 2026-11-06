@@ -1,0 +1,920 @@
+{
+  "slug": "design-systems",
+  "pageTitle": "Design systems your teams use · OGANIKO",
+  "description": "A capability demonstration: how Phil Parry turns what your products already have into one design system of tokens, components and rules.",
+  "output": "index.html",
+  "status": {
+    "label": "Capability demonstration",
+    "real": false
+  },
+  "brandLine": "Design systems",
+  "logo": "../../assets/ogl-master.svg",
+  "crumbs": [
+    {
+      "label": "Showcase",
+      "href": "../../"
+    },
+    {
+      "label": "Explorations",
+      "href": "../../#explorations"
+    }
+  ],
+  "theme": {
+    "accent": "#109200",
+    "deep": "#0F3E09",
+    "tint": "#EDF6EC",
+    "surface": "#F6FAF5",
+    "line": "#DCEBD9",
+    "darkest": "#0A2207"
+  },
+  "fonts": [
+    {
+      "family": "Open Sans",
+      "src": "../../assets/fonts/open-sans-latin-300-normal.woff2",
+      "weight": "300"
+    },
+    {
+      "family": "Open Sans",
+      "src": "../../assets/fonts/open-sans-latin-400-normal.woff2",
+      "weight": "400"
+    },
+    {
+      "family": "Open Sans",
+      "src": "../../assets/fonts/open-sans-latin-600-normal.woff2",
+      "weight": "600"
+    },
+    {
+      "family": "Open Sans",
+      "src": "../../assets/fonts/open-sans-latin-700-normal.woff2",
+      "weight": "700"
+    }
+  ],
+  "contact": {
+    "name": "Phil Parry",
+    "line": "20+ years in UX, brand and design systems",
+    "email": "phil.parry@oganiko.com",
+    "site": "oganiko.com"
+  },
+  "recipe": {
+    "idea": "A design system earns its keep by replacing the mess teams already live with, so show the mess turning into tokens, a component and its rules.",
+    "task": "A product or brand lead decides whether to talk to Phil about a design system their teams will actually adopt.",
+    "signature": "Mess in, system out: pick an organisation, watch an inventory of what exists become tokens, one component and its rules.",
+    "simple": "No maturity models, no ROI claims, no logos wall. One demonstration, one documentation explorer, the evidence and a clear next step.",
+    "references": [
+      "relume.io (staged input-to-output pipeline)",
+      "tasteskill.dev (before/after toggle feel, measured motion)"
+    ]
+  },
+  "nav": [
+    {
+      "label": "How it works",
+      "href": "#transform"
+    },
+    {
+      "label": "Why me",
+      "href": "#evidence"
+    },
+    {
+      "label": "Questions",
+      "href": "#faq"
+    }
+  ],
+  "hero": {
+    "title": "Design systems your teams actually use",
+    "lede": "I build design systems from who your products serve and what they already have: one set of tokens, a library of components and the rules that go with them, shared by design and code.",
+    "actions": [
+      {
+        "label": "Book a 30-minute call",
+        "href": "mailto:phil.parry@oganiko.com?subject=Design%20system"
+      },
+      {
+        "label": "See how it works",
+        "href": "#transform"
+      }
+    ],
+    "proof": [
+      "**[design.orange.com](https://design.orange.com)**, built before anyone called it a design system",
+      "**20+ years** in UX and design systems"
+    ],
+    "media": {
+      "src": "../../assets/img/ds-str-components.jpg",
+      "alt": "The components page of a published client design system: buttons, trust badges and a product card",
+      "caption": "From a real build: a client design system's components"
+    }
+  },
+  "sections": [
+    {
+      "type": "problem",
+      "id": "problem",
+      "title": "Every team builds its own version.",
+      "intro": "Nobody sets out to have twenty-three buttons. It happens one deadline at a time, until a small change takes a week.",
+      "beforeLabel": "Without a system",
+      "afterLabel": "With a system",
+      "rows": [
+        {
+          "before": "The look follows the team's taste.",
+          "after": "The look follows researched personas: who uses it decides."
+        },
+        {
+          "before": "Every team picks its own shade of the brand colour.",
+          "after": "One colour token, used everywhere."
+        },
+        {
+          "before": "Twenty-three slightly different buttons.",
+          "after": "One button, three variants, each documented."
+        },
+        {
+          "before": "Designers redraw what developers already built.",
+          "after": "Design files and code use the same names."
+        },
+        {
+          "before": "A rebrand means touching every screen.",
+          "after": "Change the token, and every product follows."
+        }
+      ]
+    },
+    {
+      "type": "transform",
+      "id": "transform",
+      "surface": true,
+      "title": "Mess in, system out.",
+      "intro": "Pick one of three example organisations and watch the work: an inventory of what exists becomes tokens, the tokens become a component, and the component gets its rules.",
+      "inputsLabel": "Example organisations (fictional)",
+      "simulated": "Simulated demonstration · fictional organisations",
+      "stages": [
+        {
+          "label": "Inventory",
+          "view": "audit",
+          "key": "inventory"
+        },
+        {
+          "label": "Tokens",
+          "view": "tokens",
+          "key": "tokens"
+        },
+        {
+          "label": "Component",
+          "view": "component",
+          "key": "component"
+        },
+        {
+          "label": "Guidelines",
+          "view": "guidelines",
+          "key": "guidelines"
+        }
+      ],
+      "inputs": [
+        {
+          "name": "Corvid Insurance",
+          "kind": "App, website and broker portal",
+          "inventory": {
+            "summary": "23 button styles across 3 products. Here are 8 of them.",
+            "items": [
+              {
+                "label": "Get a quote",
+                "bg": "#E4572E",
+                "fg": "#fff",
+                "r": 4,
+                "fw": 600,
+                "where": "Website"
+              },
+              {
+                "label": "Get quote",
+                "bg": "#D9481F",
+                "fg": "#fff",
+                "r": 20,
+                "fw": 700,
+                "where": "App"
+              },
+              {
+                "label": "Get a quote",
+                "bg": "#1F3A5F",
+                "fg": "#fff",
+                "r": 0,
+                "tt": "uppercase",
+                "fw": 600,
+                "ls": ".04em",
+                "where": "Broker portal"
+              },
+              {
+                "label": "Continue",
+                "bg": "#2A6F97",
+                "fg": "#fff",
+                "r": 6,
+                "where": "App"
+              },
+              {
+                "label": "Next",
+                "bg": "#fff",
+                "fg": "#E4572E",
+                "b": "2px solid #E4572E",
+                "r": 4,
+                "fw": 600,
+                "where": "Website"
+              },
+              {
+                "label": "Submit",
+                "bg": "#5A5A5A",
+                "fg": "#fff",
+                "r": 2,
+                "where": "Broker portal"
+              },
+              {
+                "label": "Buy now",
+                "bg": "#F28C28",
+                "fg": "#1B1B1B",
+                "r": 999,
+                "fw": 700,
+                "where": "Website"
+              },
+              {
+                "label": "Apply",
+                "bg": "#E9ECEF",
+                "fg": "#1F3A5F",
+                "r": 8,
+                "where": "Broker portal"
+              }
+            ],
+            "note": "Five oranges, three radii, four ways to say the same thing."
+          },
+          "tokens": {
+            "groups": [
+              {
+                "name": "Colour",
+                "tokens": [
+                  {
+                    "name": "color.action",
+                    "value": "#D9481F"
+                  },
+                  {
+                    "name": "color.action.hover",
+                    "value": "#B23A17"
+                  },
+                  {
+                    "name": "color.text",
+                    "value": "#1B1B1B"
+                  },
+                  {
+                    "name": "color.surface",
+                    "value": "#FFFFFF"
+                  }
+                ]
+              },
+              {
+                "name": "Shape and space",
+                "tokens": [
+                  {
+                    "name": "radius.control",
+                    "value": "8px",
+                    "short": "R"
+                  },
+                  {
+                    "name": "space.control.x",
+                    "value": "20px",
+                    "short": "X"
+                  },
+                  {
+                    "name": "space.control.y",
+                    "value": "12px",
+                    "short": "Y"
+                  }
+                ]
+              },
+              {
+                "name": "Type",
+                "tokens": [
+                  {
+                    "name": "font.label",
+                    "value": "16 / 600",
+                    "short": "Aa"
+                  }
+                ]
+              }
+            ]
+          },
+          "component": {
+            "name": "Button · one component, three variants",
+            "specimens": [
+              {
+                "label": "Primary",
+                "text": "Get a quote",
+                "bg": "#D9481F",
+                "fg": "#fff",
+                "r": 8,
+                "fw": 600,
+                "p": "12px 20px",
+                "uses": "color.action · radius.control"
+              },
+              {
+                "label": "Secondary",
+                "text": "Compare cover",
+                "bg": "#fff",
+                "fg": "#1B1B1B",
+                "b": "1.5px solid #1B1B1B",
+                "r": 8,
+                "fw": 600,
+                "p": "11px 20px",
+                "uses": "color.text · radius.control"
+              },
+              {
+                "label": "Quiet",
+                "text": "Save for later",
+                "bg": "transparent",
+                "fg": "#1B1B1B",
+                "r": 8,
+                "fw": 600,
+                "p": "12px 4px",
+                "uses": "color.text"
+              },
+              {
+                "label": "Disabled",
+                "text": "Get a quote",
+                "bg": "#E6E6E6",
+                "fg": "#8A8A8A",
+                "r": 8,
+                "fw": 600,
+                "p": "12px 20px",
+                "uses": "Same shape, no colour"
+              }
+            ]
+          },
+          "guidelines": {
+            "do": [
+              "One primary button per screen.",
+              "Name the action: “Get a quote”, not “Submit”.",
+              "Use Secondary for the alternative path."
+            ],
+            "dont": [
+              "Don't add a second orange button for emphasis.",
+              "Don't change the radius for one product.",
+              "Don't use a disabled button to hide an error."
+            ]
+          }
+        },
+        {
+          "name": "Velo Rail",
+          "kind": "Booking app and station screens",
+          "inventory": {
+            "summary": "11 ways to show a train's status. Here are 7 of them.",
+            "items": [
+              {
+                "label": "On time",
+                "bg": "#DFF3E4",
+                "fg": "#1E7A46",
+                "r": 4,
+                "fw": 600,
+                "where": "App"
+              },
+              {
+                "label": "ONTIME",
+                "bg": "#1E7A46",
+                "fg": "#fff",
+                "r": 0,
+                "fw": 700,
+                "where": "Station screen"
+              },
+              {
+                "label": "Delayed 5'",
+                "bg": "#FFE9A8",
+                "fg": "#6B4A00",
+                "r": 999,
+                "where": "App"
+              },
+              {
+                "label": "Late",
+                "bg": "#fff",
+                "fg": "#C62828",
+                "b": "1px solid #C62828",
+                "r": 2,
+                "where": "Website"
+              },
+              {
+                "label": "+6 min",
+                "bg": "#FF9800",
+                "fg": "#fff",
+                "r": 6,
+                "fw": 700,
+                "where": "Station screen"
+              },
+              {
+                "label": "Cancelled",
+                "bg": "#C62828",
+                "fg": "#fff",
+                "r": 999,
+                "where": "App"
+              },
+              {
+                "label": "Canc.",
+                "bg": "#EEE",
+                "fg": "#555",
+                "r": 0,
+                "tt": "uppercase",
+                "where": "Station screen"
+              }
+            ],
+            "note": "Different words, colours and shapes for the same three facts."
+          },
+          "tokens": {
+            "groups": [
+              {
+                "name": "Status colour",
+                "tokens": [
+                  {
+                    "name": "status.ok",
+                    "value": "#1E7A46"
+                  },
+                  {
+                    "name": "status.ok.bg",
+                    "value": "#E3F2E8"
+                  },
+                  {
+                    "name": "status.warn",
+                    "value": "#8A5A00"
+                  },
+                  {
+                    "name": "status.warn.bg",
+                    "value": "#FFF1CC"
+                  },
+                  {
+                    "name": "status.stop",
+                    "value": "#B3261E"
+                  },
+                  {
+                    "name": "status.stop.bg",
+                    "value": "#FBE4E2"
+                  }
+                ]
+              },
+              {
+                "name": "Shape and type",
+                "tokens": [
+                  {
+                    "name": "radius.pill",
+                    "value": "999px",
+                    "short": "R"
+                  },
+                  {
+                    "name": "font.status",
+                    "value": "14 / 600",
+                    "short": "Aa"
+                  }
+                ]
+              }
+            ]
+          },
+          "component": {
+            "name": "Status pill · three states, always in words",
+            "specimens": [
+              {
+                "label": "On time",
+                "text": "● On time",
+                "bg": "#E3F2E8",
+                "fg": "#1E7A46",
+                "r": 999,
+                "fw": 600,
+                "p": "6px 14px",
+                "uses": "status.ok · radius.pill"
+              },
+              {
+                "label": "Delayed",
+                "text": "● Delayed 6 min",
+                "bg": "#FFF1CC",
+                "fg": "#8A5A00",
+                "r": 999,
+                "fw": 600,
+                "p": "6px 14px",
+                "uses": "status.warn · radius.pill"
+              },
+              {
+                "label": "Cancelled",
+                "text": "● Cancelled",
+                "bg": "#FBE4E2",
+                "fg": "#B3261E",
+                "r": 999,
+                "fw": 600,
+                "p": "6px 14px",
+                "uses": "status.stop · radius.pill"
+              }
+            ]
+          },
+          "guidelines": {
+            "do": [
+              "Give the delay in minutes.",
+              "Pair colour with words, so it reads without colour.",
+              "Use the same pill in the app and on station screens."
+            ],
+            "dont": [
+              "Don't abbreviate: write “Cancelled”, not “Canc.”",
+              "Don't flash or animate a delay.",
+              "Don't invent a fourth colour for “minor delay”."
+            ]
+          }
+        },
+        {
+          "name": "Mira Health",
+          "kind": "Patient portal and booking",
+          "inventory": {
+            "summary": "6 different form fields across the portal. Here are 5 of them.",
+            "items": [
+              {
+                "label": "Date of birth",
+                "field": true,
+                "b": "1px solid #BBB",
+                "r": 4,
+                "where": "Label inside, disappears"
+              },
+              {
+                "label": "DOB (dd/mm/yy)",
+                "field": true,
+                "b": "0",
+                "r": 0,
+                "bg": "#F1F1F1",
+                "where": "Grey box, no border"
+              },
+              {
+                "label": "Date of birth *",
+                "field": true,
+                "b": "2px solid #2C6E63",
+                "r": 10,
+                "where": "Thick border"
+              },
+              {
+                "label": "Invalid",
+                "field": true,
+                "b": "1px solid #E53935",
+                "r": 4,
+                "fg": "#E53935",
+                "where": "Error in red only"
+              },
+              {
+                "label": "Birthday",
+                "field": true,
+                "b": "0;border-bottom:1px solid #999",
+                "r": 0,
+                "where": "Underline only"
+              }
+            ],
+            "note": "Patients meet a different form on every page."
+          },
+          "tokens": {
+            "groups": [
+              {
+                "name": "Colour",
+                "tokens": [
+                  {
+                    "name": "field.border",
+                    "value": "#80868F"
+                  },
+                  {
+                    "name": "field.focus",
+                    "value": "#2C6E63"
+                  },
+                  {
+                    "name": "field.error",
+                    "value": "#B3261E"
+                  },
+                  {
+                    "name": "text.label",
+                    "value": "#1D2329"
+                  }
+                ]
+              },
+              {
+                "name": "Shape and type",
+                "tokens": [
+                  {
+                    "name": "radius.field",
+                    "value": "6px",
+                    "short": "R"
+                  },
+                  {
+                    "name": "size.field",
+                    "value": "48px",
+                    "short": "H"
+                  },
+                  {
+                    "name": "font.label",
+                    "value": "14 / 600",
+                    "short": "Aa"
+                  }
+                ]
+              }
+            ]
+          },
+          "component": {
+            "name": "Form field · label above, help below",
+            "specimens": [
+              {
+                "label": "Default",
+                "text": "DD/MM/YYYY",
+                "field": true,
+                "b": "1px solid #80868F",
+                "r": 6,
+                "p": "13px 12px",
+                "uses": "field.border · radius.field",
+                "lab": "Date of birth"
+              },
+              {
+                "label": "Focus",
+                "text": "14/03/19",
+                "field": true,
+                "fg": "#1D2329",
+                "b": "2px solid #2C6E63",
+                "r": 6,
+                "p": "12px 11px",
+                "uses": "field.focus",
+                "lab": "Date of birth"
+              },
+              {
+                "label": "Error",
+                "text": "14/03/19",
+                "field": true,
+                "fg": "#1D2329",
+                "b": "2px solid #B3261E",
+                "r": 6,
+                "p": "12px 11px",
+                "help": "Enter the year in full, for example 1985.",
+                "helpColor": "#B3261E",
+                "uses": "field.error · words, not just colour",
+                "lab": "Date of birth"
+              }
+            ]
+          },
+          "guidelines": {
+            "do": [
+              "Keep the label above the field, always visible.",
+              "Say how to fix an error, in words.",
+              "Show the format before the patient types."
+            ],
+            "dont": [
+              "Don't use placeholder text as the label.",
+              "Don't show an error in red alone.",
+              "Don't clear the field when there's an error."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "detail",
+      "id": "detail",
+      "title": "Every component is documented the same way.",
+      "intro": "Click a part of the documentation to see what your teams get for each component. The example is Corvid's button.",
+      "pageLabel": "Example documentation: Button",
+      "blocks": [
+        {
+          "name": "Anatomy",
+          "summary": "What it's made of",
+          "fields": [
+            {
+              "k": "Parts",
+              "v": "Container, label, optional icon"
+            },
+            {
+              "k": "Sizes",
+              "v": "Medium (default), small"
+            }
+          ],
+          "note": "Every component starts with the same picture of its parts."
+        },
+        {
+          "name": "Tokens",
+          "summary": "Where every value comes from",
+          "fields": [
+            {
+              "k": "Colour",
+              "v": "color.action, color.text"
+            },
+            {
+              "k": "Shape",
+              "v": "radius.control"
+            },
+            {
+              "k": "Space",
+              "v": "space.control.x, space.control.y"
+            }
+          ],
+          "note": "No raw values: change a token and every button follows."
+        },
+        {
+          "name": "States",
+          "summary": "How it behaves",
+          "fields": [
+            {
+              "k": "States",
+              "v": "Default, hover, focus, disabled"
+            },
+            {
+              "k": "Focus",
+              "v": "Visible ring, never removed"
+            }
+          ],
+          "note": "Designed and built for every state, not only the happy path."
+        },
+        {
+          "name": "Usage",
+          "summary": "When to use it, and when not",
+          "fields": [
+            {
+              "k": "Use",
+              "v": "The main action on a screen"
+            },
+            {
+              "k": "Don't use",
+              "v": "Navigation; use a link instead"
+            }
+          ],
+          "note": "The rules sit next to the component, not in a separate PDF."
+        },
+        {
+          "name": "Accessibility",
+          "summary": "Checked, not assumed",
+          "fields": [
+            {
+              "k": "Contrast",
+              "v": "Meets WCAG AA"
+            },
+            {
+              "k": "Keyboard",
+              "v": "Enter and Space"
+            },
+            {
+              "k": "Label",
+              "v": "Says the action"
+            }
+          ],
+          "note": "Each component lists how it was checked."
+        }
+      ],
+      "nav": "Documentation"
+    },
+    {
+      "type": "evidence",
+      "id": "evidence",
+      "title": "Why trust me with it.",
+      "intro": "Design systems are where most of my career has been spent.",
+      "items": [
+        {
+          "claim": "I was building [design.orange.com](https://design.orange.com) before anyone called it a design system",
+          "proof": "Much of my 20+ years in enterprise UX and design systems was spent building them inside Orange, one of Europe's largest telecoms groups.",
+          "source": "From [oganiko.com](https://oganiko.com)"
+        },
+        {
+          "claim": "Knowing when a system needs a new home",
+          "proof": "When Orange's design system outgrew its WordPress platform, I led its move to a dedicated documentation tool, before it became a problem.",
+          "source": "From the WordPress story on [oganiko.com](https://oganiko.com)"
+        },
+        {
+          "claim": "A design system starts with who it's for",
+          "proof": "For STR Technologies and mAbV, background research showed the audience is primarily scientists. The personas went into each design system and set its rules: a clean, clinical white throughout, and no dark mode, which has no place in the world of biochemistry.",
+          "source": "[STR design system](https://str-design-system.web.app/styleguide/) · [mAbV design system](https://mabvbio.com/design-system/)"
+        },
+        {
+          "claim": "My own system runs every site I build",
+          "proof": "The OGANIKO Design System: tokens in one source file generate the code, every component carries a maturity status, and a check fails when the output drifts from the source.",
+          "source": "From [oganiko.com](https://oganiko.com)"
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "id": "process",
+      "label": "From what exists to a system teams use",
+      "title": "From mess to system.",
+      "intro": "How I build a design system: start from who it's for and what your products already have, agree the foundations with your teams, then document it and roll it out one product at a time.",
+      "groupLabel": "↺ Review with your teams until it's right",
+      "steps": [
+        {
+          "title": "Who it's for",
+          "text": "Research the people your products serve and write them into the system as personas. Then count what already exists."
+        },
+        {
+          "title": "Tokens",
+          "text": "The foundations as named values: colour, type, space, shape, chosen for those people.",
+          "group": true
+        },
+        {
+          "title": "Components",
+          "text": "The most-used parts first, built from the tokens.",
+          "group": true
+        },
+        {
+          "title": "Guidelines and site",
+          "text": "The rules next to each component, on a site everyone can search."
+        },
+        {
+          "title": "Adopted",
+          "text": "One product moves first, the rest follow, and a check catches drift.",
+          "end": true
+        }
+      ],
+      "alt": {
+        "label": "The style-guide route",
+        "steps": [
+          "A PDF of rules",
+          "Teams copy what they can",
+          "Drift by the next release"
+        ],
+        "note": "A style guide describes; a design system is used, in design files and in code."
+      }
+    },
+    {
+      "type": "offer",
+      "id": "offer",
+      "title": "What you'd get.",
+      "intro": "A system your teams build with, not a document they file away.",
+      "items": [
+        {
+          "title": "A token set",
+          "text": "Colour, type, space and shape, generating code for every product."
+        },
+        {
+          "title": "A component library",
+          "text": "The parts you use most, with every state and rule."
+        },
+        {
+          "title": "A documentation site",
+          "text": "Live, searchable, and kept next to the code."
+        },
+        {
+          "title": "Adoption",
+          "text": "The first product moved over, and a drift check for the rest."
+        }
+      ],
+      "actions": [
+        {
+          "label": "Book a 30-minute call",
+          "href": "mailto:phil.parry@oganiko.com?subject=Design%20system"
+        },
+        {
+          "label": "Email a few screenshots",
+          "href": "mailto:phil.parry@oganiko.com"
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "id": "faq",
+      "title": "Questions.",
+      "items": [
+        {
+          "q": "We already have a style guide. Isn't that enough?",
+          "a": "A style guide describes how things should look. A design system is what teams actually build with: the same tokens and components in design files and in code."
+        },
+        {
+          "q": "Do we have to rebuild our products?",
+          "a": "No. I start with the tokens and the most-used components, then move one product over at a time."
+        },
+        {
+          "q": "Can one system cover several brands?",
+          "a": "Yes. The components stay the same and each brand gets its own theme of tokens."
+        },
+        {
+          "q": "Can you work with our teams in their language?",
+          "a": "Yes. I work in English, German, French and Polish."
+        }
+      ]
+    },
+    {
+      "type": "close",
+      "id": "close",
+      "lines": [
+        "One system,",
+        "every product."
+      ]
+    }
+  ],
+  "pager": {
+    "prev": {
+      "href": "../shopify-stores/",
+      "title": "Shopify stores"
+    },
+    "next": {
+      "href": "../amazon-listings/",
+      "title": "Amazon research and listings"
+    }
+  },
+  "logoReversed": "../../assets/oganiko-lockup-reversed.svg",
+  "capabilities": [
+    {
+      "slug": "wordpress-builds",
+      "title": "WordPress builds",
+      "href": "../wordpress-builds/"
+    },
+    {
+      "slug": "shopify-stores",
+      "title": "Shopify stores",
+      "href": "../shopify-stores/"
+    },
+    {
+      "slug": "design-systems",
+      "title": "Design systems",
+      "href": "../design-systems/"
+    },
+    {
+      "slug": "amazon-listings",
+      "title": "Amazon research and listings",
+      "href": "../amazon-listings/"
+    }
+  ]
+}

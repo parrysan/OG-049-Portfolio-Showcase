@@ -1,0 +1,622 @@
+{
+  "slug": "wordpress-builds",
+  "pageTitle": "WordPress sites your team can run · OGANIKO",
+  "description": "A capability demonstration: how Phil Parry designs and builds WordPress sites from a library of custom blocks your team can edit.",
+  "output": "index.html",
+  "status": {
+    "label": "Capability demonstration",
+    "real": false
+  },
+  "brandLine": "WordPress builds",
+  "footer": "Phil Parry · OGANIKO Digital",
+  "theme": {
+    "accent": "#109200",
+    "deep": "#0F3E09",
+    "tint": "#EDF6EC",
+    "surface": "#F6FAF5",
+    "line": "#DCEBD9",
+    "darkest": "#0A2207"
+  },
+  "fonts": [
+    {
+      "family": "Open Sans",
+      "src": "../../assets/fonts/open-sans-latin-300-normal.woff2",
+      "weight": "300"
+    },
+    {
+      "family": "Open Sans",
+      "src": "../../assets/fonts/open-sans-latin-400-normal.woff2",
+      "weight": "400"
+    },
+    {
+      "family": "Open Sans",
+      "src": "../../assets/fonts/open-sans-latin-600-normal.woff2",
+      "weight": "600"
+    },
+    {
+      "family": "Open Sans",
+      "src": "../../assets/fonts/open-sans-latin-700-normal.woff2",
+      "weight": "700"
+    }
+  ],
+  "contact": {
+    "name": "Phil Parry",
+    "line": "20+ years in UX, brand and design systems",
+    "email": "phil.parry@oganiko.com",
+    "site": "oganiko.com"
+  },
+  "recipe": {
+    "idea": "A WordPress site is only as good as what your team can safely edit, so show the build turning a brief into editable blocks.",
+    "task": "A business owner decides whether to talk to Phil about a WordPress site their own team can run.",
+    "signature": "Brief in, site out: pick a business, watch the brief become a sitemap, a block library and a finished page.",
+    "simple": "No pricing table, no testimonials, no feature grid. One demonstration, one explorer, the evidence and a clear next step.",
+    "references": [
+      "relume.io (staged brief-to-site pipeline, assembled-not-generated claim)",
+      "tasteskill.dev (before/after toggle feel, measured motion)"
+    ]
+  },
+  "nav": [
+    {
+      "label": "How it works",
+      "href": "#transform"
+    },
+    {
+      "label": "Why me",
+      "href": "#evidence"
+    },
+    {
+      "label": "Questions",
+      "href": "#faq"
+    }
+  ],
+  "hero": {
+    "title": "WordPress sites your team can actually run",
+    "lede": "I design and build WordPress sites from a library of custom blocks. Your team edits words and images in plain fields; the design stays intact.",
+    "actions": [
+      {
+        "label": "Book a 30-minute call",
+        "href": "mailto:phil.parry@oganiko.com?subject=WordPress%20site"
+      },
+      {
+        "label": "See how it works",
+        "href": "#transform"
+      }
+    ],
+    "proof": [
+      "**5 years** running Orange's WordPress design-community platform",
+      "**20+ years** in UX and design systems"
+    ],
+    "media": {
+      "video": "../../assets/video/wp-brick-build-1080x1350.mp4",
+      "poster": "../../assets/video/wp-brick-build-poster.jpg",
+      "alt": "Animation: a crane and workers assemble a WordPress site from building blocks",
+      "caption": "Built from blocks, not from scratch every time"
+    }
+  },
+  "sections": [
+    {
+      "type": "problem",
+      "id": "problem",
+      "title": "A site you can't edit is a site you'll rebuild.",
+      "intro": "Most small-business sites fail the same way: the design looks right on launch day, then every change needs a developer or breaks something.",
+      "beforeLabel": "The usual site",
+      "afterLabel": "Built from blocks",
+      "rows": [
+        {
+          "before": "Every text change goes through a developer.",
+          "after": "Your team edits words and images in plain fields."
+        },
+        {
+          "before": "A page builder buries the design under hundreds of settings.",
+          "after": "The design lives in the blocks, so it can't drift."
+        },
+        {
+          "before": "A bought theme ships features you'll never use.",
+          "after": "Only the blocks your site needs, nothing else to maintain."
+        },
+        {
+          "before": "Nobody knows which plugins are installed, or why.",
+          "after": "One view of every plugin, setting and custom field."
+        }
+      ]
+    },
+    {
+      "type": "transform",
+      "id": "transform",
+      "surface": true,
+      "title": "Brief in, site out.",
+      "intro": "Pick one of three example businesses and watch the build: the brief becomes a sitemap, the sitemap becomes a set of blocks, and the blocks become the page.",
+      "inputsLabel": "Example businesses (fictional)",
+      "simulated": "Simulated demonstration · fictional businesses",
+      "stages": [
+        "Brief",
+        "Sitemap",
+        "Blocks",
+        "Site"
+      ],
+      "inputs": [
+        {
+          "name": "Lindell Physio",
+          "kind": "Physiotherapy clinic",
+          "brief": {
+            "Goal": "More first appointments booked online",
+            "Audience": "Local adults with back, knee and sports injuries",
+            "Team edits": "Opening hours, prices, therapist profiles",
+            "Languages": "English and Polish"
+          },
+          "sitemap": [
+            {
+              "page": "Home",
+              "note": "What we treat, book a visit"
+            },
+            {
+              "page": "Treatments",
+              "note": "One page per condition"
+            },
+            {
+              "page": "Therapists",
+              "note": "Profiles the team updates"
+            },
+            {
+              "page": "Prices",
+              "note": "Edited by reception"
+            },
+            {
+              "page": "Book",
+              "note": "Hand-off to the booking tool"
+            }
+          ],
+          "blocks": [
+            {
+              "name": "Hero with booking",
+              "note": "Heading, text, button"
+            },
+            {
+              "name": "Condition cards",
+              "note": "Pick from a list"
+            },
+            {
+              "name": "Therapist profile",
+              "note": "Photo, bio, specialisms"
+            },
+            {
+              "name": "Price table",
+              "note": "Rows the team edits"
+            },
+            {
+              "name": "Opening hours",
+              "note": "One place, shown everywhere"
+            },
+            {
+              "name": "FAQ",
+              "note": "Question and answer pairs"
+            }
+          ],
+          "site": {
+            "bg": "#EEF4F1",
+            "ink": "#16302A",
+            "accent": "#1F6F5C",
+            "eyebrow": "Physiotherapy · Gdańsk",
+            "title": "Back on your feet, with a plan you understand",
+            "text": "Assessment, treatment and a home programme from the same therapist, week by week.",
+            "button": "Book a first visit",
+            "cards": [
+              {
+                "t": "Back pain",
+                "d": "Assessment and treatment plan"
+              },
+              {
+                "t": "Sports injuries",
+                "d": "Return-to-play programmes"
+              },
+              {
+                "t": "After surgery",
+                "d": "Rehab with your surgeon's notes"
+              }
+            ],
+            "foot": "Open Monday to Saturday · Prices and hours edited by reception"
+          }
+        },
+        {
+          "name": "Ziarno Coffee",
+          "kind": "Neighbourhood café and roastery",
+          "brief": {
+            "Goal": "Sell beans online, fill the weekend workshops",
+            "Audience": "Regulars and coffee hobbyists in the city",
+            "Team edits": "Menu, beans in stock, workshop dates",
+            "Languages": "Polish and English"
+          },
+          "sitemap": [
+            {
+              "page": "Home",
+              "note": "This week's beans"
+            },
+            {
+              "page": "Menu",
+              "note": "Changes with the season"
+            },
+            {
+              "page": "Beans",
+              "note": "Linked to the shop"
+            },
+            {
+              "page": "Workshops",
+              "note": "Dates the team adds"
+            },
+            {
+              "page": "Visit",
+              "note": "Map and hours"
+            }
+          ],
+          "blocks": [
+            {
+              "name": "Seasonal hero",
+              "note": "Photo, heading, button"
+            },
+            {
+              "name": "Menu list",
+              "note": "Sections and prices"
+            },
+            {
+              "name": "Bean card",
+              "note": "Origin, notes, roast"
+            },
+            {
+              "name": "Event list",
+              "note": "Date, seats, sign-up"
+            },
+            {
+              "name": "Map and hours",
+              "note": "One place, shown everywhere"
+            }
+          ],
+          "site": {
+            "bg": "#F4EEE6",
+            "ink": "#2B1F17",
+            "accent": "#7A4A2A",
+            "eyebrow": "Café and roastery",
+            "title": "Roasted on Tuesday, in your cup by Thursday",
+            "text": "Three single origins this week, and a brewing workshop every Saturday morning.",
+            "button": "See this week's beans",
+            "cards": [
+              {
+                "t": "Ethiopia Guji",
+                "d": "Peach, bergamot · light"
+              },
+              {
+                "t": "Colombia Huila",
+                "d": "Cocoa, cherry · medium"
+              },
+              {
+                "t": "Saturday workshop",
+                "d": "Pour-over basics · 6 seats"
+              }
+            ],
+            "foot": "Menu and workshop dates edited by the café team"
+          }
+        },
+        {
+          "name": "Northline Joinery",
+          "kind": "Family joinery workshop",
+          "brief": {
+            "Goal": "Better enquiries for fitted furniture",
+            "Audience": "Homeowners and architects",
+            "Team edits": "Project gallery, enquiry form questions",
+            "Languages": "English"
+          },
+          "sitemap": [
+            {
+              "page": "Home",
+              "note": "Recent work first"
+            },
+            {
+              "page": "Projects",
+              "note": "Gallery the team adds to"
+            },
+            {
+              "page": "Process",
+              "note": "From survey to fitting"
+            },
+            {
+              "page": "About",
+              "note": "The workshop and the family"
+            },
+            {
+              "page": "Enquire",
+              "note": "Guided form"
+            }
+          ],
+          "blocks": [
+            {
+              "name": "Project hero",
+              "note": "Full-width photo, caption"
+            },
+            {
+              "name": "Project gallery",
+              "note": "Photos with captions"
+            },
+            {
+              "name": "Process steps",
+              "note": "Numbered steps"
+            },
+            {
+              "name": "Material swatches",
+              "note": "Woods and finishes"
+            },
+            {
+              "name": "Enquiry form",
+              "note": "Questions the team sets"
+            }
+          ],
+          "site": {
+            "bg": "#EFEBE4",
+            "ink": "#24211C",
+            "accent": "#5C4A32",
+            "eyebrow": "Fitted furniture, made by hand",
+            "title": "Built for the room, fitted to the millimetre",
+            "text": "Kitchens, wardrobes and libraries, designed with you and made in our own workshop.",
+            "button": "Start an enquiry",
+            "cards": [
+              {
+                "t": "Oak library",
+                "d": "Floor-to-ceiling, 2026"
+              },
+              {
+                "t": "Walnut kitchen",
+                "d": "Handle-less fronts"
+              },
+              {
+                "t": "Built-in wardrobe",
+                "d": "Under a sloped roof"
+              }
+            ],
+            "foot": "New projects added by the workshop team"
+          }
+        }
+      ]
+    },
+    {
+      "type": "detail",
+      "id": "detail",
+      "title": "Every block is a set of plain fields.",
+      "intro": "Click a part of the page to see exactly what your team edits. No layout settings, no code, nothing that can break the design.",
+      "pageLabel": "Example page",
+      "blocks": [
+        {
+          "name": "Hero",
+          "summary": "The first thing visitors see",
+          "fields": [
+            {
+              "k": "Heading",
+              "v": "Back on your feet, with a plan you understand"
+            },
+            {
+              "k": "Text",
+              "v": "Assessment, treatment and a home programme…"
+            },
+            {
+              "k": "Button label",
+              "v": "Book a first visit"
+            },
+            {
+              "k": "Button link",
+              "v": "/book"
+            }
+          ],
+          "note": "Fonts, colours and spacing come from the design, not from the editor."
+        },
+        {
+          "name": "Condition cards",
+          "summary": "What the clinic treats",
+          "fields": [
+            {
+              "k": "Cards",
+              "v": "Choose from the Treatments list"
+            },
+            {
+              "k": "Show",
+              "v": "3 cards"
+            }
+          ],
+          "note": "Cards link to their treatment pages automatically."
+        },
+        {
+          "name": "Therapist profile",
+          "summary": "Updated by the team",
+          "fields": [
+            {
+              "k": "Photo",
+              "v": "anna-k.jpg"
+            },
+            {
+              "k": "Name",
+              "v": "Anna K."
+            },
+            {
+              "k": "Specialisms",
+              "v": "Sports injuries, knee rehab"
+            },
+            {
+              "k": "Bio",
+              "v": "Two short paragraphs"
+            }
+          ],
+          "note": "A new therapist is a new profile, not a new page design."
+        },
+        {
+          "name": "Opening hours",
+          "summary": "Edited once, shown everywhere",
+          "fields": [
+            {
+              "k": "Monday to Friday",
+              "v": "8:00–19:00"
+            },
+            {
+              "k": "Saturday",
+              "v": "9:00–14:00"
+            }
+          ],
+          "note": "The footer, contact page and booking page all read the same hours."
+        }
+      ],
+      "nav": "Blocks"
+    },
+    {
+      "type": "evidence",
+      "id": "evidence",
+      "title": "Why trust me with it.",
+      "intro": "WordPress isn't new to me. I ran a large WordPress platform for years before going independent.",
+      "items": [
+        {
+          "claim": "Five years running a WordPress platform for Orange's global design community",
+          "proof": "Up to five thousand people across the company used it for guidance on building Orange's digital products. The theme was built on Orange Boosted, Orange's own open-source framework.",
+          "source": "From the WordPress story on [oganiko.com](https://oganiko.com)"
+        },
+        {
+          "claim": "Knowing when WordPress is the wrong tool",
+          "proof": "When the design system outgrew a general-purpose CMS, I led its move to Zeroheight, before it became a problem.",
+          "source": "From the WordPress story on [oganiko.com](https://oganiko.com)"
+        },
+        {
+          "claim": "One view of every site I look after",
+          "proof": "A control panel that shows each site's plugins, themes, settings, custom fields and SEO in one place, built for the sites I run.",
+          "source": "Phil's WordPress control panel, in use today"
+        },
+        {
+          "claim": "Design systems, not one-off pages",
+          "proof": "20+ years in UX and design systems: the block library is a small design system your team can't accidentally break.",
+          "source": "Phil Parry, OGANIKO Digital"
+        }
+      ]
+    },
+    {
+      "type": "process",
+      "id": "process",
+      "title": "How a build runs.",
+      "intro": "A proposed shape for a typical small-business site. Every project is scoped on the first call.",
+      "steps": [
+        {
+          "title": "Brief and sitemap",
+          "text": "What the site must do, who it's for, and what your team needs to edit."
+        },
+        {
+          "title": "Block library",
+          "text": "The set of blocks the site needs, designed as one system."
+        },
+        {
+          "title": "Build and content",
+          "text": "The theme, the blocks and your content moved in, page by page."
+        },
+        {
+          "title": "Handover",
+          "text": "A walkthrough for your team, and a list of who edits what."
+        }
+      ]
+    },
+    {
+      "type": "offer",
+      "id": "offer",
+      "title": "What you'd get.",
+      "intro": "No surprises: the site, the blocks, and a team that knows how to use them.",
+      "items": [
+        {
+          "title": "A custom WordPress theme",
+          "text": "Built for your site only, with nothing extra to maintain."
+        },
+        {
+          "title": "A block library",
+          "text": "Every section of the site as an editable block."
+        },
+        {
+          "title": "Your content, moved in",
+          "text": "Existing pages and images carried over and tidied."
+        },
+        {
+          "title": "Editor training",
+          "text": "A recorded walkthrough so new staff can learn it too."
+        }
+      ],
+      "actions": [
+        {
+          "label": "Book a 30-minute call",
+          "href": "mailto:phil.parry@oganiko.com?subject=WordPress%20site"
+        },
+        {
+          "label": "Email a brief",
+          "href": "mailto:phil.parry@oganiko.com"
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "id": "faq",
+      "title": "Questions.",
+      "items": [
+        {
+          "q": "Can my team really edit it without breaking anything?",
+          "a": "Yes. Each block exposes plain fields (words, images, links) and keeps the layout, fonts and colours locked to the design."
+        },
+        {
+          "q": "Do I need a page builder like Elementor?",
+          "a": "No. Custom blocks replace the page builder, which keeps the site lighter and the design consistent."
+        },
+        {
+          "q": "Can you take over an existing WordPress site?",
+          "a": "Often, yes. I start by mapping what is installed and what your team actually edits, then decide what to keep and what to rebuild as blocks."
+        },
+        {
+          "q": "Can the site be in more than one language?",
+          "a": "Yes. I work in English, German and Polish, and plan the blocks for every language from the start."
+        }
+      ]
+    },
+    {
+      "type": "close",
+      "id": "close",
+      "lines": [
+        "Your content,",
+        "your site."
+      ]
+    }
+  ],
+  "logo": "../../assets/ogl-master.svg",
+  "crumbs": [
+    {
+      "label": "Showcase",
+      "href": "../../"
+    },
+    {
+      "label": "Explorations",
+      "href": "../../#explorations"
+    }
+  ],
+  "pager": {
+    "next": {
+      "href": "../shopify-stores/",
+      "title": "Shopify stores"
+    }
+  },
+  "logoReversed": "../../assets/oganiko-lockup-reversed.svg",
+  "capabilities": [
+    {
+      "slug": "wordpress-builds",
+      "title": "WordPress builds",
+      "href": "../wordpress-builds/"
+    },
+    {
+      "slug": "shopify-stores",
+      "title": "Shopify stores",
+      "href": "../shopify-stores/"
+    },
+    {
+      "slug": "design-systems",
+      "title": "Design systems",
+      "href": "../design-systems/"
+    },
+    {
+      "slug": "amazon-listings",
+      "title": "Amazon research and listings",
+      "href": "../amazon-listings/"
+    }
+  ]
+}
