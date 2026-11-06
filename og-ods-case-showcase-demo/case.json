@@ -1,0 +1,450 @@
+{
+  "slug": "showcase-demo",
+  "title": "Case showcase",
+  "pageTitle": "Case showcase: stage types · OGANIKO",
+  "description": "Every stage type the og-ods-case-showcase skill can build, each shown with real project material.",
+  "output": "showcase/index.html",
+  "theme": {
+    "accent": "#0A5F8A",
+    "deep": "#0A2540",
+    "ink": "#334155",
+    "muted": "#64748B",
+    "surface": "#F3F6F9",
+    "line": "#E0E7EE",
+    "heroA": "#0A2540",
+    "heroB": "#0B3A5C",
+    "glow": "rgba(10,95,138,.32)",
+    "face": "DM Sans"
+  },
+  "fonts": [
+    {
+      "family": "Open Sans",
+      "src": "../../portfolio-mabv/assets/fonts/open-sans-latin-400-normal.woff2",
+      "weight": "400"
+    },
+    {
+      "family": "Open Sans",
+      "src": "../../portfolio-mabv/assets/fonts/open-sans-latin-600-normal.woff2",
+      "weight": "600"
+    },
+    {
+      "family": "Open Sans",
+      "src": "../../portfolio-mabv/assets/fonts/open-sans-latin-700-normal.woff2",
+      "weight": "700"
+    },
+    {
+      "family": "DM Sans",
+      "src": "../../portfolio-mabv/assets/fonts/dm-sans-latin-var.woff2",
+      "weight": "100 1000"
+    },
+    {
+      "family": "Noto Sans SC",
+      "src": "../../portfolio-mabv/assets/fonts/noto-sans-sc-700-baiweixin.woff2",
+      "weight": "700"
+    }
+  ],
+  "contact": {
+    "name": "Phil Parry",
+    "line": "20+ years in UX, brand and design systems",
+    "email": "phil.parry@oganiko.com",
+    "site": "oganiko.com"
+  },
+  "brandLine": "og-ods-case-showcase · Stage types",
+  "hero": {
+    "title": "Twelve ways to show the work",
+    "lede": "Every stage type the case showcase can build, each shown with real material from the mAbV and STR case studies. Scroll to see each one perform.",
+    "projects": [
+      {
+        "label": "Stage types",
+        "current": true
+      },
+      {
+        "label": "mAbV",
+        "href": "../../portfolio-mabv/showcase/"
+      },
+      {
+        "label": "STR",
+        "href": "../../portfolio-str/showcase/"
+      }
+    ],
+    "art": {
+      "src": "../../portfolio-mabv/assets/vector/mabv-logo-lockup.svg",
+      "alt": "mAbV lockup, used as sample artwork"
+    },
+    "line": "One case file in, one interactive page out. The hero, stepper, wheel and closing reveal are shared; each step picks a stage type.",
+    "photo": {
+      "src": "../../portfolio-str/assets/img/home-phone.jpg",
+      "alt": "STR storefront on a phone, used as sample artwork",
+      "pos": "center top"
+    },
+    "meta": [
+      {
+        "k": "Skill",
+        "v": "og-ods-case-showcase"
+      },
+      {
+        "k": "Stage types",
+        "v": "12"
+      },
+      {
+        "k": "Built with",
+        "v": "the skill's own engine"
+      }
+    ]
+  },
+  "scene": {
+    "label": "Stage types, one per step",
+    "title": "Each stage type, in action.",
+    "steps": [
+      {
+        "title": "Decode · Unpack a name",
+        "note": "Each letter or part rises in with its meaning beside it, set in the brand's own typeface.",
+        "stage": {
+          "type": "decode",
+          "items": [
+            {
+              "glyph": "m",
+              "word": "monoclonal"
+            },
+            {
+              "glyph": "Ab",
+              "word": "antibody"
+            },
+            {
+              "glyph": "V",
+              "word": "vaccine",
+              "accent": true
+            }
+          ],
+          "caption": "Example: mAbV."
+        },
+        "badge": "decode",
+        "bestFor": "The brief, when the name itself carries the idea."
+      },
+      {
+        "title": "Anatomy · Explain a mark",
+        "note": "The artwork sits large while leader lines draw in from each feature to its label.",
+        "stage": {
+          "type": "anatomy",
+          "src": "../../portfolio-mabv/assets/vector/mabv-logo.svg",
+          "alt": "The mAbV mark",
+          "box": {
+            "left": 14,
+            "top": 8,
+            "height": 84
+          },
+          "callouts": [
+            {
+              "text": "Feature one, drawn from the artwork",
+              "dot": [
+                504,
+                263
+              ],
+              "edge": 588
+            },
+            {
+              "text": "Feature two, on the outline",
+              "dot": [
+                588,
+                392
+              ]
+            },
+            {
+              "text": "Feature three, inside the mark",
+              "dot": [
+                375,
+                502
+              ],
+              "edge": 520
+            }
+          ],
+          "caption": "Example: the mAbV shield."
+        },
+        "badge": "anatomy",
+        "bestFor": "The core design idea, when it lives inside the artwork."
+      },
+      {
+        "title": "Converge · Show the routes not taken",
+        "note": "The explored options sit side by side, then slide together into the one that was chosen.",
+        "stage": {
+          "type": "converge",
+          "items": [
+            {
+              "src": "../../portfolio-str/assets/logo-routes/v000.svg",
+              "label": "Route V0"
+            },
+            {
+              "src": "../../portfolio-str/assets/logo-routes/v001.svg",
+              "label": "Route V1"
+            },
+            {
+              "src": "../../portfolio-str/assets/logo-routes/v002.svg",
+              "label": "Route V2"
+            },
+            {
+              "src": "../../portfolio-str/assets/logo-routes/v004.svg",
+              "label": "Route V4"
+            },
+            {
+              "src": "../../portfolio-str/assets/logo-routes/v005.svg",
+              "label": "Route V5"
+            }
+          ],
+          "final": {
+            "src": "../../portfolio-str/assets/vector/logo-str.svg",
+            "alt": "The final STR mark"
+          },
+          "caption": "Example: STR's logo routes."
+        },
+        "badge": "converge",
+        "bestFor": "Logo routes, layout options or concepts (four to six)."
+      },
+      {
+        "title": "Flood · Make a colour decision",
+        "note": "The old colour floods into the new one, with the spec set large: Pantone, HEX, RGB.",
+        "stage": {
+          "type": "flood",
+          "from": "#00B4A6",
+          "to": "#0047BB",
+          "was": "Before: teal",
+          "eyebrow": "Pantone",
+          "big": "2728 C",
+          "sub": "Cobalt Blue",
+          "specs": [
+            {
+              "k": "HEX",
+              "v": "#0047BB"
+            },
+            {
+              "k": "RGB",
+              "v": "0 · 71 · 187"
+            }
+          ],
+          "caption": "Example: teal to cobalt."
+        },
+        "badge": "flood",
+        "bestFor": "A colour change with a clear before and after."
+      },
+      {
+        "title": "Palette · Present a palette",
+        "note": "Swatches grow up from the baseline, each with its name and value.",
+        "stage": {
+          "type": "palette",
+          "swatches": [
+            {
+              "name": "Primary",
+              "hex": "#0A5F8A"
+            },
+            {
+              "name": "Dark",
+              "hex": "#084A6D"
+            },
+            {
+              "name": "Light",
+              "hex": "#3D8AB5"
+            },
+            {
+              "name": "Tint",
+              "hex": "#E6F2F7"
+            },
+            {
+              "name": "Secondary",
+              "hex": "#0D9488"
+            },
+            {
+              "name": "Trust",
+              "hex": "#059669"
+            }
+          ],
+          "caption": "Example: STR's six colours."
+        },
+        "badge": "palette",
+        "bestFor": "A full palette, or several colours with roles."
+      },
+      {
+        "title": "Pair · Connect artwork to the real thing",
+        "note": "The artwork on the left, the photo of it in the world on the right.",
+        "stage": {
+          "type": "pair",
+          "art": {
+            "src": "../../portfolio-mabv/assets/vector/mabv-logo-lockup-cn-en.svg",
+            "alt": "Bilingual mAbV lockup"
+          },
+          "note": "Artwork on the left, the real thing on the right.",
+          "photo": {
+            "src": "../../portfolio-mabv/assets/img/office-1.jpg",
+            "alt": "mAbV reception sign"
+          }
+        },
+        "badge": "pair",
+        "bestFor": "A deliverable next to its real application."
+      },
+      {
+        "title": "Window · Show a live screen",
+        "note": "A real screenshot in a browser frame. The optional size ladder renders the actual logo files at real sizes.",
+        "stage": {
+          "type": "window",
+          "src": "../../portfolio-mabv/assets/img/ds-logo.jpg",
+          "alt": "mAbV design system logo page",
+          "ladder": {
+            "label": "Size ladder",
+            "split": 2,
+            "items": [
+              {
+                "src": "../../portfolio-mabv/assets/vector/mabv-logo-simple.svg",
+                "size": 16
+              },
+              {
+                "src": "../../portfolio-mabv/assets/vector/mabv-logo-simple.svg",
+                "size": 24
+              },
+              {
+                "src": "../../portfolio-mabv/assets/vector/mabv-logo.svg",
+                "size": 32
+              },
+              {
+                "src": "../../portfolio-mabv/assets/vector/mabv-logo.svg",
+                "size": 48
+              },
+              {
+                "src": "../../portfolio-mabv/assets/vector/mabv-logo.svg",
+                "size": 72
+              }
+            ]
+          },
+          "caption": "Example: mAbV design system."
+        },
+        "badge": "window",
+        "bestFor": "Websites and design-system pages; add a size ladder for marks."
+      },
+      {
+        "title": "Responsive · Prove it works on a phone",
+        "note": "The desktop page in a browser frame, with the phone version sliding up beside it.",
+        "stage": {
+          "type": "responsive",
+          "desktop": {
+            "src": "../../portfolio-str/assets/img/pdp.jpg",
+            "alt": "STR product page on desktop"
+          },
+          "phone": {
+            "src": "../../portfolio-str/assets/img/pdp-phone.jpg",
+            "alt": "STR product page on a phone"
+          },
+          "caption": "Example: STR product page."
+        },
+        "badge": "responsive",
+        "bestFor": "Any site where mobile matters."
+      },
+      {
+        "title": "Rules · State the rules",
+        "note": "Do and Don't side by side; the Don'ts are struck through.",
+        "stage": {
+          "type": "rules",
+          "do": [
+            "“Synthetic QS-21-Api demonstrates equivalent activity.”",
+            "“Secure supply chain.”"
+          ],
+          "dont": [
+            "“Our amazing product boosts vaccines like never before.”",
+            "“The best adjuvant on the market.”"
+          ],
+          "caption": "Example: STR writing rules."
+        },
+        "badge": "rules",
+        "bestFor": "Writing style, logo usage, accessibility do's and don'ts."
+      },
+      {
+        "title": "Manifest · List the handover",
+        "note": "A screen with a row of facts underneath: files, formats and counts stagger in.",
+        "stage": {
+          "type": "manifest",
+          "src": "../../portfolio-mabv/assets/img/ds-brand-kit.jpg",
+          "alt": "mAbV brand kit page",
+          "items": [
+            {
+              "k": "Digital",
+              "v": "4 SVG · 4 PNG"
+            },
+            {
+              "k": "Print",
+              "v": "4 PDF · 4 EPS"
+            },
+            {
+              "k": "Social",
+              "v": "1 SVG · 1 PNG"
+            }
+          ],
+          "caption": "Example: mAbV brand kit."
+        },
+        "badge": "manifest",
+        "bestFor": "Brand kits, file sets, component libraries."
+      },
+      {
+        "title": "Fan · Prove it's in use",
+        "note": "Two to four portraits fan out on the brand's deep colour.",
+        "stage": {
+          "type": "fan",
+          "photos": [
+            {
+              "src": "../../portfolio-str/assets/img/products-phone.jpg",
+              "alt": "STR products on a phone"
+            },
+            {
+              "src": "../../portfolio-mabv/assets/img/office-2.jpg",
+              "alt": "mAbV reception"
+            },
+            {
+              "src": "../../portfolio-str/assets/img/pdp-phone.jpg",
+              "alt": "STR product page on a phone"
+            }
+          ],
+          "caption": "Example: phones and an office photo."
+        },
+        "badge": "fan",
+        "bestFor": "Real-world photos or phone screens: the proof step."
+      },
+      {
+        "title": "Image · Show anything else",
+        "note": "Any single image, contained or covering the stage, on any background.",
+        "stage": {
+          "type": "image",
+          "src": "../../portfolio-str/assets/img/catalogue-manager.jpg",
+          "alt": "STR catalogue manager prototype",
+          "fit": "cover",
+          "pos": "top left",
+          "caption": "Example: STR catalogue manager."
+        },
+        "badge": "image",
+        "bestFor": "Diagrams, infographics, a single strong picture."
+      }
+    ],
+    "numbered": true
+  },
+  "wheel": {
+    "title": "Shared by every page",
+    "items": [
+      "A project switcher in the hero",
+      "A pinned story stepper",
+      "Twelve stage types",
+      "A delivered wheel like this one",
+      "A closing two-line reveal",
+      "A phone layout that never pins"
+    ],
+    "foot": "Say “make a case study for <project>” to build one."
+  },
+  "close": {
+    "lines": [
+      "One case file in,",
+      "one page out."
+    ],
+    "note": "Built from ~/OG/reports/og-ods-case-showcase-demo/case.json with the og-ods-case-showcase engine. Schema and stage reference: references/case-schema.md and references/stage-types.md in the skill."
+  },
+  "footer": {
+    "text": "og-ods-case-showcase · stage-type demo",
+    "links": []
+  },
+  "index": {
+    "title": "Twelve stage types, numbered, and what each is for",
+    "intro": "Each step of a case study picks one stage type. Pick the one that shows the point. Click a type to jump to it in action."
+  }
+}

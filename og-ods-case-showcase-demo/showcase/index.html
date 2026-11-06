@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Case showcase: stage types · OGANIKO</title>
+<meta name="description" content="Every stage type the og-ods-case-showcase skill can build, each shown with real project material.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%228%209%2016%2015%22%3E%3Cpath%20fill%3D%22%23109200%22%20d%3D%22M9%2022c0-6%204-11%2014-12-1%209-6%2013-12%2013-.7%200-1.4-.1-2-.3z%22%2F%3E%3C%2Fsvg%3E">
+<style>
+@font-face{font-family:"Open Sans";src:url("../../portfolio-mabv/assets/fonts/open-sans-latin-400-normal.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Open Sans";src:url("../../portfolio-mabv/assets/fonts/open-sans-latin-600-normal.woff2") format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:"Open Sans";src:url("../../portfolio-mabv/assets/fonts/open-sans-latin-700-normal.woff2") format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:"DM Sans";src:url("../../portfolio-mabv/assets/fonts/dm-sans-latin-var.woff2") format("woff2");font-weight:100 1000;font-display:swap}
+@font-face{font-family:"Noto Sans SC";src:url("../../portfolio-mabv/assets/fonts/noto-sans-sc-700-baiweixin.woff2") format("woff2");font-weight:700;font-display:swap}
+:root{--w-accent:#0A5F8A;--w-deep:#0A2540;--w-ink:#334155;--w-muted:#64748B;--w-surface:#F3F6F9;--w-line:#E0E7EE;--w-hero-a:#0A2540;--w-hero-b:#0B3A5C;--w-glow:rgba(10,95,138,.32);--w-face:"DM Sans";}
+/* og-ods-case-showcase engine v1.0 — interactive case-study page.
+   Frame = ODS (Open Sans, ink on white, hairline rails). Work colour = the case's --w-* tokens, set by build.mjs.
+   Patterns adapted from tasteskill.dev (studied 5 Nov 2026): hero project switcher with tilted preview,
+   pinned before/after stepper, pinned word wheel, closing two-line reveal. */
+:root{
+  --ink:#0A0A0A;--ink-2:#333;--ink-3:#595959;--line:#E0E0E0;--paper:#FFF;--leaf:#109200;
+  --ease:cubic-bezier(.16,1,.3,1);--pad:clamp(20px,5vw,96px);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--w-surface);color:var(--ink);font-family:"Open Sans",system-ui,sans-serif;font-size:18px;line-height:1.5;-webkit-font-smoothing:antialiased}
+::selection{background:var(--w-accent);color:#fff}
+img{display:block;max-width:100%}
+a{color:inherit;text-underline-offset:.2em}
+:focus-visible{outline:3px solid var(--w-accent);outline-offset:3px}
+h1,h2,h3,p,ol,ul,figure,dl,dd{margin:0;padding:0}ol,ul{list-style:none}
+.cn{font-family:"Noto Sans SC",sans-serif;font-weight:700}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.sr:focus{position:fixed;left:16px;top:16px;width:auto;height:auto;clip:auto;z-index:30;background:#fff;padding:8px 12px}
+
+/* Top bar */
+.bar{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:20;display:flex;align-items:center;gap:20px;padding:8px 10px 8px 16px;background:rgba(255,255,255,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid var(--line);border-radius:999px;font-size:14px;white-space:nowrap}
+.bar svg{width:16px;height:15px}.bar b{letter-spacing:.04em}.bar span{color:var(--ink-3)}
+.bar a.cta{padding:6px 14px;border-radius:999px;background:var(--ink);color:#fff;text-decoration:none;font-weight:600}
+@media (max-width:640px){.bar span{display:none}}
+
+/* 1. Hero: project switcher + tilted preview */
+.hero{position:relative;padding:140px var(--pad) 80px;text-align:center;overflow:hidden;background:radial-gradient(120% 70% at 50% 100%,var(--w-glow),transparent 60%),linear-gradient(180deg,var(--w-hero-a) 0%,var(--w-hero-b) 45%,var(--w-surface) 92%)}
+.hero h1{color:#fff;font-size:clamp(40px,6vw,84px);line-height:1.02;letter-spacing:-.03em;font-weight:700;text-wrap:balance}
+.hero .lede{color:rgba(255,255,255,.82);max-width:36em;margin:20px auto 0;font-size:clamp(16px,1.4vw,20px);text-wrap:pretty}
+.tabs{display:inline-flex;flex-wrap:wrap;justify-content:center;gap:4px;margin:36px auto 0;padding:4px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);border-radius:999px}
+.tabs a,.tabs span{color:rgba(255,255,255,.85);font-size:14px;font-weight:600;padding:9px 16px;border-radius:999px;text-decoration:none;min-height:40px;display:inline-flex;align-items:center}
+.tabs [aria-current]{background:#fff;color:var(--w-deep)}
+.tabs a:hover:not([aria-current]){background:rgba(255,255,255,.14)}
+.tabs span.soon{opacity:.55}
+.tilt{perspective:1600px;margin:40px auto 0;max-width:1180px}
+.screen{position:relative;transform:rotateX(18deg);transform-origin:50% 100%;border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 40px 80px -30px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.4);transition:transform 1.1s var(--ease);aspect-ratio:16/8.4;display:grid;grid-template-columns:1.25fr .75fr}
+.tilt.in .screen{transform:rotateX(7deg)}
+.screen .left{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:6% 7%;gap:28px;text-align:left}
+.screen .left img{width:var(--logo-w,78%)}
+.screen .left p{font-size:clamp(14px,1.6vw,24px);color:var(--ink-2);text-wrap:pretty}
+.screen .right{background:var(--w-surface)}
+.screen .right img{width:100%;height:100%;object-fit:cover;object-position:var(--pos,center top)}
+.meta{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 28px;margin-top:28px;font-size:14px;color:var(--ink-3)}
+.meta b{color:var(--ink);font-weight:600}
+
+/* 2. Pinned case scene */
+.scene{position:relative;height:calc(var(--n) * 95vh + 60vh)}
+.pin{position:sticky;top:0;height:100vh;display:grid;grid-template-columns:minmax(300px,.8fr) 1.2fr;gap:clamp(24px,4vw,72px);align-items:center;padding:80px var(--pad) 48px}
+.intro .label{display:inline-flex;align-items:center;gap:8px;color:var(--w-accent);font-weight:600;font-size:15px}
+.intro h2{font-size:clamp(34px,4vw,60px);line-height:1.04;letter-spacing:-.03em;margin-top:10px;text-wrap:balance}
+.steps{margin-top:36px}
+.steps li{position:relative;padding:9px 0 9px 28px}
+.steps li::before{content:"";position:absolute;left:0;top:9px;bottom:9px;width:3px;background:var(--w-line);border-radius:2px}
+.steps li::after{content:"";position:absolute;left:0;top:9px;width:3px;height:calc((100% - 18px) * var(--fill,0));background:var(--w-accent);border-radius:2px;transition:height .25s linear}
+.steps button{appearance:none;border:0;background:none;padding:0;font:inherit;font-size:clamp(17px,1.5vw,22px);font-weight:600;color:var(--w-muted);cursor:pointer;text-align:left;transition:color .3s}
+.steps li.on button{color:var(--ink)}
+.steps .note{display:grid;grid-template-rows:0fr;opacity:0;transition:grid-template-rows .5s var(--ease),opacity .4s}
+.steps .note>span{overflow:hidden;color:var(--ink-2);font-size:16px;line-height:1.5;text-wrap:pretty}
+.steps li.on .note{grid-template-rows:1fr;opacity:1;margin-top:6px}
+.counter{margin-top:22px;font-size:13px;color:var(--ink-3);font-variant-numeric:tabular-nums}
+.counter b{color:var(--w-accent)}
+/* Long cases (10+ steps): compact the rail so it fits a laptop-height screen */
+.scene.many .intro h2{font-size:clamp(28px,2.8vw,42px)}
+.scene.many .steps{margin-top:22px}
+.scene.many .steps li{padding:5px 0 5px 24px}
+.scene.many .steps li::before,.scene.many .steps li::after{top:5px}
+.scene.many .steps li::before{bottom:5px}
+.scene.many .steps button{font-size:clamp(15px,1.2vw,18px)}
+.scene.many .steps .note>span{font-size:14px}
+.stage-wrap{perspective:1500px}
+.stage{position:relative;aspect-ratio:4/3;border-radius:16px;background:#fff;overflow:hidden;box-shadow:0 30px 60px -28px rgba(0,0,0,.35),0 0 0 1px var(--w-line);transform:rotateY(-5deg) rotateX(3deg)}
+.layer{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .55s var(--ease),visibility 0s linear .55s,transform .8s var(--ease);transform:translateY(14px) scale(.985)}
+.layer.on{opacity:1;visibility:visible;transform:none;transition:opacity .55s var(--ease),transform .8s var(--ease)}
+.cap{position:absolute;left:24px;bottom:16px;right:24px;font-size:13px;color:var(--ink-3);text-wrap:pretty}
+.on-dark .cap,.cap.light{color:rgba(255,255,255,.78)}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+
+/* stage: decode */
+.decode{position:absolute;inset:0;display:grid;place-content:center;gap:4px;background:var(--w-surface)}
+.decode div{display:grid;grid-template-columns:10.5em 1fr;column-gap:.6em;align-items:baseline;font-size:clamp(14px,1.5vw,22px)}
+.decode b{font-family:var(--w-face,"Open Sans"),sans-serif;font-weight:700;font-size:4.4em;line-height:1.05;color:var(--w-ink);letter-spacing:-.02em;justify-self:end}
+.decode div.accent b{color:var(--w-accent)}
+.decode span{color:var(--ink-2)}
+.layer.on .decode div{animation:rise .7s var(--ease) both}
+.layer.on .decode div:nth-child(2){animation-delay:.12s}.layer.on .decode div:nth-child(3){animation-delay:.24s}.layer.on .decode div:nth-child(4){animation-delay:.36s}
+
+/* stage: anatomy (coordinates in a 1000×750 stage space) */
+.anat{position:absolute;inset:0;background:var(--w-surface)}
+.anat img{position:absolute}
+.anat svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.anat line{stroke:var(--w-deep);stroke-width:2;fill:none;stroke-dasharray:var(--len);stroke-dashoffset:var(--len)}
+.anat line.w{stroke:#fff}
+.anat circle{fill:var(--w-deep);stroke:#fff;stroke-width:3;opacity:0}
+.layer.on .anat line{animation:draw .9s var(--ease) .3s forwards}
+.layer.on .anat line.late{animation-delay:.6s}
+.layer.on .anat circle{animation:pop .3s var(--ease) .2s forwards}
+@keyframes draw{to{stroke-dashoffset:0}}@keyframes pop{to{opacity:1}}
+.anat .lbl{position:absolute;left:62%;width:34%;font-size:clamp(12px,1.15vw,16px);font-weight:600;color:var(--w-deep);line-height:1.3;transform:translateY(-50%);opacity:0;transition:opacity .4s .7s;text-wrap:balance}
+.layer.on .anat .lbl{opacity:1}
+
+/* stage: converge */
+.converge{position:absolute;inset:0;display:grid;grid-template-columns:repeat(var(--k),1fr);align-items:center;padding:0 5%;gap:3%;background:#fff}
+.converge figure{display:grid;justify-items:center;gap:10px;transition:transform .9s var(--ease),opacity .6s}
+.converge figure img{height:clamp(54px,9vw,130px);width:auto}
+.converge figcaption{font-size:clamp(11px,.95vw,13px);color:var(--ink-3);text-align:center}
+.converge .final{position:absolute;inset:0 0 12% 0;display:grid;place-items:center;opacity:0;transition:opacity .6s var(--ease) .9s}
+.converge .final img{height:clamp(150px,22vw,340px);width:auto}
+.converge.go figure{opacity:0;transform:translateX(var(--dx)) scale(.6)}
+.converge.go .final{opacity:1}
+
+/* stage: flood */
+.flood{position:absolute;inset:0;background:var(--from);transition:background 1.1s var(--ease) .5s;color:#fff;display:flex;flex-direction:column;justify-content:center;padding:0 9%}
+.layer.on .flood{background:var(--to)}
+.flood small{font-size:clamp(14px,1.4vw,20px);opacity:.9}
+.flood strong{font-size:clamp(56px,8vw,128px);line-height:.95;letter-spacing:-.03em}
+.flood dl{display:flex;flex-wrap:wrap;gap:6%;margin:28px 0 0;font-size:clamp(12px,1.1vw,16px)}
+.flood dt{text-transform:uppercase;letter-spacing:.08em;font-weight:600;opacity:.85;font-size:.8em}
+.flood dd{margin:4px 0 0;font-weight:600}
+.flood .was{position:absolute;right:6%;top:8%;font-size:13px;background:rgba(255,255,255,.16);padding:6px 10px;border-radius:999px}
+
+/* stage: palette */
+.palette{position:absolute;inset:0;background:#fff;display:grid;grid-template-columns:repeat(var(--k),1fr);gap:2.4%;padding:9% 6% 16%;align-items:stretch}
+.palette div{display:grid;grid-template-rows:1fr auto;gap:10px;font-size:clamp(11px,1vw,14px)}
+.palette i{display:block;border-radius:10px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.06);transform-origin:bottom}
+.layer.on .palette i{animation:grow .8s var(--ease) both}
+.layer.on .palette div:nth-child(2) i{animation-delay:.07s}.layer.on .palette div:nth-child(3) i{animation-delay:.14s}.layer.on .palette div:nth-child(4) i{animation-delay:.21s}.layer.on .palette div:nth-child(5) i{animation-delay:.28s}.layer.on .palette div:nth-child(6) i{animation-delay:.35s}
+@keyframes grow{from{transform:scaleY(.15);opacity:0}to{transform:none;opacity:1}}
+.palette b{display:block;font-weight:600}.palette span{color:var(--ink-3);font-variant-numeric:tabular-nums}
+
+/* stage: pair */
+.pair{position:absolute;inset:0;display:grid;grid-template-columns:1.25fr .75fr}
+.pair .l{display:grid;place-content:center;gap:26px;padding:0 9%;background:#fff}
+.pair .l img{width:100%}
+.pair .l p{font-size:13px;color:var(--ink-3)}
+.pair .r img{width:100%;height:100%;object-fit:cover}
+
+/* stage: window (+ optional size ladder) */
+.win-stage{position:absolute;inset:0;background:var(--w-surface);padding:5% 5% 0}
+.win-stage:has(+ .cap){padding-bottom:9%}.win-stage:has(+ .cap) .win{border-radius:10px}
+.win{border-radius:10px 10px 0 0;overflow:hidden;box-shadow:0 0 0 1px var(--w-line),0 18px 40px -20px rgba(0,0,0,.3);background:#fff;height:100%}
+.win i{display:flex;gap:6px;padding:9px 12px;background:#fff;border-bottom:1px solid var(--w-line)}
+.win i::before,.win i::after,.win i b{content:"";width:9px;height:9px;border-radius:50%;background:#D7DCE3;display:block}
+.win img{width:100%;height:calc(100% - 28px);object-fit:cover;object-position:top left}
+.ladder{position:absolute;right:6%;bottom:9%;display:flex;align-items:flex-end;gap:16px;padding:14px 18px;background:rgba(255,255,255,.94);border:1px solid var(--w-line);border-radius:12px;font-size:11px;color:var(--ink-3)}
+.ladder figure{display:grid;justify-items:center;gap:6px}
+.ladder .sep{width:1px;align-self:stretch;background:var(--w-line)}
+
+/* stage: responsive (desktop window + phone) */
+.resp{position:absolute;inset:0;background:var(--w-surface);padding:6% 26% 0 5%}
+.resp .phone{position:absolute;right:5%;bottom:-4%;width:24%;aspect-ratio:9/19.5;border-radius:22px;overflow:hidden;border:6px solid #111;box-shadow:0 24px 50px -18px rgba(0,0,0,.45);background:#fff;transition:transform .9s var(--ease) .2s}
+.resp .phone img{width:100%;height:100%;object-fit:cover;object-position:top}
+.layer .resp .phone{transform:translateY(30%)}
+.layer.on .resp .phone{transform:none}
+
+/* stage: rules (do / don't) */
+.rules{position:absolute;inset:0;background:#fff;display:grid;grid-template-columns:1fr 1fr;gap:4%;padding:8% 6% 14%}
+.rules div{border-radius:12px;padding:22px 24px;display:flex;flex-direction:column;gap:14px}
+.rules .do{background:color-mix(in srgb,var(--w-accent) 9%,#fff);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--w-accent) 25%,#fff)}
+.rules .dont{background:#FBF3F3;box-shadow:inset 0 0 0 1px #F0D6D6}
+.rules h3{font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+.rules .do h3{color:var(--w-accent)}.rules .dont h3{color:#B42318}
+.rules p{font-size:clamp(13px,1.25vw,18px);line-height:1.4;color:var(--ink-2)}
+.rules .dont p{text-decoration:line-through;text-decoration-color:rgba(180,35,24,.5)}
+.layer.on .rules p{animation:rise .6s var(--ease) both}
+.layer.on .rules p:nth-of-type(2){animation-delay:.1s}.layer.on .rules p:nth-of-type(3){animation-delay:.2s}
+
+/* stage: image */
+.img-stage{position:absolute;inset:0;background:var(--bg,#fff);display:grid;place-items:center}
+.img-stage:has(+ .cap){inset:0 0 11% 0}
+.img-stage img{width:100%;height:100%;object-fit:var(--fit,contain);object-position:var(--pos,center)}
+
+/* stage: manifest (screen + facts row) */
+.manifest{position:absolute;inset:0;display:grid;grid-template-rows:1fr auto;background:#fff}
+.manifest img{width:100%;height:100%;object-fit:cover;object-position:top left;min-height:0}
+.manifest ul{display:grid;grid-template-columns:repeat(var(--k),1fr);border-top:1px solid var(--w-line)}
+.manifest li{padding:14px 18px;font-size:13px;color:var(--ink-2)}
+.manifest li+li{border-left:1px solid var(--w-line)}
+.manifest li b{display:block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);margin-bottom:4px}
+.layer.on .manifest li{animation:rise .6s var(--ease) both}
+.layer.on .manifest li:nth-child(2){animation-delay:.08s}.layer.on .manifest li:nth-child(3){animation-delay:.16s}.layer.on .manifest li:nth-child(4){animation-delay:.24s}
+
+/* stage: fan (2–4 portraits) */
+.fan{position:absolute;inset:0;background:var(--w-deep);display:flex;justify-content:center;align-items:center}
+.fan img{position:absolute;height:84%;width:auto;border-radius:10px;box-shadow:0 24px 50px -18px rgba(0,0,0,.6);transition:transform 1s var(--ease)}
+.layer.on .fan img:nth-child(1){transform:translateX(-62%) rotate(-6deg)}
+.layer.on .fan img:nth-child(3){transform:translateX(62%) rotate(6deg)}
+.layer.on .fan img:nth-child(4){transform:translateX(120%) rotate(10deg)}
+
+/* 3. Delivered wheel */
+.wheel{position:relative;height:calc(var(--n) * 55vh + 100vh)}
+.wheel .pin2{position:sticky;top:0;height:100vh;display:grid;place-items:center;overflow:hidden;background:#fff}
+.wheel ol{position:relative;width:min(1100px,92vw);height:60vh}
+.wheel li{position:absolute;left:0;right:0;top:50%;text-align:center;font-weight:700;letter-spacing:-.025em;font-size:clamp(26px,4.6vw,64px);line-height:1.05;color:#B9C2CE;transform:translateY(calc(-50% + var(--d,0) * 1.25em)) scale(calc(1 - var(--ad,0) * .1));opacity:calc(1 - var(--ad,0) * .28);transition:color .3s}
+.wheel li.on{color:var(--w-accent)}
+.wheel .band{position:absolute;left:0;right:0;top:50%;height:1.35em;transform:translateY(-50%);font-size:clamp(26px,4.6vw,64px);border-top:1px solid var(--w-line);border-bottom:1px solid var(--w-line);pointer-events:none}
+.wheel .foot{position:absolute;left:var(--pad);right:var(--pad);bottom:36px;display:flex;justify-content:space-between;gap:24px;font-size:14px;color:var(--ink-3)}
+.wheel .foot b{color:var(--w-accent)}
+.wheel h2{position:absolute;top:96px;left:0;right:0;text-align:center;font-size:15px;font-weight:600;color:var(--ink-3)}
+
+/* 4. Closing reveal */
+.close{position:relative;min-height:110vh;display:grid;place-items:center;text-align:center;padding:120px var(--pad) 0;overflow:hidden;background:#fff}
+.close h2{font-size:clamp(40px,7vw,104px);line-height:1;letter-spacing:-.035em;text-wrap:balance}
+.close h2 span{display:block}
+.close h2 span+span{color:color-mix(in srgb,var(--w-accent) calc(var(--r,0) * 100%),#DCE3EC)}
+.close .glow{position:absolute;left:50%;bottom:-38vh;width:110vw;height:70vh;transform:translateX(-50%) scale(calc(.7 + var(--r,0) * .3));border-radius:50%;background:radial-gradient(closest-side,var(--w-accent),color-mix(in srgb,var(--w-accent) 35%,transparent) 55%,transparent);filter:blur(2px);opacity:calc(.25 + var(--r,0) * .75)}
+.close .who{position:relative;margin-top:48px;font-size:16px;color:var(--ink-2)}
+.close .who b{display:block;font-size:20px;color:var(--ink)}
+.close .who a{font-weight:600}
+.close .note{position:relative;margin:32px auto 0;max-width:36em;font-size:14px;color:var(--ink-3);text-wrap:pretty}
+.pending{display:inline-block;margin-top:24px;font-size:13px;padding:6px 12px;border-radius:999px;background:#FFF4D6;color:#7A5300}
+footer{position:relative;background:var(--w-deep);color:#fff;padding:22px var(--pad);display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center;font-size:14px}
+footer svg{width:16px;height:15px}footer svg path{fill:#fff}footer a{color:#fff}
+
+/* Phone / narrow: no pinning; each step carries its own static stage */
+.mstage{display:none}
+@media (max-width:900px){
+  .scene,.wheel{height:auto}
+  .pin{position:static;height:auto;display:block;padding:72px 20px 24px}
+  .steps .note{grid-template-rows:1fr;opacity:1;margin-top:6px}
+  .steps li::after{height:calc(100% - 18px)}
+  .steps button{color:var(--ink)}
+  .stage-wrap,.counter{display:none}
+  .mstage{display:block;margin:14px 0 6px;aspect-ratio:4/3;position:relative;border-radius:12px;overflow:hidden;box-shadow:0 0 0 1px var(--w-line)}
+  .mstage .layer{opacity:1;visibility:visible;transform:none}
+  .mstage *{animation:none!important}
+  .mstage .anat svg{display:none}
+  .mstage .anat circle,.mstage .anat .lbl{opacity:1}
+  .mstage .converge .final{display:none}
+  .mstage .flood{background:var(--to)}
+  .mstage .resp .phone{transform:none}
+  .decode div{font-size:9px;grid-template-columns:9em 1fr}
+  .decode span{font-size:13px}
+  .anat .lbl{left:58%;width:40%;font-size:10px}
+  .rules{padding:6% 4% 12%;gap:3%}.rules div{padding:12px}.rules p{font-size:11px}
+  .screen .left p{display:none}
+  .wheel .pin2{position:static;height:auto;padding:64px 20px}
+  .wheel ol{height:auto}
+  .wheel li{position:static;transform:none;opacity:1;color:var(--ink);font-size:26px;text-align:left;padding:10px 0;border-top:1px solid var(--w-line)}
+  .wheel .band,.wheel .foot{display:none}
+  .wheel h2{position:static;text-align:left;margin-bottom:16px}
+  .close{min-height:auto;padding:96px 20px 80px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-delay:0s!important;transition-duration:.01ms!important;transition-delay:0s!important}
+  .anat line{stroke-dashoffset:0}
+}
+
+/* Optional use-case labels: badge on the stage, "Best for" line in the note, index grid before the scene */
+.badge{position:absolute;left:16px;top:14px;z-index:2;font:600 12px/1 "Open Sans",sans-serif;letter-spacing:.06em;text-transform:uppercase;padding:7px 10px;border-radius:999px;background:var(--w-deep);color:#fff;box-shadow:0 4px 12px -4px rgba(0,0,0,.35)}
+.best{display:block;margin-top:8px;font-style:normal;font-size:14px;line-height:1.45;color:var(--w-deep);padding-left:10px;border-left:2px solid var(--w-accent)}
+.best b{display:block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--w-accent)}
+.index{background:#fff;padding:96px var(--pad) 88px}
+.index-in{max-width:1180px;margin:0 auto}
+.index h2{font-size:clamp(30px,3.6vw,52px);line-height:1.05;letter-spacing:-.03em;text-wrap:balance}
+.index p{margin-top:12px;max-width:44em;color:var(--ink-2);text-wrap:pretty}
+.index ol{margin-top:36px;display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:1px;background:var(--w-line);border:1px solid var(--w-line)}
+.index button{appearance:none;border:0;width:100%;height:100%;text-align:left;font:inherit;background:#fff;padding:20px 20px 22px;display:grid;gap:6px;align-content:start;cursor:pointer;transition:background .2s}
+.index button:hover{background:var(--w-surface)}
+.index .n{font-size:12px;color:var(--w-muted);font-variant-numeric:tabular-nums}
+.index b{font-size:20px;color:var(--ink);letter-spacing:-.01em}
+.index button span:last-child{font-size:14px;line-height:1.45;color:var(--ink-2)}
+@media (max-width:900px){.badge{font-size:10px;padding:5px 8px;left:10px;top:10px}.index{padding:64px 20px}}
+
+/* Optional numbered steps (scene.numbered) */
+.steps .num{display:inline-block;min-width:2.1em;font-variant-numeric:tabular-nums;color:var(--w-accent);font-weight:700}
+.steps li:not(.on) .num{color:var(--w-muted)}
+
+</style>
+</head>
+<body>
+<!-- DIRECTION CONTRACT (design-impeccable)
+THESIS: A case study you move through, not a deck you click: one pinned stage morphs through the project while a step rail explains each decision.
+OWN-WORLD: ODS frame (Open Sans, ink on white, hairline rails) holding Case showcase's world: accent #0A5F8A, deep #0A2540, surface #F3F6F9; real artwork, live screens and real photos only.
+STORY: Each stage type, in action.
+FIRST VIEWPORT: Deep-to-surface hero, project tabs, a tilted screen that settles flat as it enters.
+FORM: og-ods-case-showcase v1.0 (pinned stepper, delivered wheel, closing reveal; patterns from tasteskill.dev).
+FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
+-->
+<a class="sr" href="#case">Skip to the case study</a>
+<nav class="bar" aria-label="Site"><svg viewBox="8 9 16 15" aria-hidden="true"><path fill="#109200" d="M9 22c0-6 4-11 14-12-1 9-6 13-12 13-.7 0-1.4-.1-2-.3z"/></svg><b>OGANIKO</b><span>og-ods-case-showcase · Stage types</span><a class="cta" href="mailto:phil.parry@oganiko.com">Get in touch</a></nav>
+
+<header class="hero">
+  <h1>Twelve ways to show the work</h1>
+  <p class="lede">Every stage type the case showcase can build, each shown with real material from the mAbV and STR case studies. Scroll to see each one perform.</p>
+  <nav class="tabs" aria-label="Projects"><a aria-current="page" href="#case">Stage types</a><a href="../../portfolio-mabv/showcase/">mAbV</a><a href="../../portfolio-str/showcase/">STR</a></nav>
+  <div class="tilt" id="tilt"><div class="screen">
+    <div class="left" style="--logo-w:78%"><img src="../../portfolio-mabv/assets/vector/mabv-logo-lockup.svg" alt="mAbV lockup, used as sample artwork"><p>One case file in, one interactive page out. The hero, stepper, wheel and closing reveal are shared; each step picks a stage type.</p></div>
+    <div class="right" style="--pos:center top"><img src="../../portfolio-str/assets/img/home-phone.jpg" alt="STR storefront on a phone, used as sample artwork"></div>
+  </div></div>
+  <div class="meta"><span>Skill <b>og-ods-case-showcase</b></span><span>Stage types <b>12</b></span><span>Built with <b>the skill's own engine</b></span></div>
+</header>
+
+<main id="case">
+<section class="index" aria-labelledby="index-title"><div class="index-in"><h2 id="index-title">Twelve stage types, numbered, and what each is for</h2><p>Each step of a case study picks one stage type. Pick the one that shows the point. Click a type to jump to it in action.</p><ol><li><button type="button" data-goto="0"><span class="n">01</span><b>Decode · Unpack a name</b><span>The brief, when the name itself carries the idea.</span></button></li><li><button type="button" data-goto="1"><span class="n">02</span><b>Anatomy · Explain a mark</b><span>The core design idea, when it lives inside the artwork.</span></button></li><li><button type="button" data-goto="2"><span class="n">03</span><b>Converge · Show the routes not taken</b><span>Logo routes, layout options or concepts (four to six).</span></button></li><li><button type="button" data-goto="3"><span class="n">04</span><b>Flood · Make a colour decision</b><span>A colour change with a clear before and after.</span></button></li><li><button type="button" data-goto="4"><span class="n">05</span><b>Palette · Present a palette</b><span>A full palette, or several colours with roles.</span></button></li><li><button type="button" data-goto="5"><span class="n">06</span><b>Pair · Connect artwork to the real thing</b><span>A deliverable next to its real application.</span></button></li><li><button type="button" data-goto="6"><span class="n">07</span><b>Window · Show a live screen</b><span>Websites and design-system pages; add a size ladder for marks.</span></button></li><li><button type="button" data-goto="7"><span class="n">08</span><b>Responsive · Prove it works on a phone</b><span>Any site where mobile matters.</span></button></li><li><button type="button" data-goto="8"><span class="n">09</span><b>Rules · State the rules</b><span>Writing style, logo usage, accessibility do's and don'ts.</span></button></li><li><button type="button" data-goto="9"><span class="n">10</span><b>Manifest · List the handover</b><span>Brand kits, file sets, component libraries.</span></button></li><li><button type="button" data-goto="10"><span class="n">11</span><b>Fan · Prove it's in use</b><span>Real-world photos or phone screens: the proof step.</span></button></li><li><button type="button" data-goto="11"><span class="n">12</span><b>Image · Show anything else</b><span>Diagrams, infographics, a single strong picture.</span></button></li></ol></div></section>
+<section class="scene many" id="scene" style="--n:12" aria-labelledby="scene-title">
+  <div class="pin">
+    <div class="intro">
+      <span class="label"><svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2 4 5v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V5z"/></svg>Stage types, one per step</span>
+      <h2 id="scene-title">Each stage type, in action.</h2>
+      <ol class="steps" id="steps">
+<li><button type="button" aria-controls="stage"><span class="num">01</span>Decode · Unpack a name</button><div class="note"><span>Each letter or part rises in with its meaning beside it, set in the brand's own typeface.<em class="best"><b>Best for</b> The brief, when the name itself carries the idea.</em></span></div><div class="mstage"><div class="layer on" data-step="0"><div class="decode"><div><b>m</b><span>monoclonal</span></div><div><b>Ab</b><span>antibody</span></div><div class="accent"><b>V</b><span>vaccine</span></div></div><p class="cap">Example: mAbV.</p><span class="badge">decode</span></div></div></li>
+<li><button type="button" aria-controls="stage"><span class="num">02</span>Anatomy · Explain a mark</button><div class="note"><span>The artwork sits large while leader lines draw in from each feature to its label.<em class="best"><b>Best for</b> The core design idea, when it lives inside the artwork.</em></span></div><div class="mstage"><div class="layer on" data-step="1"><div class="anat"><img src="../../portfolio-mabv/assets/vector/mabv-logo.svg" alt="The mAbV mark" style="left:14%;top:8%;height:84%"><svg viewBox="0 0 1000 750" preserveAspectRatio="none" aria-hidden="true"><line class="w" x1="504" y1="263" x2="588" y2="263" style="--len:84"/><line class="late" x1="588" y1="263" x2="604" y2="263" style="--len:16"/><circle cx="504" cy="263" r="7"/><line class="late" x1="588" y1="392" x2="604" y2="392" style="--len:16"/><circle cx="588" cy="392" r="7"/><line class="w" x1="375" y1="502" x2="520" y2="502" style="--len:145"/><line class="late" x1="520" y1="502" x2="604" y2="502" style="--len:84"/><circle cx="375" cy="502" r="7"/></svg><p class="lbl" style="top:35.1%">Feature one, drawn from the artwork</p><p class="lbl" style="top:52.3%">Feature two, on the outline</p><p class="lbl" style="top:66.9%">Feature three, inside the mark</p></div><p class="cap">Example: the mAbV shield.</p><span class="badge">anatomy</span></div></div></li>
+<li><button type="button" aria-controls="stage"><span class="num">03</span>Converge · Show the routes not taken</button><div class="note"><span>The explored options sit side by side, then slide together into the one that was chosen.<em class="best"><b>Best for</b> Logo routes, layout options or concepts (four to six).</em></span></div><div class="mstage"><div class="layer on" data-step="2"><div class="converge" style="--k:5"><figure style="--dx:150%"><img src="../../portfolio-str/assets/logo-routes/v000.svg" alt=""><figcaption>Route V0</figcaption></figure><figure style="--dx:75%"><img src="../../portfolio-str/assets/logo-routes/v001.svg" alt=""><figcaption>Route V1</figcaption></figure><figure style="--dx:0%"><img src="../../portfolio-str/assets/logo-routes/v002.svg" alt=""><figcaption>Route V2</figcaption></figure><figure style="--dx:-75%"><img src="../../portfolio-str/assets/logo-routes/v004.svg" alt=""><figcaption>Route V4</figcaption></figure><figure style="--dx:-150%"><img src="../../portfolio-str/assets/logo-routes/v005.svg" alt=""><figcaption>Route V5</figcaption></figure><div class="final"><img src="../../portfolio-str/assets/vector/logo-str.svg" alt="The final STR mark"></div></div><p class="cap">Example: STR's logo routes.</p><span class="badge">converge</span></div></div></li>
+<li><button type="button" aria-controls="stage"><span class="num">04</span>Flood · Make a colour decision</button><div class="note"><span>The old colour floods into the new one, with the spec set large: Pantone, HEX, RGB.<em class="best"><b>Best for</b> A colour change with a clear before and after.</em></span></div><div class="mstage"><div class="layer on" data-step="3"><div class="flood" style="--from:#00B4A6;--to:#0047BB"><span class="was">Before: teal</span><small>Pantone</small><strong>2728 C</strong><small>Cobalt Blue</small><dl><div><dt>HEX</dt><dd>#0047BB</dd></div><div><dt>RGB</dt><dd>0 · 71 · 187</dd></div></dl></div><span class="badge">flood</span></div></div></li>
+<li><button type="button" aria-controls="stage"><span class="num">05</span>Palette · Present a palette</button><div class="note"><span>Swatches grow up from the baseline, each with its name and value.<em class="best"><b>Best for</b> A full palette, or several colours with roles.</em></span></div><div class="mstage"><div class="layer on" data-step="4"><div class="palette" style="--k:6"><div><i style="background:#0A5F8A"></i><p><b>Primary</b><span>#0A5F8A</span></p></div><div><i style="background:#084A6D"></i><p><b>Dark</b><span>#084A6D</span></p></div><div><i style="background:#3D8AB5"></i><p><b>Light</b><span>#3D8AB5</span></p></div><div><i style="background:#E6F2F7"></i><p><b>Tint</b><span>#E6F2F7</span></p></div><div><i style="background:#0D9488"></i><p><b>Secondary</b><span>#0D9488</span></p></div><div><i style="background:#059669"></i><p><b>Trust</b><span>#059669</span></p></div></div><p class="cap">Example: STR's six colours.</p><span class="badge">palette</span></div></div></li>
+<li><button type="button" aria-controls="stage"><span class="num">06</span>Pair · Connect artwork to the real thing</button><div class="note"><span>The artwork on the left, the photo of it in the world on the right.<em class="best"><b>Best for</b> A deliverable next to its real application.</em></span></div><div class="mstage"><div class="layer on" data-step="5"><div class="pair"><div class="l"><img src="../../portfolio-mabv/assets/vector/mabv-logo-lockup-cn-en.svg" alt="Bilingual mAbV lockup"><p>Artwork on the left, the real thing on the right.</p></div><div class="r"><img src="../../portfolio-mabv/assets/img/office-1.jpg" alt="mAbV reception sign"></div></div><span class="badge">pair</span></div></div></li>
+<li><button type="button" aria-controls="stage"><span class="num">07</span>Window · Show a live screen</button><div class="note"><span>A real screenshot in a browser frame. The optional size ladder renders the actual logo files at real sizes.<em class="best"><b>Best for</b> Websites and design-system pages; add a size ladder for marks.</em></span></div><div class="mstage"><div class="layer on" data-step="6"><div class="win-stage"><div class="win"><i><b></b></i><img src="../../portfolio-mabv/assets/img/ds-logo.jpg" alt="mAbV design system logo page"></div><div class="ladder" aria-label="Size ladder"><figure><img src="../../portfolio-mabv/assets/vector/mabv-logo-simple.svg" alt="" style="height:16px">16</figure><figure><img src="../../portfolio-mabv/assets/vector/mabv-logo-simple.svg" alt="" style="height:24px">24</figure><span class="sep"></span><figure><img src="../../portfolio-mabv/assets/vector/mabv-logo.svg" alt="" style="height:32px">32</figure><figure><img src="../../portfolio-mabv/assets/vector/mabv-logo.svg" alt="" style="height:48px">48</figure><figure><img src="../../portfolio-mabv/assets/vector/mabv-logo.svg" alt="" style="height:72px">72</figure></div></div><p class="cap">Example: mAbV design system.</p><span class="badge">window</span></div></div></li>
+<li><button type="button" aria-controls="stage"><span class="num">08</span>Responsive · Prove it works on a phone</button><div class="note"><span>The desktop page in a browser frame, with the phone version sliding up beside it.<em class="best"><b>Best for</b> Any site where mobile matters.</em></span></div><div class="mstage"><div class="layer on" data-step="7"><div class="resp"><div class="win"><i><b></b></i><img src="../../portfolio-str/assets/img/pdp.jpg" alt="STR product page on desktop"></div><div class="phone"><img src="../../portfolio-str/assets/img/pdp-phone.jpg" alt="STR product page on a phone"></div></div><p class="cap">Example: STR product page.</p><span class="badge">responsive</span></div></div></li>
+<li><button type="button" aria-controls="stage"><span class="num">09</span>Rules · State the rules</button><div class="note"><span>Do and Don't side by side; the Don'ts are struck through.<em class="best"><b>Best for</b> Writing style, logo usage, accessibility do's and don'ts.</em></span></div><div class="mstage"><div class="layer on" data-step="8"><div class="rules"><div class="do"><h3>Do</h3><p>“Synthetic QS-21-Api demonstrates equivalent activity.”</p><p>“Secure supply chain.”</p></div><div class="dont"><h3>Don't</h3><p>“Our amazing product boosts vaccines like never before.”</p><p>“The best adjuvant on the market.”</p></div></div><p class="cap">Example: STR writing rules.</p><span class="badge">rules</span></div></div></li>
+<li><button type="button" aria-controls="stage"><span class="num">10</span>Manifest · List the handover</button><div class="note"><span>A screen with a row of facts underneath: files, formats and counts stagger in.<em class="best"><b>Best for</b> Brand kits, file sets, component libraries.</em></span></div><div class="mstage"><div class="layer on" data-step="9"><div class="manifest"><img src="../../portfolio-mabv/assets/img/ds-brand-kit.jpg" alt="mAbV brand kit page"><ul style="--k:3"><li><b>Digital</b>4 SVG · 4 PNG</li><li><b>Print</b>4 PDF · 4 EPS</li><li><b>Social</b>1 SVG · 1 PNG</li></ul></div><span class="badge">manifest</span></div></div></li>
+<li><button type="button" aria-controls="stage"><span class="num">11</span>Fan · Prove it's in use</button><div class="note"><span>Two to four portraits fan out on the brand's deep colour.<em class="best"><b>Best for</b> Real-world photos or phone screens: the proof step.</em></span></div><div class="mstage"><div class="layer on" data-step="10"><div class="fan"><img src="../../portfolio-str/assets/img/products-phone.jpg" alt="STR products on a phone"><img src="../../portfolio-mabv/assets/img/office-2.jpg" alt="mAbV reception"><img src="../../portfolio-str/assets/img/pdp-phone.jpg" alt="STR product page on a phone"></div><p class="cap light">Example: phones and an office photo.</p><span class="badge">fan</span></div></div></li>
+<li><button type="button" aria-controls="stage"><span class="num">12</span>Image · Show anything else</button><div class="note"><span>Any single image, contained or covering the stage, on any background.<em class="best"><b>Best for</b> Diagrams, infographics, a single strong picture.</em></span></div><div class="mstage"><div class="layer on" data-step="11"><div class="img-stage" style="--fit:cover;--pos:top left;--bg:#fff"><img src="../../portfolio-str/assets/img/catalogue-manager.jpg" alt="STR catalogue manager prototype"></div><p class="cap">Example: STR catalogue manager.</p><span class="badge">image</span></div></div></li>
+      </ol>
+      <p class="counter" aria-live="polite"><b id="cnum">1</b> of 12</p>
+    </div>
+    <div class="stage-wrap"><div class="stage" id="stage">
+<div class="layer" data-step="0"><div class="decode"><div><b>m</b><span>monoclonal</span></div><div><b>Ab</b><span>antibody</span></div><div class="accent"><b>V</b><span>vaccine</span></div></div><p class="cap">Example: mAbV.</p><span class="badge">decode</span></div>
+<div class="layer" data-step="1"><div class="anat"><img src="../../portfolio-mabv/assets/vector/mabv-logo.svg" alt="The mAbV mark" style="left:14%;top:8%;height:84%"><svg viewBox="0 0 1000 750" preserveAspectRatio="none" aria-hidden="true"><line class="w" x1="504" y1="263" x2="588" y2="263" style="--len:84"/><line class="late" x1="588" y1="263" x2="604" y2="263" style="--len:16"/><circle cx="504" cy="263" r="7"/><line class="late" x1="588" y1="392" x2="604" y2="392" style="--len:16"/><circle cx="588" cy="392" r="7"/><line class="w" x1="375" y1="502" x2="520" y2="502" style="--len:145"/><line class="late" x1="520" y1="502" x2="604" y2="502" style="--len:84"/><circle cx="375" cy="502" r="7"/></svg><p class="lbl" style="top:35.1%">Feature one, drawn from the artwork</p><p class="lbl" style="top:52.3%">Feature two, on the outline</p><p class="lbl" style="top:66.9%">Feature three, inside the mark</p></div><p class="cap">Example: the mAbV shield.</p><span class="badge">anatomy</span></div>
+<div class="layer" data-step="2"><div class="converge" style="--k:5"><figure style="--dx:150%"><img src="../../portfolio-str/assets/logo-routes/v000.svg" alt=""><figcaption>Route V0</figcaption></figure><figure style="--dx:75%"><img src="../../portfolio-str/assets/logo-routes/v001.svg" alt=""><figcaption>Route V1</figcaption></figure><figure style="--dx:0%"><img src="../../portfolio-str/assets/logo-routes/v002.svg" alt=""><figcaption>Route V2</figcaption></figure><figure style="--dx:-75%"><img src="../../portfolio-str/assets/logo-routes/v004.svg" alt=""><figcaption>Route V4</figcaption></figure><figure style="--dx:-150%"><img src="../../portfolio-str/assets/logo-routes/v005.svg" alt=""><figcaption>Route V5</figcaption></figure><div class="final"><img src="../../portfolio-str/assets/vector/logo-str.svg" alt="The final STR mark"></div></div><p class="cap">Example: STR's logo routes.</p><span class="badge">converge</span></div>
+<div class="layer" data-step="3"><div class="flood" style="--from:#00B4A6;--to:#0047BB"><span class="was">Before: teal</span><small>Pantone</small><strong>2728 C</strong><small>Cobalt Blue</small><dl><div><dt>HEX</dt><dd>#0047BB</dd></div><div><dt>RGB</dt><dd>0 · 71 · 187</dd></div></dl></div><span class="badge">flood</span></div>
+<div class="layer" data-step="4"><div class="palette" style="--k:6"><div><i style="background:#0A5F8A"></i><p><b>Primary</b><span>#0A5F8A</span></p></div><div><i style="background:#084A6D"></i><p><b>Dark</b><span>#084A6D</span></p></div><div><i style="background:#3D8AB5"></i><p><b>Light</b><span>#3D8AB5</span></p></div><div><i style="background:#E6F2F7"></i><p><b>Tint</b><span>#E6F2F7</span></p></div><div><i style="background:#0D9488"></i><p><b>Secondary</b><span>#0D9488</span></p></div><div><i style="background:#059669"></i><p><b>Trust</b><span>#059669</span></p></div></div><p class="cap">Example: STR's six colours.</p><span class="badge">palette</span></div>
+<div class="layer" data-step="5"><div class="pair"><div class="l"><img src="../../portfolio-mabv/assets/vector/mabv-logo-lockup-cn-en.svg" alt="Bilingual mAbV lockup"><p>Artwork on the left, the real thing on the right.</p></div><div class="r"><img src="../../portfolio-mabv/assets/img/office-1.jpg" alt="mAbV reception sign"></div></div><span class="badge">pair</span></div>
+<div class="layer" data-step="6"><div class="win-stage"><div class="win"><i><b></b></i><img src="../../portfolio-mabv/assets/img/ds-logo.jpg" alt="mAbV design system logo page"></div><div class="ladder" aria-label="Size ladder"><figure><img src="../../portfolio-mabv/assets/vector/mabv-logo-simple.svg" alt="" style="height:16px">16</figure><figure><img src="../../portfolio-mabv/assets/vector/mabv-logo-simple.svg" alt="" style="height:24px">24</figure><span class="sep"></span><figure><img src="../../portfolio-mabv/assets/vector/mabv-logo.svg" alt="" style="height:32px">32</figure><figure><img src="../../portfolio-mabv/assets/vector/mabv-logo.svg" alt="" style="height:48px">48</figure><figure><img src="../../portfolio-mabv/assets/vector/mabv-logo.svg" alt="" style="height:72px">72</figure></div></div><p class="cap">Example: mAbV design system.</p><span class="badge">window</span></div>
+<div class="layer" data-step="7"><div class="resp"><div class="win"><i><b></b></i><img src="../../portfolio-str/assets/img/pdp.jpg" alt="STR product page on desktop"></div><div class="phone"><img src="../../portfolio-str/assets/img/pdp-phone.jpg" alt="STR product page on a phone"></div></div><p class="cap">Example: STR product page.</p><span class="badge">responsive</span></div>
+<div class="layer" data-step="8"><div class="rules"><div class="do"><h3>Do</h3><p>“Synthetic QS-21-Api demonstrates equivalent activity.”</p><p>“Secure supply chain.”</p></div><div class="dont"><h3>Don't</h3><p>“Our amazing product boosts vaccines like never before.”</p><p>“The best adjuvant on the market.”</p></div></div><p class="cap">Example: STR writing rules.</p><span class="badge">rules</span></div>
+<div class="layer" data-step="9"><div class="manifest"><img src="../../portfolio-mabv/assets/img/ds-brand-kit.jpg" alt="mAbV brand kit page"><ul style="--k:3"><li><b>Digital</b>4 SVG · 4 PNG</li><li><b>Print</b>4 PDF · 4 EPS</li><li><b>Social</b>1 SVG · 1 PNG</li></ul></div><span class="badge">manifest</span></div>
+<div class="layer" data-step="10"><div class="fan"><img src="../../portfolio-str/assets/img/products-phone.jpg" alt="STR products on a phone"><img src="../../portfolio-mabv/assets/img/office-2.jpg" alt="mAbV reception"><img src="../../portfolio-str/assets/img/pdp-phone.jpg" alt="STR product page on a phone"></div><p class="cap light">Example: phones and an office photo.</p><span class="badge">fan</span></div>
+<div class="layer" data-step="11"><div class="img-stage" style="--fit:cover;--pos:top left;--bg:#fff"><img src="../../portfolio-str/assets/img/catalogue-manager.jpg" alt="STR catalogue manager prototype"></div><p class="cap">Example: STR catalogue manager.</p><span class="badge">image</span></div>
+    </div></div>
+  </div>
+</section>
+
+<section class="wheel" id="wheel" style="--n:6" aria-labelledby="wheel-title">
+  <div class="pin2">
+    <h2 id="wheel-title">Shared by every page</h2>
+    <div class="band" aria-hidden="true"></div>
+    <ol><li>A project switcher in the hero</li><li>A pinned story stepper</li><li>Twelve stage types</li><li>A delivered wheel like this one</li><li>A closing two-line reveal</li><li>A phone layout that never pins</li></ol>
+    <div class="foot"><span><b id="wnum">1</b> of 6</span><span>Say “make a case study for &lt;project&gt;” to build one.</span></div>
+  </div>
+</section>
+
+<section class="close" id="close" aria-labelledby="close-title">
+  <div class="glow" aria-hidden="true"></div>
+  <div>
+    <h2 id="close-title"><span>One case file in,</span><span>one page out.</span></h2>
+    <p class="note">Built from ~/OG/reports/og-ods-case-showcase-demo/case.json with the og-ods-case-showcase engine. Schema and stage reference: references/case-schema.md and references/stage-types.md in the skill.</p>
+    <p class="who"><b>Phil Parry</b>20+ years in UX, brand and design systems<br><a href="mailto:phil.parry@oganiko.com">phil.parry@oganiko.com</a> · <a href="https://oganiko.com">oganiko.com</a></p>
+    
+  </div>
+</section>
+</main>
+<footer><svg viewBox="8 9 16 15" aria-hidden="true"><path d="M9 22c0-6 4-11 14-12-1 9-6 13-12 13-.7 0-1.4-.1-2-.3z"/></svg><b>OGANIKO</b><span>og-ods-case-showcase · stage-type demo</span></footer>
+<script>
+// og-ods-case-showcase engine v1.0 — scroll behaviour for the built page. No dependencies.
+// Pinned stepper: scroll progress through .scene picks the active step, fills its rail, and swaps the stage layer.
+// Steps are buttons, so the story can also be driven by click or keyboard. Under 900 px nothing pins.
+(() => {
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const narrow = matchMedia("(max-width: 900px)");
+  const scene = document.getElementById("scene");
+  const items = [...document.querySelectorAll("#steps > li")];
+  const layers = [...document.querySelectorAll("#stage > .layer")];
+  const n = items.length;
+  let current = -1;
+  let convergeTimer = 0;
+
+  function setStep(i, fill) {
+    items.forEach((li, j) => li.style.setProperty("--fill", j < i ? 1 : j === i ? fill : 0));
+    if (i === current) return;
+    current = i;
+    items.forEach((li, j) => { li.classList.toggle("on", j === i); li.querySelector("button").toggleAttribute("aria-current", j === i); });
+    layers.forEach((l, j) => l.classList.toggle("on", j === i));
+    const num = document.getElementById("cnum"); if (num) num.textContent = i + 1;
+    clearTimeout(convergeTimer);
+    document.querySelectorAll("#stage .converge").forEach((c) => c.classList.remove("go"));
+    const c = layers[i]?.querySelector(".converge");
+    if (c) convergeTimer = setTimeout(() => c.classList.add("go"), reduce ? 0 : 1600);
+  }
+
+  function onScene() {
+    if (narrow.matches || !scene) return;
+    const span = scene.offsetHeight - innerHeight;
+    const p = Math.min(Math.max(-scene.getBoundingClientRect().top / span, 0), 0.9999);
+    const f = p * n;
+    setStep(Math.floor(f), f % 1);
+  }
+  function goTo(i) {
+    if (narrow.matches) { items[i]?.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" }); return; }
+    const span = scene.offsetHeight - innerHeight;
+    scrollTo({ top: scene.offsetTop + span * ((i + 0.05) / n), behavior: reduce ? "auto" : "smooth" });
+  }
+  items.forEach((li, i) => li.querySelector("button").addEventListener("click", () => { if (!narrow.matches) goTo(i); }));
+  document.querySelectorAll("[data-goto]").forEach((b) => b.addEventListener("click", () => goTo(+b.dataset.goto)));
+
+  const wheel = document.getElementById("wheel");
+  const wItems = wheel ? [...wheel.querySelectorAll("ol > li")] : [];
+  function onWheel() {
+    if (narrow.matches || !wheel) return;
+    const span = wheel.offsetHeight - innerHeight;
+    const p = Math.min(Math.max(-wheel.getBoundingClientRect().top / span, 0), 1) * (wItems.length - 1);
+    wItems.forEach((li, j) => { const d = j - p; li.style.setProperty("--d", d.toFixed(3)); li.style.setProperty("--ad", Math.min(Math.abs(d), 3).toFixed(3)); li.classList.toggle("on", Math.abs(d) < 0.5); });
+    const w = document.getElementById("wnum"); if (w) w.textContent = Math.round(p) + 1;
+  }
+
+  const close = document.getElementById("close");
+  function onClose() {
+    if (!close) return;
+    const v = Math.min(Math.max((innerHeight - close.getBoundingClientRect().top) / (innerHeight * 0.9), 0), 1);
+    close.style.setProperty("--r", v.toFixed(3));
+  }
+
+  let ticking = false;
+  const frame = () => { onScene(); onWheel(); onClose(); ticking = false; };
+  addEventListener("scroll", () => { if (!ticking) { ticking = true; requestAnimationFrame(frame); } }, { passive: true });
+  addEventListener("resize", frame);
+  narrow.addEventListener("change", frame);
+  requestAnimationFrame(() => document.getElementById("tilt")?.classList.add("in"));
+  setStep(0, 0);
+  frame();
+
+  // ?y=<viewport heights>: open scrolled to that point, settled (QA captures, deep links to a step).
+  // ?step=<n> (1-based): open settled on that step of the story; links can point at a single step.
+  const q = new URLSearchParams(location.search);
+  const sN = parseInt(q.get("step"), 10);
+  const y = Number.isFinite(sN) && scene ? (scene.offsetTop + (scene.offsetHeight - innerHeight) * ((sN - 1 + 0.4) / n)) / innerHeight : parseFloat(q.get("y"));
+  if (Number.isFinite(y)) {
+    const st = document.createElement("style");
+    st.textContent = "*,*::before,*::after{transition:none!important;animation-duration:0s!important;animation-delay:0s!important}";
+    document.head.append(st);
+    addEventListener("load", () => { scrollTo(0, y * innerHeight); frame(); layers[current]?.querySelector(".converge")?.classList.add("go"); });
+  }
+})();
+
+</script>
+</body>
+</html>

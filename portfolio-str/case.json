@@ -1,0 +1,53 @@
+{
+  "slug": "str",
+  "title": "STR Technologies",
+  "pageTitle": "STR Technologies case study · Phil Parry",
+  "description": "A Shopify storefront, design system and catalogue tools for research-grade vaccine adjuvants. An interactive case study by Phil Parry.",
+  "output": "showcase/index.html",
+  "theme": { "accent": "#0A5F8A", "deep": "#084A6D", "ink": "#1F3A4D", "muted": "#5B7183", "surface": "#F2F7FA", "line": "#DCE8EE", "heroA": "#062A3E", "heroB": "#0A4F73", "glow": "rgba(10,95,138,.34)" },
+  "fonts": [
+    { "family": "Open Sans", "src": "../assets/fonts/open-sans-latin-400-normal.woff2", "weight": "400" },
+    { "family": "Open Sans", "src": "../assets/fonts/open-sans-latin-600-normal.woff2", "weight": "600" },
+    { "family": "Open Sans", "src": "../assets/fonts/open-sans-latin-700-normal.woff2", "weight": "700" }
+  ],
+  "contact": { "name": "Phil Parry", "line": "20+ years in UX, brand and design systems", "email": "phil.parry@oganiko.com", "site": "oganiko.com" },
+  "hero": {
+    "title": "A storefront built the way scientists buy",
+    "lede": "Selected work by Phil Parry: a Shopify store, a design system and catalogue tools for a supplier of research-grade vaccine adjuvants.",
+    "projects": [
+      { "label": "mAbV", "href": "../../portfolio-mabv/showcase/" },
+      { "label": "STR", "current": true },
+      { "label": "Orange" },
+      { "label": "Tartak" }
+    ],
+    "art": { "src": "../assets/vector/logo-str.svg", "alt": "STR Technologies logo", "width": "40%" },
+    "line": "Shopify storefront, design system and catalogue tools for research-grade vaccine adjuvants.",
+    "photo": { "src": "../assets/img/home-phone.jpg", "alt": "The STR storefront on a phone: Defined adjuvants for vaccine research", "pos": "center top" },
+    "meta": [ { "k": "Client", "v": "STR Technologies" }, { "k": "Scope", "v": "Shopify storefront, design system, catalogue tools" }, { "k": "Year", "v": "2026" }, { "k": "Role", "v": "Design and build" } ]
+  },
+  "scene": {
+    "label": "STR, step by step",
+    "title": "A shop for buyers who don't browse.",
+    "steps": [
+      { "title": "The buyers", "note": "STR sells research-grade vaccine adjuvants to scientists. The products are white powders in near-identical vials, so buyers compare formulation, purity and documentation before they trust a supplier.",
+        "stage": { "type": "window", "src": "../assets/img/home.jpg", "alt": "The live STR homepage: Defined adjuvants for vaccine research, with ready-to-use adjuvants and defined synthetic components", "caption": "The live homepage at strsg.com." } },
+      { "title": "Written for scientists", "note": "The voice is set in the design system as scientific, never salesy: precise claims backed by data, and no marketing language a researcher would discount on sight.",
+        "stage": { "type": "rules", "do": [ "“Synthetic QS-21-Api demonstrates equivalent activity.”", "“Secure supply chain.”" ], "dont": [ "“Our amazing product boosts vaccines like never before.”", "“The best adjuvant on the market.”" ], "caption": "Examples from the writing rules in the STR design system." } },
+      { "title": "A mark with a signal", "note": "The logo was explored through seven routes, from a literal QS-21 structure to rounded geometry. The live mark adds a small green dot: a quiet signal of reliability.",
+        "stage": { "type": "converge", "items": [ { "src": "../assets/logo-routes/v000.svg", "label": "V0 Structuralist" }, { "src": "../assets/logo-routes/v001.svg", "label": "V1 Industrial" }, { "src": "../assets/logo-routes/v002.svg", "label": "V2 Human-centric" }, { "src": "../assets/logo-routes/v004.svg", "label": "V4 Certifier" }, { "src": "../assets/logo-routes/v005.svg", "label": "V5 Modernist" } ], "final": { "src": "../assets/vector/logo-str.svg", "alt": "The live STR mark with its green dot" }, "caption": "Five of the routes in the design system, converging on the live mark." } },
+      { "title": "One palette", "note": "A deep laboratory blue carries the brand, with a teal and a trust green held back for status. The same palette brands the shop, the checkout and the customer accounts.",
+        "stage": { "type": "palette", "swatches": [ { "name": "Primary", "hex": "#0A5F8A" }, { "name": "Primary dark", "hex": "#084A6D" }, { "name": "Primary light", "hex": "#3D8AB5" }, { "name": "Tint", "hex": "#E6F2F7" }, { "name": "Secondary", "hex": "#0D9488" }, { "name": "Trust green", "hex": "#059669" } ], "caption": "From the colour page of the STR design system." } },
+      { "title": "A reference that takes orders", "note": "Product pages lead with what a scientist checks: formulation, purity, pack sizes and documentation, set like instrument output. Ordering sits beside the data, not in place of it.",
+        "stage": { "type": "responsive", "desktop": { "src": "../assets/img/pdp.jpg", "alt": "A01 Squalene Emulsion Adjuvant product page on desktop" }, "phone": { "src": "../assets/img/pdp-phone.jpg", "alt": "The same product page on a phone" } } },
+      { "title": "A theme of its own", "note": "I built the Shopify theme from scratch rather than adapting a bought one, so it carries only what this catalogue needs. Shopify's own speed report rates it Good.",
+        "stage": { "type": "window", "src": "../assets/img/admin-themes.jpg", "alt": "Shopify admin: the STR theme with its Core Web Vitals rated Good", "caption": "The STR theme in Shopify admin, with Shopify's speed report." } },
+      { "title": "Publishing the client runs", "note": "The client team runs the catalogue themselves. A spreadsheet stays the source of truth, and a catalogue manager shows what is draft, ready or live before anything reaches the shop.",
+        "stage": { "type": "window", "src": "../assets/img/catalogue-manager.jpg", "alt": "Catalogue manager: draft, ready and live counts above a sortable product table", "caption": "Client-review prototype, running on sample data." } },
+      { "title": "Live at strsg.com", "note": "The storefront went live at strsg.com in time for World Vaccine Congress Europe in Amsterdam, and reads as well on a phone as at a desk.",
+        "stage": { "type": "fan", "photos": [ { "src": "../assets/img/products-phone.jpg", "alt": "Product sections on a phone" }, { "src": "../assets/img/home-phone.jpg", "alt": "The homepage on a phone" }, { "src": "../assets/img/pdp-phone.jpg", "alt": "A product page on a phone" } ], "caption": "strsg.com on a phone." } }
+    ]
+  },
+  "wheel": { "title": "What I delivered", "items": [ "A Shopify theme built from scratch", "Product pages built around specifications", "Branded checkout and customer accounts", "A design system hub", "A catalogue manager for the client team", "The storefront, live at strsg.com" ], "foot": "Live at strsg.com." },
+  "close": { "lines": [ "Defined adjuvants", "for vaccine research." ], "note": "The line on STR's own homepage, live at [strsg.com](https://strsg.com/). Also in this series: mAbV.", "pending": "Draft: waiting on Phil's answers and STR's approval before public use." },
+  "footer": { "links": [] }
+}
