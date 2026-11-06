@@ -1,0 +1,93 @@
+/* Vendored from OS-000-Design-System components/status-pill/status-pill.css @ 879a1c9. Do not edit; re-copy from source. */
+@layer ods.primitives {
+  .ods-status-pill {
+    display: inline-flex;
+    flex: none;
+    align-items: center;
+    gap: var(--spacing-1-5);
+    padding: var(--spacing-1) var(--spacing-2-5);
+    border: var(--border-width) solid var(--color-border);
+    border-radius: var(--radius-full);
+    background: var(--color-bg-muted);
+    color: var(--color-text-secondary);
+    font-family: var(--font-primary);
+    font-size: var(--text-xs);
+    font-weight: var(--weight-semibold);
+    line-height: var(--leading-snug);
+    white-space: nowrap;
+  }
+  .ods-status-pill[data-size="sm"] { padding: var(--spacing-0) var(--spacing-2); }
+  .ods-status-pill[data-tone="success"] { border-color: var(--color-success-border); background: var(--color-success-bg); color: var(--color-success-text); }
+  .ods-status-pill[data-tone="warning"] { border-color: var(--color-warning-border); background: var(--color-warning-bg); color: var(--color-warning-text); }
+  .ods-status-pill[data-tone="info"] { border-color: var(--color-info-border); background: var(--color-info-bg); color: var(--color-info-text); }
+  .ods-status-pill[data-tone="draft"] { border-color: var(--color-status-draft-border); background: var(--color-warning-bg); color: var(--color-status-draft-text); }
+  .ods-status-pill[data-tone="validation"] { border-color: var(--color-status-validation-border); background: var(--color-status-validation-bg); color: var(--color-status-validation-text); }
+  .ods-status-pill-dot {
+    flex: none;
+    inline-size: var(--spacing-1-5);
+    block-size: var(--spacing-1-5);
+    border-radius: var(--radius-full);
+    background: currentColor;
+  }
+}
+
+/* Status / Badge — the settled form of a button.
+   Unlayered so a page reset cannot wipe the padding.
+   Square corners, the S or M button height, the same type, weight and border.
+   Approved pairs with positive. Rejected pairs with negative. The word carries the meaning. */
+.ods-status {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-1);
+  min-block-size: var(--control-height-sm);
+  padding-block: var(--spacing-0);
+  padding-inline: var(--spacing-3);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: 0;
+  box-shadow: none;
+  background: var(--color-bg-muted);
+  color: var(--color-text);
+  font-family: var(--font-primary);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-snug);
+  white-space: nowrap;
+}
+
+.ods-status--s {
+  min-block-size: var(--control-height-sm);
+  padding-inline: var(--spacing-3);
+}
+
+.ods-status--m {
+  min-block-size: var(--control-height-md);
+  padding-inline: var(--spacing-5);
+}
+
+.ods-status--approved {
+  border-color: var(--color-success-strong);
+  background: var(--color-success-strong);
+  color: var(--color-on-success-strong);
+}
+
+.ods-status--rejected {
+  border-color: var(--color-error);
+  background: var(--color-bg-muted);
+  color: var(--color-text);
+}
+
+.ods-status--neutral {
+  border-color: var(--color-border);
+  background: var(--color-bg-muted);
+  color: var(--color-text);
+}
+
+.ods-status__icon {
+  display: block;
+  flex: none;
+  inline-size: var(--spacing-4);
+  block-size: var(--spacing-4);
+  fill: currentColor;
+}
