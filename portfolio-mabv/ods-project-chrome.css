@@ -1,0 +1,95 @@
+/* ods-project-chrome.css: ODS Project header v1.1.3 + Project footer v1.1.0, for the ODS decision report template (v1.1+).
+   Copied verbatim from Scout's reference report ~/OG/reports/research-tool-fallbacks/index.html (18 Oct 2026, Tung's markup).
+   Not yet an OS-000-Design-System component. Once OS-000 PR #47 merges, replace this file with that component's copy.
+   Load it after report.css; hide-on-scroll comes from /_shared/ods-project-header-collapse.css. */
+/* ods-project-header v1.1.3 + ods-project-footer v1.1.0 (proposal, 2026-10-17, Phil's markup)
+   FOOTER v1.1.0 (2026-10-17, Phil via Scout): the related-links row is replaced by ONE 'Project portals' dropdown
+   (ODS Forms dropdown), fed by ~/OG/reports/_shared/project-portals.json; picking a portal goes straight to it.
+   CHANGELOG v1.1.3 (2026-10-17, Phil via Scout): title = project name only (no project code; the code appears only in the
+   footer, the same way on every page). Standard anchor-tab script: click marks aria-current at once, observer paused until
+   scrolling settles (150ms), hashchange + hash on load, observer follows normal scrolling.
+   CHANGELOG v1.1.2 (2026-10-17, Phil): the title no longer shrinks on scroll. It keeps one size on all pages and in all states;
+   the title-to-tabs gap stays 24px (--spacing-6) when stuck. Sticky header and scroll hairline unchanged. */
+:root{
+ /* ODS tokens (OS-000 tokens/base.css, tokens/theme-oganiko.css) */
+ --spacing-1:.25rem;--spacing-2:.5rem;--spacing-3:.75rem;--spacing-4:1rem;--spacing-6:1.5rem;--spacing-8:2rem;
+ --radius-sm:4px;
+ --color-green:rgb(16 146 0 / 1);            /* #109200, darkest green in the ODS palette */
+ --color-success-strong:var(--color-green);
+ /* component tokens */
+ --ph-bg:#1a1a1a;--ph-text:#fff;--ph-muted:#ccc;
+ --ph-line:var(--color-success-strong);--ph-line-w:2px;
+ --ph-title-gap:var(--spacing-6);            /* was 12px; 24px = 2.0x */
+ --ph-tab-radius:var(--radius-sm);           /* top corners only */
+ --ph-canvas:#fff;                           /* the selected tab takes the colour of the canvas it selects */
+ --ph-tab-active-text:#000;
+ --font:"Open Sans","Helvetica Neue",Arial,sans-serif}
+*{box-sizing:border-box}body{margin:0;font:16px/1.5 var(--font);color:#000;background:#fff}
+.ods-project-header{position:sticky;top:0;z-index:100;background:var(--ph-bg);color:var(--ph-text)}
+.ods-project-header:has(.ods-project-header__sub){--ph-canvas:#f4f4f4}
+.ods-project-header__inner{max-width:1200px;margin:0 auto;padding:16px 24px 0}
+.ods-project-header__global{display:flex;align-items:center;gap:12px;min-height:32px}
+.ods-project-header__mark{font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--ph-muted);text-decoration:none}
+.ods-project-header__mark:hover{color:#fff;text-decoration:underline}
+.ods-project-header__meta{margin-inline-start:auto;display:flex;gap:8px;align-items:center}
+.ods-project-header__util{font:600 14px/1 var(--font);height:32px;padding:0 12px;background:transparent;color:var(--ph-muted);border:1px solid var(--ph-muted);border-radius:0;cursor:pointer;transition:background-color 120ms,color 120ms}
+.ods-project-header__util:hover{background:#fff;color:#000;border-color:#fff}
+.ods-project-header__util:active{background:#ccc;border-color:#ccc;color:#000}
+.ods-project-header__title{margin:8px 0 var(--ph-title-gap);font-size:32px;font-weight:700;line-height:1.2}
+/* v1.1.2: no stuck-state title rule. Same size and same 24px gap when stuck (Phil, 2026-10-17). */
+/* Tab row. The green line is painted as the row's own background, so the opaque selected tab covers it:
+   the line breaks under the selected tab and the tab joins the canvas below. */
+/* v1.1.1: the line is painted on the full-bleed tab bar (edge to edge of the viewport), not on the inner content width. */
+.ods-project-header__tabbar{background:linear-gradient(var(--ph-line),var(--ph-line)) left bottom/100% var(--ph-line-w) no-repeat}
+.ods-project-header__tabbar>.ods-project-header__inner{padding-top:0;padding-bottom:0}
+.ods-project-header__tabs{display:flex;overflow-x:auto;scrollbar-width:none;scroll-snap-type:x proximity;margin:0 -24px;padding:0 24px}
+.ods-project-header__tabs::-webkit-scrollbar{display:none}
+.ods-project-header__tabs a{flex:none;scroll-snap-align:start;padding:12px 16px calc(12px + var(--ph-line-w));font-size:14px;font-weight:600;color:var(--ph-muted);text-decoration:none;white-space:nowrap;
+ border-radius:var(--ph-tab-radius) var(--ph-tab-radius) 0 0;transition:background-color 120ms,color 120ms}
+.ods-project-header__tabs a:hover{color:#fff;background:rgb(255 255 255/.08)}
+.ods-project-header__tabs a[aria-current=page]{background:var(--ph-canvas);color:var(--ph-tab-active-text);font-weight:700;border:0}
+.ods-project-header a:focus-visible,.ods-project-header button:focus-visible{outline:2px solid #fff;outline-offset:-2px}
+.ods-project-header__tabs a[aria-current=page]:focus-visible{outline-color:#000}
+.ods-project-header__sub{background:var(--ph-canvas);color:#333;font-size:14px}
+/* Hairline on scroll (approved item 7): the light line under the header only shows once content scrolls beneath it */
+.ods-project-header{border-bottom:1px solid transparent;background-clip:padding-box;transition:border-color 120ms}
+.ods-project-header.is-stuck{border-bottom-color:#ccc}
+
+.ods-project-header__sub .ods-project-header__inner{padding:8px 24px}
+/* Project footer: same treatment, slim, not sticky */
+.ods-project-footer{background:var(--ph-bg);color:var(--ph-muted);font-size:13px;line-height:1.5;border-top:var(--ph-line-w) solid var(--ph-line)}
+.ods-project-footer__inner{max-width:1200px;margin:0 auto;padding:var(--spacing-4) 24px;display:grid;gap:var(--spacing-3)}
+.ods-project-footer__meta,.ods-project-footer__links,.ods-project-footer__small{display:flex;flex-wrap:wrap;gap:var(--spacing-2) var(--spacing-6);margin:0;padding:0;list-style:none;align-items:baseline}
+.ods-project-footer__meta dt{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.ods-project-footer__meta dd{margin:0}
+.ods-project-footer__label{color:#999}
+.ods-project-footer a{color:var(--ph-muted);text-decoration:underline;text-underline-offset:2px}
+.ods-project-footer a:hover{color:#fff;text-decoration-thickness:2px}
+.ods-project-footer a:focus-visible{outline:2px solid #fff;outline-offset:2px}
+.ods-project-footer__version{color:#fff;font-weight:600}
+.ods-project-footer__small{color:#999;font-size:12px;padding-top:var(--spacing-3);border-top:1px solid #333}
+.ods-project-footer__example{font-size:12px;color:#999;font-style:italic}
+
+
+.note{background:#f4f4f4;padding:12px 16px;font-size:14px}
+@media (max-width:767px){.ods-project-header__title{font-size:24px}
+ .ods-project-footer__meta,.ods-project-footer__links,.ods-project-footer__small{flex-direction:column;gap:var(--spacing-1)}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+/* ods-project-footer v1.1.0: "Project portals" dropdown. ODS Forms dropdown (WEB-FOR-DDL-001, og-select):
+   40px field, square, 1px grey border; active/open = 2px black border; selected row black with white text.
+   On the dark footer the field is white (17:1 against #1a1a1a), so the black active border reads against the white fill. */
+.ods-project-footer__portals{display:flex;flex-direction:column;gap:var(--spacing-1,4px);max-width:22rem;width:100%}
+.ods-project-footer__portals-label{font-size:13px;font-weight:600;color:#fff}
+.ods-project-footer__portals .og-select__control{position:relative}
+.ods-project-footer__portals .og-select__trigger{box-sizing:border-box;display:flex;align-items:center;width:100%;height:40px;padding:0 40px 0 12px;font:400 14px/1.5 var(--font);color:#000;background:#fff;border:1px solid #ccc;border-radius:0;cursor:pointer;outline:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;transition:border-color 120ms}
+.ods-project-footer__portals .og-select__trigger:focus,.ods-project-footer__portals.is-open .og-select__trigger{border:2px solid #000;padding-left:11px;padding-right:39px}
+.ods-project-footer__portals .og-select__chevron{position:absolute;top:50%;right:12px;transform:translateY(-50%);width:24px;height:24px;color:#000;pointer-events:none}
+.ods-project-footer__portals .og-select__list{position:absolute;z-index:20;left:0;right:0;top:100%;margin:0;padding:0;list-style:none;background:#fff;color:#000;border:1px solid #000;border-radius:0;max-height:min(360px,60vh);overflow:auto}
+.ods-project-footer__portals.is-up .og-select__list{top:auto;bottom:100%}
+.ods-project-footer__portals .og-select__option{display:flex;justify-content:space-between;gap:12px;padding:8px 12px;font-size:14px;line-height:1.5;cursor:pointer;color:#000;background:#fff}
+.ods-project-footer__portals .og-select__option .ods-portals__meta{color:#555;font-size:12px;white-space:nowrap}
+.ods-project-footer__portals .og-select__option:hover,.ods-project-footer__portals .og-select__option.is-active,.ods-project-footer__portals .og-select__option[aria-selected=true]{background:#000;color:#fff}
+.ods-project-footer__portals .og-select__option:hover .ods-portals__meta,.ods-project-footer__portals .og-select__option.is-active .ods-portals__meta,.ods-project-footer__portals .og-select__option[aria-selected=true] .ods-portals__meta{color:#ccc}
+.ods-project-footer__portals .og-select__option[aria-selected=true]>span:first-child::after{content:" (this portal)";font-size:12px;color:#ccc}
+@media (prefers-reduced-motion:reduce){.ods-project-footer__portals .og-select__trigger{transition:none}}
