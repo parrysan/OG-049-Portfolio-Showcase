@@ -42,7 +42,7 @@ created: "2026-11-06"
 | **Project docs** | `./docs/` |
 | **Vault project page** | `Open-Memory-Vault/projects/OG-049-Portfolio-Showcase/README.md` |
 | **GitHub repo** | https://github.com/parrysan/OG-049-Portfolio-Showcase (private) |
-| **Research store** | OG-Research Drive `OG-049 Portfolio Showcase`: (pending) |
+| **Research store** | OG-Research Drive `OG-049 Portfolio Showcase`: https://drive.google.com/drive/folders/1G8bW8Nncx6gs0TKCuxoXzFbPG-D03WF6 (01 Start sheet `1_HJaXLZssj9QvcXEPtifeG11rlr-Y1tc`, 02 Research `15jbs4MY1cAbbLyxMx5W5HjkdZNXGMtKG`, 03 HTML `1ZqR74LPElm5WIgCZiWhL0mqF21fEQz1j`, 04 Sources `1AKFqkcJdPZg_isTMPGeRZ0nNOWH75r4G`, 05 Outputs `19Nbo1vQvOlYvK7HInNajSkqLMBP9YdDH`, 99 Archive `1lRO6xn4uBvZrztioEGWIBoSzInLne_Vq`). Heavy assets live here, never in the repo. |
 | **External systems** | none |
 
 ---
@@ -53,6 +53,9 @@ created: "2026-11-06"
 - **Live pages (tailnet)**: served from `~/OG/reports/<dir>/` at https://snoops-mac-studio.tail970398.ts.net:8452/ — see README "Source → live mapping"
 - **Production URL**: (tbd)
 - **NotebookLM**: (not provisioned — add later via notebook_push.py provision)
+- **Start sheet (Doc, master)**: https://docs.google.com/document/d/1uNJldYSo4taGyHmcT5w1HQ88kYtTylBJWtctCfQ5v5E/edit · vault copy `start-sheet.md`
+- **Vision draft**: vault `vision-portfolio-showcase.md`
+- **Miro index card**: (follow-up — not added at scaffold; no Miro tool in that session)
 - **Client area**: docs/client-area/ (Overview + Research seeded; ODS Project header/footer)
 - **Credentials**: stored in global `.env` under `OG049_*` (none yet)
 
