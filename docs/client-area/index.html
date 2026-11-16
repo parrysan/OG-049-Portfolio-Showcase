@@ -5,62 +5,258 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
 <title>Portfolio Showcase | Oganiko Digital</title>
-<link rel="stylesheet" href="assets/ods-tokens.css">
-<link rel="stylesheet" href="assets/client.css">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/ods-project-chrome.css">
+<meta name="description" content="Project portal for OG-049 Portfolio Showcase: the showcase site, the mAbV and STR case studies, the UX review offer video and the case-study skill.">
+<link rel="preload" href="assets/fonts/open-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/tokens-base.css">
+<link rel="stylesheet" href="assets/tokens-theme-oganiko.css">
+<link rel="stylesheet" href="assets/ods-status-pill.css">
+<link rel="stylesheet" href="assets/ods-project-header.css">
+<link rel="stylesheet" href="assets/ods-project-footer.css">
+<link rel="stylesheet" href="assets/portal.css">
 </head>
 <body>
-<header class="ods-project-header" data-version="1.1.2">
- <div class="ods-project-header__inner">
-  <div class="ods-project-header__global">
-   <a class="ods-project-header__mark" href="./">Oganiko Digital</a>
-  </div>
-  <p class="ods-project-header__title">Portfolio Showcase</p>
- </div>
- <div class="ods-project-header__tabbar"><div class="ods-project-header__inner">
-  <nav class="ods-project-header__tabs" aria-label="Sections"><a href="./" aria-current="page">Overview</a><a href="research/">Research</a></nav>
- </div></div>
-</header>
-
-<main class="wrap">
-  <p class="lead">OGANIKO's portfolio and showcase work — case-study decks (mAbV, STR), the services showcase pages and the offer videos, plus the playbook and template for making more.</p>
-  <p>This page is the single place where everything from the project comes together. Each area has its own tab. Where a piece of work is finished it is linked; where we are still gathering data, the space is reserved and marked so it can be filled as information arrives.</p>
-
-  <h2>Sections</h2>
-  <div class="cards">
-    <a class="card" href="research/">
-      <span class="kicker">Section 1</span>
-      <h3>Research</h3>
-      <p>Market, competitor and product research as it lands.</p>
-      <span class="go">Open research →</span>
-    </a>
-    <div class="card pending">
-      <span class="kicker">Reserved</span>
-      <h3>More sections</h3>
-      <p>Design, strategy and other areas will be added as the project takes shape — each project's tabs differ.</p>
-      <span class="go">Added as needed</span>
+<header class="ods-project-header" data-version="1.3.1">
+  <div class="ods-project-header__identity">
+    <div class="ods-project-header__inner">
+      <div class="ods-project-header__global">
+        <a class="ods-project-header__mark" href="./">Oganiko Digital</a>
+      </div>
+      <h1 class="ods-project-header__title">Portfolio Showcase</h1>
     </div>
   </div>
+  <div class="ods-project-header__tabbar"><div class="ods-project-header__inner">
+    <nav class="ods-project-header__tabs" aria-label="Sections" data-ods-tab-panels>
+      <a href="#overview" aria-current="page">Overview</a>
+      <a href="#showcase">Showcase site</a>
+      <a href="#mabv">mAbV case study</a>
+      <a href="#str">STR case study</a>
+      <a href="#offer-video">Offer video</a>
+      <a href="#case-study-skill">Case-study skill</a>
+    </nav>
+  </div></div>
+</header>
+
+<main class="portal">
+
+<!-- ============ Overview ============ -->
+<section id="overview" class="portal-panel" aria-label="Overview">
+  <p class="meta-line">OG-049 · Service work · Started 6 Nov 2026</p>
+  <p class="intro">The work that shows what OGANIKO Digital can do: case studies of real client projects, working demonstrations of each service, and short offer videos for freelance marketplaces.</p>
+  <p>It is for business owners and product leads deciding who to hire for a website, a Shopify store, a design system or Amazon listings. Each piece answers their question by showing finished work rather than describing it.</p>
 
   <h2>Where things stand</h2>
-  <div class="status"><b>Just initialised.</b> This client area was created with the project on 2026-11-06. The Overview and Research tabs are seeded; content fills out as the work progresses.</div>
+  <p>Everything below is live on the Studio preview server, inside the private network. One case study is waiting for the client's approval before it can be shown publicly.</p>
+  <ul class="rows">
+    <li>
+      <span class="row-text"><a class="row-name" href="#showcase" data-tab-link>Showcase site</a><span class="row-desc">Home page plus four service demonstrations.</span></span>
+      <span class="ods-status-pill" data-tone="info"><span class="ods-status-pill-dot" aria-hidden="true"></span>Live preview</span>
+    </li>
+    <li>
+      <span class="row-text"><a class="row-name" href="#mabv" data-tab-link>mAbV case study</a><span class="row-desc">Identity, design system and brand kit. Deck, PDF and case page.</span></span>
+      <span class="ods-status-pill" data-tone="success"><span class="ods-status-pill-dot" aria-hidden="true"></span>Client approved</span>
+    </li>
+    <li>
+      <span class="row-text"><a class="row-name" href="#str" data-tab-link>STR case study</a><span class="row-desc">Shopify storefront, design system and catalogue tools.</span></span>
+      <span class="ods-status-pill" data-tone="warning"><span class="ods-status-pill-dot" aria-hidden="true"></span>Awaiting client approval</span>
+    </li>
+    <li>
+      <span class="row-text"><a class="row-name" href="#offer-video" data-tab-link>UX review offer video</a><span class="row-desc">46-second offer video in landscape and portrait.</span></span>
+      <span class="ods-status-pill" data-tone="info"><span class="ods-status-pill-dot" aria-hidden="true"></span>Rendered</span>
+    </li>
+    <li>
+      <span class="row-text"><a class="row-name" href="#case-study-skill" data-tab-link>Case-study skill</a><span class="row-desc">Turns a finished project into a scroll-driven case page.</span></span>
+      <span class="ods-status-pill" data-tone="success"><span class="ods-status-pill-dot" aria-hidden="true"></span>In use</span>
+    </li>
+  </ul>
 
-  <div class="note">This area is private (<code>noindex</code>) and intended for project stakeholders. It is a living workspace — sections will fill out as the project progresses.</div>
+  <h2>Where the files live</h2>
+  <dl class="facts">
+    <dt>Source</dt><dd><a href="https://github.com/parrysan/OG-049-Portfolio-Showcase">GitHub: OG-049-Portfolio-Showcase</a> (private)</dd>
+    <dt>Live copies</dt><dd><code>~/OG/reports/</code> on the Studio, served on the tailnet at port 8452</dd>
+    <dt>Research store</dt><dd><a href="https://drive.google.com/drive/folders/1G8bW8Nncx6gs0TKCuxoXzFbPG-D03WF6">Drive: OG-Research / OG-049 Portfolio Showcase</a></dd>
+    <dt>Start sheet</dt><dd><a href="https://docs.google.com/document/d/1uNJldYSo4taGyHmcT5w1HQ88kYtTylBJWtctCfQ5v5E/edit">OG-049 start sheet</a> (to fill in)</dd>
+  </dl>
+</section>
+
+<!-- ============ Showcase site ============ -->
+<section id="showcase" class="portal-panel" aria-label="Showcase site">
+  <p class="meta-line"><span class="ods-status-pill" data-tone="info"><span class="ods-status-pill-dot" aria-hidden="true"></span>Live preview</span> Built 5 Nov 2026</p>
+  <p class="intro">One home page for the work. It splits real client projects (selected work) from capability demonstrations (explorations): working examples of what OGANIKO Digital would build for a brief like the visitor's.</p>
+  <figure class="shot"><img src="assets/img/showcase-home.jpg" alt="Showcase home: Work, and what it could be next" width="1200" height="750" loading="lazy"></figure>
+  <ul class="links">
+    <li><a href="https://snoops-mac-studio.tail970398.ts.net:8452/showcase/">Open the showcase home</a><span class="hint">Selected work, explorations, and the services in preparation.</span></li>
+    <li><a href="https://snoops-mac-studio.tail970398.ts.net:8452/showcase/internal.html">How the showcase was made</a><span class="hint">Internal page: which approach each example uses, and why.</span></li>
+  </ul>
+
+  <h2>Explorations</h2>
+  <p>Each one demonstrates a service instead of describing it. Any businesses in them are fictional.</p>
+  <ul class="cards">
+    <li>
+      <img src="assets/img/wordpress.jpg" alt="WordPress demonstration page" width="1200" height="513" loading="lazy">
+      <div class="card-body">
+        <h3><a href="https://snoops-mac-studio.tail970398.ts.net:8452/showcase/explorations/wordpress-builds/">WordPress sites your team can run</a></h3>
+        <p>A brief becomes a sitemap, a block library and a finished page. Click a block to see what the team would edit.</p>
+        <span><span class="ods-status-pill" data-tone="info"><span class="ods-status-pill-dot" aria-hidden="true"></span>Live preview</span></span>
+      </div>
+    </li>
+    <li>
+      <img src="assets/img/shopify.jpg" alt="Shopify demonstration page" width="1200" height="578" loading="lazy">
+      <div class="card-body">
+        <h3><a href="https://snoops-mac-studio.tail970398.ts.net:8452/showcase/explorations/shopify-stores/">Shopify stores that stay easy to run</a></h3>
+        <p>One spreadsheet becomes collections, a product page with real buying choices, and a checkout, including one for business buyers.</p>
+        <span><span class="ods-status-pill" data-tone="info"><span class="ods-status-pill-dot" aria-hidden="true"></span>Live preview</span></span>
+      </div>
+    </li>
+    <li>
+      <img src="assets/img/design-systems.jpg" alt="Design systems demonstration page" width="1200" height="513" loading="lazy">
+      <div class="card-body">
+        <h3><a href="https://snoops-mac-studio.tail970398.ts.net:8452/showcase/explorations/design-systems/">Design systems your teams actually use</a></h3>
+        <p>Twenty-three buttons become one set of tokens, one component and its rules.</p>
+        <span><span class="ods-status-pill" data-tone="info"><span class="ods-status-pill-dot" aria-hidden="true"></span>Live preview</span></span>
+      </div>
+    </li>
+    <li>
+      <img src="assets/img/amazon.jpg" alt="Amazon listings demonstration page" width="1200" height="513" loading="lazy">
+      <div class="card-body">
+        <h3><a href="https://snoops-mac-studio.tail970398.ts.net:8452/showcase/explorations/amazon-listings/">Amazon product research and listings</a></h3>
+        <p>Search research becomes a title, bullets, an image set and A+ content, using real products.</p>
+        <span><span class="ods-status-pill" data-tone="info"><span class="ods-status-pill-dot" aria-hidden="true"></span>Live preview</span></span>
+      </div>
+    </li>
+  </ul>
+  <p class="meta-line">In preparation: Research, and Conversion rate optimisation.</p>
+</section>
+
+<!-- ============ mAbV case study ============ -->
+<section id="mabv" class="portal-panel" aria-label="mAbV case study">
+  <p class="meta-line"><span class="ods-status-pill" data-tone="success"><span class="ods-status-pill-dot" aria-hidden="true"></span>Client approved</span> Selected work · 2026</p>
+  <p class="intro">mAbV, a new antibody company in Guangzhou working with Oxford University, needed an identity that investors and scientists could trust. The case study follows it from a founder's sketch to the sign on the office doors.</p>
+  <figure class="shot"><img src="assets/img/mabv.jpg" alt="mAbV case page: the shield mark with its antibody V explained" width="1200" height="750" loading="lazy"></figure>
+  <dl class="facts">
+    <dt>Scope</dt><dd>Identity, design system, brand kit, holding page</dd>
+    <dt>Formats</dt><dd>Scroll-driven case page, 10-slide deck, PDF. An editable PowerPoint is generated from the same deck on request.</dd>
+  </dl>
+  <ul class="links">
+    <li><a href="https://snoops-mac-studio.tail970398.ts.net:8452/portfolio-mabv/showcase/">Case page</a><span class="hint">The interactive version for the showcase site.</span></li>
+    <li><a href="https://snoops-mac-studio.tail970398.ts.net:8452/portfolio-mabv/">Deck</a><span class="hint">Ten slides in the browser.</span></li>
+    <li><a href="https://snoops-mac-studio.tail970398.ts.net:8452/portfolio-mabv/deck.pdf">Deck as PDF</a></li>
+    <li><a href="https://snoops-mac-studio.tail970398.ts.net:8452/portfolio-mabv/PLAYBOOK.md">Playbook</a><span class="hint">How to turn the next project into a case study with the same template.</span></li>
+    <li><a href="https://snoops-mac-studio.tail970398.ts.net:8452/portfolio-mabv/plan.html">Case study plan</a><span class="hint">The 4 Nov plan and the sources behind every claim.</span></li>
+  </ul>
+</section>
+
+<!-- ============ STR case study ============ -->
+<section id="str" class="portal-panel" aria-label="STR case study">
+  <p class="meta-line"><span class="ods-status-pill" data-tone="warning"><span class="ods-status-pill-dot" aria-hidden="true"></span>Awaiting client approval</span> Selected work · 2026</p>
+  <p class="intro">A Shopify shop for scientists who compare specifications, not pictures. STR Technologies sells research-grade vaccine adjuvants; the store was built from scratch and is live at strsg.com, with its own design system and catalogue tools behind it.</p>
+  <p class="note">Not for public use until STR approves it. Share the case page internally only.</p>
+  <figure class="shot"><img src="assets/img/str.jpg" alt="STR case page: a product page shown on desktop and phone" width="1200" height="750" loading="lazy"></figure>
+  <dl class="facts">
+    <dt>Scope</dt><dd>Shopify storefront, design system, catalogue tools</dd>
+    <dt>Formats</dt><dd>Scroll-driven case page</dd>
+  </dl>
+  <ul class="links">
+    <li><a href="https://snoops-mac-studio.tail970398.ts.net:8452/portfolio-str/showcase/">Case page</a><span class="hint">The interactive version, shown on the showcase home as awaiting approval.</span></li>
+  </ul>
+</section>
+
+<!-- ============ Offer video ============ -->
+<section id="offer-video" class="portal-panel" aria-label="Offer video">
+  <p class="meta-line"><span class="ods-status-pill" data-tone="info"><span class="ods-status-pill-dot" aria-hidden="true"></span>Rendered</span> 5 Nov 2026 · script v4</p>
+  <p class="intro">A 46-second video for the website and Shopify UX review offer. It plays muted on marketplaces, so every spoken line is also on screen. The demo footage is OGANIKO's own honey concept storefront, not a client site.</p>
+  <figure class="shot">
+    <video controls preload="none" playsinline poster="assets/img/ux-review-poster.jpg" width="1280" height="720">
+      <source src="https://snoops-mac-studio.tail970398.ts.net:8452/offer-videos/ux-review/ux-review-offer-16x9.mp4" type="video/mp4">
+      <a href="https://snoops-mac-studio.tail970398.ts.net:8452/offer-videos/ux-review/ux-review-offer-16x9.mp4">Download the 16:9 video</a>
+    </video>
+  </figure>
+
+  <h2>Cuts</h2>
+  <ul class="links">
+    <li><a href="https://snoops-mac-studio.tail970398.ts.net:8452/offer-videos/ux-review/ux-review-offer-16x9.mp4">Offer, 16:9 (46 s)</a><span class="hint">For Fiverr, Upwork and Malt. <code>~/OG/reports/offer-videos/ux-review/ux-review-offer-16x9.mp4</code></span></li>
+    <li><a href="https://snoops-mac-studio.tail970398.ts.net:8452/offer-videos/ux-review/ux-review-offer-9x16.mp4">Offer, 9:16 (45 s)</a><span class="hint">For LinkedIn and Shorts. <code>~/OG/reports/offer-videos/ux-review/ux-review-offer-9x16.mp4</code></span></li>
+    <li><a href="https://snoops-mac-studio.tail970398.ts.net:8452/offer-videos/ux-review/ux-review-broll-16x9.mp4">B-roll, 16:9 (32 s)</a><span class="hint"><code>~/OG/reports/offer-videos/ux-review/ux-review-broll-16x9.mp4</code></span></li>
+    <li><a href="https://snoops-mac-studio.tail970398.ts.net:8452/offer-videos/ux-review/ux-review-broll-9x16.mp4">B-roll, 9:16 (32 s)</a><span class="hint"><code>~/OG/reports/offer-videos/ux-review/ux-review-broll-9x16.mp4</code></span></li>
+  </ul>
+
+  <h2>Script and source</h2>
+  <ul class="links">
+    <li><a href="https://snoops-mac-studio.tail970398.ts.net:8452/offer-videos/ux-review/script-v4.md">Script v4</a><span class="hint">The current script, with timings, captions and shots. Earlier drafts v1 to v3 sit in the same folder.</span></li>
+    <li><span>Edit project</span><span class="hint"><code>~/OG-Research/_global/videos/2026-11-05-ux-review-broll/</code>: compositions, music and renders.</span></li>
+  </ul>
+</section>
+
+<!-- ============ Case-study skill ============ -->
+<section id="case-study-skill" class="portal-panel" aria-label="Case-study skill">
+  <p class="meta-line"><span class="ods-status-pill" data-tone="success"><span class="ods-status-pill-dot" aria-hidden="true"></span>In use</span> Built the mAbV and STR case pages</p>
+  <p class="intro">The reusable method behind the case pages. It turns one finished project into a scroll-driven story: a pinned stepper where the picture changes step by step as the reader scrolls. It only takes real, delivered work, with the facts on record.</p>
+  <figure class="shot"><img src="assets/img/case-showcase-demo.jpg" alt="Demonstration page: twelve ways to show the work" width="1200" height="750" loading="lazy"></figure>
+  <ul class="links">
+    <li><a href="https://snoops-mac-studio.tail970398.ts.net:8452/og-ods-case-showcase-demo/showcase/">Stage types demonstration</a><span class="hint">All twelve stage types, each shown with real mAbV and STR material.</span></li>
+    <li><span>Skill</span><span class="hint"><code>~/OG/shared-skills/og-ods-case-showcase/</code></span></li>
+    <li><span>Deck template</span><span class="hint">One case file in, an HTML deck, PDF and PowerPoint out: <code>portfolio-mabv/deck/</code> in the repo. Steps in the <a href="https://snoops-mac-studio.tail970398.ts.net:8452/portfolio-mabv/PLAYBOOK.md">playbook</a>.</span></li>
+  </ul>
+  <h2>Related methods</h2>
+  <dl class="facts">
+    <dt>Product story</dt><dd>Explains a service by demonstrating it. Used for the four explorations. <code>~/OG/shared-skills/og-product-story/</code></dd>
+    <dt>Reference to recipe</dt><dd>Turns a site worth learning from into a written design recipe. <code>~/OG/shared-skills/og-reference-to-recipe/</code></dd>
+  </dl>
+</section>
+
 </main>
 
-<footer class="ods-project-footer" data-version="1.0.0">
- <div class="ods-project-footer__inner">
-  <dl class="ods-project-footer__meta">
-   <dt>Version</dt><dd><a class="ods-project-footer__version" href="https://github.com/parrysan/OG-049-Portfolio-Showcase/commits/main">v0.1 · Just started</a></dd>
-   <dt>Last updated</dt><dd><span class="ods-project-footer__label">Updated</span> <time datetime="2026-11-06">6 Nov 2026 (Warsaw)</time></dd>
-   <dt>Owner</dt><dd><span class="ods-project-footer__label">Owner</span> <a href="mailto:phil.parry@oganiko.com">Phil Parry</a></dd>
-   <dt>Project</dt><dd><span class="ods-project-footer__label">Project</span> <a href="https://github.com/parrysan/OG-049-Portfolio-Showcase">OG-049</a></dd>
-   <dt>Environment</dt><dd><span class="ods-project-footer__label">Environment</span> Preview</dd>
-  </dl>
-  <p class="ods-project-footer__small"><span>© 2026 OGANIKO Digital · Prepared for Portfolio Showcase · Private client workspace</span></p>
- </div>
+<footer class="ods-project-footer" data-version="1.1.0">
+  <div class="ods-project-footer__inner">
+    <dl class="ods-project-footer__meta">
+      <dt>Version</dt><dd><a class="ods-project-footer__version" href="https://github.com/parrysan/OG-049-Portfolio-Showcase/commits/main">v0.2 · Project page</a></dd>
+      <dt>Last updated</dt><dd><span class="ods-project-footer__label" aria-hidden="true">Updated</span> <time datetime="2026-11-06">6 Nov 2026 (Warsaw)</time></dd>
+      <dt>Owner</dt><dd><span class="ods-project-footer__label" aria-hidden="true">Owner</span> <a href="mailto:phil.parry@oganiko.com">Phil Parry</a></dd>
+      <dt>Project</dt><dd><span class="ods-project-footer__label" aria-hidden="true">Project</span> <a href="https://github.com/parrysan/OG-049-Portfolio-Showcase">OG-049</a></dd>
+      <dt>Environment</dt><dd><span class="ods-project-footer__label" aria-hidden="true">Environment</span> Preview</dd>
+    </dl>
+    <nav class="ods-project-footer__portals" aria-label="Project portals" data-registry="/_shared/project-portals.json" data-project="OG-049">
+      <span class="ods-project-footer__portals-label">Project portals</span>
+      <ul class="ods-project-footer__links"><li><a href="https://oganiko-ods.web.app">ODS design system</a></li></ul>
+    </nav>
+    <p class="ods-project-footer__small">© 2026 OGANIKO Digital · Private project workspace</p>
+  </div>
 </footer>
-<script src="assets/ods-project-chrome.js"></script>
+<script src="assets/ods-project-header.js"></script>
+<script src="assets/ods-project-footer.js"></script>
+<script>
+  (function () {
+    var nav = document.querySelector('.ods-project-header__tabs')
+    if (!nav) return
+    var tabFor = function (hash) { return hash ? nav.querySelector('a[href="' + hash + '"]') : null }
+    // Without JavaScript every panel stays visible. With it, show only the current one.
+    if (!tabFor(window.location.hash)) {
+      document.querySelectorAll('main > .portal-panel').forEach(function (panel) {
+        if (panel.id !== 'overview') panel.hidden = true
+      })
+    }
+    // Keep the current tab in view when the tab row overflows (phones).
+    var centre = function () {
+      var current = nav.querySelector('[aria-current="page"]')
+      if (!current || nav.scrollWidth <= nav.clientWidth) return
+      nav.scrollLeft = current.offsetLeft - (nav.clientWidth - current.offsetWidth) / 2
+    }
+    nav.addEventListener('click', function () { requestAnimationFrame(centre) })
+    window.addEventListener('load', centre)
+    // In-page links to a tab (overview rows) switch panels through the header's own tab logic.
+    document.addEventListener('click', function (event) {
+      var link = event.target.closest('a[data-tab-link]')
+      var tab = link && tabFor(link.getAttribute('href'))
+      if (!tab) return
+      event.preventDefault()
+      tab.click()
+      window.scrollTo(0, 0)
+    })
+    // A hash typed or followed while the page is open (and back/forward) selects that tab too.
+    window.addEventListener('hashchange', function () {
+      var tab = tabFor(window.location.hash)
+      if (tab && tab.getAttribute('aria-current') !== 'page') tab.click()
+    })
+  })()
+</script>
 </body>
 </html>

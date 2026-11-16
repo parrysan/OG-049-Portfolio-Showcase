@@ -29,7 +29,7 @@ created: "2026-11-06"
 - **Revenue lane**: `1-service`
 - **Autonomy mode**: `co-pilot` — Phil drives, agent assists. See master prompt.
 - **Purpose** (one sentence): OGANIKO's portfolio and showcase work — case-study decks (mAbV, STR), the services showcase pages and the offer videos, plus the playbook and template for making more.
-- **Client dashboard**: _(not deployed yet — paste the Client Area URL here after deploying; the AIOS project card links it automatically)_
+- **Client dashboard**: https://snoops-mac-studio.tail970398.ts.net:8452/og-049-portfolio-showcase/ (tailnet; copy of `docs/client-area/`)
 - **Last touched**: `2026-11-06`
 
 ---
@@ -56,7 +56,7 @@ created: "2026-11-06"
 - **Start sheet (Doc, master)**: https://docs.google.com/document/d/1uNJldYSo4taGyHmcT5w1HQ88kYtTylBJWtctCfQ5v5E/edit · vault copy `start-sheet.md`
 - **Vision draft**: vault `vision-portfolio-showcase.md`
 - **Miro index card**: (follow-up — not added at scaffold; no Miro tool in that session)
-- **Client area**: docs/client-area/ (Overview + Research seeded; ODS Project header/footer)
+- **Client area**: docs/client-area/ (Overview + Research seeded; ODS Project header/footer) · served at https://snoops-mac-studio.tail970398.ts.net:8452/og-049-portfolio-showcase/ from `~/OG/reports/og-049-portfolio-showcase/` (republish with rsync, see README)
 - **Credentials**: stored in global `.env` under `OG049_*` (none yet)
 
 ---

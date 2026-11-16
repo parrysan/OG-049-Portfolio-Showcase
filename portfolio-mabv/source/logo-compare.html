@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mAbV — Logo Comparison</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;500&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #F4F7FA;
+      color: #334155;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Header ── */
+    .page-header {
+      background: #0A2540;
+      padding: 2rem 3rem;
+      display: flex;
+      align-items: baseline;
+      gap: 1.5rem;
+    }
+    .page-header-wordmark {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.5rem;
+      letter-spacing: -0.04em;
+      color: #ffffff;
+      font-weight: 700;
+    }
+    .page-header-wordmark span { color: #0047BB; }
+    .page-header-title {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      font-weight: 600;
+    }
+
+    /* ── Layout ── */
+    .page { max-width: 1100px; margin: 0 auto; padding: 3rem 2rem 5rem; }
+
+    .intro {
+      margin-bottom: 3rem;
+    }
+    .intro h1 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: #0A2540;
+      margin-bottom: 0.5rem;
+    }
+    .intro p {
+      font-size: 0.9rem;
+      color: #64748B;
+      max-width: 540px;
+      line-height: 1.6;
+    }
+
+    /* ── Group ── */
+    .group { margin-bottom: 3.5rem; }
+    .group-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid #E2E8F0;
+    }
+    .group-label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #0047BB;
+    }
+    .group-desc {
+      font-size: 0.8rem;
+      color: #94A3B8;
+    }
+
+    /* ── Variant grid ── */
+    .variants { display: flex; flex-direction: column; gap: 1.5rem; }
+
+    .variant-row {
+      background: #ffffff;
+      border: 1px solid #E2E8F0;
+      border-radius: 16px;
+      padding: 2rem 2rem 1.75rem;
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 2rem;
+      align-items: start;
+    }
+
+    .variant-meta { padding-top: 0.25rem; }
+    .variant-id {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #94A3B8;
+      margin-bottom: 0.4rem;
+    }
+    .variant-name {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #0A2540;
+      margin-bottom: 0.4rem;
+    }
+    .variant-desc {
+      font-size: 0.75rem;
+      color: #94A3B8;
+      line-height: 1.5;
+    }
+
+    /* ── Size previews ── */
+    .size-previews {
+      display: flex;
+      align-items: flex-end;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+    .size-preview {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+    .size-label {
+      font-size: 0.6rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #CBD5E1;
+      font-weight: 500;
+    }
+
+    /* Wordmark at different sizes */
+    .wm {
+      font-family: 'DM Sans', sans-serif;
+      letter-spacing: -0.04em;
+      color: #0A2540;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+    }
+    .wm-lg { font-size: 2.5rem; }
+    .wm-md { font-size: 1.4rem; }
+    .wm-sm { font-size: 0.85rem; }
+
+    /* Dark swatch */
+    .swatch-dark {
+      background: #0A2540;
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+      display: inline-flex;
+      align-items: center;
+    }
+    .swatch-dark .wm { color: #ffffff; }
+
+    /* ── Responsive ── */
+    @media (max-width: 680px) {
+      .variant-row { grid-template-columns: 1fr; }
+      .page-header { padding: 1.5rem; }
+      .page { padding: 2rem 1rem 4rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="page-header">
+    <div class="page-header-wordmark">mAb<span>V</span></div>
+    <div class="page-header-title">Logo Comparison — April 2026</div>
+  </header>
+
+  <div class="page">
+
+    <div class="intro">
+      <h1>Logo directions</h1>
+      <p>Eleven variants across four directions. Each shown at large, medium, and small — and on dark. Use this to compare alongside any external mocks.</p>
+    </div>
+
+
+    <!-- ══════════════════════════════════════════
+         GROUP 1 — SHIELD
+    ══════════════════════════════════════════ -->
+    <div class="group">
+      <div class="group-header">
+        <span class="group-label">Shield</span>
+        <span class="group-desc">V letterform inside a shield — two top profiles</span>
+      </div>
+      <div class="variants">
+
+        <!-- v2 Rounded shield -->
+        <div class="variant-row">
+          <div class="variant-meta">
+            <div class="variant-id">v2</div>
+            <div class="variant-name">Rounded Shield</div>
+            <div class="variant-desc">Top shoulders curve outward. Friendly, approachable, modern pharma.</div>
+          </div>
+          <div class="size-previews">
+            <div class="size-preview">
+              <span class="size-label">Large</span>
+              <span class="wm wm-lg">mAb<svg width="42" height="50" viewBox="0 0 120 144" fill="none" style="margin:0 -1px;position:relative;top:-1px"><path d="M10 18 Q10 4,28 4 L92 4 Q110 4,110 18 L110 82 L60 136 L10 82 Z" fill="#0047BB"/><path d="M34 38 L60 102 L86 38" stroke="white" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </div>
+            <div class="size-preview">
+              <span class="size-label">Medium</span>
+              <span class="wm wm-md">mAb<svg width="23" height="28" viewBox="0 0 120 144" fill="none" style="margin:0 -1px;position:relative;top:-1px"><path d="M10 18 Q10 4,28 4 L92 4 Q110 4,110 18 L110 82 L60 136 L10 82 Z" fill="#0047BB"/><path d="M34 38 L60 102 L86 38" stroke="white" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </div>
+            <div class="size-preview">
+              <span class="size-label">Small</span>
+              <span class="wm wm-sm">mAb<svg width="14" height="17" viewBox="0 0 120 144" fill="none" style="margin:0 -1px;position:relative;top:-1px"><path d="M10 18 Q10 4,28 4 L92 4 Q110 4,110 18 L110 82 L60 136 L10 82 Z" fill="#0047BB"/><path d="M34 38 L60 102 L86 38" stroke="white" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </div>
+            <div class="size-preview">
+              <span class="size-label">On dark</span>
+              <span class="swatch-dark"><span class="wm wm-md">mAb<svg width="23" height="28" viewBox="0 0 120 144" fill="none" style="margin:0 -1px;position:relative;top:-1px"><path d="M10 18 Q10 4,28 4 L92 4 Q110 4,110 18 L110 82 L60 136 L10 82 Z" fill="#0047BB"/><path d="M34 38 L60 102 L86 38" stroke="white" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- v3 Pointed shield -->
+        <div class="variant-row">
+          <div class="variant-meta">
+            <div class="variant-id">v3</div>
+            <div class="variant-name">Pointed Shield</div>
+            <div class="variant-desc">Top peaks sharply upward. More angular, heraldic, authoritative.</div>
+          </div>
+          <div class="size-previews">
+            <div class="size-preview">
+              <span class="size-label">Large</span>
+              <span class="wm wm-lg">mAb<svg width="42" height="50" viewBox="0 0 120 144" fill="none" style="margin:0 -1px;position:relative;top:-1px"><path d="M60 2 L108 18 L108 82 L60 136 L12 82 L12 18 Z" fill="#0047BB"/><path d="M34 40 L60 102 L86 40" stroke="white" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </div>
+            <div class="size-preview">
+              <span class="size-label">Medium</span>
+              <span class="wm wm-md">mAb<svg width="23" height="28" viewBox="0 0 120 144" fill="none" style="margin:0 -1px;position:relative;top:-1px"><path d="M60 2 L108 18 L108 82 L60 136 L12 82 L12 18 Z" fill="#0047BB"/><path d="M34 40 L60 102 L86 40" stroke="white" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </div>
+            <div class="size-preview">
+              <span class="size-label">Small</span>
+              <span class="wm wm-sm">mAb<svg width="14" height="17" viewBox="0 0 120 144" fill="none" style="margin:0 -1px;position:relative;top:-1px"><path d="M60 2 L108 18 L108 82 L60 136 L12 82 L12 18 Z" fill="#0047BB"/><path d="M34 40 L60 102 L86 40" stroke="white" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </div>
+            <div class="size-preview">
+              <span class="size-label">On dark</span>
+              <span class="swatch-dark"><span class="wm wm-md">mAb<svg width="23" height="28" viewBox="0 0 120 144" fill="none" style="margin:0 -1px;position:relative;top:-1px"><path d="M60 2 L108 18 L108 82 L60 136 L12 82 L12 18 Z" fill="#0047BB"/><path d="M34 40 L60 102 L86 40" stroke="white" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- v12 Jin's design — clean vector recreation -->
+        <div class="variant-row">
+          <div class="variant-meta">
+            <div class="variant-id">v12</div>
+            <div class="variant-name">Jin's Design</div>
+            <div class="variant-desc">Vector recreation of Jin's mab-V reference. Wide flat top, steep chamfered shoulders, smooth rounded bottom. Four rounded bars + teardrop Fc tail converging at centre.</div>
+          </div>
+          <div class="size-previews">
+            <div class="size-preview">
+              <span class="size-label">Large</span>
+              <span class="wm wm-lg">mAb<svg width="42" height="50" viewBox="0 0 120 144" fill="none" style="margin:0 -1px;position:relative;top:-1px"><path d="M14 4 L106 4 L116 26 L116 84 C116 112 88 136 60 136 C32 136 4 112 4 84 L4 26 Z" fill="#0047BB"/><line x1="16" y1="44" x2="54" y2="100" stroke="white" stroke-width="9" stroke-linecap="round"/><line x1="38" y1="35" x2="57" y2="100" stroke="white" stroke-width="9" stroke-linecap="round"/><line x1="82" y1="35" x2="63" y2="100" stroke="white" stroke-width="9" stroke-linecap="round"/><line x1="104" y1="44" x2="66" y2="100" stroke="white" stroke-width="9" stroke-linecap="round"/><ellipse cx="60" cy="110" rx="11" ry="13" fill="white"/></svg></span>
+            </div>
+            <div class="size-preview">
+              <span class="size-label">Medium</span>
+              <span class="wm wm-md">mAb<svg width="23" height="28" viewBox="0 0 120 144" fill="none" style="margin:0 -1px;position:relative;top:-1px"><path d="M14 4 L106 4 L116 26 L116 84 C116 112 88 136 60 136 C32 136 4 112 4 84 L4 26 Z" fill="#0047BB"/><line x1="16" y1="44" x2="54" y2="100" stroke="white" stroke-width="9" stroke-linecap="round"/><line x1="38" y1="35" x2="57" y2="100" stroke="white" stroke-width="9" stroke-linecap="round"/><line x1="82" y1="35" x2="63" y2="100" stroke="white" stroke-width="9" stroke-linecap="round"/><line x1="104" y1="44" x2="66" y2="100" stroke="white" stroke-width="9" stroke-linecap="round"/><ellipse cx="60" cy="110" rx="11" ry="13" fill="white"/></svg></span>
+            </div>
+            <div class="size-preview">
+              <span class="size-label">Small</span>
+              <span class="wm wm-sm">mAb<svg width="14" height="17" viewBox="0 0 120 144" fill="none" style="margin:0 -1px;position:relative;top:-1px"><path d="M14 4 L106 4 L116 26 L116 84 C116 112 88 136 60 136 C32 136 4 112 4 84 L4 26 Z" fill="#0047BB"/><line x1="16" y1="44" x2="54" y2="100" stroke="white" stroke-width="9" stroke-linecap="round"/><line x1="38" y1="35" x2="57" y2="100" stroke="white" stroke-width="9" stroke-linecap="round"/><line x1="82" y1="35" x2="63" y2="100" stroke="white" stroke-width="9" stroke-linecap="round"/><line x1="104" y1="44" x2="66" y2="100" stroke="white" stroke-width="9" stroke-linecap="round"/><ellipse cx="60" cy="110" rx="11" ry="13" fill="white"/></svg></span>
+            </div>
+            <div class="size-preview">
+              <span class="size-label">On dark</span>
+              <span class="swatch-dark"><span class="wm wm-md">mAb<svg width="23" height="28" viewBox="0 0 120 144" fill="none" style="margin:0 -1px;position:relative;top:-1px"><path d="M14 4 L106 4 L116 26 L116 84 C116 112 88 136 60 136 C32 136 4 112 4 84 L4 26 Z" fill="#0047BB"/><line x1="16" y1="44" x2="54" y2="100" stroke="white" stroke-width="9" stroke-linecap="round"/><line x1="38" y1="35" x2="57" y2="100" stroke="white" stroke-width="9" stroke-linecap="round"/><line x1="82" y1="35" x2="63" y2="100" stroke="white" stroke-width="9" stroke-linecap="round"/><line x1="104" y1="44" x2="66" y2="100" stroke="white" stroke-width="9" stroke-linecap="round"/><ellipse cx="60" cy="110" rx="11" ry="13" fill="white"/></svg></span></span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- ══════════════════════════════════════════
+         GROUP 2 — ANTIBODY, FAB ARMS ONLY
+    ══════════════════════════════════════════ -->
+    <div class="group">
+      <div class="group-header">
+        <span class="group-label">Antibody — arms only</span>
+        <span class="group-desc">V drawn from the mAb Fab arm structure. No tail.</span>
+      </div>
+      <div class="variants">
+
+        <!-- v4 Double Track -->
+        <div class="variant-row">
+          <div class="variant-meta">
+            <div class="variant-id">v4</div>
+            <div class="variant-name">Double Track</div>
+            <div class="variant-desc">Four bars, two per arm. The gap between bars mirrors the Fab arm structure.</div>
+          </div>
+          <div class="size-previews">
+            <div class="size-preview">
+              <span class="size-label">Large</span>
+              <span class="wm wm-lg">mAb<svg width="70" height="50" viewBox="0 0 180 130" fill="none" style="margin-left:-1px;position:relative;top:-1px"><polygon points="0,4 22,4 54,126 32,126" fill="#0047BB"/><polygon points="30,4 52,4 82,126 60,126" fill="#0047BB"/><polygon points="128,4 150,4 120,126 98,126" fill="#0047BB"/><polygon points="158,4 180,4 148,126 126,126" fill="#0047BB"/></svg></span>
+            </div>
+            <div class="size-preview">
+              <span class="size-label">Medium</span>
+              <span class="wm wm-md">mAb<svg width="38" height="27" viewBox="0 0 180 130" fill="none" style="margin-left:-1px;position:relative;top:-1px"><polygon points="0,4 22,4 54,126 32,126" fill="#0047BB"/><polygon points="30,4 52,4 82,126 60,126" fill="#0047BB"/><polygon points="128,4 150,4 120,126 98,126" fill="#0047BB"/><polygon points="158,4 180,4 148,126 126,126" fill="#0047BB"/></svg></span>
+            </div>
+            <div class="size-preview">
+              <span class="size-label">Small</span>
+              <span class="wm wm-sm">mAb<svg width="23" height="16" viewBox="0 0 180 130" fill="none" style="margin-left:-1px;position:relative;top:-1px"><polygon points="0,4 22,4 54,126 32,126" fill="#0047BB"/><polygon points="30,4 52,4 82,126 60,126" fill="#0047BB"/><polygon points="128,4 150,4 120,126 98,126" fill="#0047BB"/><polygon points="158,4 180,4 148,126 126,126" fill="#0047BB"/></svg></span>
+            </div>
+            <div class="size-preview">
+              <span class="size-label">On dark</span>
+              <span class="swatch-dark"><span class="wm wm-md">mAb<svg width="38" height="27" viewBox="0 0 180 130" fill="none" style="margin-left:-1px;position:relative;top:-1px"><polygon points="0,4 22,4 54,126 32,126" fill="#0047BB"/><polygon points="30,4 52,4 82,126 60,126" fill="#0047BB"/><polygon points="128,4 150,4 120,126 98,126" fill="#0047BB"/><polygon points="158,4 180,4 148,126 126,126" fill="#0047BB"/></svg></span></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- v5 Solid Y -->
+        <div class="variant-row">
+          <div class="variant-meta">
+            <div class="variant-id">v5</div>
+            <div class="variant-name">Solid Y</div>
+            <div class="variant-desc">Both bars merged into one bold arm. Wide spread, reads clearly at small sizes.</div>
+          </div>
+          <div class="size-previews">
+            <div class="size-preview">
+              <span class="size-label">Large</span>
+              <span class="wm wm-lg">mAb<svg width="70" height="50" viewBox="0 0 180 130" fill="none" style="margin-left:-1px;position:relative;top:-1px"><polygon points="0,4 56,4 84,126 28,126" fill="#0047BB"/><polygon points="124,4 180,4 152,126 96,126" fill="#0047BB"/></svg></span>
+            </div>
+            <div class="size-preview">
+              <span class="size-label">Medium</span>
+              <span class="wm wm-md">mAb<svg width="38" height="27" viewBox="0 0 180 130" fill="none" style="margin-left:-1px;position:relative;top:-1px"><polygon points="0,4 56,4 84,126 28,126" fill="#0047BB"/><polygon points="124,4 180,4 152,126 96,126" fill="#0047BB"/></svg></span>
+            </div>
+            <div class="size-preview">
+              <span class="size-label">Small</span>
+              <span class="wm wm-sm">mAb<svg width="23" height="16" viewBox="0 0 180 130" fill="none" style="margin-left:-1px;position:relative;top:-1px"><polygon points="0,4 56,4 84,126 28,126" fill="#0047BB"/><polygon points="124,4 180,4 152,126 96,126" fill="#0047BB"/></svg></span>
+            </div>
+            <div class="size-preview">
+              <span class="size-label">On dark</span>
+              <span class="swatch-dark"><span class="wm wm-md">mAb<svg width="38" height="27" viewBox="0 0 180 130" fill="none" style="margin-left:-1px;position:relative;top:-1px"><polygon points="0,4 56,4 84,126 28,126" fill="#0047BB"/><polygon points="124,4 180,4 152,126 96,126" fill="#0047BB"/></svg></span></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- v6 Wire Frame -->
+        <div class="variant-row">
+          <div class="variant-meta">
+            <div class="variant-id">v6</div>
+            <div class="variant-name">Wire Frame</div>
+            <div class="variant-desc">Stroke-only. Light, diagrammatic — closer to scientific illustration.</div>
+          </div>
+          <div class="size-previews">
+            <div class="size-preview">
+              <span class="size-label">Large</span>
+              <span class="wm wm-lg">mAb<svg width="70" height="50" viewBox="0 0 180 130" fill="none" style="margin-left:-1px;position:relative;top:-1px"><line x1="11" y1="4" x2="43" y2="126" stroke="#0047BB" stroke-width="16" stroke-linecap="round"/><line x1="41" y1="4" x2="71" y2="126" stroke="#0047BB" stroke-width="16" stroke-linecap="round"/><line x1="139" y1="4" x2="109" y2="126" stroke="#0047BB" stroke-width="16" stroke-linecap="round"/><line x1="169" y1="4" x2="137" y2="126" stroke="#0047BB" stroke-width="16" stroke-linecap="round"/></svg></span>
+            </div>
+            <div class="size-preview">
+              <span class="size-label">Medium</span>
+              <span class="wm wm-md">mAb<svg width="38" height="27" viewBox="0 0 180 130" fill="none" style="margin-left:-1px;position:relative;top:-1px"><line x1="11" y1="4" x2="43" y2="126" stroke="#0047BB" stroke-width="16" stroke-linecap="round"/><line x1="41" y1="4" x2="71" y2="126" stroke="#0047BB" stroke-width="16" stroke-linecap="round"/><line x1="139" y1="4" x2="109" y2="126" stroke="#0047BB" stroke-width="16" stroke-linecap="round"/><line x1="169" y1="4" x2="137" y2="126" stroke="#0047BB" stroke-width="16" stroke-linecap="round"/></svg></span>
+            </div>
+            <div class="size-preview">
+              <span class="size-label">Small</span>
+              <span class="wm wm-sm">mAb<svg width="23" height="16" viewBox="0 0 180 130" fill="none" style="margin-left:-1px;position:relative;top:-1px"><line x1="11" y1="4" x2="43" y2="126" stroke="#0047BB" stroke-width="16" stroke-linecap="round"/><line x1="41" y1="4" x2="71" y2="126" stroke="#0047BB" stroke-width="16" stroke-linecap="round"/><line x1="139" y1="4" x2="109" y2="126" stroke="#0047BB" stroke-width="16" stroke-linecap="round"/><line x1="169" y1="4" x2="137" y2="126" stroke="#0047BB" stroke-width="16" stroke-linecap="round"/></svg></span>
+            </div>
+            <div class="size-preview">
+              <span class="size-label">On dark</span>
+              <span class="swatch-dark"><span class="wm wm-md">mAb<svg width="38" height="27" viewBox="0 0 180 130" fill="none" style="margin-left:-1px;position:relative;top:-1px"><line x1="11" y1="4" x2="43" y2="126" stroke="#0047BB" stroke-width="16" stroke-linecap="round"/><line x1="41" y1="4" x2="71" y2="126" stroke="#0047BB" stroke-width="16" stroke-linecap="round"/><line x1="139" y1="4" x2="109" y2="126" stroke="#0047BB" stroke-width="16" stroke-linecap="round"/><line x1="169" y1="4" x2="137" y2="126" stroke="#0047BB" stroke-width="16" stroke-linecap="round"/></svg></span></span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- ══════════════════════════════════════════
+         GROUP 3 — FULL ANTIBODY Y WITH TAIL
+    ══════════════════════════════════════════ -->
+    <div class="group">
+      <div class="group-header">
+        <span class="group-label">Antibody — full Y with tail</span>
+        <span class="group-desc">Fab arms + Fc tail. Complete antibody structure below the hinge.</span>
+      </div>
+      <div class="variants">
+
+        <!-- v7 Double Track + Tail -->
+        <div class="variant-row">
+          <div class="variant-meta">
+            <div class="variant-id">v7</div>
+            <div class="variant-name">Double Track + Tail</div>
+            <div class="variant-desc">Four arm bars, H-shaped hinge, two parallel Fc stems descending.</div>
+          </div>
+          <div class="size-previews">
+            <div class="size-preview">
+              <span class="size-label">Large</span>
+              <span class="wm wm-lg">mAb<svg width="40" height="49" viewBox="0 0 180 220" fill="none" style="margin-left:-1px;position:relative;top:-1px"><polygon points="0,4 22,4 54,126 32,126" fill="#0047BB"/><polygon points="30,4 52,4 82,126 60,126" fill="#0047BB"/><polygon points="128,4 150,4 120,126 98,126" fill="#0047BB"/><polygon points="158,4 180,4 148,126 126,126" fill="#0047BB"/><rect x="60" y="126" width="22" height="22" fill="#0047BB"/><rect x="98" y="126" width="22" height="22" fill="#0047BB"/><rect x="60" y="133" width="60" height="8" fill="#0047BB"/><rect x="60" y="148" width="22" height="64" fill="#0047BB"/><rect x="98" y="148" width="22" height="64" fill="#0047BB"/></svg></span>
+            </div>
+            <div class="size-preview">
+              <span class="size-label">Medium</span>
+              <span class="wm wm-md">mAb<svg width="22" height="27" viewBox="0 0 180 220" fill="none" style="margin-left:-1px;position:relative;top:-1px"><polygon points="0,4 22,4 54,126 32,126" fill="#0047BB"/><polygon points="30,4 52,4 82,126 60,126" fill="#0047BB"/><polygon points="128,4 150,4 120,126 98,126" fill="#0047BB"/><polygon points="158,4 180,4 148,126 126,126" fill="#0047BB"/><rect x="60" y="126" width="22" height="22" fill="#0047BB"/><rect x="98" y="126" width="22" height="22" fill="#0047BB"/><rect x="60" y="133" width="60" height="8" fill="#0047BB"/><rect x="60" y="148" width="22" height="64" fill="#0047BB"/><rect x="98" y="148" width="22" height="64" fill="#0047BB"/></svg></span>
+            </div>
+            <div class="size-preview">
+              <span class="size-label">Small</span>
+              <span class="wm wm-sm">mAb<svg width="13" height="16" viewBox="0 0 180 220" fill="none" style="margin-left:-1px;position:relative;top:-1px"><polygon points="0,4 22,4 54,126 32,126" fill="#0047BB"/><polygon points="30,4 52,4 82,126 60,126" fill="#0047BB"/><polygon points="128,4 150,4 120,126 98,126" fill="#0047BB"/><polygon points="158,4 180,4 148,126 126,126" fill="#0047BB"/><rect x="60" y="126" width="22" height="22" fill="#0047BB"/><rect x="98" y="126" width="22" height="22" fill="#0047BB"/><rect x="60" y="133" width="60" height="8" fill="#0047BB"/><rect x="60" y="148" width="22" height="64" fill="#0047BB"/><rect x="98" y="148" width="22" height="64" fill="#0047BB"/></svg></span>
+            </div>
+            <div class="size-preview">
+              <span class="size-label">On dark</span>
+              <span class="swatch-dark"><span class="wm wm-md">mAb<svg width="22" height="27" viewBox="0 0 180 220" fill="none" style="margin-left:-1px;position:relative;top:-1px"><polygon points="0,4 22,4 54,126 32,126" fill="#0047BB"/><polygon points="30,4 52,4 82,126 60,126" fill="#0047BB"/><polygon points="128,4 150,4 120,126 98,126" fill="#0047BB"/><polygon points="158,4 180,4 148,126 126,126" fill="#0047BB"/><rect x="60" y="126" width="22" height="22" fill="#0047BB"/><rect x="98" y="126" width="22" height="22" fill="#0047BB"/><rect x="60" y="133" width="60" height="8" fill="#0047BB"/><rect x="60" y="148" width="22" height="64" fill="#0047BB"/><rect x="98" y="148" width="22" height="64" fill="#0047BB"/></svg></span></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- v8 Solid Y + Tail -->
+        <div class="variant-row">
+          <div class="variant-meta">
+            <div class="variant-id">v8</div>
+            <div class="variant-name">Solid Y + Tail</div>
+            <div class="variant-desc">Wide arms taper through a collar into a single Fc stem. Most compact at small sizes.</div>
+          </div>
+          <div class="size-previews">
+            <div class="size-preview">
+              <span class="size-label">Large</span>
+              <span class="wm wm-lg">mAb<svg width="40" height="49" viewBox="0 0 180 220" fill="none" style="margin-left:-1px;position:relative;top:-1px"><polygon points="0,4 56,4 80,120 24,120" fill="#0047BB"/><polygon points="124,4 180,4 156,120 100,120" fill="#0047BB"/><polygon points="24,120 156,120 106,140 74,140" fill="#0047BB"/><rect x="74" y="140" width="32" height="72" fill="#0047BB"/></svg></span>
+            </div>
+            <div class="size-preview">
+              <span class="size-label">Medium</span>
+              <span class="wm wm-md">mAb<svg width="22" height="27" viewBox="0 0 180 220" fill="none" style="margin-left:-1px;position:relative;top:-1px"><polygon points="0,4 56,4 80,120 24,120" fill="#0047BB"/><polygon points="124,4 180,4 156,120 100,120" fill="#0047BB"/><polygon points="24,120 156,120 106,140 74,140" fill="#0047BB"/><rect x="74" y="140" width="32" height="72" fill="#0047BB"/></svg></span>
+            </div>
+            <div class="size-preview">
+              <span class="size-label">Small</span>
+              <span class="wm wm-sm">mAb<svg width="13" height="16" viewBox="0 0 180 220" fill="none" style="margin-left:-1px;position:relative;top:-1px"><polygon points="0,4 56,4 80,120 24,120" fill="#0047BB"/><polygon points="124,4 180,4 156,120 100,120" fill="#0047BB"/><polygon points="24,120 156,120 106,140 74,140" fill="#0047BB"/><rect x="74" y="140" width="32" height="72" fill="#0047BB"/></svg></span>
+            </div>
+            <div class="size-preview">
+              <span class="size-label">On dark</span>
+              <span class="swatch-dark"><span class="wm wm-md">mAb<svg width="22" height="27" viewBox="0 0 180 220" fill="none" style="margin-left:-1px;position:relative;top:-1px"><polygon points="0,4 56,4 80,120 24,120" fill="#0047BB"/><polygon points="124,4 180,4 156,120 100,120" fill="#0047BB"/><polygon points="24,120 156,120 106,140 74,140" fill="#0047BB"/><rect x="74" y="140" width="32" height="72" fill="#0047BB"/></svg></span></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- v9 Wire Frame + Tail -->
+        <div class="variant-row">
+          <div class="variant-meta">
+            <div class="variant-id">v9</div>
+            <div class="variant-name">Wire Frame + Tail</div>
+            <div class="variant-desc">Stroke-only full antibody. Hinge bridge + two descending lines. Light, diagrammatic.</div>
+          </div>
+          <div class="size-previews">
+            <div class="size-preview">
+              <span class="size-label">Large</span>
+              <span class="wm wm-lg">mAb<svg width="40" height="49" viewBox="0 0 180 220" fill="none" style="margin-left:-1px;position:relative;top:-1px"><line x1="11" y1="4" x2="41" y2="116" stroke="#0047BB" stroke-width="16" stroke-linecap="round"/><line x1="41" y1="4" x2="69" y2="116" stroke="#0047BB" stroke-width="16" stroke-linecap="round"/><line x1="139" y1="4" x2="111" y2="116" stroke="#0047BB" stroke-width="16" stroke-linecap="round"/><line x1="169" y1="4" x2="137" y2="116" stroke="#0047BB" stroke-width="16" stroke-linecap="round"/><line x1="55" y1="116" x2="125" y2="116" stroke="#0047BB" stroke-width="12" stroke-linecap="round"/><line x1="71" y1="130" x2="71" y2="208" stroke="#0047BB" stroke-width="16" stroke-linecap="round"/><line x1="109" y1="130" x2="109" y2="208" stroke="#0047BB" stroke-width="16" stroke-linecap="round"/></svg></span>
+            </div>
+            <div class="size-preview">
+              <span class="size-label">Medium</span>
+              <span class="wm wm-md">mAb<svg width="22" height="27" viewBox="0 0 180 220" fill="none" style="margin-left:-1px;position:relative;top:-1px"><line x1="11" y1="4" x2="41" y2="116" stroke="#0047BB" stroke-width="16" stroke-linecap="round"/><line x1="41" y1="4" x2="69" y2="116" stroke="#0047BB" stroke-width="16" stroke-linecap="round"/><line x1="139" y1="4" x2="111" y2="116" stroke="#0047BB" stroke-width="16" stroke-linecap="round"/><line x1="169" y1="4" x2="137" y2="116" stroke="#0047BB" stroke-width="16" stroke-linecap="round"/><line x1="55" y1="116" x2="125" y2="116" stroke="#0047BB" stroke-width="12" stroke-linecap="round"/><line x1="71" y1="130" x2="71" y2="208" stroke="#0047BB" stroke-width="16" stroke-linecap="round"/><line x1="109" y1="130" x2="109" y2="208" stroke="#0047BB" stroke-width="16" stroke-linecap="round"/></svg></span>
+            </div>
+            <div class="size-preview">
+              <span class="size-label">Small</span>
+              <span class="wm wm-sm">mAb<svg width="13" height="16" viewBox="0 0 180 220" fill="none" style="margin-left:-1px;position:relative;top:-1px"><line x1="11" y1="4" x2="41" y2="116" stroke="#0047BB" stroke-width="16" stroke-linecap="round"/><line x1="41" y1="4" x2="69" y2="116" stroke="#0047BB" stroke-width="16" stroke-linecap="round"/><line x1="139" y1="4" x2="111" y2="116" stroke="#0047BB" stroke-width="16" stroke-linecap="round"/><line x1="169" y1="4" x2="137" y2="116" stroke="#0047BB" stroke-width="16" stroke-linecap="round"/><line x1="55" y1="116" x2="125" y2="116" stroke="#0047BB" stroke-width="12" stroke-linecap="round"/><line x1="71" y1="130" x2="71" y2="208" stroke="#0047BB" stroke-width="16" stroke-linecap="round"/><line x1="109" y1="130" x2="109" y2="208" stroke="#0047BB" stroke-width="16" stroke-linecap="round"/></svg></span>
+            </div>
+            <div class="size-preview">
+              <span class="size-label">On dark</span>
+              <span class="swatch-dark"><span class="wm wm-md">mAb<svg width="22" height="27" viewBox="0 0 180 220" fill="none" style="margin-left:-1px;position:relative;top:-1px"><line x1="11" y1="4" x2="41" y2="116" stroke="#0047BB" stroke-width="16" stroke-linecap="round"/><line x1="41" y1="4" x2="69" y2="116" stroke="#0047BB" stroke-width="16" stroke-linecap="round"/><line x1="139" y1="4" x2="111" y2="116" stroke="#0047BB" stroke-width="16" stroke-linecap="round"/><line x1="169" y1="4" x2="137" y2="116" stroke="#0047BB" stroke-width="16" stroke-linecap="round"/><line x1="55" y1="116" x2="125" y2="116" stroke="#0047BB" stroke-width="12" stroke-linecap="round"/><line x1="71" y1="130" x2="71" y2="208" stroke="#0047BB" stroke-width="16" stroke-linecap="round"/><line x1="109" y1="130" x2="109" y2="208" stroke="#0047BB" stroke-width="16" stroke-linecap="round"/></svg></span></span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════
+         GROUP 4 — HYBRID
+    ══════════════════════════════════════════ -->
+    <div class="group">
+      <div class="group-header">
+        <span class="group-label">Hybrid</span>
+        <span class="group-desc">Antibody Y+tail contained within the rounded shield — science inside structure</span>
+      </div>
+      <div class="variants">
+
+        <!-- v10 Shield + Antibody -->
+        <div class="variant-row">
+          <div class="variant-meta">
+            <div class="variant-id">v10</div>
+            <div class="variant-name">Shield + Antibody</div>
+            <div class="variant-desc">The full antibody Y+tail (v8) inside the rounded shield (v2). Two concepts fused — protective form, biological mark within.</div>
+          </div>
+          <div class="size-previews">
+            <div class="size-preview">
+              <span class="size-label">Large</span>
+              <span class="wm wm-lg">mAb<svg width="42" height="50" viewBox="0 0 120 144" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin:0 -1px;position:relative;top:-1px">
+                <path d="M10 18 Q10 4,28 4 L92 4 Q110 4,110 18 L110 82 L60 136 L10 82 Z" fill="#0047BB"/>
+                <g transform="translate(20,18) scale(0.44)" fill="white">
+                  <polygon points="0,4 56,4 80,120 24,120"/>
+                  <polygon points="124,4 180,4 156,120 100,120"/>
+                  <polygon points="24,120 156,120 106,140 74,140"/>
+                  <rect x="74" y="140" width="32" height="52"/>
+                </g>
+              </svg></span>
+            </div>
+            <div class="size-preview">
+              <span class="size-label">Medium</span>
+              <span class="wm wm-md">mAb<svg width="23" height="28" viewBox="0 0 120 144" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin:0 -1px;position:relative;top:-1px">
+                <path d="M10 18 Q10 4,28 4 L92 4 Q110 4,110 18 L110 82 L60 136 L10 82 Z" fill="#0047BB"/>
+                <g transform="translate(20,18) scale(0.44)" fill="white">
+                  <polygon points="0,4 56,4 80,120 24,120"/>
+                  <polygon points="124,4 180,4 156,120 100,120"/>
+                  <polygon points="24,120 156,120 106,140 74,140"/>
+                  <rect x="74" y="140" width="32" height="52"/>
+                </g>
+              </svg></span>
+            </div>
+            <div class="size-preview">
+              <span class="size-label">Small</span>
+              <span class="wm wm-sm">mAb<svg width="14" height="17" viewBox="0 0 120 144" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin:0 -1px;position:relative;top:-1px">
+                <path d="M10 18 Q10 4,28 4 L92 4 Q110 4,110 18 L110 82 L60 136 L10 82 Z" fill="#0047BB"/>
+                <g transform="translate(20,18) scale(0.44)" fill="white">
+                  <polygon points="0,4 56,4 80,120 24,120"/>
+                  <polygon points="124,4 180,4 156,120 100,120"/>
+                  <polygon points="24,120 156,120 106,140 74,140"/>
+                  <rect x="74" y="140" width="32" height="52"/>
+                </g>
+              </svg></span>
+            </div>
+            <div class="size-preview">
+              <span class="size-label">On dark</span>
+              <span class="swatch-dark"><span class="wm wm-md">mAb<svg width="23" height="28" viewBox="0 0 120 144" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin:0 -1px;position:relative;top:-1px">
+                <path d="M10 18 Q10 4,28 4 L92 4 Q110 4,110 18 L110 82 L60 136 L10 82 Z" fill="#0047BB"/>
+                <g transform="translate(20,18) scale(0.44)" fill="white">
+                  <polygon points="0,4 56,4 80,120 24,120"/>
+                  <polygon points="124,4 180,4 156,120 100,120"/>
+                  <polygon points="24,120 156,120 106,140 74,140"/>
+                  <rect x="74" y="140" width="32" height="52"/>
+                </g>
+              </svg></span></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- v11 Shield + Antibody (Phil's edit) -->
+        <div class="variant-row">
+          <div class="variant-meta">
+            <div class="variant-id">v11</div>
+            <div class="variant-name">Shield + Antibody II</div>
+            <div class="variant-desc">Phil's hand-tuned variant of v10 — tail proportions adjusted, slightly more compact Fc stem relative to the Fab arms.</div>
+          </div>
+          <div class="size-previews">
+            <div class="size-preview">
+              <span class="size-label">Large</span>
+              <span class="wm wm-lg">mAb<svg width="42" height="50" viewBox="0 0 600 720" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin:0 -1px;position:relative;top:-1px"><g transform="matrix(5,0,0,5,0,0)"><path d="M10,18C10,8.667 16,4 28,4L92,4C104,4 110,8.667 110,18L110,82L60,136L10,82L10,18Z" fill="#0047BB"/></g><g transform="matrix(2.2,0,0,2.2,100,90)"><g transform="matrix(0.454545,0,0,0.454545,-45.454545,-33.181818)"><g transform="matrix(2.2,0,0,1.526923,100,177.230769)"><rect x="74" y="140" width="32" height="52" fill="white"/></g><g transform="matrix(2.2,0,0,2.2,100,90)"><path d="M0,4L56,4L80,120L24,120L0,4Z" fill="white"/></g><g transform="matrix(2.2,0,0,2.2,100,90)"><path d="M24,120L156,120L106,140L74,140L24,120Z" fill="white"/></g><g transform="matrix(2.2,0,0,2.2,100,90)"><path d="M124,4L180,4L156,120L100,120L124,4Z" fill="white"/></g></g></g></svg></span>
+            </div>
+            <div class="size-preview">
+              <span class="size-label">Medium</span>
+              <span class="wm wm-md">mAb<svg width="23" height="28" viewBox="0 0 600 720" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin:0 -1px;position:relative;top:-1px"><g transform="matrix(5,0,0,5,0,0)"><path d="M10,18C10,8.667 16,4 28,4L92,4C104,4 110,8.667 110,18L110,82L60,136L10,82L10,18Z" fill="#0047BB"/></g><g transform="matrix(2.2,0,0,2.2,100,90)"><g transform="matrix(0.454545,0,0,0.454545,-45.454545,-33.181818)"><g transform="matrix(2.2,0,0,1.526923,100,177.230769)"><rect x="74" y="140" width="32" height="52" fill="white"/></g><g transform="matrix(2.2,0,0,2.2,100,90)"><path d="M0,4L56,4L80,120L24,120L0,4Z" fill="white"/></g><g transform="matrix(2.2,0,0,2.2,100,90)"><path d="M24,120L156,120L106,140L74,140L24,120Z" fill="white"/></g><g transform="matrix(2.2,0,0,2.2,100,90)"><path d="M124,4L180,4L156,120L100,120L124,4Z" fill="white"/></g></g></g></svg></span>
+            </div>
+            <div class="size-preview">
+              <span class="size-label">Small</span>
+              <span class="wm wm-sm">mAb<svg width="14" height="17" viewBox="0 0 600 720" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin:0 -1px;position:relative;top:-1px"><g transform="matrix(5,0,0,5,0,0)"><path d="M10,18C10,8.667 16,4 28,4L92,4C104,4 110,8.667 110,18L110,82L60,136L10,82L10,18Z" fill="#0047BB"/></g><g transform="matrix(2.2,0,0,2.2,100,90)"><g transform="matrix(0.454545,0,0,0.454545,-45.454545,-33.181818)"><g transform="matrix(2.2,0,0,1.526923,100,177.230769)"><rect x="74" y="140" width="32" height="52" fill="white"/></g><g transform="matrix(2.2,0,0,2.2,100,90)"><path d="M0,4L56,4L80,120L24,120L0,4Z" fill="white"/></g><g transform="matrix(2.2,0,0,2.2,100,90)"><path d="M24,120L156,120L106,140L74,140L24,120Z" fill="white"/></g><g transform="matrix(2.2,0,0,2.2,100,90)"><path d="M124,4L180,4L156,120L100,120L124,4Z" fill="white"/></g></g></g></svg></span>
+            </div>
+            <div class="size-preview">
+              <span class="size-label">On dark</span>
+              <span class="swatch-dark"><span class="wm wm-md">mAb<svg width="23" height="28" viewBox="0 0 600 720" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin:0 -1px;position:relative;top:-1px"><g transform="matrix(5,0,0,5,0,0)"><path d="M10,18C10,8.667 16,4 28,4L92,4C104,4 110,8.667 110,18L110,82L60,136L10,82L10,18Z" fill="#0047BB"/></g><g transform="matrix(2.2,0,0,2.2,100,90)"><g transform="matrix(0.454545,0,0,0.454545,-45.454545,-33.181818)"><g transform="matrix(2.2,0,0,1.526923,100,177.230769)"><rect x="74" y="140" width="32" height="52" fill="white"/></g><g transform="matrix(2.2,0,0,2.2,100,90)"><path d="M0,4L56,4L80,120L24,120L0,4Z" fill="white"/></g><g transform="matrix(2.2,0,0,2.2,100,90)"><path d="M24,120L156,120L106,140L74,140L24,120Z" fill="white"/></g><g transform="matrix(2.2,0,0,2.2,100,90)"><path d="M124,4L180,4L156,120L100,120L124,4Z" fill="white"/></g></g></g></svg></span></span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <p style="font-size:0.65rem;color:#CBD5E1;text-align:center;margin-top:2rem;">mAbV — Internal use only. April 2026.</p>
+
+  </div>
+
+</body>
+</html>

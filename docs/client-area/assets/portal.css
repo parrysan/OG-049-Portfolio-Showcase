@@ -1,0 +1,135 @@
+/* OG-049 project portal: page layout on ODS tokens.
+   Chrome comes from ods-project-header / ods-project-footer (vendored from OS-000).
+   Only token variables here: no raw colours, sizes or spacing. */
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 400; font-display: swap; src: url("fonts/open-sans-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 600; font-display: swap; src: url("fonts/open-sans-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 700; font-display: swap; src: url("fonts/open-sans-latin-700-normal.woff2") format("woff2"); }
+
+@layer ods.compositions {
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-primary);
+    font-size: var(--text-base);
+    line-height: var(--leading-relaxed);
+    -webkit-font-smoothing: antialiased;
+  }
+  img { display: block; max-inline-size: 100%; block-size: auto; }
+
+  .portal {
+    max-inline-size: var(--container-max);
+    margin-inline: auto;
+    padding: var(--spacing-10) var(--container-padding) var(--spacing-20);
+  }
+  .portal .portal-panel > * + * { margin-block-start: var(--spacing-6); }
+  .portal .portal-panel > h2 { margin-block-start: var(--spacing-12); }
+
+  :where(.portal) h2 {
+    margin: 0;
+    padding-block-start: var(--spacing-6);
+    border-block-start: var(--border-width) solid var(--color-border);
+    font-size: var(--text-xl);
+    font-weight: var(--weight-bold);
+    line-height: var(--leading-snug);
+  }
+  :where(.portal) h3 {
+    margin: 0;
+    font-size: var(--text-lg);
+    font-weight: var(--weight-bold);
+    line-height: var(--leading-snug);
+  }
+  :where(.portal) p { margin: 0; max-inline-size: var(--container-reading-max); }
+  .portal a { color: var(--color-text); text-decoration-thickness: var(--border-width); text-underline-offset: 0.2em; }
+  .portal a:hover { color: var(--color-green-deep); }
+  .portal a:focus-visible { outline: var(--focus-width) solid var(--color-focus-ring); outline-offset: var(--focus-offset); }
+  .portal code {
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    overflow-wrap: anywhere;
+  }
+
+  .meta-line { display: flex; flex-wrap: wrap; align-items: center; gap: var(--spacing-2); color: var(--color-text-secondary); font-size: var(--text-sm); }
+  .intro { font-size: var(--text-lg); line-height: var(--leading-normal); }
+
+  /* Key facts: label / value rows */
+  .facts {
+    display: grid;
+    grid-template-columns: minmax(8rem, max-content) 1fr;
+    gap: var(--spacing-3) var(--spacing-6);
+    margin: 0;
+    max-inline-size: var(--container-reading-max);
+  }
+  .facts dt { color: var(--color-text-secondary); font-size: var(--text-sm); padding-block-start: var(--spacing-0); }
+  .facts dd { margin: 0; }
+
+  /* Component rows on the overview */
+  .rows { list-style: none; margin: 0; padding: 0; border-block-start: var(--border-width) solid var(--color-border); }
+  .rows li {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: var(--spacing-2) var(--spacing-6);
+    align-items: start;
+    padding-block: var(--spacing-4);
+    border-block-end: var(--border-width) solid var(--color-border);
+  }
+  .rows .row-text { display: grid; gap: var(--spacing-1); }
+  .rows .row-name { font-weight: var(--weight-semibold); }
+  .rows .row-desc { color: var(--color-text-secondary); font-size: var(--text-sm); }
+
+  /* Media: preview images and video */
+  .shot {
+    margin: 0;
+    max-inline-size: var(--container-reading-max);
+    border: var(--border-width) solid var(--color-border);
+    background: var(--color-bg-muted);
+  }
+  .shot img, .shot video { inline-size: 100%; display: block; }
+  .shot video { block-size: auto; aspect-ratio: 16 / 9; background: var(--color-black); }
+
+  /* Link list */
+  .links { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--spacing-2); max-inline-size: var(--container-reading-max); }
+  .links li { display: grid; gap: var(--spacing-0); }
+  .links .hint { color: var(--color-text-secondary); font-size: var(--text-sm); }
+
+  /* Exploration cards */
+  .cards {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+    gap: var(--spacing-6);
+  }
+  .cards li {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    border: var(--border-width) solid var(--color-border);
+  }
+  .cards img { aspect-ratio: 16 / 9; object-fit: cover; object-position: top left; inline-size: 100%; border-block-end: var(--border-width) solid var(--color-border); }
+  .card-body { display: grid; align-content: start; gap: var(--spacing-2); padding: var(--spacing-4); }
+  .card-body p { font-size: var(--text-sm); color: var(--color-text-secondary); }
+
+  .note {
+    padding: var(--spacing-4);
+    border-inline-start: var(--spacing-1) solid var(--color-warning);
+    background: var(--color-bg-muted);
+    max-inline-size: var(--container-reading-max);
+  }
+
+  .visually-hidden {
+    position: absolute !important;
+    inline-size: 1px; block-size: 1px;
+    overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
+  }
+
+  @media (max-width: 40rem) {
+    .portal { padding-block-start: var(--spacing-8); }
+    .facts { grid-template-columns: 1fr; gap: var(--spacing-1); }
+    .facts dd + dt { margin-block-start: var(--spacing-3); }
+    .rows li { grid-template-columns: 1fr; }
+  }
+}

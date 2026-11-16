@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>How the showcase was made · internal</title>
+<meta name="robots" content="noindex">
+<style>
+@font-face{font-family:"Open Sans";src:url("assets/fonts/open-sans-latin-400-normal.woff2") format("woff2");font-weight:400}
+@font-face{font-family:"Open Sans";src:url("assets/fonts/open-sans-latin-700-normal.woff2") format("woff2");font-weight:700}
+body{margin:0;font-family:"Open Sans",system-ui,sans-serif;color:#0A0A0A;background:#fff;line-height:1.55;font-size:16px}
+.wrap{max-width:1100px;margin:0 auto;padding:48px clamp(20px,5vw,64px) 80px}
+h1{font-size:clamp(32px,4vw,48px);letter-spacing:-.03em;line-height:1.05;margin:0}
+h2{font-size:22px;margin:48px 0 12px}
+p{max-width:46em;color:#333}
+.note{display:inline-block;margin-top:12px;font-size:13px;padding:6px 12px;border-radius:999px;background:#FFF4D6;color:#7A5300}
+table{width:100%;border-collapse:collapse;margin-top:12px;font-size:15px}
+th,td{text-align:left;vertical-align:top;padding:12px 14px;border-bottom:1px solid #E0E0E0}
+th{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#595959;background:#F6F6F4}
+code{font-size:13px;background:#F6F6F4;padding:1px 6px;border-radius:4px}
+a{color:#0A0A0A}
+@media (max-width:760px){table,thead,tbody,tr,th,td{display:block}thead{display:none}td{border:0;padding:4px 0}tr{border-bottom:1px solid #E0E0E0;padding:12px 0}}
+</style>
+</head>
+<body><div class="wrap">
+<p><a href="./">← Back to the showcase</a></p>
+<h1>How the showcase was made</h1>
+<p>Internal view for Phil and the agents. Clients see the showcase itself; skill names stay out of it.</p>
+<span class="note">Vertical slice, 5 Nov 2026: one exploration built. Waiting on Phil's approval before the pattern spreads.</span>
+
+<h2>Examples and the skills behind them</h2>
+<table>
+<thead><tr><th>Example</th><th>Collection</th><th>Primary skill</th><th>Supporting</th><th>Why this approach</th><th>When it would be wrong</th><th>For a real commission</th></tr></thead>
+<tbody>
+<tr><td>mAbV</td><td>Selected work (approved)</td><td><code>og-ods-case-showcase</code></td><td>—</td><td>The story is a sequence of design decisions with real artwork for each: a pinned stepper suits it.</td><td>When there is little artwork and the story is one decision.</td><td>Already real.</td></tr>
+<tr><td>STR Technologies</td><td>Selected work (awaiting STR approval)</td><td><code>og-ods-case-showcase</code></td><td>—</td><td>As above, with screens instead of physical artwork.</td><td>—</td><td>Client approval before public use.</td></tr>
+<tr><td>WordPress sites your team can run</td><td>Exploration</td><td><code>og-product-story</code></td><td><code>og-reference-to-recipe</code> (relume.io, tasteskill.dev)</td><td>A service is hard to see, so the page demonstrates it: brief → sitemap → blocks → site, then an editor explorer. The visitor's question ("will my team cope?") is answered by clicking, not reading.</td><td>When the visitor needs pricing or specs fast; then use a plain service page.</td><td>Real client examples instead of fictional businesses; a real pricing or scoping step; real testimonials only if supplied.</td></tr>
+</tbody>
+</table>
+
+<h2>The skills</h2>
+<table>
+<thead><tr><th>Skill</th><th>Job</th><th>Use when</th><th>Don't use when</th></tr></thead>
+<tbody>
+<tr><td><code>og-ods-case-showcase</code></td><td>Real delivered work as a scroll-driven case study.</td><td>The project is finished, the facts are on record, there is artwork for each decision.</td><td>The work is speculative or unapproved; never imply a concept was delivered.</td></tr>
+<tr><td><code>og-product-story</code></td><td>An offer explained by demonstrating it.</td><td>A service or product is abstract and a demonstration makes it obvious (input → transformation → output, before → after, overview → detail).</td><td>Visitors mainly need specs, prices or fast purchase; an editorial layout is hiding missing evidence.</td></tr>
+<tr><td><code>og-reference-to-recipe</code></td><td>Turns a reference site into a written design recipe.</td><td>Phil points at a site he admires, or a new page type needs a quality bar.</td><td>Copying a site's look; one-off inspiration that won't be reused.</td></tr>
+</tbody>
+</table>
+<p>The full decision guide, including skills planned but not yet built, is in <code>~/OG/shared-skills/ods/reference/experiences.md</code>.</p>
+
+<h2>Files</h2>
+<p>Showcase home: <code>~/OG/reports/showcase/index.html</code> · Explorations: <code>~/OG/reports/showcase/explorations/&lt;slug&gt;/story.json</code> · Case studies: <code>~/OG/reports/portfolio-&lt;slug&gt;/case.json</code> · Recipes: <code>~/OG/shared-skills/og-reference-to-recipe/recipes/</code></p>
+</div></body>
+</html>

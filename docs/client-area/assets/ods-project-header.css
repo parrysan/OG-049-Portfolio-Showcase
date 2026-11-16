@@ -1,0 +1,42 @@
+/* OGANIKO Project header — ods-project-header v1.3.1
+   Import generated ODS tokens before this file. */
+.ods-project-header {
+  --ods-project-surface: var(--color-gray-900);
+  --ods-project-canvas: var(--color-bg);
+  --ods-project-rule-width: calc(var(--border-width) * 2);
+  --ods-project-identity-size: var(--spacing-0);
+  --ods-project-collapsed-inset: var(--spacing-3);
+  position: sticky; top: 0; z-index: var(--z-modal); background: var(--ods-project-surface); color: var(--color-text-inverse);
+  border-block-end: var(--border-width) solid transparent; transition: border-color var(--transition-fast), transform var(--transition-base);
+}
+.ods-project-header:has(.ods-project-header__sub) { --ods-project-canvas: var(--color-bg-muted); }
+.ods-project-header.is-stuck { border-block-end-color: var(--color-border); }
+
+.ods-project-header__identity { display: flow-root; }
+/* Leave collapsed-inset of the inverse surface above the tab row (do not flush tabs to the viewport edge). */
+.ods-project-header.is-collapsed { transform: translateY(calc(var(--ods-project-collapsed-inset) - var(--ods-project-identity-size))); }
+.ods-project-header.is-collapsed:has(.ods-project-header__identity :focus-visible) { transform: none; }
+
+.ods-project-header__inner { max-inline-size: var(--container-max); margin-inline: auto; padding-inline: var(--container-padding); }
+.ods-project-header__global { display: flex; align-items: center; gap: var(--spacing-3); min-block-size: var(--control-height-md); padding-block-start: var(--spacing-4); }
+.ods-project-header__mark { color: var(--color-text-inverse-muted); font-family: var(--font-primary); font-size: var(--text-sm); letter-spacing: var(--tracking-caps); text-decoration: none; text-transform: uppercase; }
+.ods-project-header__mark:hover { color: var(--color-text-inverse); text-decoration: underline; }
+.ods-project-header__meta { display: flex; gap: var(--spacing-2); margin-inline-start: auto; }
+.ods-project-header__title { margin: var(--spacing-2) 0 var(--spacing-6); color: var(--color-text-inverse); font-family: var(--font-primary); font-size: var(--text-3xl); font-weight: var(--weight-bold); line-height: var(--leading-snug); }
+.ods-project-header__tabbar { position: relative; }
+.ods-project-header__tabbar::before { content: ""; position: absolute; inset-inline: 0; inset-block-end: 0; block-size: var(--ods-project-rule-width); background: var(--color-success-strong); }
+.ods-project-header__tabs { position: relative; display: flex; margin: 0 calc(var(--container-padding) * -1); overflow-x: auto; padding-inline: var(--container-padding); scrollbar-width: none; scroll-snap-type: x proximity; }
+.ods-project-header__tabs::-webkit-scrollbar { display: none; }
+.ods-project-header__tabs a { flex: 0 0 auto; margin-block-end: var(--ods-project-rule-width); padding: var(--spacing-3) var(--spacing-4); border-radius: var(--radius-sm) var(--radius-sm) 0 0; color: var(--color-text-inverse-muted); font-family: var(--font-primary); font-size: var(--text-sm); font-weight: var(--weight-semibold); scroll-snap-align: start; text-decoration: none; transition: background-color var(--transition-fast), color var(--transition-fast); white-space: nowrap; }
+.ods-project-header__tabs a:hover { background: color-mix(in srgb, var(--color-text-inverse) 10%, var(--ods-project-surface)); color: var(--color-text-inverse); }
+.ods-project-header__tabs a[aria-current="page"] { margin-block-end: 0; border-block-end: var(--ods-project-rule-width) solid var(--ods-project-canvas); background: var(--ods-project-canvas); color: var(--color-text); font-weight: var(--weight-bold); }
+.ods-project-header a:focus-visible, .ods-project-header button:focus-visible { outline: var(--focus-width) solid var(--color-text-inverse); outline-offset: calc(var(--focus-offset) * -1); }
+.ods-project-header__tabs a[aria-current="page"]:focus-visible { outline-color: var(--color-focus-ring); }
+.ods-project-header__sub { background: var(--ods-project-canvas); color: var(--color-text-secondary); font-family: var(--font-primary); font-size: var(--text-sm); }
+.ods-project-header__sub .ods-project-header__inner { padding-block: var(--spacing-2); }
+.ods-project-header__sub a { color: inherit; }
+@media (max-width: 767px) { .ods-project-header__title { font-size: var(--text-2xl); } }
+@media (prefers-reduced-motion: reduce) {
+  .ods-project-header,
+  .ods-project-header__tabs a { transition: none; }
+}

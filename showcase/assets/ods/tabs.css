@@ -1,0 +1,186 @@
+/* ds:tabs v0.1
+   ============================================================
+   Oganiko Tabs — og-tabs
+   Canonical component · OS-000 Tabs (tab list / section switcher)
+   Source of truth: OS-000-Design-System/components/tabs/tabs.css
+   ------------------------------------------------------------
+   In-page section switcher. Assimilated from shadcn/21st Tabs
+   patterns — principles only; restyled with ODS tokens.
+   Not a raw dump. Not packages/og-tabs.css (os-002 cell,
+   underline-animated, segmented). Do not load both stylesheets:
+   the older file also uses the .og-tabs block.
+   Token names only; fallbacks repeat current token values so the
+   file works in the static catalogue. Do not invent new token values.
+   version: 0.1.0 (2026-09-23) · maturity: experimental
+   ------------------------------------------------------------
+   Markup:
+     <div class="og-tabs og-tabs--line og-tabs--md">
+       <div class="og-tabs__list" role="tablist" aria-label="…"
+            aria-orientation="horizontal">
+         <button type="button" class="og-tabs__tab" role="tab"
+                 id="tab-account" aria-selected="true"
+                 aria-controls="panel-account">Account</button>
+         <button type="button" class="og-tabs__tab" role="tab"
+                 id="tab-delivery" aria-selected="false" tabindex="-1"
+                 aria-controls="panel-delivery">Delivery</button>
+       </div>
+       <div class="og-tabs__panel" role="tabpanel" id="panel-account"
+            aria-labelledby="tab-account">…</div>
+       <div class="og-tabs__panel" role="tabpanel" id="panel-delivery"
+            aria-labelledby="tab-delivery" hidden>…</div>
+     </div>
+   ============================================================ */
+
+.og-tabs {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+  font-family: var(--font-primary);
+  color: var(--color-text);
+  max-width: 100%;
+}
+
+.og-tabs__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: var(--spacing-1);
+}
+
+.og-tabs__tab {
+  appearance: none;
+  margin: 0;
+  font-family: inherit;
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-snug);
+  color: var(--color-text-secondary);
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  transition:
+    color var(--transition-fast),
+    background-color var(--transition-fast),
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.og-tabs--sm .og-tabs__tab {
+  padding: var(--spacing-2) var(--spacing-3);
+  font-size: var(--text-sm);
+}
+
+.og-tabs--md .og-tabs__tab,
+.og-tabs:not(.og-tabs--sm) .og-tabs__tab {
+  padding: var(--spacing-2) var(--spacing-4);
+  font-size: var(--text-sm);
+}
+
+.og-tabs__tab:hover:not(:disabled):not([aria-selected='true']) {
+  color: var(--color-text);
+}
+
+.og-tabs__tab:focus-visible {
+  outline: var(--focus-width) solid var(--color-border-focus);
+  outline-offset: var(--focus-offset);
+}
+
+.og-tabs__tab:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.og-tabs__tab .og-tabs__icon,
+.og-tabs__tab iconify-icon {
+  width: 24px;
+  height: 24px;
+  font-size: 24px;
+  color: currentColor;
+}
+
+/* ── line (default) — quiet rule under the selected label ── */
+.og-tabs--line .og-tabs__list,
+.og-tabs:not(.og-tabs--pill) .og-tabs__list {
+  border-bottom: var(--border-width) solid var(--color-border);
+}
+
+.og-tabs--line .og-tabs__tab,
+.og-tabs:not(.og-tabs--pill) .og-tabs__tab {
+  border-bottom: calc(var(--border-width) * 2) solid transparent;
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+  margin-bottom: calc(var(--border-width) * -1);
+}
+
+.og-tabs--line .og-tabs__tab:hover:not(:disabled):not([aria-selected='true']),
+.og-tabs:not(.og-tabs--pill) .og-tabs__tab:hover:not(:disabled):not([aria-selected='true']) {
+  background: var(--color-bg-muted);
+}
+
+.og-tabs--line .og-tabs__tab[aria-selected='true'],
+.og-tabs:not(.og-tabs--pill) .og-tabs__tab[aria-selected='true'] {
+  color: var(--color-text);
+  font-weight: var(--weight-semibold);
+  border-bottom-color: var(--color-text);
+}
+
+/* ── pill — muted track, raised selected tab (no brand-green fill) ── */
+.og-tabs--pill .og-tabs__list {
+  align-self: flex-start;
+  width: fit-content;
+  max-width: 100%;
+  padding: var(--spacing-1);
+  background: var(--color-bg-muted);
+  border-radius: var(--radius-lg);
+}
+
+.og-tabs--pill .og-tabs__tab {
+  border-radius: var(--radius-md);
+}
+
+.og-tabs--pill .og-tabs__tab[aria-selected='true'] {
+  color: var(--color-text);
+  font-weight: var(--weight-semibold);
+  background: var(--color-bg);
+  box-shadow: var(--shadow-sm);
+}
+
+.og-tabs__panel {
+  background: var(--color-bg);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-6);
+}
+
+.og-tabs--sm .og-tabs__panel {
+  padding: var(--spacing-4);
+}
+
+.og-tabs__panel[hidden] {
+  display: none;
+}
+
+.og-tabs__panel:focus-visible {
+  outline: var(--focus-width) solid var(--color-border-focus);
+  outline-offset: var(--focus-offset);
+}
+
+.og-tabs__panel-title {
+  margin: 0 0 var(--spacing-2);
+  font-size: var(--text-lg);
+  font-weight: var(--weight-semibold);
+  line-height: var(--leading-snug);
+  color: var(--color-text);
+}
+
+.og-tabs__panel-lead {
+  margin: 0;
+  font-size: var(--text-sm);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-normal);
+  color: var(--color-text-secondary);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .og-tabs__tab {
+    transition: none;
+  }
+}

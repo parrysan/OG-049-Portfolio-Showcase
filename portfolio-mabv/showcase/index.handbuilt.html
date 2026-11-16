@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>mAbV case study · Phil Parry</title>
+<meta name="description" content="Identity, design system and brand kit for a new antibody company. An interactive case study by Phil Parry.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='8 9 16 15'%3E%3Cpath fill='%23109200' d='M9 22c0-6 4-11 14-12-1 9-6 13-12 13-.7 0-1.4-.1-2-.3z'/%3E%3C/svg%3E">
+<style>
+@font-face{font-family:"Open Sans";src:url("../assets/fonts/open-sans-latin-400-normal.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Open Sans";src:url("../assets/fonts/open-sans-latin-600-normal.woff2") format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:"Open Sans";src:url("../assets/fonts/open-sans-latin-700-normal.woff2") format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:"DM Sans";src:url("../assets/fonts/dm-sans-latin-var.woff2") format("woff2");font-weight:100 1000;font-display:swap}
+@font-face{font-family:"Noto Sans SC";src:url("../assets/fonts/noto-sans-sc-700-baiweixin.woff2") format("woff2");font-weight:700;font-display:swap}
+
+:root{
+  /* Frame: ODS */
+  --ink:#0A0A0A;--ink-2:#333;--ink-3:#595959;--line:#E0E0E0;--paper:#FFF;--leaf:#109200;
+  /* Work: mAbV */
+  --accent:#0047BB;--deep:#0A2540;--slate:#334155;--muted:#64748B;--surface:#F4F7FA;--wline:#E2E8F0;
+  --ease:cubic-bezier(.16,1,.3,1);
+  --pad:clamp(20px,5vw,96px);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--surface);color:var(--ink);font-family:"Open Sans",system-ui,sans-serif;font-size:18px;line-height:1.5;-webkit-font-smoothing:antialiased}
+::selection{background:var(--accent);color:#fff}
+img{display:block;max-width:100%}
+a{color:inherit;text-underline-offset:.2em}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+h1,h2,h3,p,ol,ul{margin:0;padding:0}ol,ul{list-style:none}
+.cn{font-family:"Noto Sans SC",sans-serif;font-weight:700}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* ---------- Top bar ---------- */
+.bar{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:20;display:flex;align-items:center;gap:20px;padding:8px 10px 8px 16px;background:rgba(255,255,255,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid var(--line);border-radius:999px;font-size:14px;white-space:nowrap}
+.bar svg{width:16px;height:15px}
+.bar b{letter-spacing:.04em}
+.bar span{color:var(--ink-3)}
+.bar a.cta{padding:6px 14px;border-radius:999px;background:var(--ink);color:#fff;text-decoration:none;font-weight:600}
+@media (max-width:640px){.bar span{display:none}}
+
+/* ---------- 1. Hero: project switcher with tilted preview ---------- */
+.hero{position:relative;padding:140px var(--pad) 80px;text-align:center;overflow:hidden;background:
+  radial-gradient(120% 70% at 50% 100%, rgba(0,71,187,.28), transparent 60%),
+  linear-gradient(180deg,#0A2540 0%,#0B2D5C 45%,#F4F7FA 92%)}
+.hero h1{color:#fff;font-size:clamp(40px,6vw,84px);line-height:1.02;letter-spacing:-.03em;font-weight:700;text-wrap:balance}
+.hero p.lede{color:rgba(255,255,255,.8);max-width:36em;margin:20px auto 0;font-size:clamp(16px,1.4vw,20px);text-wrap:pretty}
+.tabs{display:inline-flex;gap:4px;margin:36px auto 0;padding:4px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);border-radius:999px}
+.tabs button{appearance:none;border:0;background:none;color:rgba(255,255,255,.85);font:inherit;font-size:14px;font-weight:600;padding:8px 16px;border-radius:999px;cursor:pointer;min-height:40px}
+.tabs button[aria-selected="true"]{background:#fff;color:var(--deep)}
+.tabs button[disabled]{opacity:.55;cursor:default}
+.tilt{perspective:1600px;margin:40px auto 0;max-width:1180px}
+.screen{position:relative;transform:rotateX(18deg);transform-origin:50% 100%;border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 40px 80px -30px rgba(10,37,64,.55),0 0 0 1px rgba(255,255,255,.4);transition:transform 1.1s var(--ease);aspect-ratio:16/8.4}
+.tilt.in .screen{transform:rotateX(7deg)}
+.screen .pane{position:absolute;inset:0;display:grid;grid-template-columns:1.25fr .75fr;opacity:0;transition:opacity .5s var(--ease)}
+.screen .pane.on{opacity:1}
+.pane .left{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:6% 7%;gap:28px;text-align:left}
+.pane .left img{width:78%}
+.pane .left p{font-size:clamp(14px,1.6vw,24px);color:var(--ink-2)}
+.pane .right img{width:100%;height:100%;object-fit:cover}
+.pane.soon{grid-template-columns:1fr;place-items:center;background:var(--surface);color:var(--muted);font-size:20px}
+.meta{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 28px;margin-top:28px;font-size:14px;color:var(--ink-3)}
+.meta b{color:var(--ink);font-weight:600}
+
+/* ---------- 2. Pinned case scene ---------- */
+.scene{position:relative;height:calc(var(--n) * 95vh + 60vh)}
+.pin{position:sticky;top:0;height:100vh;display:grid;grid-template-columns:minmax(300px,.8fr) 1.2fr;gap:clamp(24px,4vw,72px);align-items:center;padding:80px var(--pad) 48px}
+.intro .label{display:inline-flex;align-items:center;gap:8px;color:var(--accent);font-weight:600;font-size:15px}
+.intro h2{font-size:clamp(34px,4vw,60px);line-height:1.04;letter-spacing:-.03em;margin-top:10px;text-wrap:balance}
+.steps{margin-top:36px;position:relative}
+.steps li{position:relative;padding:10px 0 10px 28px}
+.steps li::before{content:"";position:absolute;left:0;top:10px;bottom:10px;width:3px;background:var(--wline);border-radius:2px}
+.steps li::after{content:"";position:absolute;left:0;top:10px;width:3px;height:calc((100% - 20px) * var(--fill,0));background:var(--accent);border-radius:2px;transition:height .25s linear}
+.steps button{appearance:none;border:0;background:none;padding:0;font:inherit;font-size:clamp(17px,1.5vw,22px);font-weight:600;color:var(--muted);cursor:pointer;text-align:left;transition:color .3s}
+.steps li.on button{color:var(--ink)}
+.steps .note{display:grid;grid-template-rows:0fr;opacity:0;transition:grid-template-rows .5s var(--ease),opacity .4s}
+.steps .note>span{overflow:hidden;color:var(--ink-2);font-size:16px;line-height:1.5;text-wrap:pretty}
+.steps li.on .note{grid-template-rows:1fr;opacity:1;margin-top:6px}
+.counter{margin-top:24px;font-size:13px;color:var(--ink-3);font-variant-numeric:tabular-nums}
+.counter b{color:var(--accent)}
+
+.stage-wrap{perspective:1500px}
+.stage{position:relative;aspect-ratio:4/3;border-radius:16px;background:#fff;overflow:hidden;box-shadow:0 30px 60px -28px rgba(10,37,64,.45),0 0 0 1px var(--wline);transform:rotateY(-5deg) rotateX(3deg);transition:transform .9s var(--ease)}
+.stage::before{content:"";position:absolute;inset:auto -20% -40% -20%;height:70%;background:radial-gradient(closest-side,rgba(0,71,187,.16),transparent);pointer-events:none}
+.layer{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .55s var(--ease),visibility 0s linear .55s,transform .8s var(--ease);transform:translateY(14px) scale(.985)}
+.layer.on{opacity:1;visibility:visible;transform:none;transition:opacity .55s var(--ease),transform .8s var(--ease)}
+.cap{position:absolute;left:24px;bottom:18px;right:24px;font-size:13px;color:var(--ink-3)}
+
+/* layer 0: decode */
+.decode{position:absolute;inset:0;display:grid;place-content:center;gap:4px;background:var(--surface)}
+.decode div{display:grid;grid-template-columns:10.5em 1fr;column-gap:.6em;align-items:baseline;font-size:clamp(14px,1.5vw,22px)}
+.decode b{font-family:"DM Sans",sans-serif;font-weight:700;font-size:4.4em;line-height:1.05;color:var(--slate);letter-spacing:-.02em}
+.decode div:last-child b{color:var(--accent)}
+.decode span{color:var(--ink-2)}
+.layer.on .decode div{animation:rise .7s var(--ease) both}
+.layer.on .decode div:nth-child(2){animation-delay:.12s}.layer.on .decode div:nth-child(3){animation-delay:.24s}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+
+/* layer 1: anatomy */
+.anat{position:absolute;inset:0;background:var(--surface)}
+.anat img{position:absolute;left:14%;top:8%;height:84%}
+.anat svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.anat line{stroke:var(--deep);stroke-width:2;fill:none;stroke-dasharray:var(--len);stroke-dashoffset:var(--len)}
+.anat line.w{stroke:#fff}
+.anat circle{fill:var(--deep);stroke:#fff;stroke-width:3;opacity:0}
+.layer.on .anat line{animation:draw .9s var(--ease) .3s forwards}
+.layer.on .anat line.late{animation-delay:.6s}
+.layer.on .anat circle{animation:pop .3s var(--ease) .2s forwards}
+@keyframes draw{to{stroke-dashoffset:0}}@keyframes pop{to{opacity:1}}
+.anat .lbl{position:absolute;left:62%;width:34%;font-size:clamp(12px,1.15vw,16px);font-weight:600;color:var(--deep);line-height:1.3;transform:translateY(-50%);opacity:0;transition:opacity .4s .7s}
+.layer.on .anat .lbl{opacity:1}
+
+/* layer 2: exploration morph */
+.explore{position:absolute;inset:0;display:grid;grid-template-columns:repeat(5,1fr);align-items:center;padding:0 5%;gap:3%;background:#fff}
+.explore figure{margin:0;display:grid;justify-items:center;gap:10px;transition:transform .9s var(--ease),opacity .6s}
+.explore img{height:clamp(54px,9vw,130px);width:auto}
+.explore figcaption{font-size:clamp(11px,.95vw,13px);color:var(--ink-3);text-align:center}
+.explore .final{position:absolute;inset:0 0 12% 0;display:grid;place-items:center;opacity:0;transition:opacity .6s var(--ease) .9s}
+.explore .final img{height:clamp(150px,22vw,340px);width:auto}
+.explore.converge figure{opacity:0;transform:scale(.6)}
+.explore.converge figure:nth-child(1){transform:translateX(150%) scale(.6)}.explore.converge figure:nth-child(2){transform:translateX(70%) scale(.6)}.explore.converge figure:nth-child(4){transform:translateX(-70%) scale(.6)}.explore.converge figure:nth-child(5){transform:translateX(-150%) scale(.6)}
+.explore.converge .final{opacity:1}
+
+/* layer 3: colour flood */
+.colour{position:absolute;inset:0;background:#00B4A6;transition:background 1.1s var(--ease) .5s;color:#fff;display:flex;flex-direction:column;justify-content:center;padding:0 9%}
+.layer.on .colour{background:var(--accent)}
+.colour small{font-size:clamp(14px,1.4vw,20px);opacity:.9}
+.colour strong{font-size:clamp(56px,8vw,128px);line-height:.95;letter-spacing:-.03em}
+.colour dl{display:flex;gap:6%;margin:28px 0 0;font-size:clamp(12px,1.1vw,16px)}
+.colour dt{text-transform:uppercase;letter-spacing:.08em;font-weight:600;opacity:.85;font-size:.8em}
+.colour dd{margin:4px 0 0;font-weight:600}
+.colour .was{position:absolute;right:6%;top:8%;font-size:13px;background:rgba(255,255,255,.16);padding:6px 10px;border-radius:999px}
+
+/* layer 4: two scripts */
+.pair{position:absolute;inset:0;display:grid;grid-template-columns:1.25fr .75fr}
+.pair .l{display:grid;place-content:center;gap:26px;padding:0 9%;background:#fff}
+.pair .l img{width:100%}
+.pair .l p{font-size:13px;color:var(--ink-3)}
+.pair .r img{width:100%;height:100%;object-fit:cover}
+
+/* layer 5: system */
+.sys{position:absolute;inset:0;background:var(--surface);padding:5% 5% 0}
+.sys .win{border-radius:10px 10px 0 0;overflow:hidden;box-shadow:0 0 0 1px var(--wline),0 18px 40px -20px rgba(10,37,64,.35);background:#fff}
+.sys .win i{display:flex;gap:6px;padding:9px 12px;background:#fff;border-bottom:1px solid var(--wline)}
+.sys .win i::before,.sys .win i::after,.sys .win i b{content:"";width:9px;height:9px;border-radius:50%;background:#D7DCE3;display:block}
+.sys .ladder{position:absolute;right:6%;bottom:9%;display:flex;align-items:flex-end;gap:16px;padding:14px 18px;background:rgba(255,255,255,.92);border:1px solid var(--wline);border-radius:12px;font-size:11px;color:var(--ink-3)}
+.sys .ladder figure{margin:0;display:grid;justify-items:center;gap:6px}
+.sys .ladder .sep{width:1px;align-self:stretch;background:var(--wline)}
+
+/* layer 6: kit */
+.kit{position:absolute;inset:0;display:grid;grid-template-rows:1fr auto;background:#fff}
+.kit img{width:100%;height:100%;object-fit:cover;object-position:top left}
+.kit ul{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--wline)}
+.kit li{padding:14px 18px;font-size:13px;color:var(--ink-2)}
+.kit li+li{border-left:1px solid var(--wline)}
+.kit li b{display:block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);margin-bottom:4px}
+.layer.on .kit li{animation:rise .6s var(--ease) both}
+.layer.on .kit li:nth-child(2){animation-delay:.08s}.layer.on .kit li:nth-child(3){animation-delay:.16s}.layer.on .kit li:nth-child(4){animation-delay:.24s}
+
+/* layer 7: in the world */
+.world{position:absolute;inset:0;background:var(--deep);display:flex;justify-content:center;align-items:center}
+.world img{position:absolute;height:84%;width:auto;border-radius:10px;box-shadow:0 24px 50px -18px rgba(0,0,0,.6);transition:transform 1s var(--ease)}
+.world img:nth-child(1){transform:rotate(0) translateX(0)}
+.layer.on .world img:nth-child(1){transform:translateX(-62%) rotate(-6deg)}
+.layer.on .world img:nth-child(3){transform:translateX(62%) rotate(6deg)}
+
+/* ---------- 3. Delivered wheel ---------- */
+.wheel{position:relative;height:calc(var(--n) * 55vh + 100vh)}
+.wheel .pin2{position:sticky;top:0;height:100vh;display:grid;place-items:center;overflow:hidden;background:#fff}
+.wheel ol{position:relative;width:min(1100px,92vw);height:60vh}
+.wheel li{position:absolute;left:0;right:0;top:50%;text-align:center;font-weight:700;letter-spacing:-.025em;font-size:clamp(26px,4.6vw,64px);line-height:1.05;color:#B9C2CE;transform:translateY(calc(-50% + var(--d) * 1.25em)) scale(calc(1 - var(--ad) * .1));opacity:calc(1 - var(--ad) * .28);transition:color .3s}
+.wheel li.on{color:var(--accent)}
+.wheel .band{position:absolute;left:0;right:0;top:50%;height:1.35em;transform:translateY(-50%);font-size:clamp(26px,4.6vw,64px);border-top:1px solid var(--wline);border-bottom:1px solid var(--wline);pointer-events:none}
+.wheel .foot{position:absolute;left:var(--pad);right:var(--pad);bottom:36px;display:flex;justify-content:space-between;font-size:14px;color:var(--ink-3)}
+.wheel .foot b{color:var(--accent)}
+.wheel h2{position:absolute;top:96px;left:0;right:0;text-align:center;font-size:15px;font-weight:600;color:var(--ink-3)}
+
+/* ---------- 4. Closing reveal ---------- */
+.close{position:relative;min-height:110vh;display:grid;place-items:center;text-align:center;padding:120px var(--pad) 0;overflow:hidden;background:#fff}
+.close h2{font-size:clamp(40px,7vw,104px);line-height:1;letter-spacing:-.035em}
+.close h2 span{display:block}
+.close h2 span+span{color:color-mix(in srgb,var(--accent) calc(var(--r,0) * 100%),#DCE3EC)}
+.close .glow{position:absolute;left:50%;bottom:-38vh;width:110vw;height:70vh;transform:translateX(-50%) scale(calc(.7 + var(--r,0) * .3));border-radius:50%;background:radial-gradient(closest-side,var(--accent),rgba(0,71,187,.35) 55%,transparent);filter:blur(2px);opacity:calc(.25 + var(--r,0) * .75)}
+.close .who{position:relative;margin-top:48px;font-size:16px;color:var(--ink-2)}
+.close .who b{display:block;font-size:20px;color:var(--ink)}
+.close .who a{font-weight:600}
+.close .note{position:relative;margin:32px auto 0;max-width:36em;font-size:14px;color:var(--ink-3)}
+footer{position:relative;background:var(--deep);color:#fff;padding:22px var(--pad);display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center;font-size:14px}
+footer svg{width:16px;height:15px}footer svg path{fill:#fff}
+footer a{color:#fff}
+
+/* ---------- Phone / narrow: no pinning, each step carries its own stage ---------- */
+@media (max-width:900px){
+  .scene,.wheel{height:auto}
+  .pin{position:static;height:auto;display:block;padding:72px 20px 24px}
+  .steps .note{grid-template-rows:1fr;opacity:1;margin-top:6px}
+  .steps li::after{height:calc(100% - 20px)}
+  .steps button{color:var(--ink)}
+  .stage-wrap{display:none}
+  .mstage{display:block!important;margin:14px 0 6px;aspect-ratio:4/3;position:relative;border-radius:12px;overflow:hidden;box-shadow:0 0 0 1px var(--wline)}
+  .mstage .layer{opacity:1;visibility:visible;transform:none}
+  .counter{display:none}
+  .wheel .pin2{position:static;height:auto;padding:64px 20px}
+  .wheel ol{height:auto}
+  .wheel li{position:static;transform:none;opacity:1;color:var(--ink);font-size:26px;text-align:left;padding:10px 0;border-top:1px solid var(--wline)}
+  .wheel .band,.wheel .foot{display:none}
+  .wheel h2{position:static;text-align:left;margin-bottom:16px}
+  .close{min-height:auto;padding:96px 20px 80px}
+  .decode div{font-size:9px;grid-template-columns:9em 1fr}
+  .decode span{font-size:13px}
+  .anat img{left:6%}
+  .anat .lbl{left:58%;width:40%;font-size:10px}
+  .pane .left p{display:none}
+  .mstage *{animation:none!important}
+  .mstage .anat line{stroke-dashoffset:0}
+  .mstage .anat circle,.mstage .anat .lbl{opacity:1}
+  .mstage .anat svg{display:none}
+}
+.mstage{display:none}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-delay:0s!important;transition-duration:.01ms!important;transition-delay:0s!important}
+  .anat line{stroke-dashoffset:0}
+}
+</style>
+</head>
+<body>
+<!-- DIRECTION CONTRACT (design-impeccable)
+THESIS: A case study you move through, not a deck you click: one pinned stage morphs through the project while a step rail explains each decision; refuses static slides and PowerPoint.
+OWN-WORLD: ODS frame (Open Sans, ink on white, hairline rails) holding mAbV's world: cobalt #0047BB, navy #0A2540 hero, cool white #F4F7FA; vector marks, real photos and live-site screens only.
+STORY: Who it was for, the idea, how it was found, the decisions, the system, the kit, the proof on real doors, what was delivered, who to contact.
+FIRST VIEWPORT: Navy-to-cool-white hero, project tabs (mAbV live, STR/Orange/Tartak next), a tilted screen that settles flat as it enters.
+FORM: Captain-pinned (5 Nov 2026: "make the page more interactive", components extracted from tasteskill.dev). Signature: the pinned before/after stepper.
+FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
+-->
+<a class="sr" href="#case">Skip to the case study</a>
+<nav class="bar" aria-label="Site"><svg viewBox="8 9 16 15" aria-hidden="true"><path fill="#109200" d="M9 22c0-6 4-11 14-12-1 9-6 13-12 13-.7 0-1.4-.1-2-.3z"/></svg><b>OGANIKO</b><span>Phil Parry · Selected work</span><a class="cta" href="mailto:phil.parry@oganiko.com">Get in touch</a></nav>
+
+<header class="hero">
+  <h1>Brands and systems that end up on real doors</h1>
+  <p class="lede">Selected work by Phil Parry: identity, design systems and websites, from the first sketch to the files a printer can trust.</p>
+  <div class="tabs" role="tablist" aria-label="Projects">
+    <button role="tab" aria-selected="true" aria-controls="pane-mabv" id="tab-mabv">mAbV</button>
+    <button role="tab" aria-selected="false" aria-controls="pane-soon" data-soon="STR Technologies">STR</button>
+    <button role="tab" aria-selected="false" aria-controls="pane-soon" data-soon="Orange">Orange</button>
+    <button role="tab" aria-selected="false" aria-controls="pane-soon" data-soon="Tartak Płońsk">Tartak</button>
+  </div>
+  <div class="tilt" id="tilt">
+    <div class="screen">
+      <div class="pane on" id="pane-mabv" role="tabpanel" aria-labelledby="tab-mabv">
+        <div class="left"><img src="../assets/vector/mabv-logo-lockup.svg" alt="mAbV wordmark lockup"><p>Identity, design system and brand kit for a new antibody company.</p></div>
+        <div class="right"><img src="../assets/img/office-2.jpg" alt="The mAbV lockup on frosted glass at the company's reception in Guangzhou"></div>
+      </div>
+      <div class="pane soon" id="pane-soon" role="tabpanel"><p>Case study in preparation.</p></div>
+    </div>
+  </div>
+  <div class="meta"><span>Client <b>mAbV, Guangzhou</b></span><span>Scope <b>Identity, design system, brand kit, holding page</b></span><span>Year <b>2026</b></span><span>Role <b>Design and build</b></span></div>
+</header>
+
+<main id="case">
+<section class="scene" id="scene" aria-labelledby="scene-title">
+  <div class="pin">
+    <div class="intro">
+      <span class="label"><svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2 4 5v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V5z"/></svg>mAbV, step by step</span>
+      <h2 id="scene-title">From a founder's sketch to a sign on the door.</h2>
+      <ol class="steps" id="steps"></ol>
+      <p class="counter" aria-live="polite"><b id="cnum">1</b> of <span id="ctot">8</span></p>
+    </div>
+    <div class="stage-wrap"><div class="stage" id="stage"></div></div>
+  </div>
+</section>
+
+<section class="wheel" id="wheel" aria-labelledby="wheel-title">
+  <div class="pin2">
+    <h2 id="wheel-title">What I delivered</h2>
+    <div class="band" aria-hidden="true"></div>
+    <ol id="wlist"></ol>
+    <div class="foot"><span><b id="wnum">1</b> of <span id="wtot">6</span></span><span>Today the identity is in use at the company's offices.</span></div>
+  </div>
+</section>
+
+<section class="close" id="close" aria-labelledby="close-title">
+  <div class="glow" aria-hidden="true"></div>
+  <div>
+    <h2 id="close-title"><span>Something new</span><span>is coming.</span></h2>
+    <p class="note">The line on mAbV's own holding page, live at <a href="https://mabvbio.com/">mabvbio.com</a>. Next in this series: STR, Orange and Tartak.</p>
+    <p class="who"><b>Phil Parry</b>20+ years in UX, brand and design systems<br><a href="mailto:phil.parry@oganiko.com">phil.parry@oganiko.com</a> · <a href="https://oganiko.com">oganiko.com</a></p>
+  </div>
+</section>
+</main>
+<footer><svg viewBox="8 9 16 15" aria-hidden="true"><path d="M9 22c0-6 4-11 14-12-1 9-6 13-12 13-.7 0-1.4-.1-2-.3z"/></svg><b>OGANIKO</b><span>Phil Parry · mAbV case study</span><a href="../deck.pdf" download>Download the PDF</a></footer>
+
+<template id="layers">
+  <div class="layer" data-step="0"><div class="decode"><div><b>m</b><span>monoclonal</span></div><div><b>Ab</b><span>antibody</span></div><div><b>V</b><span>vaccine</span></div></div><p class="cap">Every letter is intentional. The casing makes the acronym readable inside the word.</p></div>
+  <div class="layer" data-step="1"><div class="anat"><img src="../assets/vector/mabv-logo.svg" alt="The full mAbV mark"><svg viewBox="0 0 1000 750" preserveAspectRatio="none" aria-hidden="true">
+    <line class="w" x1="504" y1="263" x2="588" y2="263" style="--len:84"/><line class="late" x1="588" y1="263" x2="604" y2="263" style="--len:16"/><circle cx="504" cy="263" r="7"/>
+    <line class="late" x1="588" y1="392" x2="604" y2="392" style="--len:16"/><circle cx="588" cy="392" r="7"/>
+    <line class="w" x1="375" y1="502" x2="520" y2="502" style="--len:145"/><line class="late" x1="520" y1="502" x2="604" y2="502" style="--len:84"/><circle cx="375" cy="502" r="7"/></svg>
+    <p class="lbl" style="top:35.1%">Four bars: the antibody's two arms form the V</p><p class="lbl" style="top:52.3%">The shield: protection before infection</p><p class="lbl" style="top:66.9%">A teardrop stem forms the point</p></div></div>
+  <div class="layer" data-step="2"><div class="explore" id="explore">
+    <figure><img src="../assets/exploration/v12.svg" alt=""><figcaption>The founder's sketch</figcaption></figure>
+    <figure><img src="../assets/exploration/v3.svg" alt=""><figcaption>Pointed shield</figcaption></figure>
+    <figure><img src="../assets/exploration/v4.svg" alt=""><figcaption>Double track</figcaption></figure>
+    <figure><img src="../assets/exploration/v8.svg" alt=""><figcaption>Solid Y with stem</figcaption></figure>
+    <figure><img src="../assets/exploration/v11.svg" alt=""><figcaption>Shield and antibody</figcaption></figure>
+    <div class="final"><img src="../assets/vector/mabv-logo.svg" alt="The final mark"></div></div><p class="cap">Five of the eleven routes, converging on the final mark.</p></div>
+  <div class="layer" data-step="3"><div class="colour"><span class="was">First draft: teal, 2.6 : 1 on white</span><small>Pantone</small><strong>2728 C</strong><small>Cobalt Blue</small><dl><div><dt>HEX</dt><dd>#0047BB</dd></div><div><dt>RGB</dt><dd>0 · 71 · 187</dd></div><div><dt>On white</dt><dd>8.0 : 1</dd></div></dl></div></div>
+  <div class="layer" data-step="4"><div class="pair"><div class="l"><img src="../assets/vector/mabv-logo-lockup-cn-en.svg" alt="Bilingual mAbV lockup with 百卫信"><p>DM Sans Bold for Latin · Noto Sans SC Bold for Chinese</p></div><div class="r"><img src="../assets/img/office-1.jpg" alt="Reception sign in Guangzhou: the lockup above the company's registered name"></div></div></div>
+  <div class="layer" data-step="5"><div class="sys"><div class="win"><i><b></b></i><img src="../assets/img/ds-logo.jpg" alt="The logo page of the live mAbV design system"></div>
+    <div class="ladder" aria-label="The mark at 16, 24, 32, 48 and 96 pixels"><figure><img src="../assets/vector/mabv-logo-simple.svg" alt="" style="height:16px">16</figure><figure><img src="../assets/vector/mabv-logo-simple.svg" alt="" style="height:24px">24</figure><span class="sep"></span><figure><img src="../assets/vector/mabv-logo.svg" alt="" style="height:32px">32</figure><figure><img src="../assets/vector/mabv-logo.svg" alt="" style="height:48px">48</figure><figure><img src="../assets/vector/mabv-logo.svg" alt="" style="height:72px">72</figure></div></div></div>
+  <div class="layer" data-step="6"><div class="kit"><img src="../assets/img/ds-brand-kit.jpg" alt="Brand Kit page of the mAbV design system"><ul><li><b>Digital</b>4 SVG · 4 PNG</li><li><b>Print</b>4 PDF · 4 EPS</li><li><b>Social</b>1 SVG · 1 PNG</li><li><b>Readme</b>English · Chinese</li></ul></div></div>
+  <div class="layer" data-step="7"><div class="world"><img src="../assets/img/office-3.jpg" alt="The mAbV lockup on a frosted glass door"><img src="../assets/img/office-2.jpg" alt="The lockup repeated along the frosted glass wall of the reception"><img src="../assets/img/office-1.jpg" alt="The reception sign"></div><p class="cap" style="color:rgba(255,255,255,.75)">Applied by the client's team from the brand kit. Photos courtesy of mAbV.</p></div>
+</template>
+
+<script>
+(() => {
+  const STEPS = [
+    ["The brief", "A young company that had said little in public yet, working with Oxford University. It came with a working name, a domain and a paragraph of science, and needed an identity investors and scientists could trust."],
+    ["The idea", "An antibody is shaped like a Y, and the mark is built from one. The shield around it frames what the company works on: protection before infection."],
+    ["The exploration", "I developed the mark from the founder's first sketch into the final system, testing it against ten other routes at three sizes and on navy."],
+    ["One blue", "Teal is the category's default, and the first draft's teal sat close to a familiar financial brand. I moved mAbV to one cobalt, tied to Pantone 2728 C so print matches screen."],
+    ["Two scripts", "In China the company trades as <span class=\"cn\" lang=\"zh-Hans\">百卫信</span>, set in Noto Sans SC Bold to match the DM Sans wordmark, and outlined so it looks the same on any device."],
+    ["The system", "Eight sections, live at mabvbio.com. The rules are shown, not just stated: below 32 px the mark switches to a simple V."],
+    ["The kit", "Eighteen files in SVG, PNG, PDF and EPS, outlined type, the Pantone instruction for printers, and a readme in English and Chinese."],
+    ["In the world", "The identity on the company's doors in Guangzhou: a reception sign and frosted film on the glass. A real installation, not a mockup."],
+  ];
+  const DELIVERED = ["The mark and a simple version", "English and bilingual lockups", "Colour and type, with Pantone", "A design system in eight sections", "A brand kit of 18 files", "The holding page at mabvbio.com"];
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const narrow = matchMedia("(max-width: 900px)");
+
+  // Build steps and stage layers from the one template, so desktop and phone share content.
+  const tpl = document.getElementById("layers").content;
+  const stage = document.getElementById("stage");
+  const list = document.getElementById("steps");
+  document.getElementById("scene").style.setProperty("--n", STEPS.length);
+  document.getElementById("ctot").textContent = STEPS.length;
+  STEPS.forEach(([t, note], i) => {
+    const li = document.createElement("li");
+    li.innerHTML = `<button type="button" aria-controls="stage">${t}</button><div class="note"><span>${note}</span></div><div class="mstage"></div>`;
+    li.querySelector("button").addEventListener("click", () => goTo(i));
+    list.append(li);
+    const layer = tpl.querySelector(`[data-step="${i}"]`);
+    stage.append(layer.cloneNode(true));
+    const m = layer.cloneNode(true); m.classList.add("on");
+    li.querySelector(".mstage").append(m);
+  });
+  const items = [...list.children];
+  const layers = [...stage.children];
+  let current = -1;
+
+  function setStep(i, fill) {
+    items.forEach((li, j) => li.style.setProperty("--fill", j < i ? 1 : j === i ? fill : 0));
+    if (i === current) return;
+    current = i;
+    items.forEach((li, j) => { li.classList.toggle("on", j === i); li.querySelector("button").toggleAttribute("aria-current", j === i); });
+    layers.forEach((l, j) => l.classList.toggle("on", j === i));
+    document.getElementById("cnum").textContent = i + 1;
+    const ex = stage.querySelector("#explore");
+    if (ex) { ex.classList.remove("converge"); if (i === 2) setTimeout(() => current === 2 && ex.classList.add("converge"), reduce ? 0 : 1600); }
+  }
+
+  const scene = document.getElementById("scene");
+  function onScene() {
+    if (narrow.matches) return;
+    const r = scene.getBoundingClientRect();
+    const span = scene.offsetHeight - innerHeight;
+    const p = Math.min(Math.max(-r.top / span, 0), 0.9999);
+    const f = p * STEPS.length;
+    setStep(Math.floor(f), f % 1);
+  }
+  function goTo(i) {
+    if (narrow.matches) return;
+    const span = scene.offsetHeight - innerHeight;
+    scrollTo({ top: scene.offsetTop + span * ((i + 0.05) / STEPS.length), behavior: reduce ? "auto" : "smooth" });
+  }
+
+  // Delivered wheel.
+  const wheel = document.getElementById("wheel"), wl = document.getElementById("wlist");
+  wheel.style.setProperty("--n", DELIVERED.length);
+  document.getElementById("wtot").textContent = DELIVERED.length;
+  wl.innerHTML = DELIVERED.map((d) => `<li>${d}</li>`).join("");
+  const wItems = [...wl.children];
+  function onWheel() {
+    if (narrow.matches) return;
+    const r = wheel.getBoundingClientRect();
+    const span = wheel.offsetHeight - innerHeight;
+    const p = Math.min(Math.max(-r.top / span, 0), 1) * (DELIVERED.length - 1);
+    wItems.forEach((li, j) => { const d = j - p; li.style.setProperty("--d", d.toFixed(3)); li.style.setProperty("--ad", Math.min(Math.abs(d), 3).toFixed(3)); li.classList.toggle("on", Math.abs(d) < 0.5); });
+    document.getElementById("wnum").textContent = Math.round(p) + 1;
+  }
+
+  // Closing reveal.
+  const close = document.getElementById("close");
+  function onClose() {
+    const r = close.getBoundingClientRect();
+    const v = Math.min(Math.max((innerHeight - r.top) / (innerHeight * 0.9), 0), 1);
+    close.style.setProperty("--r", v.toFixed(3));
+  }
+
+  let ticking = false;
+  const frame = () => { onScene(); onWheel(); onClose(); ticking = false; };
+  addEventListener("scroll", () => { if (!ticking) { ticking = true; requestAnimationFrame(frame); } }, { passive: true });
+  addEventListener("resize", frame);
+  narrow.addEventListener("change", frame);
+
+  // Hero: tilt settles in, tabs switch the preview.
+  requestAnimationFrame(() => document.getElementById("tilt").classList.add("in"));
+  const tabs = [...document.querySelectorAll('[role="tab"]')];
+  tabs.forEach((t) => t.addEventListener("click", () => {
+    tabs.forEach((x) => x.setAttribute("aria-selected", String(x === t)));
+    const soon = t.dataset.soon;
+    document.getElementById("pane-mabv").classList.toggle("on", !soon);
+    const ps = document.getElementById("pane-soon");
+    ps.classList.toggle("on", !!soon);
+    if (soon) ps.querySelector("p").textContent = `${soon}: case study in preparation.`;
+  }));
+
+  setStep(0, 0);
+  frame();
+  // ?y=<viewport heights>: open scrolled to that point (QA captures, deep links to a step).
+  const y = parseFloat(new URLSearchParams(location.search).get("y"));
+  if (Number.isFinite(y)) {
+    const st = document.createElement("style");
+    st.textContent = "*,*::before,*::after{transition:none!important;animation-duration:0s!important;animation-delay:0s!important}";
+    document.head.append(st);
+    addEventListener("load", () => { scrollTo(0, y * innerHeight); frame(); const ex = stage.querySelector("#explore"); if (current === 2 && ex) ex.classList.add("converge"); });
+  }
+})();
+</script>
+</body>
+</html>

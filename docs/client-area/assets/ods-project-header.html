@@ -1,0 +1,30 @@
+<!-- OGANIKO Project header — ods-project-header v1.3.1.
+     Include packages/ods-project-header.js (or the component JS). It toggles
+     is-collapsed + is-stuck on scroll so the identity band slides away while the
+     tab row stays sticky, and updates aria-current for same-document hash tabs.
+     Add data-ods-tab-panels to the tab nav for exclusive panels that keep scrollY. Keep the current tab in view on phones.
+     Title once: the page/system name lives here only. Not in a lone tab (no one-tab bars), the breadcrumb root,
+     an eyebrow, the body or a card heading. npm run check:title-once enforces it.
+     Exactly one h1 per page: change the title <p> below to <h1 class="ods-project-header__title">, or give the body a visually hidden h1. -->
+<header class="ods-project-header" data-version="1.3.1">
+  <div class="ods-project-header__identity">
+    <div class="ods-project-header__inner">
+      <div class="ods-project-header__global">
+        <a class="ods-project-header__mark" href="/">Oganiko Digital</a>
+        <div class="ods-project-header__meta"><button class="ods-button ods-button--outlined" type="button">Sign out</button></div>
+      </div>
+      <p class="ods-project-header__title">Project name</p>
+    </div>
+  </div>
+  <div class="ods-project-header__tabbar"><div class="ods-project-header__inner">
+    <nav class="ods-project-header__tabs" aria-label="Sections">
+      <a href="./" aria-current="page">Overview</a>
+      <a href="design/">Design</a>
+      <a href="research/">Research</a>
+    </nav>
+  </div></div>
+  <!-- Optional context layer:
+  <div class="ods-project-header__sub"><div class="ods-project-header__inner">
+    <nav aria-label="Breadcrumb"><a href="./">Project</a> › <span aria-current="page">Overview</span></nav>
+  </div></div> -->
+</header>

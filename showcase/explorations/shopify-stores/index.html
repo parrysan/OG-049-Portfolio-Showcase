@@ -1,0 +1,2008 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Shopify stores built to run · OGANIKO</title>
+<meta name="description" content="A capability demonstration: how Phil Parry designs and builds Shopify stores, from one catalogue spreadsheet to a product page and checkout."><meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%228%209%2016%2015%22%3E%3Cpath%20fill%3D%22%23109200%22%20d%3D%22M9%2022c0-6%204-11%2014-12-1%209-6%2013-12%2013-.7%200-1.4-.1-2-.3z%22%2F%3E%3C%2Fsvg%3E">
+<style>
+/* GENERATED from tokens/*.tokens.json by npm run ds:tokens. Do not edit. */
+@layer ods.tokens, ods.primitives, ods.patterns, ods.compositions;
+@layer ods.tokens {
+  :root {
+    --font-primary: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+    --font-fallback: Arial, sans-serif;
+    --font-mono: "SF Mono", "Fira Code", "Cascadia Code", monospace;
+    --text-xs: 0.75rem;
+    --text-sm: 0.875rem;
+    --text-base: 1rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.5rem;
+    --text-2xl: 2rem;
+    --text-3xl: 2.5rem;
+    --text-4xl: 3rem;
+    --text-5xl: 3.75rem;
+    --leading-tight: 1.15;
+    --leading-snug: 1.25;
+    --leading-normal: 1.5;
+    --leading-relaxed: 1.65;
+    --weight-light: 300;
+    --weight-regular: 400;
+    --weight-medium: 500;
+    --weight-semibold: 600;
+    --weight-bold: 700;
+    --tracking-tight: -0.02em;
+    --tracking-normal: 0;
+    --tracking-wide: 0.02em;
+    --tracking-caps: 0.08em;
+    --spacing-0: 0;
+    --spacing-1: 0.25rem;
+    --spacing-2: 0.5rem;
+    --spacing-3: 0.75rem;
+    --spacing-4: 1rem;
+    --spacing-5: 1.25rem;
+    --spacing-6: 1.5rem;
+    --spacing-8: 2rem;
+    --spacing-10: 2.5rem;
+    --spacing-12: 3rem;
+    --spacing-16: 4rem;
+    --spacing-20: 5rem;
+    --spacing-24: 6rem;
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    --radius-2xl: 24px;
+    --radius-full: 9999px;
+    --shadow-sm: 0px 1px 3px 0px rgb(0 0 0 / 0.08);
+    --shadow-md: 0px 4px 12px 0px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0px 8px 24px 0px rgb(0 0 0 / 0.12);
+    --shadow-xl: 0px 16px 48px 0px rgb(0 0 0 / 0.16);
+    --breakpoint-sm: 640px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 1024px;
+    --breakpoint-xl: 1280px;
+    --container-max: 1200px;
+    --border-width: 1px;
+    --focus-width: 2px;
+    --focus-offset: 3px;
+    --spacing-1-5: 0.375rem;
+    --spacing-2-5: 0.625rem;
+    --spacing-3-5: 0.875rem;
+    --control-height-sm: 2rem;
+    --control-height-md: 2.25rem;
+    --control-height-lg: 2.75rem;
+    --color-black-4: rgb(0 0 0 / 0.04);
+    --color-black-6: rgb(0 0 0 / 0.06);
+    --color-black-10: rgb(0 0 0 / 0.1);
+    --color-black-55: rgb(0 0 0 / 0.55);
+    --opacity-0: 0;
+    --opacity-50: 0.5;
+    --opacity-100: 1;
+    --font-editorial: var(--font-primary);
+    --overlay-backdrop: var(--color-black-55);
+    --z-modal: 100;
+    --container-padding: var(--spacing-6);
+    --opacity-disabled: var(--opacity-50);
+    --opacity-visible: var(--opacity-100);
+    --opacity-hidden: var(--opacity-0);
+    --transition-fast: 150ms cubic-bezier(0.25, 0.1, 0.25, 1) 0ms;
+    --transition-base: 200ms cubic-bezier(0.25, 0.1, 0.25, 1) 0ms;
+    --transition-slow: 400ms cubic-bezier(0.25, 0.1, 0.25, 1) 0ms;
+    --duration-feedback: 150ms;
+    --duration-hover: 120ms;
+    --duration-enter: 200ms;
+    --duration-exit: 150ms;
+    --container-reading-max: 40rem;
+    --grid-item-min: 16rem;
+    --header-h-expanded: 5.5rem;
+    --header-h-collapsed: 4rem;
+    --marker-size: 1.15em;
+    --textarea-height-sm: 5rem;
+    --textarea-height-md: 7.5rem;
+    --textarea-height-lg: 10rem;
+    --dialog-max: 32rem;
+    --duration-instant: 80ms;
+    --duration-fast: 140ms;
+    --duration-normal: 220ms;
+    --duration-slow: 360ms;
+    --ease-standard: cubic-bezier(0.25, 0.1, 0.25, 1);
+    --ease-enter: cubic-bezier(0, 0, 0.2, 1);
+    --ease-exit: cubic-bezier(0.4, 0, 1, 1);
+    --ease-emphasized: cubic-bezier(0.2, 0, 0, 1);
+    --distance-4: 4px;
+    --distance-8: 8px;
+    --distance-16: 16px;
+    --distance-24: 24px;
+    --spring-gentle-stiffness: 160;
+    --spring-gentle-damping: 26;
+    --spring-gentle-mass: 1;
+    --spring-gentle-duration: 800ms;
+    --spring-gentle-ease: linear(0, 0.0583, 0.1815, 0.3211, 0.4538, 0.5696, 0.666, 0.7437, 0.805, 0.8526, 0.8892, 0.917, 0.9381, 0.9539, 0.9658, 0.9746, 0.9812, 0.9861, 0.9897, 0.9924, 0.9944, 0.9959, 0.997, 0.9978, 0.9984, 0.9988, 1);
+    --spring-responsive-stiffness: 400;
+    --spring-responsive-damping: 40;
+    --spring-responsive-mass: 1;
+    --spring-responsive-duration: 500ms;
+    --spring-responsive-ease: linear(0, 0.1302, 0.3554, 0.5591, 0.7127, 0.8188, 0.8883, 0.9323, 0.9596, 0.9761, 0.986, 0.9919, 0.9953, 0.9973, 0.9985, 0.9991, 1);
+    --spring-drawer-stiffness: 280;
+    --spring-drawer-damping: 34;
+    --spring-drawer-mass: 1;
+    --spring-drawer-duration: 650ms;
+    --spring-drawer-ease: linear(0, 0.0953, 0.2753, 0.4558, 0.6072, 0.7238, 0.8093, 0.8701, 0.9124, 0.9414, 0.961, 0.9742, 0.983, 0.9888, 0.9927, 0.9952, 0.9969, 0.998, 0.9987, 0.9991, 1, 1);
+    --marker-content: "■ ";
+    --menu-heading-case: none;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    :root {
+      --spring-gentle-duration: 0ms;
+      --spring-gentle-ease: linear;
+      --spring-responsive-duration: 0ms;
+      --spring-responsive-ease: linear;
+      --spring-drawer-duration: 0ms;
+      --spring-drawer-ease: linear;
+    }
+  }
+}
+
+/* GENERATED from tokens/*.tokens.json by npm run ds:tokens. Do not edit. */
+@layer ods.tokens {
+  :root:not([data-ods-brand]), [data-ods-brand="oganiko"] {
+    --color-black: rgb(0 0 0 / 1);
+    --color-white: rgb(255 255 255 / 1);
+    --color-green: rgb(16 146 0 / 1);
+    --color-leaf: rgb(52 199 85 / 1);
+    --color-gold: rgb(238 202 37 / 1);
+    --color-gray-dark: rgb(51 51 51 / 1);
+    --color-olive: rgb(107 142 35 / 1);
+    --color-brown: rgb(139 69 19 / 1);
+    --color-orange-soft: rgb(255 160 122 / 1);
+    --color-sage: rgb(156 175 136 / 1);
+    --color-lavender: rgb(147 112 219 / 1);
+    --color-clear: rgb(0 0 0 / 0);
+    --color-gray-50: rgb(248 248 246 / 1);
+    --color-gray-100: rgb(245 245 243 / 1);
+    --color-gray-500: rgb(119 119 119 / 1);
+    --color-leaf-dark: rgb(45 184 74 / 1);
+    --color-leaf-strong: rgb(36 158 60 / 1);
+    --color-gray-200: rgb(224 224 224 / 1);
+    --color-black-6: rgb(0 0 0 / 0.06);
+    --color-gray-300: rgb(204 204 204 / 1);
+    --color-gray-900: rgb(28 28 28 / 1);
+    --color-red: rgb(229 62 62 / 1);
+    --color-red-strong: rgb(220 38 38 / 1);
+    --color-blue: rgb(49 130 206 / 1);
+    --color-bg: var(--color-white);
+    --color-bg-secondary: var(--color-gray-50);
+    --color-bg-card: var(--color-white);
+    --color-bg-muted: var(--color-gray-100);
+    --color-text: var(--color-black);
+    --color-text-secondary: var(--color-gray-dark);
+    --color-text-muted: var(--color-gray-500);
+    --color-text-inverse: var(--color-white);
+    --color-accent: var(--color-green);
+    --color-cta: var(--color-leaf);
+    --color-cta-hover: var(--color-leaf-dark);
+    --color-cta-strong: var(--color-leaf-strong);
+    --color-highlight: var(--color-gold);
+    --color-border: var(--color-gray-200);
+    --color-border-subtle: var(--color-black-6);
+    --color-border-focus: var(--color-leaf);
+    --color-text-inverse-muted: var(--color-gray-300);
+    --color-bg-inverse-hover: var(--color-gray-900);
+    --color-success: var(--color-leaf);
+    --color-success-strong: var(--color-green);
+    --color-on-success-strong: var(--color-black);
+    --color-warning: var(--color-gold);
+    --color-error: var(--color-red);
+    --color-error-strong: var(--color-red-strong);
+    --color-on-error-strong: var(--color-white);
+    --color-info: var(--color-blue);
+    --color-on-cta: var(--color-black);
+    --color-on-error: var(--color-black);
+    --color-focus-ring: var(--color-text);
+    --color-field-placeholder: var(--color-text-secondary);
+    --color-success-bg: var(--color-bg-muted);
+    --color-success-text: var(--color-text);
+    --color-success-border: var(--color-success);
+    --color-warning-bg: var(--color-bg-muted);
+    --color-warning-text: var(--color-text);
+    --color-warning-border: var(--color-warning);
+    --color-info-bg: var(--color-bg-muted);
+    --color-info-text: var(--color-text);
+    --color-info-border: var(--color-info);
+    --color-status-draft-text: var(--color-text);
+    --color-status-draft-border: var(--color-warning);
+    --color-status-validation-bg: var(--color-bg-muted);
+    --color-status-validation-text: var(--color-text);
+    --color-status-validation-border: var(--color-info);
+    --color-bg-header: var(--color-bg);
+    --color-menu-heading: var(--color-text);
+    --color-menu-link-emphasis: var(--color-text);
+    --color-menu-heading-rule: var(--color-border);
+    --text-menu-heading: var(--text-sm);
+    --tracking-menu-heading: 0em;
+    --menu-heading-rule: 0px;
+    --menu-heading-rule-gap: 0px;
+  }
+}
+@layer ods.tokens {
+  :root:not([data-ods-brand="neutral"]):not([data-ods-brand="steve"]):not([data-ods-brand="str"])[data-theme="dark"], [data-ods-brand="oganiko"][data-theme="dark"], [data-ods-brand="oganiko"] [data-theme="dark"], .dark:not([data-ods-brand="neutral"]):not([data-ods-brand="steve"]):not([data-ods-brand="str"]) {
+    --shadow-sm: 0px 1px 3px 0px rgb(0 0 0 / 0.3);
+    --shadow-md: 0px 4px 12px 0px rgb(0 0 0 / 0.4);
+    --shadow-lg: 0px 8px 24px 0px rgb(0 0 0 / 0.5);
+    --color-dark-950: rgb(10 10 10 / 1);
+    --color-dark-900: rgb(17 17 17 / 1);
+    --color-dark-850: rgb(26 26 26 / 1);
+    --color-dark-800: rgb(34 34 34 / 1);
+    --color-dark-50: rgb(245 245 245 / 1);
+    --color-dark-300: rgb(187 187 187 / 1);
+    --color-dark-500: rgb(136 136 136 / 1);
+    --color-white-10: rgb(255 255 255 / 0.1);
+    --color-white-5: rgb(255 255 255 / 0.05);
+    --color-bg: var(--color-dark-950);
+    --color-bg-secondary: var(--color-dark-900);
+    --color-bg-card: var(--color-dark-850);
+    --color-bg-muted: var(--color-dark-800);
+    --color-text: var(--color-dark-50);
+    --color-text-secondary: var(--color-dark-300);
+    --color-text-muted: var(--color-dark-500);
+    --color-border: var(--color-white-10);
+    --color-border-subtle: var(--color-white-5);
+    --color-bg-header: var(--color-bg);
+    --color-menu-heading: var(--color-text);
+    --color-menu-link-emphasis: var(--color-text);
+  }
+}
+
+/* Shared visual contract for native HTML and the React bindings. */
+@layer ods.primitives {
+  :where(.ods-container, .ods-stack, .ods-cluster, .ods-grid, .ods-section, .ods-heading, .ods-text, .ods-link) { box-sizing: border-box; }
+  .ods-container { width: 100%; max-width: var(--container-max); margin-inline: auto; padding-inline: var(--container-padding); }
+  .ods-container[data-width="reading"] { max-width: var(--container-reading-max); }
+  .ods-stack { display: flex; flex-direction: column; gap: var(--spacing-4); }
+  .ods-cluster { display: flex; flex-wrap: wrap; align-items: center; gap: var(--spacing-4); }
+  .ods-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--grid-item-min)), 1fr)); gap: var(--spacing-4); }
+  :where(.ods-stack, .ods-cluster, .ods-grid)[data-gap="sm"] { gap: var(--spacing-2); }
+  :where(.ods-stack, .ods-cluster, .ods-grid)[data-gap="lg"] { gap: var(--spacing-6); }
+  :where(.ods-stack, .ods-cluster, .ods-grid) > * { min-inline-size: var(--spacing-0); margin-block: var(--spacing-0); }
+  .ods-cluster > * { max-inline-size: 100%; }
+  .ods-section { padding-block: var(--spacing-12); }
+  .ods-section[data-space="compact"] { padding-block: var(--spacing-8); }
+  .ods-section[data-space="spacious"] { padding-block: var(--spacing-16); }
+  .ods-heading, .ods-text { margin: var(--spacing-0); color: var(--color-text); font-family: var(--font-primary); overflow-wrap: anywhere; }
+  .ods-heading { font-size: var(--text-2xl); font-weight: var(--weight-bold); line-height: var(--leading-tight); }
+  .ods-heading[data-size="sm"] { font-size: var(--text-xl); }
+  .ods-heading[data-size="lg"] { font-size: var(--text-3xl); }
+  .ods-text { font-size: var(--text-base); line-height: var(--leading-relaxed); }
+  .ods-text[data-size="sm"] { font-size: var(--text-sm); }
+  .ods-text[data-size="lead"] { font-size: var(--text-lg); }
+  .ods-text[data-tone="secondary"] { color: var(--color-text-secondary); }
+  .ods-link { font-family: var(--font-primary); color: var(--color-text); text-decoration-line: underline; text-decoration-thickness: var(--border-width); text-underline-offset: var(--spacing-1); overflow-wrap: anywhere; transition: color var(--duration-fast) var(--ease-standard); }
+  .ods-link:visited, .ods-link:hover { color: var(--color-text-secondary); }
+  .ods-link[aria-current="page"] { font-weight: var(--weight-semibold); }
+  :where(.ods-button, .ods-input, .ods-textarea, .ods-label, .ods-card, .ods-card *) {
+    box-sizing: border-box;
+    font-family: var(--font-primary);
+  }
+  .ods-button {
+    max-inline-size: 100%;
+    min-inline-size: var(--spacing-0);
+    white-space: normal;
+    overflow-wrap: anywhere;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-2);
+    padding: var(--spacing-2-5) var(--spacing-5);
+    border: var(--border-width) solid var(--color-clear);
+    border-radius: var(--radius-md);
+    font-size: var(--text-sm);
+    font-weight: var(--weight-medium);
+    line-height: var(--leading-normal);
+    background: var(--color-cta);
+    color: var(--color-on-cta);
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color var(--duration-feedback) var(--ease-standard), color var(--duration-feedback) var(--ease-standard), border-color var(--duration-feedback) var(--ease-standard);
+  }
+  .ods-button:enabled:hover { background: var(--color-cta-hover); }
+  .ods-button[data-variant="secondary"] { background: var(--color-clear); color: var(--color-text); border-color: var(--color-cta); }
+  .ods-button[data-variant="secondary"]:enabled:hover { background: var(--color-cta); color: var(--color-on-cta); }
+  .ods-button[data-variant="ghost"] { background: var(--color-clear); color: var(--color-text-secondary); }
+  .ods-button[data-variant="ghost"]:enabled:hover { background: var(--color-bg-muted); }
+  .ods-button[data-variant="destructive"] { background: var(--color-error); color: var(--color-on-error); }
+  .ods-button[data-variant="destructive"]:enabled:hover { background: var(--color-error); }
+  .ods-button:enabled:active { border-color: var(--color-text); }
+  .ods-button[data-size="sm"] { padding: var(--spacing-1-5) var(--spacing-3); }
+  .ods-button[data-size="lg"] { padding: var(--spacing-3-5) var(--spacing-8); font-size: var(--text-base); }
+  :where(.ods-button, .ods-link[href]):focus-visible {
+    outline: var(--focus-width) solid var(--color-focus-ring);
+    outline-offset: var(--focus-offset);
+  }
+  .ods-button:disabled { cursor: not-allowed; opacity: var(--opacity-disabled); }
+  .ods-card { min-inline-size: var(--spacing-0); overflow-wrap: anywhere; background: var(--color-bg-card); color: var(--color-text); border: var(--border-width) solid var(--color-border); border-radius: var(--radius-lg); padding: var(--spacing-6); }
+  .ods-card[data-variant="elevated"] { border-color: var(--color-clear); box-shadow: var(--shadow-md); }
+  .ods-card-image { display: block; width: 100%; height: auto; border-radius: var(--radius-md); margin-bottom: var(--spacing-4); object-fit: cover; }
+  .ods-card-title { margin: var(--spacing-0) var(--spacing-0) var(--spacing-2); font-size: var(--text-xl); font-weight: var(--weight-bold); line-height: var(--leading-snug); }
+  .ods-card-body { margin: var(--spacing-0); font-size: var(--text-base); color: var(--color-text-secondary); line-height: var(--leading-relaxed); }
+  @media (prefers-reduced-motion: reduce) {
+    .ods-button, .ods-link { transition: none; }
+  }
+}
+
+/* Unlayered so a page reset (* { padding: 0 }) cannot pull the text flush to the border. */
+  /* Orange Forms sheet. Standard is 40px (--spacing-10). Large is 50px.
+     Active and filled are a 2px black border. No second outline. */
+  .ods-input, .ods-textarea {
+    appearance: none;
+    display: block;
+    width: 100%;
+    min-width: var(--spacing-0);
+    padding-block: var(--spacing-0);
+    padding-inline: var(--spacing-3);
+    border-width: var(--border-width);
+    border-style: solid;
+    border-color: var(--color-border);
+    border-radius: 0;
+    box-shadow: none;
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-size: var(--text-sm);
+    line-height: var(--leading-normal);
+    outline: none;
+    transition:
+      border-color var(--duration-fast) var(--ease-standard),
+      background-color var(--duration-fast) var(--ease-standard),
+      color var(--duration-fast) var(--ease-standard);
+  }
+  .ods-input { height: var(--spacing-10); }
+  .ods-input[data-size="sm"] {
+    height: var(--control-height-sm);
+    padding-inline: var(--spacing-2);
+  }
+  .ods-input[data-size="lg"] {
+    height: calc(var(--spacing-12) + var(--spacing-1) / 2);
+    font-size: var(--text-base);
+  }
+  .ods-textarea {
+    min-height: var(--textarea-height-md);
+    padding-block: var(--spacing-3);
+    resize: vertical;
+  }
+  .ods-textarea[data-size="sm"] { min-height: var(--textarea-height-sm); padding-block: var(--spacing-2); }
+  .ods-textarea[data-size="lg"] {
+    min-height: var(--textarea-height-lg);
+    padding-block: var(--spacing-3);
+    font-size: var(--text-base);
+  }
+  .ods-input::placeholder, .ods-textarea::placeholder { color: var(--color-text-muted); opacity: var(--opacity-visible); }
+  .ods-input:focus,
+  .ods-textarea:focus,
+  .ods-input:focus-visible,
+  .ods-textarea:focus-visible,
+  .ods-input[placeholder]:not(:placeholder-shown),
+  .ods-textarea[placeholder]:not(:placeholder-shown) {
+    outline: none;
+    border-color: var(--color-black);
+    border-width: var(--focus-width);
+  }
+  .ods-input[aria-invalid="true"],
+  .ods-textarea[aria-invalid="true"],
+  .ods-input[aria-invalid="true"]:focus,
+  .ods-textarea[aria-invalid="true"]:focus,
+  .ods-input[placeholder][aria-invalid="true"]:not(:placeholder-shown),
+  .ods-textarea[placeholder][aria-invalid="true"]:not(:placeholder-shown) {
+    outline: none;
+    border-color: var(--color-error);
+    border-width: var(--focus-width);
+  }
+  .ods-input:disabled,
+  .ods-textarea:disabled,
+  .ods-input[placeholder]:disabled,
+  .ods-textarea[placeholder]:disabled,
+  .ods-input[placeholder][aria-invalid="true"]:disabled,
+  .ods-textarea[placeholder][aria-invalid="true"]:disabled {
+    cursor: not-allowed;
+    opacity: var(--opacity-visible);
+    background: var(--color-bg-muted);
+    color: var(--color-text-muted);
+    -webkit-text-fill-color: var(--color-text-muted);
+    border-width: var(--border-width);
+    border-color: var(--color-border);
+  }
+  .ods-label { color: var(--color-text); font-size: var(--text-sm); font-weight: var(--weight-bold); line-height: var(--leading-snug); }
+  .ods-label-required { color: var(--color-text); }
+  .ods-choice-group { display: flex; flex-wrap: wrap; gap: var(--spacing-4); }
+  .ods-choice {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    color: var(--color-text);
+    font-size: var(--text-sm);
+    font-weight: var(--weight-regular);
+    line-height: var(--leading-normal);
+    cursor: pointer;
+  }
+  .ods-checkbox, .ods-radio, .ods-switch {
+    -webkit-appearance: none;
+    appearance: none;
+    box-sizing: border-box;
+    margin: var(--spacing-0);
+    border: var(--border-width) solid var(--color-black);
+    border-radius: 0;
+    background: var(--color-bg);
+    flex: none;
+    cursor: pointer;
+  }
+  .ods-checkbox, .ods-radio {
+    display: inline-grid;
+    place-content: center;
+    width: var(--spacing-4);
+    height: var(--spacing-4);
+  }
+  .ods-checkbox:checked,
+  .ods-checkbox:indeterminate,
+  .ods-switch:checked {
+    background: var(--color-cta-strong);
+    border-color: var(--color-cta-strong);
+  }
+  .ods-checkbox:checked::after {
+    content: "";
+    box-sizing: content-box;
+    width: var(--spacing-1);
+    height: var(--spacing-2);
+    border-width: 0 var(--focus-width) var(--focus-width) 0;
+    border-style: solid;
+    border-color: var(--color-on-cta);
+    transform: translateY(calc(var(--focus-width) * -1)) rotate(45deg);
+  }
+  .ods-checkbox:indeterminate::after {
+    content: "";
+    box-sizing: border-box;
+    width: var(--spacing-2);
+    height: var(--focus-width);
+    margin: 0;
+    border: 0;
+    background: var(--color-on-cta);
+    transform: none;
+  }
+  /* Radio is the sanctioned circle. Selected is a brand dot in a black ring. */
+  .ods-radio { border-radius: var(--radius-full); }
+  .ods-radio:checked {
+    background: var(--color-bg);
+    border-color: var(--color-black);
+  }
+  .ods-radio:checked::after {
+    content: "";
+    width: var(--spacing-2);
+    height: var(--spacing-2);
+    border-radius: var(--radius-full);
+    background: var(--color-cta-strong);
+  }
+  .ods-switch {
+    --ods-switch-knob: calc(var(--spacing-6) - (var(--border-width) + var(--focus-width)) * 2);
+    display: inline-block;
+    position: relative;
+    width: var(--spacing-10);
+    min-width: var(--spacing-10);
+    max-width: var(--spacing-10);
+    height: var(--spacing-6);
+    min-height: var(--spacing-6);
+    max-height: var(--spacing-6);
+    margin: var(--spacing-0);
+    overflow: hidden;
+    border-radius: 0;
+    background: var(--color-bg);
+    border-color: var(--color-black);
+    vertical-align: middle;
+  }
+  .ods-switch::before,
+  .ods-switch::after {
+    border-radius: 0;
+    box-sizing: border-box;
+    margin: 0;
+  }
+  .ods-switch::before {
+    content: "";
+    position: absolute;
+    inset-block: var(--focus-width) auto;
+    inset-inline: var(--focus-width) auto;
+    width: var(--ods-switch-knob);
+    max-width: var(--ods-switch-knob);
+    height: var(--ods-switch-knob);
+    background: var(--color-black);
+  }
+  .ods-switch::after {
+    content: "";
+    position: absolute;
+    width: var(--spacing-2);
+    max-width: var(--spacing-2);
+    height: var(--spacing-2);
+    inset-block-start: calc(var(--focus-width) + (var(--ods-switch-knob) - var(--spacing-2)) / 2);
+    inset-inline: calc(var(--focus-width) + (var(--ods-switch-knob) - var(--spacing-2)) / 2) auto;
+    background:
+      linear-gradient(var(--color-white), var(--color-white)) center / var(--focus-width) 100% no-repeat,
+      linear-gradient(var(--color-white), var(--color-white)) center / 100% var(--focus-width) no-repeat;
+    transform: rotate(45deg);
+  }
+  .ods-switch:checked::before {
+    background: var(--color-white);
+    inset-inline-start: calc(100% - var(--ods-switch-knob) - var(--focus-width));
+    inset-inline-end: auto;
+  }
+  .ods-switch:checked::after {
+    box-sizing: content-box;
+    width: var(--spacing-1);
+    max-width: var(--spacing-2);
+    height: var(--spacing-2);
+    inset-inline-start: calc(100% - var(--focus-width) - var(--ods-switch-knob) + (var(--ods-switch-knob) - var(--spacing-2)) / 2);
+    inset-inline-end: auto;
+    background: none;
+    border-width: 0 var(--focus-width) var(--focus-width) 0;
+    border-style: solid;
+    border-color: var(--color-black);
+    transform: translateY(calc(var(--focus-width) * -1)) rotate(45deg);
+  }
+  :where(.ods-checkbox, .ods-radio, .ods-switch):focus-visible {
+    outline: var(--focus-width) solid var(--color-focus-ring);
+    outline-offset: var(--focus-offset);
+  }
+  :where(.ods-checkbox, .ods-radio, .ods-switch):disabled {
+    cursor: not-allowed;
+    background: var(--color-bg-muted);
+    border-color: var(--color-border);
+  }
+  .ods-checkbox:disabled,
+  .ods-checkbox:checked:disabled,
+  .ods-checkbox:indeterminate:disabled {
+    background: var(--color-bg-muted);
+    border-color: var(--color-text-muted);
+  }
+  .ods-checkbox:checked:disabled::after { border-color: var(--color-text-muted); }
+  .ods-checkbox:indeterminate:disabled::after { background: var(--color-text-muted); }
+  .ods-radio:disabled,
+  .ods-radio:checked:disabled {
+    background: var(--color-bg-muted);
+    border-color: var(--color-text-muted);
+  }
+  .ods-radio:checked:disabled::after { background: var(--color-text-muted); }
+  .ods-switch:disabled,
+  .ods-switch:checked:disabled {
+    background: var(--color-bg-muted);
+    border-color: var(--color-text-muted);
+  }
+  .ods-switch:disabled::before { background: var(--color-text-muted); }
+  .ods-switch:disabled::after {
+    background:
+      linear-gradient(var(--color-bg), var(--color-bg)) center / var(--focus-width) 100% no-repeat,
+      linear-gradient(var(--color-bg), var(--color-bg)) center / 100% var(--focus-width) no-repeat;
+  }
+  .ods-switch:checked:disabled::before { background: var(--color-bg); }
+  .ods-switch:checked:disabled::after {
+    background: none;
+    border-color: var(--color-text-muted);
+  }
+  .ods-choice:has(:disabled) {
+    color: var(--color-text-muted);
+    cursor: not-allowed;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .ods-input, .ods-textarea { transition: none; }
+  }
+
+
+@font-face{font-family:"Open Sans";src:url("../../assets/fonts/open-sans-latin-300-normal.woff2") format("woff2");font-weight:300;font-display:swap}
+@font-face{font-family:"Open Sans";src:url("../../assets/fonts/open-sans-latin-400-normal.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Open Sans";src:url("../../assets/fonts/open-sans-latin-600-normal.woff2") format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:"Open Sans";src:url("../../assets/fonts/open-sans-latin-700-normal.woff2") format("woff2");font-weight:700;font-display:swap}
+:root{--s-accent:#109200;--s-deep:#0F3E09;--s-darkest:#0A2207;--s-tint:#EDF6EC;--s-surface:#F6FAF5;--s-line:#DCEBD9}
+/* og-product-story engine v0.1 — a product or service page that explains an offer by demonstrating it.
+   Frame = ODS (Open Sans, ink on white, hairlines). Offer colour = --s-* tokens from the story file.
+   Structure: hero (offer + media) → problem/resolution → transformation demo (signature) → detail explorer
+   → claim/evidence → process → offer → FAQ → close. Sections are optional; order follows the story file. */
+:root{--ink:#0A0A0A;--ink-2:#333;--ink-3:#595959;--line:#E0E0E0;--paper:#FFF;--ease:cubic-bezier(.16,1,.3,1);--pad:clamp(20px,5vw,96px);--max:1200px}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Open Sans",system-ui,sans-serif;font-size:18px;line-height:1.55;-webkit-font-smoothing:antialiased}
+::selection{background:var(--s-deep);color:#fff}
+img,video{display:block;max-width:100%}
+a:not(.ods-link){color:inherit;text-underline-offset:.2em}
+:focus-visible{outline:3px solid var(--s-accent);outline-offset:3px}
+h1,h2,h3,p,ol,ul,dl,dd,figure{margin:0;padding:0}ol,ul{list-style:none}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+.sec{padding:clamp(72px,10vw,128px) 0}
+.sec h2{font-size:clamp(30px,3.8vw,54px);line-height:1.05;letter-spacing:-.03em;max-width:18em;text-wrap:balance}
+.sec .intro{margin-top:16px;max-width:38em;color:var(--ink-2);font-size:clamp(17px,1.3vw,20px);text-wrap:pretty}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.sr:focus{position:fixed;left:16px;top:16px;width:auto;height:auto;clip:auto;z-index:40;background:#fff;padding:8px 12px}
+
+/* Status chip: concept vs real work, always visible */
+.status{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;letter-spacing:.02em;padding:6px 12px 6px 10px;border-radius:999px;background:#F6F6F4;color:var(--ink)}
+.status::before{content:"";width:8px;height:8px;border-radius:50%;background:#8A8A8A}
+.hero .og-breadcrumb{margin-bottom:22px}
+.status.real::before{background:#109200}
+
+/* Bar */
+.bar{position:sticky;top:0;z-index:30;background:#fff;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;align-items:center;gap:18px;min-height:60px;font-size:14px}
+.brand{display:inline-flex;align-items:center;text-decoration:none;color:var(--ink);flex-shrink:0}
+.brand img{display:block;height:36px;width:auto}
+.brand svg{width:16px;height:15px;margin-right:8px}.brand b{letter-spacing:.04em}
+.wordmark-light{font-weight:300;color:var(--ods-green,#109200);margin-left:6px;font-size:16px;line-height:1}
+.brand-foot img{height:28px}.brand-foot .wordmark-light{font-size:13px}
+.bar .who{color:var(--ink-3);padding-left:16px;border-left:1px solid var(--line)}
+@media (max-width:480px){.bar .who{display:none}}
+.bar nav{margin-left:auto;display:flex;gap:4px}
+.bar .cta{margin-left:auto;padding:8px 14px;border-radius:8px;text-decoration:none;background:var(--ink);color:#fff!important;font-weight:600;white-space:nowrap}
+@media (max-width:480px){.brand img{height:28px}.bar .wordmark-light{font-size:14px}.bar .cta{padding:8px 12px}}
+@media (max-width:820px){.bar nav a:not(.cta),.bar .who{display:none}}
+
+/* Hero */
+.hero{padding:clamp(48px,7vw,96px) 0 clamp(56px,8vw,112px);background:linear-gradient(180deg,var(--s-tint),#fff 70%)}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,5vw,80px);align-items:center}
+.hero h1{margin-top:20px;font-size:clamp(40px,5.6vw,80px);line-height:1;letter-spacing:-.035em;text-wrap:balance}
+.hero .lede{margin-top:22px;font-size:clamp(18px,1.5vw,22px);color:var(--ink-2);max-width:32em;text-wrap:pretty}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.btn{display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:0 22px;border-radius:999px;font-weight:600;text-decoration:none;border:1px solid transparent;transition:transform .2s var(--ease),background .2s}
+.btn.primary{background:var(--ink);color:#fff}.btn.primary:hover{transform:translateY(-1px)}
+.btn.ghost{border-color:var(--line);background:#fff}.btn.ghost:hover{border-color:var(--ink-3)}
+.media{position:relative;border-radius:20px;overflow:hidden;background:var(--s-surface);box-shadow:0 30px 60px -30px rgba(0,0,0,.35),0 0 0 1px var(--s-line);aspect-ratio:4/5}
+.media video,.media img{width:100%;height:100%;object-fit:cover}
+.media figcaption{position:absolute;left:14px;bottom:12px;font-size:12px;padding:4px 10px;border-radius:999px;background:rgba(255,255,255,.9);color:var(--ink-2)}
+.proofline{margin-top:28px;display:flex;flex-wrap:wrap;gap:8px 24px;font-size:14px;color:var(--ink-3)}
+.proofline b{color:var(--ink);font-weight:600}
+
+/* Problem → resolution: one toggle flips every row */
+.pr-tabs{margin-top:32px}
+.pr-list{margin-top:20px;display:grid;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.pr-list li{background:#fff;display:grid;grid-template-columns:2.4em 1fr;gap:12px;align-items:start;padding:20px 24px}
+.pr-list .ico{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;transition:background .4s,color .4s}
+.pr-list .ico svg{grid-area:1/1;width:20px;height:20px;transition:opacity .3s,transform .4s var(--ease)}
+.pr .i-check{opacity:0;transform:scale(.5)}
+.pr[data-view="after"] .i-check{opacity:1;transform:none}
+.pr[data-view="after"] .i-priority_high{opacity:0;transform:scale(.5)}
+.pr-list .txt{position:relative;display:grid}
+.pr-list .txt span{grid-area:1/1;transition:opacity .45s var(--ease),transform .45s var(--ease)}
+.pr-list .txt .after{opacity:0;transform:translateY(8px)}
+.pr[data-view="after"] .txt .before{opacity:0;transform:translateY(-8px)}
+.pr[data-view="after"] .txt .after{opacity:1;transform:none}
+.pr .ico{background:#F6E3E3;color:#B42318}
+/* ODS success green (--color-green), white mark */
+.pr[data-view="after"] .ico{background:var(--ods-green,#109200);color:#fff}
+
+/* Transformation demo (signature): pick an input, watch it move through the stages */
+.tx{margin-top:40px;display:grid;grid-template-columns:280px 1fr;gap:28px;align-items:start}
+.tx-inputs{display:grid;gap:10px}
+.tx-inputs p{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
+.tx-inputs button{appearance:none;text-align:left;font:inherit;border:1px solid var(--line);background:#fff;border-radius:14px;padding:14px 16px;cursor:pointer;display:grid;gap:2px;transition:border-color .2s,box-shadow .2s}
+.tx-inputs button b{font-size:16px}.tx-inputs button span{font-size:14px;color:var(--ink-3)}
+.tx-inputs button[aria-pressed="true"]{border-color:var(--s-accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--s-accent) 18%,transparent)}
+.tx-stage{border-radius:18px;background:var(--s-surface);border:1px solid var(--s-line);overflow:hidden}
+.tx-head{padding:10px 18px 0;background:#fff;gap:0}
+.tx-head .og-tabs__tab{display:inline-flex;align-items:center;gap:8px;white-space:nowrap}
+.tx-head .og-tabs__list{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}.tx-head .og-tabs__list::-webkit-scrollbar{display:none}
+.tx-n{font-size:12px;font-variant-numeric:tabular-nums;opacity:.6}
+.tx-head .og-tabs__tab[aria-selected="true"] .tx-n{opacity:1}
+.tx-next .sim{margin-left:auto;font-size:12px;color:var(--ink-3)}
+.tx-view{position:relative;min-height:440px;padding:28px}
+.tx-panel{display:none}.tx-panel.on{display:block;animation:fade .45s var(--ease)}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.brief{background:#fff;border-radius:12px;padding:22px 24px;box-shadow:0 1px 0 var(--s-line);max-width:560px}
+.brief dt{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);margin-top:12px}
+.brief dt:first-child{margin-top:0}.brief dd{font-size:16px}
+.map{display:grid;gap:12px}
+.map .root{justify-self:start;background:var(--s-deep);color:#fff;border-radius:10px;padding:10px 16px;font-weight:600}
+.map ul{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.map li{background:#fff;border:1px solid var(--s-line);border-radius:10px;padding:12px 14px;font-size:15px;font-weight:600;position:relative;animation:pop .5s var(--ease) both;animation-delay:calc(var(--i) * 70ms)}
+.map li small{display:block;font-weight:400;color:var(--ink-3);font-size:13px;margin-top:4px}
+@keyframes pop{from{opacity:0;transform:translateY(12px) scale(.97)}to{opacity:1;transform:none}}
+.blocks{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
+.blocks li{background:#fff;border-radius:10px;border:1px solid var(--s-line);padding:12px;display:grid;gap:8px;animation:drop .55s var(--ease) both;animation-delay:calc(var(--i) * 80ms)}
+.blocks li b{font-size:14px}.blocks li span{font-size:12px;color:var(--ink-3)}
+.blocks .thumb{height:56px;border-radius:6px;background:repeating-linear-gradient(0deg,var(--s-line) 0 6px,transparent 6px 12px),var(--s-tint)}
+@keyframes drop{from{opacity:0;transform:translateY(-24px)}to{opacity:1;transform:none}}
+.site{background:#fff;border-radius:12px;box-shadow:0 20px 40px -24px rgba(0,0,0,.35),0 0 0 1px var(--s-line);overflow:hidden;max-width:720px}
+.site .chrome{display:flex;gap:6px;padding:9px 12px;border-bottom:1px solid var(--s-line)}
+.site .chrome i{width:9px;height:9px;border-radius:50%;background:#D7DCE3}
+.site .s-hero{padding:28px 28px 22px;background:var(--p-bg,#F3F1EC);color:var(--p-ink,#1d1d1d)}
+.site .s-hero small{font-size:12px;letter-spacing:.08em;text-transform:uppercase;opacity:.7}
+.site .s-hero h4{margin:6px 0 0;font-size:clamp(22px,2.4vw,30px);line-height:1.1;letter-spacing:-.02em;font-family:var(--p-face,inherit)}
+.site .s-hero p{margin:8px 0 0;font-size:14px;opacity:.85;max-width:36em}
+.site .s-hero .b{display:inline-block;margin-top:14px;font-size:13px;font-weight:600;padding:8px 14px;border-radius:999px;background:var(--p-accent,#222);color:#fff}
+.site .s-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:18px 28px}
+.site .s-row div{border-radius:8px;background:#F7F7F5;padding:12px;font-size:13px}
+.site .s-row div b{display:block;font-size:14px;margin-bottom:2px}
+.site .s-foot{padding:14px 28px 20px;font-size:12px;color:var(--ink-3);border-top:1px solid #eee}
+.site>*{animation:pop .5s var(--ease) both}.site>*:nth-child(2){animation-delay:.1s}.site>*:nth-child(3){animation-delay:.2s}.site>*:nth-child(4){animation-delay:.3s}
+.tx-next{margin-top:22px;display:flex;gap:10px;align-items:center;font-size:14px;color:var(--ink-3)}
+.tx-next button{appearance:none;font:inherit;font-weight:600;border:1px solid var(--line);background:#fff;border-radius:999px;padding:9px 16px;cursor:pointer;min-height:44px}
+.tx-next button:hover{border-color:var(--ink-3)}
+
+/* Detail explorer: overview → detail. Click a block, see what an editor actually edits */
+.dx{margin-top:40px;display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:start}
+.dx-page{border-radius:16px;border:1px solid var(--line);overflow:hidden;background:#fff}
+.dx-page button{appearance:none;display:block;width:100%;text-align:left;font:inherit;border:0;border-bottom:1px solid var(--line);background:#fff;padding:20px 22px;cursor:pointer;position:relative;transition:background .2s}
+.dx-page button:last-child{border-bottom:0}
+.dx-page button:hover{background:var(--s-surface)}
+.dx-page button[aria-pressed="true"]{background:var(--s-tint);box-shadow:inset 3px 0 0 var(--s-accent)}
+.dx-page button b{display:block;font-size:17px}.dx-page button span{font-size:14px;color:var(--ink-3)}
+.dx-page button em{position:absolute;right:18px;top:20px;font-style:normal;font-size:12px;color:var(--s-deep);font-weight:600}
+.dx-panel{position:sticky;top:84px;border-radius:16px;background:var(--s-deep);color:#fff;padding:24px}
+.dx-panel h3{font-size:20px}.dx-panel p{margin-top:6px;font-size:14px;opacity:.8}
+.dx-panel dl{margin-top:18px;display:grid;gap:10px}
+.dx-panel dt{font-size:12px;letter-spacing:.06em;text-transform:uppercase;opacity:.7}
+.dx-panel dd{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:8px;padding:10px 12px;font-size:15px;animation:fade .35s var(--ease) both}
+.dx-panel .note{margin-top:16px;font-size:13px;opacity:.75}
+
+/* Claim → evidence */
+.ev{margin-top:40px;display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.ev li{background:#fff;padding:28px;display:grid;gap:10px;align-content:start}
+.ev li{transition:background-color .2s ease}
+.js .ev li.reveal{transition:opacity .7s var(--ease),transform .7s var(--ease),background-color .2s ease}
+.ev li:hover{background:var(--color-bg-muted)}
+.ev b{font-size:clamp(19px,1.6vw,23px);line-height:1.25;letter-spacing:-.01em}
+.ev p{color:var(--ink-2);font-size:16px}
+.ev small{font-size:13px;color:var(--ink-3)}
+
+/* Process */
+.proc{margin-top:40px;display:grid;grid-template-columns:repeat(var(--k),1fr);gap:20px;counter-reset:p}
+.proc li{position:relative;padding-top:56px;counter-increment:p}
+.proc li::before{content:counter(p,decimal-leading-zero);position:absolute;top:0;left:0;font-weight:700;font-size:14px;color:var(--s-deep);width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--s-tint)}
+.proc li::after{content:"";position:absolute;top:20px;left:48px;right:-12px;height:1px;background:var(--s-line)}
+.proc li:last-child::after{display:none}
+.proc b{font-size:18px}.proc p{margin-top:6px;color:var(--ink-2);font-size:15px}
+
+/* Offer */
+.offer{background:var(--s-deep);color:#fff}
+.offer h2{color:#fff}.offer .intro{color:rgba(255,255,255,.8)}
+.offer ul{margin-top:36px;display:grid;grid-template-columns:repeat(2,1fr);gap:14px 32px}
+.offer li{padding:16px 0;border-top:1px solid rgba(255,255,255,.18);display:grid;gap:4px;align-content:start}
+.offer li b{font-size:18px}.offer li span{opacity:.78;font-size:15px}
+.offer .actions .btn.primary{background:#fff;color:var(--s-deep)}
+.offer .actions .btn.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.4)}
+
+/* FAQ */
+.faq{margin-top:32px;max-width:52em}
+.faq details{margin:0 -12px;padding:0 12px;border-bottom:1px solid var(--line);border-radius:0;position:relative;transition:background-color .3s ease,border-radius .3s ease}
+.faq details:first-child{border-top:1px solid var(--line)}
+.faq details.is-open{background:var(--color-bg-muted);border-radius:12px;border-bottom-color:transparent}
+.faq details.is-open::before{content:"";position:absolute;left:0;top:16px;bottom:16px;width:3px;border-radius:3px;background:var(--color-text)}
+.faq details.is-open summary{color:var(--color-text)}
+.faq details.is-open summary:hover{background:transparent}
+.faq details.is-open summary::after{color:var(--color-text)}
+.faq summary{list-style:none;cursor:pointer;padding:20px 52px 20px 12px;margin:0 -12px;border-radius:8px;font-weight:600;font-size:18px;position:relative;transition:background-color .2s ease}
+.faq summary:hover{background:var(--color-bg-muted)}
+.faq summary:focus-visible{outline:var(--focus-width) solid var(--color-focus-ring);outline-offset:2px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:18px;top:16px;font-size:24px;font-weight:400;color:var(--ink-3);transition:transform .3s var(--ease)}
+.faq details.is-open summary::after{transform:rotate(45deg)}
+.faq-body{overflow:hidden}
+.faq p{padding:0 0 20px;color:var(--ink-2);max-width:44em}
+
+/* Close + footer */
+.closing{text-align:left}
+.closing h2{font-size:clamp(40px,6vw,88px);line-height:1;letter-spacing:-.035em}
+.closing h2 span{display:block;color:var(--s-deep)}
+.closing .who{margin-top:28px;color:var(--ink-2);font-size:16px}
+.closing .who b{display:block;color:var(--ink);font-size:20px}
+.closing .disclose{margin-top:28px;font-size:13px;color:var(--ink-3);max-width:44em}
+footer{background:var(--s-darkest);color:rgba(255,255,255,.72);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center;min-height:64px}
+footer svg{width:16px;height:15px}footer a{color:#fff}
+footer .wordmark-light{color:var(--color-leaf)}
+
+/* Reveal on scroll (content visible by default; JS opts in) */
+.js .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.js .reveal.in{opacity:1;transform:none}
+
+/* v0.2 views: table, product, checkout */
+.tbl{max-width:760px}
+.tbl-cap{margin:0 0 10px;font-size:13px;font-weight:600;color:var(--ink-2)}
+.tbl-scroll{overflow-x:auto;border-radius:12px;background:#fff;box-shadow:0 0 0 1px var(--s-line)}
+.tbl table{border-collapse:collapse;width:100%;font-size:13px;font-variant-numeric:tabular-nums}
+.tbl th{position:sticky;top:0;background:var(--s-tint);color:var(--s-deep);text-align:left;font-weight:600;padding:9px 12px;white-space:nowrap}
+.tbl td{padding:9px 12px;border-top:1px solid var(--s-line);white-space:nowrap}
+.tbl tbody tr{animation:pop .4s var(--ease) both;animation-delay:calc(var(--i) * 60ms)}
+.tbl-note{margin:10px 0 0;font-size:13px;color:var(--ink-3)}
+.pdp-body{display:grid;grid-template-columns:minmax(0,300px) 1fr;align-items:start;gap:22px;padding:22px;background:var(--p-bg,#fff);color:var(--p-ink,#1d1d1d)}
+.pdp-img{aspect-ratio:1;border-radius:10px;background:radial-gradient(circle at 35% 30%,var(--c1),var(--c2));display:flex;align-items:flex-end;padding:12px}
+.pdp-img{position:relative;overflow:hidden}.pdp-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.pdp-img span{position:relative;font-size:11px;letter-spacing:.06em;text-transform:uppercase;background:rgba(255,255,255,.85);color:#333;padding:3px 8px;border-radius:999px}
+.pdp-info small{font-size:12px;opacity:.7}
+.pdp-info h4{margin:4px 0 6px;font-size:clamp(20px,2vw,26px);line-height:1.15;letter-spacing:-.01em}
+.pdp-price{margin:0 0 12px;font-size:18px;font-weight:700}.pdp-price span{display:block;font-size:12px;font-weight:400;opacity:.7}
+.pdp-gate{margin:0 0 12px;font-size:13px;padding:10px 12px;border-radius:8px;background:rgba(0,0,0,.05)}
+.pdp-opt{margin:0 0 10px}.pdp-opt p{margin:0 0 6px;font-size:12px;font-weight:600}
+.pdp-opt button{appearance:none;font:inherit;font-size:13px;border:1px solid rgba(0,0,0,.18);background:#fff;color:inherit;border-radius:999px;padding:6px 12px;margin:0 6px 6px 0;cursor:pointer;min-height:36px}
+.pdp-opt button[aria-pressed="true"]{border-color:var(--p-accent);box-shadow:inset 0 0 0 1px var(--p-accent);font-weight:600}
+.pdp .b{display:block;text-align:center;margin-top:6px;font-size:14px;font-weight:600;padding:11px 14px;border-radius:999px;background:var(--p-accent,#222);color:#fff}
+.pdp-notes{list-style:none;margin:12px 0 0;padding:0;font-size:12px;opacity:.8;display:grid;gap:4px}.pdp-notes li::before{content:"✓ ";color:var(--p-accent)}
+.co-body{display:grid;grid-template-columns:1.3fr 1fr;gap:0}
+.co-lines{padding:20px 22px}
+.co-line{display:grid;grid-template-columns:44px 1fr auto;gap:12px;align-items:center;padding:8px 0;font-size:14px;animation:pop .4s var(--ease) both;animation-delay:calc(var(--i) * 80ms)}
+.co-line b{display:block;font-size:14px}.co-line small{font-size:12px;color:var(--ink-3)}
+.co-thumb{width:44px;height:44px;border-radius:8px}
+.co-lines dl{margin:12px 0 0;padding-top:10px;border-top:1px solid var(--s-line);display:grid;gap:6px;font-size:14px}
+.co-lines dl div{display:flex;justify-content:space-between}.co-lines dd{margin:0}
+.co-total{font-weight:700;font-size:16px;padding-top:6px;border-top:1px solid var(--s-line)}
+.co-pay{background:var(--s-surface);padding:20px 22px;border-left:1px solid var(--s-line);display:flex;flex-direction:column;justify-content:center;gap:10px}
+.co-pay .b{display:block;text-align:center;font-size:14px;font-weight:600;padding:12px 14px;border-radius:999px;background:var(--p-accent);color:#fff}
+.co-pay p{margin:0;font-size:12px;color:var(--ink-3)}
+
+/* flow diagram */
+.flow{margin-top:32px}
+.flow-main{list-style:none;margin:0;padding:0;display:flex;align-items:stretch;gap:30px}
+.flow-main>li{flex:1;position:relative;display:flex}
+.flow-main>li.flow-group{flex:2.15}
+.flow-main li:not(:last-child)::after,.flow-group ol>li:not(:last-child)::after{content:"→";position:absolute;right:-23px;top:50%;transform:translateY(-50%);color:var(--s-accent);font-weight:700;font-size:18px}
+.flow-group{border:1.5px dashed var(--s-accent);border-radius:18px;padding:34px 12px 12px;background:var(--s-tint)}
+.flow-group ol{list-style:none;margin:0;padding:0;display:flex;gap:30px;width:100%}
+.flow-group ol>li{flex:1;position:relative;display:flex}
+.g-label{position:absolute;top:9px;left:14px;font-size:12px;font-weight:600;color:var(--s-deep)}
+.node{background:#fff;border:1px solid var(--s-line);border-radius:14px;padding:16px;width:100%}
+.node i{font-style:normal;font-size:12px;font-weight:700;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:var(--s-tint);color:var(--s-deep);margin-bottom:10px}
+.node b{display:block;font-size:16px;line-height:1.25}
+.node p{margin:6px 0 0;font-size:14px;color:var(--ink-2);line-height:1.5}
+.node.end{background:var(--s-deep);border-color:var(--s-deep);color:#fff}.node.end p{color:rgba(255,255,255,.82)}.node.end i{background:#fff;color:var(--s-deep)}
+.flow-alt{margin-top:28px;padding:16px 18px;border-radius:14px;border:1px solid var(--line);background:#fff;color:var(--ink-3);font-size:14px}
+.flow-alt b{display:block;color:var(--ink-2);font-size:13px;letter-spacing:.04em;text-transform:uppercase;margin-bottom:8px}
+.flow-alt ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px 0}
+.flow-alt li{text-decoration:line-through;text-decoration-color:rgba(0,0,0,.25)}
+.flow-alt li:not(:last-child)::after{content:"→";margin:0 10px;text-decoration:none;display:inline-block}
+.flow-alt p{margin:8px 0 0}
+
+/* Chapter bar: sticky under the header, ODS tabs "line" look (hairline, 2px ink rule, semibold current). */
+.bar{border-bottom-color:transparent}
+.chapters{position:sticky;top:var(--bar-h,61px);z-index:29;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.chapters ol{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;margin:0 -12px}
+.chapters ol::-webkit-scrollbar{display:none}
+.chapters a{display:inline-flex;flex-direction:column;align-items:center;position:relative;white-space:nowrap;padding:11px 12px 12px;font-size:14px;font-weight:500;color:var(--ink-3);text-decoration:none;transition:color .2s}
+.chapters a::before{content:attr(data-label);font-weight:600;height:0;visibility:hidden;overflow:hidden}
+.chapters a::after{content:"";position:absolute;left:12px;right:12px;bottom:-1px;height:2px;background:var(--ink);transform:scaleX(0);transform-origin:left;transition:transform .25s var(--ease)}
+.chapters a:hover{color:var(--ink)}
+.chapters a[aria-current]{color:var(--ink);font-weight:600}
+.chapters a[aria-current]::after{transform:none}
+section[id]{scroll-margin-top:calc(var(--bar-h,61px) + 46px)}
+/* Pager: previous / next demonstration (Orange design system pattern, with a little more emphasis) */
+.pager{padding:40px 0 44px;background:var(--s-deep);color:#fff}
+.pager .wrap{display:flex;justify-content:space-between;align-items:center;gap:24px}
+.pager .pg{color:#fff}
+.pager .ods-link,.pager .ods-link:visited,.pager .ods-link:hover{color:#fff}
+.pager .pg-k{color:rgba(255,255,255,.72)}
+.pager .pg:focus-visible{outline-color:#fff}
+.pg{display:inline-flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none}
+.pg-tx{display:grid;gap:2px}
+.pg-next .pg-tx{text-align:right}
+.pg-k{font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-3)}
+.pg .ods-link{font-size:22px;font-weight:600;letter-spacing:-.01em}
+.pg svg{width:32px;height:32px;flex-shrink:0;transition:transform .25s var(--ease)}
+.pg:hover .ods-link{text-decoration-thickness:2px}
+.pg-prev:hover svg{transform:translateX(-4px)}.pg-next:hover svg{transform:translateX(4px)}
+.pg:focus-visible{outline:var(--focus-width) solid var(--color-focus-ring);outline-offset:4px;border-radius:4px}
+@media (max-width:600px){.pg{gap:4px;white-space:nowrap}.pg .ods-link{font-size:16px}.pg-k{font-size:11px}.pg svg{width:24px;height:24px}}
+
+/* v0.4 views: listing, gallery (Amazon) */
+.lst{max-width:720px;background:#fff;border-radius:12px;box-shadow:0 0 0 1px var(--s-line);padding:20px 22px}
+.lst-k{margin:0 0 6px;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
+.lst-t{margin:0 0 16px;font-size:18px;line-height:1.35;font-weight:600}
+.lst-b{display:grid;gap:8px;padding-left:18px;list-style:disc;font-size:14px;line-height:1.5;color:var(--ink-2)}
+.lst-b li{animation:pop .4s var(--ease) both;animation-delay:calc(var(--i) * 70ms)}
+.lst-b b{color:var(--ink);font-weight:700;font-size:13px;letter-spacing:.02em}
+.gal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.gal-grid li{display:grid;gap:6px;animation:pop .4s var(--ease) both;animation-delay:calc(var(--i) * 70ms)}
+.gal-img{position:relative;display:block;aspect-ratio:1;border-radius:10px;overflow:hidden;background:radial-gradient(circle at 35% 30%,var(--c1),var(--c2));box-shadow:0 0 0 1px var(--s-line)}
+.gal-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.gal-brief{position:absolute;inset:0;display:flex;align-items:flex-end;padding:10px;font-size:11.5px;line-height:1.35;color:#1d1d1d;background:linear-gradient(transparent 40%,rgba(255,255,255,.85))}
+.gal-grid b{font-size:12.5px}
+
+@media (max-width:900px){.chapters ol{-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent);mask-image:linear-gradient(90deg,#000 88%,transparent)}}
+@media (prefers-reduced-motion:reduce){.chapters a::after{transition:none}}
+
+/* v0.3 views: audit, tokens, component, guidelines (design systems) */
+.au-sum{margin:0 0 14px;font-size:15px;font-weight:600}
+.au-grid{display:flex;flex-wrap:wrap;gap:14px 12px;align-items:flex-start}
+.au-grid li{display:grid;gap:5px;justify-items:start;animation:pop .4s var(--ease) both;animation-delay:calc(var(--i) * 50ms)}
+.au-grid small{font-size:11px;color:var(--ink-3)}
+.au-sample{display:inline-block;font-size:14px;line-height:1.2;padding:10px 16px;white-space:nowrap}
+.au-sample.field{background:#fff;color:#777;text-align:left;min-width:180px}
+.tok{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.tok-g p{margin:0 0 8px;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
+.tok-g ul{display:grid;gap:6px}
+.tok-g li{display:grid;grid-template-columns:28px 1fr auto;gap:10px;align-items:center;font-size:13px;padding:6px 8px;border-radius:8px;background:#fff;box-shadow:0 0 0 1px var(--s-line);animation:pop .4s var(--ease) both;animation-delay:calc(var(--i) * 60ms)}
+.tok-g code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;color:var(--ink)}
+.tok-g li span:last-child{color:var(--ink-3);font-variant-numeric:tabular-nums}
+.sw{width:28px;height:28px;border-radius:6px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.1)}
+.sw-v{display:grid;place-items:center;background:var(--s-tint);font-size:10px;font-weight:700;color:var(--s-deep)}
+.cmp-name{margin:0 0 14px;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
+.cmp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px}
+.cmp-grid figure{margin:0;padding:22px 16px 14px;border-radius:12px;background:#fff;box-shadow:0 0 0 1px var(--s-line);display:grid;gap:10px;justify-items:start;animation:pop .4s var(--ease) both;animation-delay:calc(var(--i) * 80ms)}
+.cmp-help{font-size:12px}
+.cmp-lab{font-size:13px;font-weight:600;margin-bottom:-4px}
+.cmp-grid figcaption{font-size:12px;color:var(--ink-3);display:grid;gap:2px;padding-top:10px;border-top:1px solid var(--s-line);width:100%}
+.cmp-grid figcaption b{font-size:13px;color:var(--ink)}
+.gl{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.gl-col{border-radius:12px;background:#fff;box-shadow:0 0 0 1px var(--s-line);padding:16px 18px}
+.gl-col>p{margin:0 0 10px;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.gl-col.do>p{color:#109200}.gl-col.dont>p{color:#B42318}
+.gl-col ul{display:grid;gap:10px}
+.gl-col li{display:grid;grid-template-columns:26px 1fr;gap:10px;align-items:start;font-size:14px;line-height:1.45}
+.gl-ico{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;color:#fff}
+.gl-ico svg{width:16px;height:16px}
+.do .gl-ico{background:#109200}.dont .gl-ico{background:#B42318}
+
+@media (max-width:900px){
+  .hero .wrap,.tx,.dx{grid-template-columns:1fr}
+  .media{aspect-ratio:4/5;max-width:440px}
+  .tx-inputs{grid-template-columns:repeat(auto-fill,minmax(160px,1fr))}
+  .tx-inputs p{grid-column:1/-1}
+  .tx-view{padding:18px;min-height:380px}
+  .site .s-row{grid-template-columns:1fr}
+  .gl{grid-template-columns:1fr}
+  .gal-grid{grid-template-columns:repeat(2,1fr)}
+  .pdp-body,.co-body{grid-template-columns:1fr}.pdp-img{aspect-ratio:16/10}.co-pay{border-left:0;border-top:1px solid var(--s-line)}
+  .dx-panel{position:static}
+  .ev,.offer ul{grid-template-columns:1fr}
+  .flow-main,.flow-group ol{flex-direction:column}
+  .flow-main li:not(:last-child)::after,.flow-group ol>li:not(:last-child)::after{content:"↓";right:auto;left:24px;top:auto;bottom:-27px;transform:none}
+  .proc{grid-template-columns:1fr;gap:28px}.proc li::after{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-delay:0s!important;transition-duration:.01ms!important}
+  .js .reveal{opacity:1;transform:none}
+}
+
+/* INTERIM until the ODS link fix lands (proposal: ~/OG/reports/ods-link-hover-proposal/proposal.md).
+   ODS gives :hover and :visited the same colour, so a visited link shows no hover. Thicken the underline on hover. */
+.ods-link{text-decoration-color:currentColor;transition:color 150ms ease,text-decoration-thickness 150ms ease}
+.ods-link:hover{text-decoration-thickness:2px;color:var(--color-text)}
+
+/* Scroll progress, toned down through its own ODS tokens (Phil, 5 Nov 2026: "very subtle"): 1px, mid grey. */
+.og-scroll-progress{--color-text:var(--color-gray-500);--border-width:.5px}
+
+/* Footer jump menu: ODS dropdown menu, opening upwards (local placement until ODS has a "side=top" option). */
+footer .wrap{align-items:center}
+.foot-menu{margin-left:auto}
+.foot-menu .og-dropdown-menu__trigger{gap:4px}
+.foot-menu .og-dropdown-menu__trigger svg{width:20px;height:20px}
+.foot-menu .og-dropdown-menu__panel{top:auto;bottom:calc(100% + var(--spacing-1));right:0;left:auto;min-width:260px}
+.foot-menu .og-dropdown-menu__item{text-decoration:none;color:var(--color-text)}
+.foot-menu .og-dropdown-menu__item[aria-current="page"]{font-weight:var(--weight-semibold)}
+
+/* ds:scroll-progress v0.1
+   ============================================================
+   Oganiko Scroll progress — og-scroll-progress
+   Canonical component · OS-000 scroll-progress
+   Source of truth: components/scroll-progress/scroll-progress.css
+   ------------------------------------------------------------
+   A 2px ink line. Fixed at the top, or under a header.
+   Fills from the left as the page scrolls. No blue, no green.
+   Reduced motion: the length updates with no transition.
+   Pattern assimilated from Scroll Progress by Julien Thibeaut
+   (ibelick), Motion Primitives (21st.dev, MIT licence).
+   Not the gradient and not the spring.
+   https://21st.dev/@ibelick/components/scroll-progress
+   version: 0.1.0 (2026-11-03) · maturity: experimental
+   ============================================================ */
+
+.og-scroll-progress {
+  --og-scroll-progress: 0;
+  --og-scroll-progress-top: 0;
+  position: fixed;
+  inset-inline: 0;
+  inset-block-start: var(--og-scroll-progress-top);
+  z-index: var(--z-modal);
+  block-size: calc(var(--border-width) * 2);
+  margin: 0;
+  padding: 0;
+  pointer-events: none;
+  background: transparent;
+}
+
+.og-scroll-progress[data-contained] {
+  position: relative;
+  inset: auto;
+  z-index: 1;
+}
+
+/* Under the catalogue rail (z-index 30 in catalogue.css). No z-index token sits between them. */
+.og-scroll-progress--catalogue {
+  z-index: 25;
+}
+
+.og-scroll-progress__fill {
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+  background: var(--color-text);
+  transform: scaleX(var(--og-scroll-progress));
+  transform-origin: left center;
+  transition: transform var(--duration-fast) var(--ease-standard);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .og-scroll-progress__fill {
+    transition: none;
+  }
+}
+
+/* ds:breadcrumb v0.1
+   ============================================================
+   Oganiko Breadcrumb — og-breadcrumb
+   Canonical component · OS-000 Breadcrumb (path trail)
+   Source of truth: OS-000-Design-System/components/breadcrumb/breadcrumb.css
+   ------------------------------------------------------------
+   Quiet page path. Assimilated from shadcn/21st Breadcrumb
+   patterns — principles only; restyled with ODS tokens.
+   Not a raw dump. No Lucide. No green trail chrome.
+   Token names only; fallbacks repeat current token values so the
+   file works in the static catalogue. Do not invent new token values.
+   version: 0.1.0 (2026-09-26) · maturity: experimental
+   ------------------------------------------------------------
+   Markup:
+     <nav class="og-breadcrumb og-breadcrumb--chevron" aria-label="Breadcrumb">
+       <ol class="og-breadcrumb__list">
+         <li class="og-breadcrumb__item">
+           <a class="og-breadcrumb__link" href="/">Home</a>
+         </li>
+         <li class="og-breadcrumb__item" aria-hidden="true">
+           <span class="og-breadcrumb__separator">…</span>
+         </li>
+         <li class="og-breadcrumb__item">
+           <span class="og-breadcrumb__current" aria-current="page">Rapeseed</span>
+         </li>
+       </ol>
+     </nav>
+   ============================================================ */
+
+.og-breadcrumb {
+  font-family: var(--font-primary, 'Open Sans', 'Helvetica Neue', Arial, sans-serif);
+  font-size: var(--text-sm, 0.875rem);
+  font-weight: var(--weight-regular, 400);
+  line-height: var(--leading-snug, 1.25);
+  color: var(--color-text, #000000);
+  max-width: 100%;
+}
+
+.og-breadcrumb__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--spacing-1, 0.25rem) var(--spacing-2, 0.5rem);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.og-breadcrumb__item {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2, 0.5rem);
+  min-width: 0;
+}
+
+.og-breadcrumb__link {
+  color: var(--color-text-secondary, #333333);
+  text-decoration: none;
+  border-radius: var(--radius-sm, 4px);
+  transition: color var(--transition-fast, 150ms ease);
+}
+
+.og-breadcrumb__link:hover {
+  color: var(--color-text, #000000);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.og-breadcrumb__link:focus-visible {
+  outline: var(--focus-width, 2px) solid var(--color-border-focus, #34c755);
+  outline-offset: var(--focus-offset, 3px);
+}
+
+.og-breadcrumb__current {
+  color: var(--color-text, #000000);
+  font-weight: var(--weight-medium, 500);
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.og-breadcrumb__separator {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-secondary, #333333);
+  flex-shrink: 0;
+}
+
+.og-breadcrumb__separator iconify-icon,
+.og-breadcrumb__separator svg {
+  width: 24px;
+  height: 24px;
+  font-size: 24px;
+  color: currentColor;
+}
+
+.og-breadcrumb--slash .og-breadcrumb__separator,
+.og-breadcrumb:not(.og-breadcrumb--chevron) .og-breadcrumb__sep-slash {
+  font-size: var(--text-sm, 0.875rem);
+  line-height: 1;
+  user-select: none;
+}
+
+.og-breadcrumb__ellipsis {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.og-breadcrumb__ellipsis-btn {
+  appearance: none;
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  border: var(--border-width, 1px) solid transparent;
+  border-radius: var(--radius-md, 8px);
+  background: transparent;
+  color: var(--color-text-secondary, #333333);
+  cursor: pointer;
+  transition:
+    color var(--transition-fast, 150ms ease),
+    background-color var(--transition-fast, 150ms ease),
+    border-color var(--transition-fast, 150ms ease);
+}
+
+.og-breadcrumb__ellipsis-btn:hover {
+  color: var(--color-text, #000000);
+  background: var(--color-bg-muted, #f5f5f3);
+}
+
+.og-breadcrumb__ellipsis-btn:focus-visible {
+  outline: var(--focus-width, 2px) solid var(--color-border-focus, #34c755);
+  outline-offset: var(--focus-offset, 3px);
+}
+
+.og-breadcrumb__ellipsis-btn[aria-expanded='true'] {
+  color: var(--color-text, #000000);
+  border-color: var(--color-border, #e0e0e0);
+  background: var(--color-bg, #ffffff);
+}
+
+.og-breadcrumb__ellipsis-btn iconify-icon,
+.og-breadcrumb__ellipsis-btn svg {
+  width: 24px;
+  height: 24px;
+  font-size: 24px;
+  color: currentColor;
+}
+
+.og-breadcrumb__menu {
+  position: absolute;
+  top: calc(100% + var(--spacing-1, 0.25rem));
+  left: 0;
+  z-index: var(--z-modal, 100);
+  min-width: 10rem;
+  margin: 0;
+  padding: var(--spacing-1, 0.25rem);
+  list-style: none;
+  background: var(--color-bg, #ffffff);
+  border: var(--border-width, 1px) solid var(--color-border, #e0e0e0);
+  border-radius: var(--radius-sm, 4px);
+  box-shadow: var(--shadow-sm, 0 1px 3px rgba(0, 0, 0, 0.08));
+}
+
+.og-breadcrumb__menu[hidden] {
+  display: none;
+}
+
+.og-breadcrumb__menu-link {
+  display: block;
+  padding: var(--spacing-2, 0.5rem) var(--spacing-3, 0.75rem);
+  color: var(--color-text, #000000);
+  text-decoration: none;
+  border-radius: var(--radius-sm, 4px);
+  white-space: nowrap;
+  transition: background-color var(--transition-fast, 150ms ease);
+}
+
+.og-breadcrumb__menu-link:hover,
+.og-breadcrumb__menu-link:focus-visible {
+  background: var(--color-bg-muted, #f5f5f3);
+}
+
+.og-breadcrumb__menu-link:focus-visible {
+  outline: var(--focus-width, 2px) solid var(--color-border-focus, #34c755);
+  outline-offset: calc(var(--focus-offset, 3px) * -1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .og-breadcrumb__link,
+  .og-breadcrumb__ellipsis-btn,
+  .og-breadcrumb__menu-link {
+    transition: none;
+  }
+}
+
+/* ds:tabs v0.1
+   ============================================================
+   Oganiko Tabs — og-tabs
+   Canonical component · OS-000 Tabs (tab list / section switcher)
+   Source of truth: OS-000-Design-System/components/tabs/tabs.css
+   ------------------------------------------------------------
+   In-page section switcher. Assimilated from shadcn/21st Tabs
+   patterns — principles only; restyled with ODS tokens.
+   Not a raw dump. Not packages/og-tabs.css (os-002 cell,
+   underline-animated, segmented). Do not load both stylesheets:
+   the older file also uses the .og-tabs block.
+   Token names only; fallbacks repeat current token values so the
+   file works in the static catalogue. Do not invent new token values.
+   version: 0.1.0 (2026-09-23) · maturity: experimental
+   ------------------------------------------------------------
+   Markup:
+     <div class="og-tabs og-tabs--line og-tabs--md">
+       <div class="og-tabs__list" role="tablist" aria-label="…"
+            aria-orientation="horizontal">
+         <button type="button" class="og-tabs__tab" role="tab"
+                 id="tab-account" aria-selected="true"
+                 aria-controls="panel-account">Account</button>
+         <button type="button" class="og-tabs__tab" role="tab"
+                 id="tab-delivery" aria-selected="false" tabindex="-1"
+                 aria-controls="panel-delivery">Delivery</button>
+       </div>
+       <div class="og-tabs__panel" role="tabpanel" id="panel-account"
+            aria-labelledby="tab-account">…</div>
+       <div class="og-tabs__panel" role="tabpanel" id="panel-delivery"
+            aria-labelledby="tab-delivery" hidden>…</div>
+     </div>
+   ============================================================ */
+
+.og-tabs {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+  font-family: var(--font-primary);
+  color: var(--color-text);
+  max-width: 100%;
+}
+
+.og-tabs__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: var(--spacing-1);
+}
+
+.og-tabs__tab {
+  appearance: none;
+  margin: 0;
+  font-family: inherit;
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-snug);
+  color: var(--color-text-secondary);
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  transition:
+    color var(--transition-fast),
+    background-color var(--transition-fast),
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.og-tabs--sm .og-tabs__tab {
+  padding: var(--spacing-2) var(--spacing-3);
+  font-size: var(--text-sm);
+}
+
+.og-tabs--md .og-tabs__tab,
+.og-tabs:not(.og-tabs--sm) .og-tabs__tab {
+  padding: var(--spacing-2) var(--spacing-4);
+  font-size: var(--text-sm);
+}
+
+.og-tabs__tab:hover:not(:disabled):not([aria-selected='true']) {
+  color: var(--color-text);
+}
+
+.og-tabs__tab:focus-visible {
+  outline: var(--focus-width) solid var(--color-border-focus);
+  outline-offset: var(--focus-offset);
+}
+
+.og-tabs__tab:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.og-tabs__tab .og-tabs__icon,
+.og-tabs__tab iconify-icon {
+  width: 24px;
+  height: 24px;
+  font-size: 24px;
+  color: currentColor;
+}
+
+/* ── line (default) — quiet rule under the selected label ── */
+.og-tabs--line .og-tabs__list,
+.og-tabs:not(.og-tabs--pill) .og-tabs__list {
+  border-bottom: var(--border-width) solid var(--color-border);
+}
+
+.og-tabs--line .og-tabs__tab,
+.og-tabs:not(.og-tabs--pill) .og-tabs__tab {
+  border-bottom: calc(var(--border-width) * 2) solid transparent;
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+  margin-bottom: calc(var(--border-width) * -1);
+}
+
+.og-tabs--line .og-tabs__tab:hover:not(:disabled):not([aria-selected='true']),
+.og-tabs:not(.og-tabs--pill) .og-tabs__tab:hover:not(:disabled):not([aria-selected='true']) {
+  background: var(--color-bg-muted);
+}
+
+.og-tabs--line .og-tabs__tab[aria-selected='true'],
+.og-tabs:not(.og-tabs--pill) .og-tabs__tab[aria-selected='true'] {
+  color: var(--color-text);
+  font-weight: var(--weight-semibold);
+  border-bottom-color: var(--color-text);
+}
+
+/* ── pill — muted track, raised selected tab (no brand-green fill) ── */
+.og-tabs--pill .og-tabs__list {
+  align-self: flex-start;
+  width: fit-content;
+  max-width: 100%;
+  padding: var(--spacing-1);
+  background: var(--color-bg-muted);
+  border-radius: var(--radius-lg);
+}
+
+.og-tabs--pill .og-tabs__tab {
+  border-radius: var(--radius-md);
+}
+
+.og-tabs--pill .og-tabs__tab[aria-selected='true'] {
+  color: var(--color-text);
+  font-weight: var(--weight-semibold);
+  background: var(--color-bg);
+  box-shadow: var(--shadow-sm);
+}
+
+.og-tabs__panel {
+  background: var(--color-bg);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-6);
+}
+
+.og-tabs--sm .og-tabs__panel {
+  padding: var(--spacing-4);
+}
+
+.og-tabs__panel[hidden] {
+  display: none;
+}
+
+.og-tabs__panel:focus-visible {
+  outline: var(--focus-width) solid var(--color-border-focus);
+  outline-offset: var(--focus-offset);
+}
+
+.og-tabs__panel-title {
+  margin: 0 0 var(--spacing-2);
+  font-size: var(--text-lg);
+  font-weight: var(--weight-semibold);
+  line-height: var(--leading-snug);
+  color: var(--color-text);
+}
+
+.og-tabs__panel-lead {
+  margin: 0;
+  font-size: var(--text-sm);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-normal);
+  color: var(--color-text-secondary);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .og-tabs__tab {
+    transition: none;
+  }
+}
+
+/* ============================================================
+   Oganiko Dropdown menu — og-dropdown-menu
+   Canonical component · OS-000 Dropdown menu (action menu)
+   Source of truth: components/dropdown-menu/dropdown-menu.css
+   ------------------------------------------------------------
+   Action menu for account / more / row actions. Not Select.
+   Assimilated from Origin UI dropdown-menu — principles only,
+   restyled with ODS tokens. Not a raw dump.
+   Token names only. Do not invent new token values.
+   version: 0.1.0 (2026-09-28) · maturity: experimental
+   ------------------------------------------------------------
+   Markup:
+     <div class="og-dropdown-menu og-dropdown-menu--md">
+       <button type="button" class="og-dropdown-menu__trigger"
+         aria-haspopup="menu" aria-expanded="false" aria-controls="menu-id">
+         Account
+       </button>
+       <div class="og-dropdown-menu__panel" id="menu-id" role="menu" hidden>
+         <button type="button" class="og-dropdown-menu__item" role="menuitem">…</button>
+       </div>
+     </div>
+   ============================================================ */
+
+.og-dropdown-menu {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  font-family: var(--font-primary);
+  color: var(--color-text);
+}
+
+.og-dropdown-menu__trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-2);
+  max-width: 100%;
+  margin: var(--spacing-0);
+  font-family: inherit;
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-snug);
+  color: var(--color-text);
+  background: var(--color-bg);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  transition:
+    border-color var(--transition-fast),
+    background-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.og-dropdown-menu--sm .og-dropdown-menu__trigger {
+  min-height: var(--control-height-sm);
+  padding: var(--spacing-1) var(--spacing-3);
+  font-size: var(--text-sm);
+}
+
+.og-dropdown-menu--md .og-dropdown-menu__trigger,
+.og-dropdown-menu:not(.og-dropdown-menu--sm) .og-dropdown-menu__trigger {
+  min-height: var(--control-height-md);
+  padding: var(--spacing-2) var(--spacing-4);
+  font-size: var(--text-sm);
+}
+
+.og-dropdown-menu--icon .og-dropdown-menu__trigger {
+  padding: var(--spacing-0);
+}
+
+.og-dropdown-menu--icon.og-dropdown-menu--sm .og-dropdown-menu__trigger {
+  width: var(--control-height-sm);
+}
+
+.og-dropdown-menu--icon.og-dropdown-menu--md .og-dropdown-menu__trigger,
+.og-dropdown-menu--icon:not(.og-dropdown-menu--sm) .og-dropdown-menu__trigger {
+  width: var(--control-height-md);
+}
+
+.og-dropdown-menu--quiet .og-dropdown-menu__trigger {
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.og-dropdown-menu__trigger:hover:not(:disabled) {
+  border-color: var(--color-text-secondary);
+  background: var(--color-bg-muted);
+}
+
+.og-dropdown-menu--quiet .og-dropdown-menu__trigger:hover:not(:disabled) {
+  border-color: transparent;
+}
+
+.og-dropdown-menu__trigger:focus-visible,
+.og-dropdown-menu__item:focus-visible {
+  outline: var(--focus-width) solid var(--color-border-focus);
+  outline-offset: var(--focus-offset);
+}
+
+.og-dropdown-menu__trigger:disabled {
+  cursor: not-allowed;
+  opacity: var(--opacity-disabled);
+}
+
+.og-dropdown-menu__glyph {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: var(--spacing-6);
+  height: var(--spacing-6);
+  color: currentColor;
+  pointer-events: none;
+}
+
+.og-dropdown-menu__glyph svg,
+.og-dropdown-menu__glyph iconify-icon {
+  display: block;
+  width: var(--spacing-6);
+  height: var(--spacing-6);
+  font-size: var(--spacing-6);
+  color: currentColor;
+}
+
+.og-dropdown-menu__panel {
+  position: absolute;
+  z-index: var(--z-modal);
+  top: calc(100% + var(--spacing-1));
+  left: var(--spacing-0);
+  display: flex;
+  flex-direction: column;
+  min-width: calc(var(--spacing-24) * 2);
+  max-width: calc(100vw - var(--spacing-4));
+  max-height: calc(var(--spacing-24) * 5);
+  margin: var(--spacing-0);
+  padding: var(--spacing-1);
+  overflow: auto;
+  font-family: var(--font-primary);
+  color: var(--color-text);
+  background: var(--color-bg);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.og-dropdown-menu--align-end .og-dropdown-menu__panel:not([data-fixed='true']) {
+  left: auto;
+  right: var(--spacing-0);
+}
+
+.og-dropdown-menu__panel[data-match='true']:not([data-fixed='true']) {
+  min-width: 100%;
+}
+
+.og-dropdown-menu__panel[data-fixed='true'] {
+  position: fixed;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  margin: var(--spacing-0);
+}
+
+.og-dropdown-menu__panel[hidden] {
+  display: none;
+}
+
+.og-dropdown-menu__group {
+  display: flex;
+  flex-direction: column;
+}
+
+.og-dropdown-menu__label {
+  padding: var(--spacing-2) var(--spacing-3) var(--spacing-1);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-semibold);
+  line-height: var(--leading-snug);
+  color: var(--color-text-secondary);
+}
+
+.og-dropdown-menu__item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  width: 100%;
+  margin: var(--spacing-0);
+  padding: var(--spacing-2) var(--spacing-3);
+  font-family: inherit;
+  font-size: var(--text-sm);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-snug);
+  color: var(--color-text);
+  text-align: start;
+  text-decoration: none;
+  background: transparent;
+  border: var(--spacing-0);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition:
+    background-color var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.og-dropdown-menu__panel[data-size='sm'] .og-dropdown-menu__item {
+  padding: var(--spacing-1) var(--spacing-2);
+}
+
+.og-dropdown-menu__item:hover:not([aria-disabled='true']) {
+  background: var(--color-bg-muted);
+}
+
+.og-dropdown-menu__item[aria-disabled='true'] {
+  color: var(--color-text-muted);
+  cursor: not-allowed;
+  opacity: var(--opacity-disabled);
+}
+
+.og-dropdown-menu__item--destructive {
+  color: var(--color-error);
+}
+
+.og-dropdown-menu__item--destructive .og-dropdown-menu__glyph {
+  color: var(--color-error);
+}
+
+.og-dropdown-menu__item-label {
+  flex: 1 1 auto;
+  min-width: var(--spacing-0);
+  overflow-wrap: anywhere;
+}
+
+.og-dropdown-menu__shortcut {
+  flex: none;
+  color: var(--color-text-secondary);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-snug);
+}
+
+.og-dropdown-menu__separator {
+  height: var(--border-width);
+  margin: var(--spacing-1) var(--spacing-2);
+  background: var(--color-border);
+  border: var(--spacing-0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .og-dropdown-menu__trigger,
+  .og-dropdown-menu__item {
+    transition: none;
+  }
+}
+
+</style>
+</head>
+<body>
+<!-- DIRECTION CONTRACT (design-impeccable)
+THESIS: A shop is only as good as its catalogue, so show one spreadsheet becoming collections, a product page and a checkout.
+VISITOR TASK: A shop owner decides whether to talk to Phil about a Shopify store that stays easy to run.
+SIGNATURE: Catalogue in, checkout out: pick a shop, watch its spreadsheet become collections, a product page with real buying choices, and a checkout.
+KEPT SIMPLE: No app list, no conversion-rate promises, no testimonials. One demonstration, one product explorer, the evidence and a clear next step.
+FORM: og-product-story v0.2. References: relume.io (staged input-to-output pipeline), tasteskill.dev (before/after toggle feel, measured motion)
+-->
+<a class="sr" href="#main">Skip to content</a>
+<header class="bar"><div class="wrap"><a class="brand" href="https://oganiko.com/" aria-label="OGANIKO Digital, home"><img src="../../assets/ogl-master.svg" alt="" width="1251" height="291"><span class="wordmark-light" aria-hidden="true">Digital</span></a><span class="who">Shopify stores</span><a class="cta" href="mailto:phil.parry@oganiko.com?subject=Shopify%20store">Book a 30-minute call</a></div></header>
+<nav class="chapters" aria-label="On this page"><div class="wrap"><ol><li><a href="#problem" data-label="The problem">The problem</a></li><li><a href="#transform" data-label="How it works">How it works</a></li><li><a href="#detail" data-label="Your products">Your products</a></li><li><a href="#evidence" data-label="Why me">Why me</a></li><li><a href="#process" data-label="Process">Process</a></li><li><a href="#offer" data-label="What you get">What you get</a></li><li><a href="#faq" data-label="Questions">Questions</a></li></ol></div></nav>
+<div class="og-scroll-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Reading progress" data-anchor=".chapters"><span class="og-scroll-progress__fill"></span></div>
+<main id="main">
+<section class="hero" id="overview" aria-labelledby="hero-t"><div class="wrap">
+  <div>
+    <nav class="og-breadcrumb og-breadcrumb--chevron" aria-label="Breadcrumb"><ol class="og-breadcrumb__list"><li class="og-breadcrumb__item"><a class="og-breadcrumb__link" href="../../">Showcase</a></li><li class="og-breadcrumb__item" aria-hidden="true"><span class="og-breadcrumb__separator"><svg class="i-chevron_right" viewBox="0 0 24 24" focusable="false"><path fill="currentColor" d="M12.6 12L8 7.4L9.4 6l6 6l-6 6L8 16.6z"/></svg></span></li><li class="og-breadcrumb__item"><a class="og-breadcrumb__link" href="../../#explorations">Explorations</a></li><li class="og-breadcrumb__item" aria-hidden="true"><span class="og-breadcrumb__separator"><svg class="i-chevron_right" viewBox="0 0 24 24" focusable="false"><path fill="currentColor" d="M12.6 12L8 7.4L9.4 6l6 6l-6 6L8 16.6z"/></svg></span></li><li class="og-breadcrumb__item"><span class="og-breadcrumb__current" aria-current="page">Shopify stores</span></li></ol></nav>
+    <span class="status">Capability demonstration</span>
+    <h1 id="hero-t">Shopify stores that stay easy to run</h1>
+    <p class="lede">I design and build Shopify stores from the catalogue up. Your products live in one spreadsheet, nothing goes live by accident, and the theme carries only what your shop needs.</p>
+    <div class="actions"><a class="btn primary" href="mailto:phil.parry@oganiko.com?subject=Shopify%20store">Book a 30-minute call</a><a class="btn ghost" href="#transform">See how it works</a></div>
+    <p class="proofline"><span><b>Live</b> Shopify build for a biotech supplier</span><span><b>20+ years</b> in UX and design systems</span></p>
+  </div>
+  <figure class="media"><img src="../../assets/img/shopify-honey-storefront.jpg" alt="Concept storefront for OGANIKO Raw Spanish Mountain Honey: a banner reading 'Honey from Spain's high mountains' beside a photo of the jar, and two jar sizes with prices"><figcaption>Concept storefront: OGANIKO Spanish mountain honey</figcaption></figure>
+</div></section>
+<section class="sec" id="problem" aria-labelledby="problem-t"><div class="wrap"><div class="pr" data-view="before"><h2 id="problem-t">Most shops are run around their store, not by it.</h2><p class="intro">The store looks fine on launch day. Then every new product is an afternoon in the admin, and every theme update is a gamble.</p>
+    <div class="pr-tabs og-tabs og-tabs--line og-tabs--md"><div class="og-tabs__list pr-toggle" role="tablist" aria-label="Compare" aria-orientation="horizontal"><button type="button" class="og-tabs__tab" role="tab" id="problem-tab-before" aria-selected="true" aria-controls="problem-panel" data-view="before">The usual shop</button><button type="button" class="og-tabs__tab" role="tab" id="problem-tab-after" aria-selected="false" aria-controls="problem-panel" tabindex="-1" data-view="after">Built to run</button></div></div>
+    <ul class="pr-list" id="problem-panel" role="tabpanel" aria-labelledby="problem-tab-before"><li><span class="ico" aria-hidden="true"><svg class="i-priority_high" viewBox="0 0 24 24" focusable="false"><path fill="currentColor" d="M12 21q-.825 0-1.412-.587T10 19t.588-1.412T12 17t1.413.588T14 19t-.587 1.413T12 21m-2-6V3h4v12z"/></svg><svg class="i-check" viewBox="0 0 24 24" focusable="false"><path fill="currentColor" d="m9.55 18l-5.7-5.7l1.425-1.425L9.55 15.15l9.175-9.175L20.15 7.4z"/></svg></span><span class="txt"><span class="before">A bought theme, plus an app for every gap.</span><span class="after">A theme built from an agreed prototype, with only what your shop needs.</span></span></li><li><span class="ico" aria-hidden="true"><svg class="i-priority_high" viewBox="0 0 24 24" focusable="false"><path fill="currentColor" d="M12 21q-.825 0-1.412-.587T10 19t.588-1.412T12 17t1.413.588T14 19t-.587 1.413T12 21m-2-6V3h4v12z"/></svg><svg class="i-check" viewBox="0 0 24 24" focusable="false"><path fill="currentColor" d="m9.55 18l-5.7-5.7l1.425-1.425L9.55 15.15l9.175-9.175L20.15 7.4z"/></svg></span><span class="txt"><span class="before">Products typed into the admin one at a time.</span><span class="after">The whole catalogue kept in one spreadsheet and pushed to the store.</span></span></li><li><span class="ico" aria-hidden="true"><svg class="i-priority_high" viewBox="0 0 24 24" focusable="false"><path fill="currentColor" d="M12 21q-.825 0-1.412-.587T10 19t.588-1.412T12 17t1.413.588T14 19t-.587 1.413T12 21m-2-6V3h4v12z"/></svg><svg class="i-check" viewBox="0 0 24 24" focusable="false"><path fill="currentColor" d="m9.55 18l-5.7-5.7l1.425-1.425L9.55 15.15l9.175-9.175L20.15 7.4z"/></svg></span><span class="txt"><span class="before">A half-finished product goes live by accident.</span><span class="after">Every product moves Draft, Ready, Live, so nothing slips out.</span></span></li><li><span class="ico" aria-hidden="true"><svg class="i-priority_high" viewBox="0 0 24 24" focusable="false"><path fill="currentColor" d="M12 21q-.825 0-1.412-.587T10 19t.588-1.412T12 17t1.413.588T14 19t-.587 1.413T12 21m-2-6V3h4v12z"/></svg><svg class="i-check" viewBox="0 0 24 24" focusable="false"><path fill="currentColor" d="m9.55 18l-5.7-5.7l1.425-1.425L9.55 15.15l9.175-9.175L20.15 7.4z"/></svg></span><span class="txt"><span class="before">Every visitor sees the same prices.</span><span class="after">Business buyers can get their own prices, documents and terms.</span></span></li><li><span class="ico" aria-hidden="true"><svg class="i-priority_high" viewBox="0 0 24 24" focusable="false"><path fill="currentColor" d="M12 21q-.825 0-1.412-.587T10 19t.588-1.412T12 17t1.413.588T14 19t-.587 1.413T12 21m-2-6V3h4v12z"/></svg><svg class="i-check" viewBox="0 0 24 24" focusable="false"><path fill="currentColor" d="m9.55 18l-5.7-5.7l1.425-1.425L9.55 15.15l9.175-9.175L20.15 7.4z"/></svg></span><span class="txt"><span class="before">A theme update breaks the homepage.</span><span class="after">Changes ship as numbered releases you can roll back.</span></span></li></ul></div></div></section>
+<section class="sec" id="transform" aria-labelledby="transform-t" style="background:var(--s-surface)"><div class="wrap"><h2 id="transform-t">Catalogue in, checkout out.</h2><p class="intro">Pick one of three example shops and watch the build: the spreadsheet becomes collections, a collection becomes a product page with real buying choices, and the basket becomes a checkout.</p>
+    <div class="tx" data-tx>
+      <div class="tx-inputs" role="group" aria-label="Example shops (fictional)"><p>Example shops (fictional)</p><button type="button" aria-pressed="true" data-i="0"><b>Kora Ceramics</b><span>Handmade tableware</span></button><button type="button" aria-pressed="false" data-i="1"><b>Halde Tea</b><span>Loose-leaf tea, with subscriptions</span></button><button type="button" aria-pressed="false" data-i="2"><b>Fieldnote Lab Supply</b><span>Lab consumables, for business buyers</span></button></div>
+      <div class="tx-stage">
+        <div class="tx-head og-tabs og-tabs--line og-tabs--md"><div class="og-tabs__list tx-tabs" role="tablist" aria-label="Stages" aria-orientation="horizontal"><button type="button" class="og-tabs__tab" role="tab" id="tx-tab-0" aria-selected="true" aria-controls="tx-panel" data-s="0"><span class="tx-n">1</span>Catalogue</button><button type="button" class="og-tabs__tab" role="tab" id="tx-tab-1" aria-selected="false" aria-controls="tx-panel" tabindex="-1" data-s="1"><span class="tx-n">2</span>Collections</button><button type="button" class="og-tabs__tab" role="tab" id="tx-tab-2" aria-selected="false" aria-controls="tx-panel" tabindex="-1" data-s="2"><span class="tx-n">3</span>Product page</button><button type="button" class="og-tabs__tab" role="tab" id="tx-tab-3" aria-selected="false" aria-controls="tx-panel" tabindex="-1" data-s="3"><span class="tx-n">4</span>Checkout</button></div></div>
+        <div class="tx-view" id="tx-panel" role="tabpanel" aria-labelledby="tx-tab-0" aria-live="polite" data-sim="Simulated demonstration · fictional shops"></div>
+      </div>
+    </div>
+    <script type="application/json" id="tx-data">{"stages":[{"label":"Catalogue","view":"table","key":"catalogue"},{"label":"Collections","view":"tree","key":"collections"},{"label":"Product page","view":"product","key":"product"},{"label":"Checkout","view":"checkout","key":"checkout"}],"inputs":[{"name":"Kora Ceramics","kind":"Handmade tableware","catalogue":{"caption":"kora-catalogue · one sheet, every product","cols":["SKU","Product","Glaze","Size","Price","Stock","Status"],"rows":[["KO-BW-14C","Breakfast bowl","Celadon","14 cm","€28","12","Live"],["KO-BW-18C","Breakfast bowl","Celadon","18 cm","€34","7","Live"],["KO-BW-14I","Breakfast bowl","Iron","14 cm","€28","9","Live"],["KO-PL-26C","Dinner plate","Celadon","26 cm","€34","15","Ready"],["KO-MG-03K","Mug","Chalk","300 ml","€24","0","Draft"]],"note":"The team edits the sheet; the store updates when a row is marked Ready."},"collections":[{"page":"Tableware","note":"Automatic: every bowl, plate and mug"},{"page":"Celadon","note":"Automatic: glaze is Celadon"},{"page":"New this month","note":"Automatic: added in the last 30 days"},{"page":"Gift sets","note":"Picked by hand"},{"page":"Seconds","note":"Picked by hand, small flaws, lower price"}],"product":{"bg":"#F6F2EC","ink":"#2A2420","accent":"#3F6B5E","swatch":["#CFE0D4","#6E9583"],"imageLabel":"Celadon glaze","crumb":"Tableware / Celadon","title":"Breakfast bowl","price":"€28","priceNote":"VAT included","options":[{"label":"Glaze","values":["Celadon","Iron","Chalk"]},{"label":"Size","values":["14 cm","18 cm"]}],"button":"Add to basket","notes":["Thrown by hand in Kraków","Dishwasher safe","Free EU shipping over €80"],"imageAlt":"Celadon breakfast bowl, hand-thrown stoneware","image":"../../assets/img/shop-kora-bowl.jpg"},"checkout":{"accent":"#3F6B5E","lines":[{"t":"Breakfast bowl × 2","d":"Celadon · 14 cm","v":"€56","c":"#A9C7B5"},{"t":"Dinner plate × 1","d":"Celadon · 26 cm","v":"€34","c":"#8FB3A1"}],"rows":[{"k":"Shipping","v":"Free over €80"},{"k":"VAT","v":"Included"}],"total":"€90","button":"Pay now","note":"Card, BLIK and Apple Pay"}},{"name":"Halde Tea","kind":"Loose-leaf tea, with subscriptions","catalogue":{"caption":"halde-catalogue · one sheet, every product","cols":["SKU","Product","Origin","Pack","Price","Stock","Status"],"rows":[["HT-SEN-50","Sencha","Shizuoka","50 g","€14","40","Live"],["HT-SEN-100","Sencha","Shizuoka","100 g","€25","28","Live"],["HT-GEN-100","Genmaicha","Kagoshima","100 g","€18","33","Live"],["HT-ASS-100","Assam","Assam","100 g","€16","21","Ready"],["HT-KYU-01","Kyusu teapot","Tokoname","1 piece","€38","6","Live"]],"note":"Harvest dates and brewing notes live in the same sheet."},"collections":[{"page":"Green teas","note":"Automatic: type is green"},{"page":"Black teas","note":"Automatic: type is black"},{"page":"Monthly tea","note":"Products sold as a subscription"},{"page":"Brewing","note":"Teapots and tools"},{"page":"Gift boxes","note":"Picked by hand for the season"}],"product":{"bg":"#F3F5EC","ink":"#22261C","accent":"#55703A","swatch":["#DDE8C4","#7E9B55"],"imageLabel":"Sencha · spring harvest","crumb":"Green teas","title":"Sencha, Shizuoka","price":"€25","priceNote":"100 g · VAT included","options":[{"label":"Pack","values":["50 g","100 g","250 g"],"sel":1},{"label":"Buy","values":["Once","Every month, 10% off"]}],"button":"Add to basket","notes":["Harvest date on every pack","Shipped within two days","Skip or cancel a subscription any time"],"imageAlt":"Sencha loose-leaf tea in a resealable pouch with a small dish of leaves","image":"../../assets/img/shop-halde-sencha.jpg"},"checkout":{"accent":"#55703A","lines":[{"t":"Sencha, 100 g","d":"Every month, 10% off","v":"€22.50","c":"#C5D6A4"},{"t":"Kyusu teapot","d":"Tokoname","v":"€38","c":"#B98B6A"}],"rows":[{"k":"Shipping","v":"€4.90"},{"k":"VAT","v":"Included"}],"total":"€65.40","button":"Pay now","note":"The subscription renews monthly; the teapot ships once."}},{"name":"Fieldnote Lab Supply","kind":"Lab consumables, for business buyers","catalogue":{"caption":"fieldnote-catalogue · one sheet, every product","cols":["SKU","Product","Grade","Pack","Price list","Documents","Status"],"rows":[["FN-TIP-200","Filter tips, 200 µl","Sterile","960","Trade A","CoA, SDS","Live"],["FN-TIP-1000","Filter tips, 1000 µl","Sterile","960","Trade A","CoA, SDS","Live"],["FN-TUB-15","Centrifuge tubes, 15 ml","Sterile","500","Trade A","CoA","Live"],["FN-BUF-PBS","PBS buffer, 1 l","Molecular","6","Trade B","CoA, SDS","Ready"],["FN-GLV-M","Nitrile gloves, M","Exam","1,000","Trade A","SDS","Draft"]],"note":"Each row says which price list applies and which documents must be attached before it can go live."},"collections":[{"page":"Pipette tips","note":"Automatic: category is tips"},{"page":"Tubes","note":"Automatic: category is tubes"},{"page":"Buffers","note":"Automatic: category is buffers"},{"page":"Reorder list","note":"Each account's past orders"},{"page":"Approved accounts only","note":"Hidden until a business account is approved"}],"product":{"bg":"#F2F5F8","ink":"#1B2530","accent":"#2C5A85","swatch":["#DCE6F0","#7C9CBC"],"imageLabel":"Sterile · racked","crumb":"Pipette tips","title":"Filter tips, 200 µl","gated":"Prices and ordering open to approved business accounts. Sign in, or apply for an account.","options":[{"label":"Pack","values":["96","960","9,600"],"sel":1}],"button":"Sign in for pricing","notes":["Certificate of analysis for every batch","Safety data sheet to download","Delivery to labs across the EU"],"imageAlt":"A rack of sterile filter pipette tips","image":"../../assets/img/shop-fieldnote-tips.jpg"},"checkout":{"accent":"#2C5A85","lines":[{"t":"Filter tips, 200 µl × 10","d":"960 per pack · Trade A","v":"€684","c":"#C9D8E6"},{"t":"PBS buffer × 4","d":"6 × 1 l · Trade B","v":"€600","c":"#A8BFD6"}],"rows":[{"k":"Payment","v":"Invoice, 30 days"},{"k":"Purchase order","v":"PO-2026-0412"},{"k":"Shipping","v":"Included"}],"total":"€1,284","button":"Place order on account","note":"Business accounts get their own price lists and payment terms."}}]}</script></div></section>
+<section class="sec" id="detail" aria-labelledby="detail-t"><div class="wrap"><h2 id="detail-t">Every product is a record your team controls.</h2><p class="intro">Click a part of a product to see what your team sets and what the store does with it.</p>
+    <div class="dx" data-dx>
+      <div class="dx-page" role="group" aria-label="Example product: Kora breakfast bowl"><button type="button" aria-pressed="true" data-i="0"><b>Title and story</b><span>What the customer reads first</span><em>Edit</em></button><button type="button" aria-pressed="false" data-i="1"><b>Options and variants</b><span>The buying choices</span><em>Edit</em></button><button type="button" aria-pressed="false" data-i="2"><b>Specs and documents</b><span>The details buyers check</span><em>Edit</em></button><button type="button" aria-pressed="false" data-i="3"><b>Status</b><span>Draft, Ready, Live</span><em>Edit</em></button></div>
+      <aside class="dx-panel" aria-live="polite"></aside>
+    </div>
+    <script type="application/json" id="dx-data">[{"name":"Title and story","summary":"What the customer reads first","fields":[{"k":"Title","v":"Breakfast bowl"},{"k":"Short description","v":"Thrown by hand, glazed in small batches."},{"k":"Care","v":"Dishwasher safe"}],"note":"Written once in the sheet; the theme sets the type and layout."},{"name":"Options and variants","summary":"The buying choices","fields":[{"k":"Glaze","v":"Celadon, Iron, Chalk"},{"k":"Size","v":"14 cm, 18 cm"},{"k":"Price per size","v":"€28, €34"},{"k":"Stock","v":"Per variant, from the sheet"}],"note":"Six variants from two short lists, each with its own stock and price."},{"name":"Specs and documents","summary":"The details buyers check","fields":[{"k":"Diameter","v":"14 cm"},{"k":"Weight","v":"420 g"},{"k":"Care sheet","v":"kora-care.pdf"}],"note":"Stored as structured fields, so filters and comparison tables read the same values."},{"name":"Status","summary":"Draft, Ready, Live","fields":[{"k":"Status","v":"Ready"},{"k":"Missing","v":"Nothing"},{"k":"Goes live","v":"On the next push"}],"note":"A product with missing data stays in Draft and can't reach the store."}]</script></div></section>
+<section class="sec" id="evidence" aria-labelledby="evidence-t"><div class="wrap"><h2 id="evidence-t">Why trust me with it.</h2><p class="intro">This isn't a sketch of how it might work. It's how I run a live Shopify build today.</p><ul class="ev"><li class="reveal"><b>A biotech supplier's whole store, built from nothing</b><p>Design system, customer personas, a custom theme and a catalogue manager for STR Technologies, a vaccine-adjuvant supplier selling to research buyers. Live as a prototype.</p><small>The <a class="ods-link" href="https://oganiko.com/work/str/">STR case study</a> on oganiko.com</small></li><li class="reveal"><b>One spreadsheet runs the catalogue</b><p>Products come from a single sheet through an admin layer with a Draft-to-Live step, so the person managing them never touches Shopify's raw backend and nothing goes live by accident.</p><small>The <a class="ods-link" href="https://oganiko.com/work/str/">STR case study</a> on oganiko.com</small></li><li class="reveal"><b>Prices only for approved buyers</b><p>Pricing, documents and checkout stay hidden until Shopify confirms a buyer as an approved business. Every deploy needs a version tag, closer to a software release than a theme tweak.</p><small>The <a class="ods-link" href="https://oganiko.com/work/str/">STR case study</a> on oganiko.com</small></li><li class="reveal"><b>I've built and sold my own product brand</b><p>OGANIKO Raw Spanish Mountain Honey: I researched the niche and the buyer, built the brand, the packaging and the listings, and sold it on Allegro and Amazon. Before design, I imported and sold goods at London markets.</p><small>Phil Parry, OGANIKO</small></li></ul></div></section>
+<section class="sec" id="process" aria-labelledby="process-t"><div class="wrap"><h2 id="process-t">From idea to store.</h2><p class="intro">How I build a Shopify store today: a static prototype first, agreed with you, then built into Shopify through its API. You get exactly what was agreed, nothing more.</p><div class="flow reveal" role="group" aria-label="From idea to live store"><ol class="flow-main"><li><div class="node"><i>1</i><b>Research and catalogue</b><p>Your product, its niche and who buys it, then your products in one sheet.</p></div></li><li class="flow-group"><span class="g-label">↺ Review and change until it's right</span><ol><li><div class="node"><i>2</i><b>Static prototype</b><p>The real pages, built from scratch. Quick to change, easy to click through.</p></div></li><li><div class="node"><i>3</i><b>Agreed</b><p>You sign off a working prototype, not a picture of one.</p></div></li></ol></li><li><div class="node"><i>4</i><b>Built through Shopify's API</b><p>Shopify now opens its building blocks through an API, so I build only what the agreed pages need.</p></div></li><li><div class="node end"><i>5</i><b>Live store</b><p>Only what was agreed. Nothing to strip out, nothing to maintain that you don't use.</p></div></li></ol><div class="flow-alt"><b>The bought-theme route I started with</b><ol><li>Buy a premium theme</li><li>Strip out what you don't need</li><li>Work around what it can't do</li></ol><p>My first Shopify build used a theme that cost nearly $500. Building the prototype first has since proved faster and cheaper.</p></div></div></div></section>
+<section class="sec offer" id="offer" aria-labelledby="offer-t"><div class="wrap"><h2 id="offer-t">What you'd get.</h2><p class="intro">A store you can run without calling a developer for every product.</p><ul><li><b>Research first</b><span>Your product, its niche and the people who buy it, written down as personas before anything is designed.</span></li><li><b>A brand identity, if you need one</b><span>Name, logo, colours and type, built into the store's design system.</span></li><li><b>A custom Shopify theme</b><span>Mapped from the prototype you agreed, with nothing extra to maintain.</span></li><li><b>A catalogue pipeline</b><span>One sheet to the store, with a Draft, Ready, Live step.</span></li><li><b>Buyer rules</b><span>Business accounts, price lists and documents where you need them.</span></li><li><b>Run it or hand it over</b><span>I keep releasing changes, or train your team to.</span></li></ul><div class="actions"><a class="btn primary" href="mailto:phil.parry@oganiko.com?subject=Shopify%20store">Book a 30-minute call</a><a class="btn ghost" href="mailto:phil.parry@oganiko.com">Email your product list</a></div></div></section>
+<section class="sec" id="faq" aria-labelledby="faq-t"><div class="wrap"><h2 id="faq-t">Questions.</h2><div class="faq" data-faq><details name="faq-q"><summary>Why not just buy a theme?</summary><div class="faq-body"><p>I started that way: my first Shopify build used a premium theme that cost nearly $500. I've since found it faster and cheaper to build a static prototype from scratch, agree it with you, then build it into Shopify through its API and the Shopify CLI. That's far more flexible than bending a theme: you get what your shop needs, and nothing more.</p></div></details><details name="faq-q"><summary>Can you take over an existing Shopify store?</summary><div class="faq-body"><p>Often, yes. I start by mapping the catalogue, the apps and what your team actually edits, then decide what to keep.</p></div></details><details name="faq-q"><summary>Do you work with business buyers?</summary><div class="faq-body"><p>Yes. Approved accounts, their own price lists, documents and payment terms are part of how I build.</p></div></details><details name="faq-q"><summary>Can the shop sell in more than one language?</summary><div class="faq-body"><p>Yes. I work in English, German, French and Polish, and plan the catalogue for every language from the start.</p></div></details></div></div></section>
+<section class="sec" id="close" aria-labelledby="close-t"><div class="wrap"><div class="closing"><h2 id="close-t">Your catalogue,<span>ready to sell.</span></h2><p class="who"><b>Phil Parry</b>20+ years in UX, brand and design systems<br><a class="ods-link" href="mailto:phil.parry@oganiko.com">phil.parry@oganiko.com</a> · <a class="ods-link" href="https://oganiko.com">oganiko.com</a></p></div></div></section>
+</main>
+<nav class="pager" aria-label="Capability demonstrations"><div class="wrap"><a class="pg pg-prev" href="../wordpress-builds/" rel="prev"><svg class="i-chevron_left" viewBox="0 0 24 24" focusable="false"><path fill="currentColor" d="M14 18l-6-6l6-6l1.4 1.4l-4.6 4.6l4.6 4.6z"/></svg><span class="pg-tx"><span class="pg-k">Previous</span><span class="ods-link">WordPress builds</span></span></a><a class="pg pg-next" href="../design-systems/" rel="next"><span class="pg-tx"><span class="pg-k">Next</span><span class="ods-link">Design systems</span></span><svg class="i-chevron_right" viewBox="0 0 24 24" focusable="false"><path fill="currentColor" d="M12.6 12L8 7.4L9.4 6l6 6l-6 6L8 16.6z"/></svg></a></div></nav>
+<footer><div class="wrap"><a class="brand brand-foot" href="https://oganiko.com/" aria-label="OGANIKO Digital, home"><img src="../../assets/oganiko-lockup-reversed.svg" alt="" width="1251" height="291"><span class="wordmark-light" aria-hidden="true">Digital</span></a><span>Capability demonstration</span><div class="og-dropdown-menu og-dropdown-menu--md foot-menu" data-menu>
+<button type="button" class="og-dropdown-menu__trigger" id="cap-trigger" aria-haspopup="menu" aria-expanded="false" aria-controls="cap-menu">Other capabilities <svg class="i-expand_more" viewBox="0 0 24 24" focusable="false"><path fill="currentColor" d="m12 15.375l-6-6l1.4-1.4l4.6 4.6l4.6-4.6l1.4 1.4z"/></svg></button>
+<div class="og-dropdown-menu__panel" id="cap-menu" role="menu" aria-labelledby="cap-trigger" hidden><a class="og-dropdown-menu__item" role="menuitem" href="../wordpress-builds/" tabindex="-1">WordPress builds</a><a class="og-dropdown-menu__item" role="menuitem" href="../shopify-stores/" aria-current="page" tabindex="-1">Shopify stores</a><a class="og-dropdown-menu__item" role="menuitem" href="../design-systems/" tabindex="-1">Design systems</a><a class="og-dropdown-menu__item" role="menuitem" href="../amazon-listings/" tabindex="-1">Amazon research and listings</a><div role="separator" class="og-dropdown-menu__separator"></div><a class="og-dropdown-menu__item" role="menuitem" href="../../" tabindex="-1">All work in the showcase</a></div>
+</div></div></footer>
+<script>
+// og-product-story engine v0.2 — behaviour: before/after toggle, transformation demo, detail explorer, reveals.
+// QA params: ?pr=after shows the resolved list; ?tx=<input>&stage=<n> sets the demo; ?dx=<n> selects a block; ?still disables motion for captures.
+(() => {
+  const q = new URLSearchParams(location.search);
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches || q.has("still");
+  const el = (tag, cls, html) => { const n = document.createElement(tag); if (cls) n.className = cls; if (html != null) n.innerHTML = html; return n; };
+  const esc = (x = "") => String(x).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  if (q.has("still")) { const st = el("style"); st.textContent = "*,*::before,*::after{animation:none!important;transition:none!important}"; document.head.append(st); }
+  else document.documentElement.classList.add("js");
+
+  // Problem → resolution
+  document.querySelectorAll(".pr").forEach((pr) => {
+    const tabs = [...pr.querySelectorAll(".pr-toggle [role=tab]")];
+    const panel = pr.querySelector(".pr-list");
+    const pick = (b) => {
+      pr.dataset.view = b.dataset.view;
+      tabs.forEach((x) => { x.setAttribute("aria-selected", String(x === b)); x.tabIndex = x === b ? 0 : -1; });
+      panel.setAttribute("aria-labelledby", b.id);
+    };
+    tabs.forEach((b, j) => {
+      b.addEventListener("click", () => pick(b));
+      b.addEventListener("keydown", (e) => { if (e.key === "ArrowRight" || e.key === "ArrowLeft") { e.preventDefault(); const n = tabs[(j + 1) % tabs.length]; pick(n); n.focus(); } });
+    });
+  });
+
+  if (q.get("pr") === "after") document.querySelectorAll(".pr .pr-toggle button[data-view=after]").forEach((b) => b.click());
+
+  // Transformation demo
+  const txRoot = document.querySelector("[data-tx]");
+  if (txRoot) {
+    const data = JSON.parse(document.getElementById("tx-data").textContent);
+    const view = txRoot.querySelector(".tx-view");
+    const tabs = [...txRoot.querySelectorAll(".tx-tabs [role=tab]")];
+    const inputs = [...txRoot.querySelectorAll(".tx-inputs button")];
+    let cur = 0, stage = 0, timer = 0;
+    // Specimen style from data: bg, fg, r (radius px), b (border), fw, tt (text-transform), p (padding), w (min width).
+    const sty = (o) => [o.bg && `background:${o.bg}`, o.fg && `color:${o.fg}`, o.r != null && `border-radius:${o.r}px`, o.b && `border:${o.b}`, o.fw && `font-weight:${o.fw}`, o.tt && `text-transform:${o.tt}`, o.p && `padding:${o.p}`, o.w && `min-width:${o.w}px`, o.ls && `letter-spacing:${o.ls}`].filter(Boolean).join(";");
+    const ICON_OK = `<svg viewBox="0 0 24 24" focusable="false"><path fill="currentColor" d="m9.55 18l-5.7-5.7l1.425-1.425L9.55 15.15l9.175-9.175L20.15 7.4z"/></svg>`;
+    const ICON_NO = `<svg viewBox="0 0 24 24" focusable="false"><path fill="currentColor" d="M6.4 19L5 17.6l5.6-5.6L5 6.4L6.4 5l5.6 5.6L17.6 5L19 6.4L13.4 12l5.6 5.6l-1.4 1.4l-5.6-5.6z"/></svg>`;
+    const VIEWS = {
+      fields: (v) => `<dl class="brief">${Object.entries(v).map(([k, val]) => `<dt>${esc(k)}</dt><dd>${esc(val)}</dd>`).join("")}</dl>`,
+      tree: (v, x) => `<div class="map"><span class="root">${esc(x.name)}</span><ul>${v.map((p, i) => `<li style="--i:${i}">${esc(p.page)}<small>${esc(p.note)}</small></li>`).join("")}</ul></div>`,
+      cards: (v) => `<ul class="blocks">${v.map((b, i) => `<li style="--i:${i}"><span class="thumb"></span><b>${esc(b.name)}</b><span>${esc(b.note)}</span></li>`).join("")}</ul>`,
+      page: (p) => `<div class="site" style="--p-bg:${p.bg};--p-ink:${p.ink};--p-accent:${p.accent};${p.face ? `--p-face:${p.face}` : ""}"><div class="chrome"><i></i><i></i><i></i></div><div class="s-hero"><small>${esc(p.eyebrow)}</small><h4>${esc(p.title)}</h4><p>${esc(p.text)}</p><span class="b">${esc(p.button)}</span></div><div class="s-row">${p.cards.map((c) => `<div><b>${esc(c.t)}</b>${esc(c.d)}</div>`).join("")}</div><div class="s-foot">${esc(p.foot)}</div></div>`,
+      table: (t) => `<div class="tbl">${t.caption ? `<p class="tbl-cap">${esc(t.caption)}</p>` : ""}<div class="tbl-scroll"><table><thead><tr>${t.cols.map((c) => `<th scope="col">${esc(c)}</th>`).join("")}</tr></thead><tbody>${t.rows.map((r, i) => `<tr style="--i:${i}">${r.map((c) => `<td>${esc(c)}</td>`).join("")}</tr>`).join("")}</tbody></table></div>${t.note ? `<p class="tbl-note">${esc(t.note)}</p>` : ""}</div>`,
+      product: (p) => `<div class="site pdp" style="--p-bg:${p.bg};--p-ink:${p.ink};--p-accent:${p.accent}"><div class="chrome"><i></i><i></i><i></i></div><div class="pdp-body"><div class="pdp-img" style="--c1:${p.swatch?.[0] ?? p.bg};--c2:${p.swatch?.[1] ?? p.accent}">${p.image ? `<img src="${esc(p.image)}" alt="${esc(p.imageAlt ?? p.title)}" loading="lazy">` : ""}<span aria-hidden="true">${esc(p.imageLabel ?? "")}</span></div><div class="pdp-info"><small>${esc(p.crumb)}</small><h4>${esc(p.title)}</h4>${p.gated ? `<p class="pdp-gate">${esc(p.gated)}</p>` : `<p class="pdp-price">${esc(p.price)}${p.priceNote ? `<span>${esc(p.priceNote)}</span>` : ""}</p>`}${(p.options ?? []).map((o) => `<div class="pdp-opt" role="group" aria-label="${esc(o.label)}"><p>${esc(o.label)}</p>${o.values.map((val, j) => `<button type="button" aria-pressed="${j === (o.sel ?? 0)}">${esc(val)}</button>`).join("")}</div>`).join("")}<span class="b">${esc(p.button)}</span><ul class="pdp-notes">${(p.notes ?? []).map((n) => `<li>${esc(n)}</li>`).join("")}</ul></div></div></div>`,
+      checkout: (c) => `<div class="site co" style="--p-accent:${c.accent ?? "#222"}"><div class="chrome"><i></i><i></i><i></i></div><div class="co-body"><div class="co-lines">${c.lines.map((l, i) => `<div class="co-line" style="--i:${i}"><span class="co-thumb" style="background:${l.c ?? "#ddd"}"></span><span><b>${esc(l.t)}</b><small>${esc(l.d)}</small></span><span>${esc(l.v)}</span></div>`).join("")}<dl>${(c.rows ?? []).map((r) => `<div><dt>${esc(r.k)}</dt><dd>${esc(r.v)}</dd></div>`).join("")}<div class="co-total"><dt>Total</dt><dd>${esc(c.total)}</dd></div></dl></div><div class="co-pay"><span class="b">${esc(c.button)}</span><p>${esc(c.note ?? "")}</p></div></div></div>`,
+      audit: (a) => `<div class="au">${a.summary ? `<p class="au-sum">${esc(a.summary)}</p>` : ""}<ul class="au-grid">${a.items.map((it, i) => `<li style="--i:${i}"><span class="au-sample${it.field ? " field" : ""}" style="${sty(it)}">${esc(it.label)}</span><small>${esc(it.where ?? "")}</small></li>`).join("")}</ul>${a.note ? `<p class="tbl-note">${esc(a.note)}</p>` : ""}</div>`,
+      tokens: (t) => `<div class="tok">${t.groups.map((g) => `<div class="tok-g"><p>${esc(g.name)}</p><ul>${g.tokens.map((k, i) => `<li style="--i:${i}">${/^#|^rgb/.test(k.value) ? `<span class="sw" style="background:${k.value}"></span>` : `<span class="sw sw-v">${esc(k.short ?? "")}</span>`}<code>${esc(k.name)}</code><span>${esc(k.value)}</span></li>`).join("")}</ul></div>`).join("")}</div>`,
+      component: (c) => `<div class="cmp"><p class="cmp-name">${esc(c.name)}</p><div class="cmp-grid">${c.specimens.map((sp, i) => `<figure style="--i:${i}">${sp.lab ? `<span class="cmp-lab">${esc(sp.lab)}</span>` : ""}<span class="au-sample${sp.field ? " field" : ""}" style="${sty(sp)}">${esc(sp.text)}</span>${sp.help ? `<span class="cmp-help" style="color:${sp.helpColor ?? "inherit"}">${esc(sp.help)}</span>` : ""}<figcaption><b>${esc(sp.label)}</b>${esc(sp.uses ?? "")}</figcaption></figure>`).join("")}</div></div>`,
+      guidelines: (g) => `<div class="gl"><div class="gl-col do"><p>Do</p><ul>${g.do.map((t) => `<li><span class="gl-ico">${ICON_OK}</span>${esc(t)}</li>`).join("")}</ul></div><div class="gl-col dont"><p>Don't</p><ul>${g.dont.map((t) => `<li><span class="gl-ico">${ICON_NO}</span>${esc(t)}</li>`).join("")}</ul></div></div>`,
+      listing: (l) => `<div class="lst"><p class="lst-k">Title · ${l.title.length} of about 200 characters</p><h4 class="lst-t">${esc(l.title)}</h4><p class="lst-k">Five bullets</p><ul class="lst-b">${l.bullets.map((b, i) => { const [head, ...rest] = b.split(" – "); return `<li style="--i:${i}"><b>${esc(head)}</b>${rest.length ? ` – ${esc(rest.join(" – "))}` : ""}</li>`; }).join("")}</ul>${l.note ? `<p class="tbl-note">${esc(l.note)}</p>` : ""}</div>`,
+      gallery: (g) => `<div class="gal">${g.caption ? `<p class="tbl-cap">${esc(g.caption)}</p>` : ""}<ul class="gal-grid">${g.items.map((it, i) => `<li style="--i:${i}"><span class="gal-img"${it.src ? "" : ` style="--c1:${it.c1 ?? "#EEE"};--c2:${it.c2 ?? "#CCC"}"`}>${it.src ? `<img src="${esc(it.src)}" alt="${esc(it.alt ?? it.label)}" loading="lazy">` : `<span class="gal-brief">${esc(it.brief ?? "")}</span>`}</span><b>${esc(it.label)}</b></li>`).join("")}</ul>${g.note ? `<p class="tbl-note">${esc(g.note)}</p>` : ""}</div>`,
+    };
+    const panel = (x, sIdx) => { const st = data.stages[sIdx]; return VIEWS[st.view](x[st.key], x); };
+    function show(i, sIdx) {
+      cur = i; stage = sIdx;
+      inputs.forEach((b, j) => b.setAttribute("aria-pressed", String(j === i)));
+      const tl = tabs[sIdx].parentElement;
+      if (tl.scrollWidth > tl.clientWidth) tl.scrollTo({ left: tabs[sIdx].offsetLeft - (tl.clientWidth - tabs[sIdx].offsetWidth) / 2, behavior: reduce ? "instant" : "smooth" });
+      tabs.forEach((t, j) => { t.setAttribute("aria-selected", String(j === sIdx)); t.classList.toggle("done", j < sIdx); t.tabIndex = j === sIdx ? 0 : -1; });
+      const last = sIdx === data.stages.length - 1;
+      view.setAttribute("aria-labelledby", `tx-tab-${sIdx}`);
+      view.innerHTML = `<div class="tx-panel on">${panel(data.inputs[i], sIdx)}</div><div class="tx-next">${last ? `<button type="button" data-restart>Try another example</button>` : `<button type="button" data-next>Next: ${esc(data.stages[sIdx + 1].label)}</button>`}<span>${sIdx + 1} of ${data.stages.length}</span><span class="sim">${esc(view.dataset.sim)}</span></div>`;
+      view.querySelectorAll(".pdp-opt").forEach((g) => g.querySelectorAll("button").forEach((b) => b.addEventListener("click", () => { stop(); g.querySelectorAll("button").forEach((o) => o.setAttribute("aria-pressed", String(o === b))); })));
+      view.querySelector("[data-next]")?.addEventListener("click", () => { stop(); show(cur, stage + 1); });
+      view.querySelector("[data-restart]")?.addEventListener("click", () => { stop(); const n = (cur + 1) % data.inputs.length; play(n); });
+    }
+    const stop = () => clearTimeout(timer);
+    function play(i) {
+      stop(); show(i, 0);
+      if (reduce) return;
+      const step = (sIdx) => { timer = setTimeout(() => { show(i, sIdx); if (sIdx < data.stages.length - 1) step(sIdx + 1); }, 1700); };
+      step(1);
+    }
+    inputs.forEach((b, j) => b.addEventListener("click", () => play(j)));
+    tabs.forEach((t, j) => {
+      t.addEventListener("click", () => { stop(); show(cur, j); });
+      t.addEventListener("keydown", (e) => { if (e.key === "ArrowRight" || e.key === "ArrowLeft") { e.preventDefault(); stop(); const n = (stage + (e.key === "ArrowRight" ? 1 : -1) + tabs.length) % tabs.length; show(cur, n); tabs[n].focus(); } });
+    });
+    const qi = parseInt(q.get("tx"), 10), qs = parseInt(q.get("stage"), 10);
+    if (Number.isFinite(qi) || Number.isFinite(qs)) show(Number.isFinite(qi) ? qi : 0, Number.isFinite(qs) ? qs : 0);
+    else {
+      show(0, 0);
+      // Start the demo when it first comes into view, so the visitor sees the transformation happen.
+      const io = new IntersectionObserver((es) => { if (es.some((e) => e.isIntersecting)) { play(0); io.disconnect(); } }, { threshold: 0.4 });
+      io.observe(txRoot);
+    }
+  }
+
+  // Detail explorer
+  const dxRoot = document.querySelector("[data-dx]");
+  if (dxRoot) {
+    const blocks = JSON.parse(document.getElementById("dx-data").textContent);
+    const panel = dxRoot.querySelector(".dx-panel");
+    const btns = [...dxRoot.querySelectorAll(".dx-page button")];
+    const show = (i) => {
+      btns.forEach((b, j) => b.setAttribute("aria-pressed", String(j === i)));
+      const b = blocks[i];
+      panel.innerHTML = `<h3>${esc(b.name)}</h3><p>${esc(b.summary)}</p><dl>${b.fields.map((f) => `<div><dt>${esc(f.k)}</dt><dd>${esc(f.v)}</dd></div>`).join("")}</dl>${b.note ? `<p class="note">${esc(b.note)}</p>` : ""}`;
+    };
+    btns.forEach((b, i) => b.addEventListener("click", () => show(i)));
+    show(Number.isFinite(parseInt(q.get("dx"), 10)) ? parseInt(q.get("dx"), 10) : 0);
+  }
+
+  // ?at=<section id>: open scrolled to a section (QA captures, deep links).
+  const at = q.get("at");
+  if (at) { const go = () => { const n = document.getElementById(at); if (n) scrollTo({ top: n.getBoundingClientRect().top + scrollY - ((document.querySelector(".bar")?.offsetHeight ?? 0) + (document.querySelector(".chapters")?.offsetHeight ?? 0)) + 1, behavior: "instant" }); }; go(); requestAnimationFrame(go); setTimeout(go, 300); }
+
+  // Chapter bar: marks the section being read, keeps it in view on narrow screens, jumps on click.
+  const bar = document.querySelector(".chapters");
+  if (bar) {
+    const header = document.querySelector(".bar");
+    const list = bar.querySelector("ol");
+    const links = [...bar.querySelectorAll("a")];
+    const secs = links.map((a) => document.getElementById(a.hash.slice(1)));
+    const offset = () => (header?.offsetHeight ?? 0) + bar.offsetHeight;
+    document.documentElement.style.setProperty("--bar-h", `${header?.offsetHeight ?? 61}px`);
+    let active = -2;
+    const update = () => {
+      const line = offset() + innerHeight * 0.25;
+      let i = -1;
+      secs.forEach((t, j) => { if (t && t.getBoundingClientRect().top <= line) i = j; });
+      const end = document.getElementById("close");
+      if (end && end.getBoundingClientRect().top < innerHeight * 0.6) i = -1;
+      if (i === active) return;
+      active = i;
+      links.forEach((a, j) => (j === i ? a.setAttribute("aria-current", "location") : a.removeAttribute("aria-current")));
+      if (i > -1 && list.scrollWidth > list.clientWidth) {
+        const a = links[i];
+        list.scrollTo({ left: a.offsetLeft - (list.clientWidth - a.offsetWidth) / 2, behavior: reduce ? "instant" : "smooth" });
+      }
+    };
+    let raf = 0;
+    addEventListener("scroll", () => { cancelAnimationFrame(raf); raf = requestAnimationFrame(update); }, { passive: true });
+    addEventListener("resize", update);
+    links.forEach((a, j) => a.addEventListener("click", (e) => { e.preventDefault(); const t = secs[j]; if (t) scrollTo({ top: t.getBoundingClientRect().top + scrollY - offset() + 1, behavior: reduce ? "instant" : "smooth" }); }));
+    update(); setTimeout(update, 350);
+  }
+
+  // Questions: one section open at a time, eased open and closed. Interim until the ODS accordion lands.
+  document.querySelectorAll("[data-faq]").forEach((faq) => {
+    const items = [...faq.querySelectorAll("details")];
+    const ease = "cubic-bezier(0.4, 0, 0.2, 1)";
+    const run = new WeakMap();
+    const close = (d) => {
+      const body = d.querySelector(".faq-body");
+      run.get(d)?.cancel();
+      d.classList.remove("is-open");
+      if (reduce) { d.open = false; return; }
+      const a = body.animate([{ height: `${body.offsetHeight}px`, opacity: 1 }, { height: "0px", opacity: 0 }], { duration: 280, easing: ease });
+      run.set(d, a);
+      a.onfinish = () => { d.open = false; run.delete(d); };
+    };
+    const open = (d) => {
+      const body = d.querySelector(".faq-body");
+      run.get(d)?.cancel();
+      d.open = true;
+      d.classList.add("is-open");
+      if (reduce) return;
+      const a = body.animate([{ height: "0px", opacity: 0 }, { height: `${body.scrollHeight}px`, opacity: 1 }], { duration: 340, easing: ease });
+      run.set(d, a);
+      a.onfinish = () => run.delete(d);
+    };
+    items.forEach((d) => {
+      if (d.open) d.classList.add("is-open");
+      d.querySelector("summary").addEventListener("click", (e) => {
+        e.preventDefault();
+        if (d.classList.contains("is-open")) close(d);
+        else { items.forEach((x) => x !== d && x.classList.contains("is-open") && close(x)); open(d); }
+      });
+    });
+  });
+
+  // Footer jump menu (ODS dropdown menu keyboard contract: arrows, Home/End, Escape, Tab closes, outside click).
+  document.querySelectorAll("[data-menu]").forEach((m) => {
+    const btn = m.querySelector(".og-dropdown-menu__trigger");
+    const panel = m.querySelector("[role=menu]");
+    const items = [...panel.querySelectorAll("[role=menuitem]")];
+    const open = (focus) => { panel.hidden = false; btn.setAttribute("aria-expanded", "true"); if (focus != null) items.at(focus)?.focus(); };
+    const close = (back) => { panel.hidden = true; btn.setAttribute("aria-expanded", "false"); if (back) btn.focus(); };
+    btn.addEventListener("click", () => (panel.hidden ? open(0) : close()));
+    btn.addEventListener("keydown", (e) => { if (e.key === "ArrowDown") { e.preventDefault(); open(0); } if (e.key === "ArrowUp") { e.preventDefault(); open(-1); } });
+    panel.addEventListener("keydown", (e) => {
+      const i = items.indexOf(document.activeElement);
+      if (e.key === "ArrowDown") { e.preventDefault(); items[(i + 1) % items.length].focus(); }
+      else if (e.key === "ArrowUp") { e.preventDefault(); items[(i - 1 + items.length) % items.length].focus(); }
+      else if (e.key === "Home") { e.preventDefault(); items[0].focus(); }
+      else if (e.key === "End") { e.preventDefault(); items.at(-1).focus(); }
+      else if (e.key === "Escape") { e.preventDefault(); close(true); }
+      else if (e.key === "Tab") close();
+    });
+    document.addEventListener("click", (e) => { if (!m.contains(e.target)) close(); });
+  });
+
+  // Reveal on scroll
+  if (!reduce && "IntersectionObserver" in window) {
+    const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { threshold: 0.15 });
+    document.querySelectorAll(".reveal").forEach((n) => io.observe(n));
+  } else document.querySelectorAll(".reveal").forEach((n) => n.classList.add("in"));
+})();
+
+</script>
+<script type="module">
+/* ds:scroll-progress v0.1 — OS-000 Scroll progress (vanilla) — 2026-11-03
+   Pattern assimilated from Scroll Progress by Julien Thibeaut (ibelick),
+   Motion Primitives (21st.dev, MIT).
+   https://21st.dev/@ibelick/components/scroll-progress */
+
+/** Scroll percent, 0–100. Zero when the box does not scroll. */
+export function scrollProgress(scrollTop, scrollHeight, clientHeight) {
+  const max = scrollHeight - clientHeight
+  if (!(max > 0)) return 0
+  const ratio = Math.min(1, Math.max(0, scrollTop / max))
+  return Math.round(ratio * 100)
+}
+
+/** Pixel offset for a fixed line under a header. Zero when the header has scrolled away. */
+export function offsetBelow(bottom) {
+  if (typeof bottom !== 'number' || !Number.isFinite(bottom) || bottom <= 0) return 0
+  return bottom
+}
+
+function metricsOf(scroller) {
+  if (scroller) {
+    return {
+      top: scroller.scrollTop,
+      height: scroller.scrollHeight,
+      client: scroller.clientHeight,
+    }
+  }
+  const el = document.scrollingElement || document.documentElement
+  return { top: el.scrollTop, height: el.scrollHeight, client: el.clientHeight }
+}
+
+/** initScrollProgress(bar, { scroller, header }) → { destroy(), paint() } */
+export function initScrollProgress(bar, options = {}) {
+  if (!bar || bar.dataset.ogScrollReady === 'true') return { destroy() {}, paint() {} }
+  bar.dataset.ogScrollReady = 'true'
+
+  const scroller = options.scroller
+    || (bar.dataset.scroller ? document.querySelector(bar.dataset.scroller) : null)
+  const header = options.header
+    || (bar.dataset.anchor ? document.querySelector(bar.dataset.anchor) : null)
+  if (scroller) bar.setAttribute('data-contained', '')
+
+  function paint() {
+    const box = metricsOf(scroller)
+    const value = scrollProgress(box.top, box.height, box.client)
+    bar.setAttribute('aria-valuenow', String(value))
+    bar.style.setProperty('--og-scroll-progress', String(value / 100))
+    if (!scroller) {
+      const bottom = header ? header.getBoundingClientRect().bottom : 0
+      bar.style.setProperty('--og-scroll-progress-top', `${offsetBelow(bottom)}px`)
+    }
+  }
+
+  const target = scroller || window
+  target.addEventListener('scroll', paint, { passive: true })
+  window.addEventListener('resize', paint)
+  const observer = header && typeof ResizeObserver !== 'undefined'
+    ? new ResizeObserver(paint)
+    : null
+  if (observer && header) observer.observe(header)
+  paint()
+
+  return {
+    paint,
+    destroy() {
+      target.removeEventListener('scroll', paint)
+      window.removeEventListener('resize', paint)
+      observer?.disconnect()
+      delete bar.dataset.ogScrollReady
+    },
+  }
+}
+
+initScrollProgress(document.querySelector(".og-scroll-progress"));
+</script>
+</body>
+</html>

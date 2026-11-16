@@ -1,0 +1,57 @@
+{
+  "slug": "mabv",
+  "title": "mAbV",
+  "pageTitle": "mAbV case study · Phil Parry",
+  "description": "Identity, design system and brand kit for a new antibody company. An interactive case study by Phil Parry.",
+  "output": "showcase/index.html",
+  "theme": { "accent": "#0047BB", "deep": "#0A2540", "ink": "#334155", "muted": "#64748B", "surface": "#F4F7FA", "line": "#E2E8F0", "heroA": "#0A2540", "heroB": "#0B2D5C", "glow": "rgba(0,71,187,.28)", "face": "DM Sans" },
+  "fonts": [
+    { "family": "Open Sans", "src": "../assets/fonts/open-sans-latin-400-normal.woff2", "weight": "400" },
+    { "family": "Open Sans", "src": "../assets/fonts/open-sans-latin-600-normal.woff2", "weight": "600" },
+    { "family": "Open Sans", "src": "../assets/fonts/open-sans-latin-700-normal.woff2", "weight": "700" },
+    { "family": "DM Sans", "src": "../assets/fonts/dm-sans-latin-var.woff2", "weight": "100 1000" },
+    { "family": "Noto Sans SC", "src": "../assets/fonts/noto-sans-sc-700-baiweixin.woff2", "weight": "700" }
+  ],
+  "contact": { "name": "Phil Parry", "line": "20+ years in UX, brand and design systems", "email": "phil.parry@oganiko.com", "site": "oganiko.com" },
+  "hero": {
+    "title": "Brands and systems that end up on real doors",
+    "lede": "Selected work by Phil Parry: identity, design systems and websites, from the first sketch to the files a printer can trust.",
+    "projects": [
+      { "label": "mAbV", "current": true },
+      { "label": "STR", "href": "../../portfolio-str/showcase/" },
+      { "label": "Orange" },
+      { "label": "Tartak" }
+    ],
+    "art": { "src": "../assets/vector/mabv-logo-lockup.svg", "alt": "mAbV wordmark lockup" },
+    "line": "Identity, design system and brand kit for a new antibody company.",
+    "photo": { "src": "../assets/img/office-2.jpg", "alt": "The mAbV lockup on frosted glass at the company's reception in Guangzhou" },
+    "meta": [ { "k": "Client", "v": "mAbV, Guangzhou" }, { "k": "Scope", "v": "Identity, design system, brand kit, holding page" }, { "k": "Year", "v": "2026" }, { "k": "Role", "v": "Design and build" } ]
+  },
+  "scene": {
+    "label": "mAbV, step by step",
+    "title": "From a founder's sketch to a sign on the door.",
+    "steps": [
+      { "title": "The brief", "note": "A young company that had said little in public yet, working with Oxford University. It came with a working name, a domain and a paragraph of science, and needed an identity investors and scientists could trust.",
+        "stage": { "type": "decode", "items": [ { "glyph": "m", "word": "monoclonal" }, { "glyph": "Ab", "word": "antibody" }, { "glyph": "V", "word": "vaccine", "accent": true } ], "caption": "Every letter is intentional. The casing makes the acronym readable inside the word." } },
+      { "title": "The idea", "note": "An antibody is shaped like a Y, and the mark is built from one. The shield around it frames what the company works on: protection before infection.",
+        "stage": { "type": "anatomy", "src": "../assets/vector/mabv-logo.svg", "alt": "The full mAbV mark", "box": { "left": 14, "top": 8, "height": 84 },
+          "callouts": [ { "text": "Four bars: the antibody's two arms form the V", "dot": [504, 263], "edge": 588 }, { "text": "The shield: protection before infection", "dot": [588, 392] }, { "text": "A teardrop stem forms the point", "dot": [375, 502], "edge": 520 } ] } },
+      { "title": "The exploration", "note": "I developed the mark from the founder's first sketch into the final system, testing it against ten other routes at three sizes and on navy.",
+        "stage": { "type": "converge", "items": [ { "src": "../assets/exploration/v12.svg", "label": "The founder's sketch" }, { "src": "../assets/exploration/v3.svg", "label": "Pointed shield" }, { "src": "../assets/exploration/v4.svg", "label": "Double track" }, { "src": "../assets/exploration/v8.svg", "label": "Solid Y with stem" }, { "src": "../assets/exploration/v11.svg", "label": "Shield and antibody" } ], "final": { "src": "../assets/vector/mabv-logo.svg", "alt": "The final mark" }, "caption": "Five of the eleven routes, converging on the final mark." } },
+      { "title": "One blue", "note": "Teal is the category's default, and the first draft's teal sat close to a familiar financial brand. I moved mAbV to one cobalt, tied to Pantone 2728 C so print matches screen.",
+        "stage": { "type": "flood", "from": "#00B4A6", "to": "#0047BB", "was": "First draft: teal, 2.6 : 1 on white", "eyebrow": "Pantone", "big": "2728 C", "sub": "Cobalt Blue", "specs": [ { "k": "HEX", "v": "#0047BB" }, { "k": "RGB", "v": "0 · 71 · 187" }, { "k": "On white", "v": "8.0 : 1" } ] } },
+      { "title": "Two scripts", "note": "In China the company trades as {{cn:百卫信}}, set in Noto Sans SC Bold to match the DM Sans wordmark, and outlined so it looks the same on any device.",
+        "stage": { "type": "pair", "art": { "src": "../assets/vector/mabv-logo-lockup-cn-en.svg", "alt": "Bilingual mAbV lockup with 百卫信" }, "note": "DM Sans Bold for Latin · Noto Sans SC Bold for Chinese", "photo": { "src": "../assets/img/office-1.jpg", "alt": "Reception sign in Guangzhou: the lockup above the company's registered name" } } },
+      { "title": "The system", "note": "Eight sections, live at mabvbio.com. The rules are shown, not just stated: below 32 px the mark switches to a simple V.",
+        "stage": { "type": "window", "src": "../assets/img/ds-logo.jpg", "alt": "The logo page of the live mAbV design system",
+          "ladder": { "label": "The mark at 16, 24, 32, 48 and 72 pixels", "split": 2, "items": [ { "src": "../assets/vector/mabv-logo-simple.svg", "size": 16 }, { "src": "../assets/vector/mabv-logo-simple.svg", "size": 24 }, { "src": "../assets/vector/mabv-logo.svg", "size": 32 }, { "src": "../assets/vector/mabv-logo.svg", "size": 48 }, { "src": "../assets/vector/mabv-logo.svg", "size": 72 } ] } } },
+      { "title": "The kit", "note": "Eighteen files in SVG, PNG, PDF and EPS, outlined type, the Pantone instruction for printers, and a readme in English and Chinese.",
+        "stage": { "type": "manifest", "src": "../assets/img/ds-brand-kit.jpg", "alt": "Brand Kit page of the mAbV design system", "items": [ { "k": "Digital", "v": "4 SVG · 4 PNG" }, { "k": "Print", "v": "4 PDF · 4 EPS" }, { "k": "Social", "v": "1 SVG · 1 PNG" }, { "k": "Readme", "v": "English · Chinese" } ] } },
+      { "title": "In the world", "note": "The identity on the company's doors in Guangzhou: a reception sign and frosted film on the glass. A real installation, not a mockup.",
+        "stage": { "type": "fan", "photos": [ { "src": "../assets/img/office-3.jpg", "alt": "The mAbV lockup on a frosted glass door" }, { "src": "../assets/img/office-2.jpg", "alt": "The lockup repeated along the frosted glass wall of the reception" }, { "src": "../assets/img/office-1.jpg", "alt": "The reception sign" } ], "caption": "Applied by the client's team from the brand kit. Photos courtesy of mAbV." } }
+    ]
+  },
+  "wheel": { "title": "What I delivered", "items": [ "The mark and a simple version", "English and bilingual lockups", "Colour and type, with Pantone", "A design system in eight sections", "A brand kit of 18 files", "The holding page at mabvbio.com" ], "foot": "Today the identity is in use at the company's offices." },
+  "close": { "lines": [ "Something new", "is coming." ], "note": "The line on mAbV's own holding page, live at [mabvbio.com](https://mabvbio.com/). Next in this series: STR, Orange and Tartak." },
+  "footer": { "links": [ { "label": "Download the PDF", "href": "../deck.pdf" } ] }
+}

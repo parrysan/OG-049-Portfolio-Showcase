@@ -1,0 +1,15 @@
+{
+  "name": "oganiko-case-study-deck",
+  "version": "1.0.0",
+  "private": true,
+  "description": "OGANIKO case-study deck template: one case JSON in, HTML deck + PDF + PPTX out.",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "pdf": "./pdf.sh",
+    "pptx": "node pptx.mjs"
+  },
+  "dependencies": {
+    "pptxgenjs": "4.0.1"
+  }
+}
